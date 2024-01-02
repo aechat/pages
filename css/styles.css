@@ -9,14 +9,22 @@ body {
 
 h1 {
    color: #9a99ff;
-   font-size: 128px;
+   font-size: 8vw;
    font-family: "Montserrat";
+   font-weight: 700;
 }
 
 h3 {
    color: #9a99ff;
-   font-size: 32px;
+   font-size: 2vw;
    font-family: "Montserrat";
+   font-weight: 500;
+}
+
+h6 {
+   color: #9b99ff7a;
+   font-family: "Montserrat";
+   font-weight: 200;
 }
 
 a {
