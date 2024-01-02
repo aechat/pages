@@ -1,0 +1,13 @@
+@font-face {
+   font-family: 'Montserrat';
+   src: url(/fonts/Montserrat-Variable.ttf);
+}
+
+h1 {
+   font-family: "Montserrat";
+}
+
+
+h2 {
+   font-family: "Montserrat";
+}
