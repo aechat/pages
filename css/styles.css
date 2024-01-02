@@ -2,6 +2,15 @@ body {
    background-color: #00005a;
 }
 
+div {
+   font-size: 1vw;
+ }
+ @media screen and (min-width: 1200px) {
+   div {
+      font-size: max(32px);
+   }
+ }
+
 @font-face {
    font-family: 'Montserrat';
    src: url(/fonts/Montserrat-Variable.ttf);
@@ -9,21 +18,23 @@ body {
 
 h1 {
    color: #9a99ff;
-   font-size: 8vw;
+   font-size: max(10vw,64px);
    font-family: "Montserrat";
    font-weight: 700;
 }
 
 h3 {
    color: #9a99ff;
-   font-size: 2vw;
+   font-size: max(2vw,24px);
    font-family: "Montserrat";
-   font-weight: 500;
+   font-weight: 300;
 }
 
+
 h6 {
-   color: #9b99ff7a;
+   color: #9b99ff59;
    font-family: "Montserrat";
+   font-size: max(1vw,16px);
    font-weight: 200;
 }
 
