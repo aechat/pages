@@ -3,11 +3,24 @@
    src: url(/fonts/Montserrat-Variable.ttf);
 }
 
+body{
+   background-color: #000028;
+}
+
 h1 {
+   color: #9a99ff;
+   text-align: center;
+   font-family: "Montserrat";
+}
+
+p{
+   color: white;
+   text-align: justify;
    font-family: "Montserrat";
 }
 
 
 h2 {
+   color: #9a99ff;
    font-family: "Montserrat";
 }

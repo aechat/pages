@@ -33,13 +33,14 @@ h1 {
    color: #9a99ff;
    font-size: max(72px, 10vw);
    font-family: "Montserrat";
+   margin-top: 20px;
    font-weight: 700;
    height: auto;
 }
 
 h3 {
-   color: #9a99ff;
-   font-size: max(2vw, 24px);
+   color: #9b99ffb0;
+   font-size: max(2.5vw, 18px);
    font-family: "Montserrat";
    font-weight: 300;
    margin-top: -7vw;
@@ -57,6 +58,7 @@ a {
    text-decoration: none;
    font-size: max(1vw, 16px);
    font-family: "Montserrat";
+   font-weight: 400;
    width: 2vw;
    height: 2vw;
    margin-left: 5px;
@@ -66,15 +68,3 @@ a {
 a:hover {
    color: #9a99ff;
 }
-
-
-
-/* .c-button {
-   appearance: none;
-   border: 0;
-   border-radius: 5px;
-   background: #4676D7;
-   color: #fff;
-   padding: 8px 16px;
-   font-size: 16px;
-} */
