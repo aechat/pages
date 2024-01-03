@@ -12,17 +12,31 @@ h1 {
    color: #9a99ff;
    text-align: center;
    font-family: "Montserrat";
-   width: max(90vw,80vw);
+   width: max(90vw, 80vw);
    margin-left: auto;
    margin-right: auto;
    text-align: left;
    border-bottom: 2px solid #fff;
 }
 
-p {
-   width: min(90vw);
-   margin-left: auto;
-   margin-right: auto;
+a {
+   color: #ffffffa0;
+   text-decoration: none;
+   font-size: max(1vw, 16px);
+   font-family: "Montserrat";
+   font-weight: 400;
+   width: 2vw;
+   height: 2vw;
+   margin-left: 5px;
+   margin-right: 5px;
+}
+
+a:hover {
+   color: #9a99ff;
+}
+
+text {
+   width: max(80vw);
    color: white;
    text-align: left;
    font-family: "Montserrat";
