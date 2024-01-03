@@ -3,19 +3,28 @@
    src: url(/fonts/Montserrat-Variable.ttf);
 }
 
-body{
+body {
    background-color: #000028;
 }
 
 h1 {
+   margin-top: 5vw;
    color: #9a99ff;
    text-align: center;
    font-family: "Montserrat";
+   width: max(90vw,80vw);
+   margin-left: auto;
+   margin-right: auto;
+   text-align: left;
+   border-bottom: 2px solid #fff;
 }
 
-p{
+p {
+   width: min(90vw);
+   margin-left: auto;
+   margin-right: auto;
    color: white;
-   text-align: justify;
+   text-align: left;
    font-family: "Montserrat";
 }
 
