@@ -5,17 +5,16 @@
 
 body {
    background-color: #151515;
-   margin: 25px;
 }
 
 h1 {
    margin-top: 5vw;
    color: #9a99ff;
    text-align: center;
-   font-family: "Montserrat";
-   width: max(90vw, 80vw);
-   margin-left: auto;
-   margin-right: auto;
+   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+   width: max-content 25px;
+   margin-left: 25px;
+   margin-right: 25px;
    text-align: left;
    border-bottom: 3px solid #9a99ffa0;
 }
@@ -23,8 +22,7 @@ h1 {
 a {
    color: #9a99ff;
    text-decoration: none;
-   font-size: max(1vw, 16px);
-   font-family: "Montserrat";
+   font-family: "Montserrat", Arial, Helvetica, sans-serif;
    font-weight: 400;
 }
 
@@ -40,11 +38,21 @@ img {
 
 p {
    color: #ffffffdd;
-   text-align: justify;
-   font-family: "Montserrat";
+   text-align: left;
+   font-size: large;
+   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+   line-height: 1.5;
    margin-left: 2.5vw;
    margin-right: 2.5vw;
-   line-height: 3vw;
+}
+
+mark {
+   background: #4f4e84;
+   font-family: monospace;
+   font-size: large;
+   color: #ffffff;
+   padding: 5px;
+   border-radius: 5px;
 }
 
 aside {
@@ -58,11 +66,6 @@ aside {
    margin-right: 10vw;
    line-height: 18px;
 
-}
-
-h2 {
-   color: #9a99ff;
-   font-family: "Montserrat";
 }
 
 .exit_to_main {
