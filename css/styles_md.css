@@ -35,15 +35,21 @@ a:hover {
    color: #9a99ff;
 }
 
-text {
+p {
    width: max(80vw);
    color: white;
    text-align: left;
    font-family: "Montserrat";
+   margin-left: 4.5vw;
+   margin-right: 4.5vw;
 }
 
 
 h2 {
    color: #9a99ff;
    font-family: "Montserrat";
+}
+
+.exit_to_main {
+   font-size: 20px;
 }
