@@ -30,6 +30,12 @@ h2 {
    text-align: center;
 }
 
+bigger {
+   font-size: 24px;
+   color:#9a99ff;
+   font-weight: bold;
+}
+
 a {
    color: #9a99ff;
    text-decoration: none;
@@ -80,5 +86,10 @@ aside {
 }
 
 .exit_to_main {
-   font-size: 20px;
+   color: #ffffffdd;
+   background: #303030;
+   margin: 50px;
+   padding: 15px;
+   font-size: 14px;
+   border-radius: 10px;
 }
