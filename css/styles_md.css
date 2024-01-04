@@ -19,6 +19,20 @@ h1 {
    border-bottom: 3px solid #9a99ffa0;
 }
 
+h2 {
+   margin-top: 5vw;
+   color: #9a99ff;
+   text-align: center;
+   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+   font-size: 144px;
+   width: max-content 25vw;
+   margin-left: 50px;
+   margin-right: 50px;
+   margin-top: -0.5vw;
+   margin-bottom: -0.5vw;
+   text-align: center;
+}
+
 a {
    color: #9a99ff;
    text-decoration: none;
