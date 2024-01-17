@@ -113,7 +113,7 @@
     <h1>2.15. Установил Premiere Pro последних версий, но мне не нравится новое меню экспорта. Как вернуть старый?</h1>
     <p>Для возвращения старого меню экспорта (работает не во всех версиях и только через <strong>Ctrl + M</strong>) в <strong>Premiere Pro</strong>, вы можете открыть консоль путём нажатия комбинации клавиш <mark>Ctrl</mark> + <mark>F12</mark>, затем нажмите
         на три полоски рядом с названием окна и выберите <mark>Debug Database View</mark>. Далее - листаем до <mark>Export.Settings.LaunchAsMode</mark> и вместо <mark>true</mark> пишем <mark>false</mark>. Если этого пункта нет, либо прописываем его вручную
-        в <mark>C:/Users/%username%/Documents/Adobe/Premiere Pro/XX.X/Debug Database.txt</mark>, либо тихонько плачем в подушку, ведь прошлое уже не вернуть...</p>
+        в <mark>%UserProfile% / Documents / Adobe / Premiere Pro / XX.X / Debug Database.txt</mark>, либо тихонько плачем в подушку, ведь прошлое уже не вернуть...</p>
     <h2>#ошибки</h2>
     <h1>3.1. Вылезло ERROR: CACHED PREVIEW NEEDS 2 OR MORE FRAMES FOR PLAYBACK. Что делать?</h1>
     <p>Чистим кэш через <mark>Edit > Purge > All Memory and Disk Cache</mark> и проверьте, что ваша рабочая область выделена <strong>не меньше, чем на два кадра</strong>. А потом пробуем кэшировать предпросмотр по новой. Если всё также не идёт, то пересмотрите
