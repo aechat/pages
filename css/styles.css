@@ -1,46 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
 body {
-    background-color: #151515;
-    margin-top: 20vh;
-    /* margin-bottom: 20vh; */
+  background-color: #151515;
+  margin-top: 20vh;
+  /* margin-bottom: 20vh; */
 }
 
 h1 {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 6vh;
-    color: #9a99ff;
-    margin-left: auto;
-    margin-right: auto;
-    width: max-content;
-    text-align: center;
-    padding-bottom: 1.25%;
-    border-bottom: 0.25vh #454545 solid;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 6vh;
+  color: #9a99ff;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  text-align: center;
+  padding-bottom: 1.25%;
+  border-bottom: 0.25vh #454545 solid;
 }
 
 p {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 2vh;
-    color: #999999;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 2vh;
+  color: #999999;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 a {
-    color: #9a99ff;
-    text-decoration: none;
+  color: #9a99ff;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #9a99ffaa;
+  color: #9a99ffaa;
 }
 
 h6 {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    color: #454545;
-    font-size: 0.75vw;
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  color: #454545;
+  font-size: 0.75vw;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
