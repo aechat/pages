@@ -1,108 +1,163 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
+/* шрифты */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
+
+/* для фона и каркаса */
+
 body {
-    background-color: #151515;
-}
-
-h1 {
-    margin-top: 5vw;
-    color: #9a99ff;
-    font-family: "Montserrat", sans-serif;
-    width: max-content 25px;
-    margin-left: 25px;
-    margin-right: 25px;
-    padding-left: 25px;
-    text-align: left;
-    border-left: 0.5vw solid #9a99ffa0;
-}
-
-h2 {
-    color: #606060;
-    font-family: "Montserrat", sans-serif;
-    font-size: medium;
-    font-weight: normal;
-    margin-top: 5vw;
-    max-width: fit-content;
+    padding: 50px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
-    /* padding-right: auto; */
-    padding-top: 10px;
-    text-align: center;
-    border-top: 0.15vw solid #606060a0;
+    font-size: larger;
 }
 
-h3 {
-    margin-top: 5vw;
-    color: #9a99ff;
-    font-family: "Montserrat", sans-serif;
-    font-size: 144px;
-    width: max-content 25vw;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: -0.5vw;
-    margin-bottom: -0.5vw;
-    text-align: center;
+body {
+    background-color: #ffffff;
+    color: #000000;
 }
 
-bigger {
-    font-size: 24px;
-    color: #9a99ff;
-    font-weight: bold;
-}
-
-a {
-    color: #9a99ff;
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bolder;
-}
-
-a:hover {
-    color: #9a99ffaa;
-}
-
-img {
-    max-height: 70vw;
-    max-width: 70vw;
-    border-radius: 15px;
-}
-
-p {
-    color: #ffffffdd;
-    text-align: left;
-    font-size: large;
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    line-height: 2;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-}
-
-mark {
-    background: #4f4e84;
-    font-family: monospace;
-    font-size: large;
+body.dark_theme {
+    background-color: #151515;
     color: #ffffff;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-aside {
-    font-family: "Montserrat";
-    color: #99999999;
-    font-size: 12px;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    line-height: 18px;
 }
 
 .exit_to_main {
-    color: #ffffffdd;
-    background: #303030;
-    margin: 50px;
-    padding: 15px;
-    font-size: 14px;
+    font-family: 'Manrope', Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+
+/* заголовок */
+
+h1 {
+    font-family: 'Manrope', Helvetica, sans-serif;
+    color: #9a99ff;
+    padding-left: 15px;
+    border-left: 5px solid #9a99ff;
+}
+
+
+/* текст */
+
+p {
+    font-family: 'Manrope', Helvetica, sans-serif;
+    margin-bottom: 50px;
+}
+
+
+/* ссылки */
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #9a99ff;
+}
+
+a:hover {
+    color: #4f4f85;
+}
+
+
+/* изображения */
+
+
+/* анимация + увеличение картинок */
+
+input[type=checkbox] {
+    display: none;
+}
+
+.container img {
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: zoom-in;
+}
+
+input[type=checkbox]:checked~label>img {
+    transform: scale(2);
+    cursor: zoom-out;
+}
+
+img {
+    display: block;
+    max-height: 800px;
+    max-width: 800px;
+    border-radius: 15px;
+}
+
+
+/* подписи под изображениями */
+
+aside {
+    display: block;
+    margin: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Manrope', Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: smaller;
+    text-align: center;
+    max-width: 75%;
+}
+
+
+/* выделение через mark */
+
+mark {
+    /* font-family: sans-serif; */
+    color: #ffffff;
+    background-color: #6b6bb2;
+    padding: 5px;
+    margin: 1px;
+    font-size: medium;
+    vertical-align: middle;
     border-radius: 10px;
+}
+
+
+/* для шапки "what the faq?" */
+
+.header {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    text-align: right;
+    margin-left: auto;
+    line-height: 48px;
+    font-size: xxx-large;
+    font-weight: 600;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    /* max-width: max-content; */
+    color: #9a99ff;
+    border-right: 7px solid #9a99ff
+}
+
+
+/* навигатор по пунктам */
+
+.navigator {
+    color: #303030;
+    padding-top: 20px;
+    font-family: 'Manrope', Helvetica, sans-serif;
+    text-align: right;
+    margin-left: auto;
+}
+
+
+/* разделитель по пунктам */
+
+.divider {
+    font-family: 'Manrope', Helvetica, sans-serif;
+    border-bottom: 3px solid #303030;
+    border-top: 3px solid #303030;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: bolder;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+    text-align: center;
 }
