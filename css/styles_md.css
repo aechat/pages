@@ -3,6 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
 
+/* темная и белая тема и их основные цвета */
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #d3a500;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #151515;
+      --text-color: #ffffff;
+      --accent-color: #9a99ff;
+    }
+  }
+
 /* для фона и каркаса */
 
 body {
@@ -14,14 +30,9 @@ body {
 }
 
 body {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-body.dark_theme {
-    background-color: #151515;
-    color: #ffffff;
-}
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
 
 .exit_to_main {
     font-family: 'Manrope', Helvetica, sans-serif;
@@ -33,9 +44,9 @@ body.dark_theme {
 
 h1 {
     font-family: 'Manrope', Helvetica, sans-serif;
-    color: #9a99ff;
+    color: var(--accent-color);
     padding-left: 15px;
-    border-left: 5px solid #9a99ff;
+    border-left: 5px solid var(--accent-color);
 }
 
 
@@ -52,11 +63,11 @@ p {
 a {
     font-weight: bold;
     text-decoration: none;
-    color: #9a99ff;
+    color: var(--accent-color);
 }
 
 a:hover {
-    color: #4f4f85;
+    color: #4f4f4f;
 }
 
 
@@ -109,7 +120,8 @@ aside {
 mark {
     /* font-family: sans-serif; */
     color: #ffffff;
-    background-color: #6b6bb2;
+    background-color: var(--accent-color);
+    opacity: 75%;
     padding: 5px;
     margin: 1px;
     font-size: medium;
@@ -130,16 +142,16 @@ mark {
     padding-bottom: 15px;
     padding-right: 15px;
     /* max-width: max-content; */
-    color: #9a99ff;
-    border-right: 7px solid #9a99ff
+    color: var(--accent-color);
+    border-right: 7px solid var(--accent-color)
 }
 
 
 /* навигатор по пунктам */
 
 .navigator {
-    color: #303030;
-    padding-top: 20px;
+    color: #50505050;
+    margin-top: 20px;
     font-family: 'Manrope', Helvetica, sans-serif;
     text-align: right;
     margin-left: auto;

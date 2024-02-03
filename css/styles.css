@@ -1,14 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
+
+/* темная и светлая тема */
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #d3a500;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #151515;
+      --text-color: #ffffff;
+      --accent-color: #9a99ff;
+    }
+  }
 body {
-    background-color: #151515;
+    background-color: var(--background-color);
     margin-top: 20vh;
-    /* margin-bottom: 20vh; */
 }
 
 h1 {
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-size: 6vh;
-    color: #9a99ff;
+    color: var(--accent-color);
     margin-left: auto;
     margin-right: auto;
     width: max-content;
@@ -27,12 +42,12 @@ p {
 }
 
 a {
-    color: #9a99ff;
+    color: var(--accent-color);
     text-decoration: none;
 }
 
 a:hover {
-    color: #9a99ffaa;
+    color: #4f4f4f;
 }
 
 h6 {
