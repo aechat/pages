@@ -1,4 +1,7 @@
+/* шрифты */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
+
 
 /* темная и светлая тема */
 
@@ -6,39 +9,34 @@
     --background-color: #ffffff;
     --text-color: #000000;
     --accent-color: #d3a500;
-  }
+}
 
-  @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
-      --background-color: #151515;
-      --text-color: #ffffff;
-      --accent-color: #9a99ff;
+        --background-color: #151515;
+        --text-color: #ffffff;
+        --accent-color: #9a99ff;
     }
-  }
+}
+
 body {
+    padding: 100px;
+    font-size: large;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
     background-color: var(--background-color);
-    margin-top: 20vh;
+    text-align: center;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 6vh;
+    font-size: 64px;
     color: var(--accent-color);
-    margin-left: auto;
-    margin-right: auto;
+    border-bottom: 2px solid #505050;
     width: max-content;
-    text-align: center;
-    padding-bottom: 1.25%;
-    border-bottom: 0.25vh #454545 solid;
-}
-
-p {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 2vh;
-    color: #999999;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
 }
 
 a {
@@ -47,15 +45,14 @@ a {
 }
 
 a:hover {
-    color: #4f4f4f;
+    color: #505050;
+}
+
+p {
+    color: var(--text-color);
 }
 
 h6 {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    color: #454545;
-    font-size: 0.75vw;
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    padding-top: 50px;
+    color: #505050;
 }

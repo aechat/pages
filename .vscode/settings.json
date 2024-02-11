@@ -1,3 +1,6 @@
 {
-   "liveServer.settings.multiRootWorkspaceName": "aetemp_misc"
+   "liveServer.settings.multiRootWorkspaceName": "aetemp_misc",
+   "lldb.showDisassembly": "auto",
+   "lldb.dereferencePointers": true,
+   "lldb.consoleMode": "commands",
 }
