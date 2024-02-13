@@ -22,6 +22,7 @@
 /* для фона и каркаса */
 
 body {
+    font-family: 'Manrope', Helvetica, sans-serif;
     padding: 50px;
     max-width: 1000px;
     margin-left: auto;
@@ -35,7 +36,7 @@ body {
   }
 
 .exit_to_main {
-    font-family: 'Manrope', Helvetica, sans-serif;
+
     text-decoration: none;
 }
 
@@ -43,7 +44,6 @@ body {
 /* заголовок */
 
 h1 {
-    font-family: 'Manrope', Helvetica, sans-serif;
     color: var(--accent-color);
     padding-left: 15px;
     border-left: 5px solid var(--accent-color);
@@ -53,7 +53,6 @@ h1 {
 /* текст */
 
 p {
-    font-family: 'Manrope', Helvetica, sans-serif;
     margin-bottom: 50px;
 }
 
@@ -107,7 +106,6 @@ aside {
     margin: 40px;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Manrope', Helvetica, sans-serif;
     font-weight: bold;
     font-size: smaller;
     text-align: center;
@@ -161,7 +159,6 @@ mark {
 /* разделитель по пунктам */
 
 .divider {
-    font-family: 'Manrope', Helvetica, sans-serif;
     border-bottom: 3px solid #303030;
     border-top: 3px solid #303030;
     margin-top: 50px;
@@ -172,4 +169,43 @@ mark {
     margin-right: auto;
     max-width: fit-content;
     text-align: center;
+}
+
+/* спойлер */
+ 
+summary::-webkit-details-marker{display:none;}
+summary::-moz-list-bullet{list-style-type:none;}
+summary::marker{display:none;} 
+summary {
+   display:block;
+   font-weight: bold;
+   /* padding: .3em .5em .3em .4em; */
+   /* font-size:1.4em; */
+   cursor: pointer;
+   padding-bottom: 50px;
+}
+
+summary:hover{
+    color: var(--accent-color);
+}
+
+summary:before {  
+  content: "+";
+  margin-right: .3em;
+}
+details[open] > summary:before {
+  content: "–";
+}
+summary ~ * {
+   padding:0 1em 0 1em;
+}
+details{
+  display:block;
+  margin-bottom: .5rem;
+}
+
+.under_summary{
+    border-top: solid #30303030 3px;
+    border-bottom: solid #30303030 3px;
+    padding: 30px;
 }
