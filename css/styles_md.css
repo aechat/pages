@@ -9,15 +9,15 @@
     --background-color: #ffffff;
     --text-color: #000000;
     --accent-color: #d3a500;
-  }
+}
 
-  @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
-      --background-color: #151515;
-      --text-color: #ffffff;
-      --accent-color: #9a99ff;
+        --background-color: #151515;
+        --text-color: #ffffff;
+        --accent-color: #9a99ff;
     }
-  }
+}
 
 /* для фона и каркаса */
 
@@ -33,7 +33,7 @@ body {
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-  }
+}
 
 .exit_to_main {
 
@@ -172,39 +172,50 @@ mark {
 }
 
 /* спойлер */
- 
-summary::-webkit-details-marker{display:none;}
-summary::-moz-list-bullet{list-style-type:none;}
-summary::marker{display:none;} 
-summary {
-   display:block;
-   font-weight: bold;
-   /* padding: .3em .5em .3em .4em; */
-   /* font-size:1.4em; */
-   cursor: pointer;
-   padding-bottom: 50px;
+
+summary::-webkit-details-marker {
+    display: none;
 }
 
-summary:hover{
+summary::-moz-list-bullet {
+    list-style-type: none;
+}
+
+summary::marker {
+    display: none;
+}
+
+summary {
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+summary:hover {
     color: var(--accent-color);
 }
 
-summary:before {  
-  content: "+";
-  margin-right: .3em;
-}
-details[open] > summary:before {
-  content: "–";
-}
-summary ~ * {
-   padding:0 1em 0 1em;
-}
-details{
-  display:block;
-  margin-bottom: .5rem;
+summary:before {
+    content: "+";
+    margin-right: .3em;
 }
 
-.under_summary{
+details[open]>summary:before {
+    content: "–";
+}
+
+summary~* {
+    /* padding: 0 1em 0 1em; */
+}
+
+details {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.under_summary {
+    text-align: center;
+    /* max-width: max-content; */
     border-top: solid #30303030 3px;
     border-bottom: solid #30303030 3px;
     padding: 30px;
