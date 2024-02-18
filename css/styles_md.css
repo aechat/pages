@@ -123,6 +123,7 @@ mark {
     padding: 5px;
     margin: 1px;
     font-size: medium;
+    line-height: 36px;
     vertical-align: middle;
     border-radius: 10px;
 }
@@ -142,6 +143,13 @@ mark {
     /* max-width: max-content; */
     color: var(--accent-color);
     border-right: 7px solid var(--accent-color)
+}
+
+/* выделение подпунктов правил */
+bigger{
+    font-size: xx-large;
+    font-weight: bold;
+    color: var(--accent-color);
 }
 
 
@@ -204,9 +212,10 @@ details[open]>summary:before {
     content: "–";
 }
 
+/* 
 summary~* {
-    /* padding: 0 1em 0 1em; */
-}
+    padding: 0 1em 0 1em;
+} */
 
 details {
     display: block;
