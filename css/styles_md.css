@@ -146,7 +146,7 @@ mark {
 }
 
 /* выделение подпунктов правил */
-bigger{
+bigger {
     font-size: xx-large;
     font-weight: bold;
     color: var(--accent-color);
@@ -156,7 +156,7 @@ bigger{
 /* навигатор по пунктам */
 
 .navigator {
-    color: #50505050;
+    color: #606060;
     margin-top: 20px;
     font-family: 'Manrope', Helvetica, sans-serif;
     text-align: right;
