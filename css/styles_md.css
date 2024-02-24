@@ -9,6 +9,7 @@
     --background-color: #ffffff;
     --text-color: #000000;
     --accent-color: #d3a500;
+    --accent-darker-color: #d3a50075;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,6 +17,7 @@
         --background-color: #151515;
         --text-color: #ffffff;
         --accent-color: #9a99ff;
+        --accent-darker-color: #9a99ff75;
     }
 }
 
@@ -117,9 +119,8 @@ aside {
 
 mark {
     /* font-family: sans-serif; */
-    color: #ffffff;
-    background-color: var(--accent-color);
-    opacity: 75%;
+    color: #ffffff; 
+    background-color: var(--accent-darker-color);
     padding: 5px;
     margin: 1px;
     font-size: medium;
