@@ -36,7 +36,37 @@
    }
 }
 
+label{font-size: 14px;color: var(--text-color);}
 
+input[type='radio']:after {
+   width: 12.5px;
+   height: 12.5px;
+   border-radius: 10px;
+   top: -2px;
+   left: -1px;
+   position: relative;
+   background-color: #d1d3d1;
+   content: '';
+   display: inline-block;
+   visibility: visible;
+   border: 3px solid var(--background-color);
+}
+
+input[type='radio']:checked:after {
+   width: 12.5px;
+   height: 12.5px;
+   border-radius: 15px;
+   top: -2px;
+   left: -1px;
+   position: relative;
+   background-color: var(--accent-color);
+   content: '';
+   display: inline-block;
+   visibility: visible;
+   border: 3px solid var(--background-color);
+}
+
+form{font-family: 'Montserrat', Arial, Helvetica, sans-serif;}
 
 .container {
    display: grid;
