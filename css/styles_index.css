@@ -1,0 +1,201 @@
+/* шрифты */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+/* цвета для темной и белой темы */
+
+:root {
+    --background: #f7f6f9;
+    --altbackground: #fdfcff;
+    --text: #303030;
+    --accent: #d3a500;
+}
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        --background: #000000;
+        --altbackground: #171719;
+        --text: #fefefe;
+        --accent: #9a99ff;
+    }
+}
+
+.dark-mode {
+    --background: #000000;
+    --altbackground: #171719;
+    --text: #fefefe;
+    --accent: #9a99ff;
+    .links li:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .dark-mode {
+        --background: #f7f6f9;
+        --altbackground: #fdfcff;
+        --text: #303030;
+        --accent: #d3a500;
+        .links li:not(:last-child) {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.material-symbols-outlined {
+    vertical-align: text-top;
+    margin-right: 5px;
+    color: var(--accent);
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 36
+}
+
+
+/* каркас */
+
+body {
+    -webkit-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: flexbox;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Manrope", Helvetica, sans-serif;
+}
+
+
+/* заглавная часть сайта */
+
+.logo {
+    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: block;
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Montserrat", Helvetica, sans-serif;
+    color: var(--accent);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 48px;
+}
+
+.top_buttons {
+    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    align-items: center;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* ссылки */
+
+.links {
+    -webkit-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--altbackground);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+aside {
+    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    text-align: center;
+    font-size: smaller;
+    opacity: 30%;
+}
+
+a {
+    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: x-large;
+    text-decoration: none;
+}
+
+h2 {
+    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: var(--accent);
+    font-size: large;
+    margin-bottom: -5px;
+}
+
+p {
+    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: var(--text);
+    font-size: medium;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    padding-bottom: -10px;
+}
+
+.links li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.links li:not(:last-child) {
+    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .links li:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}

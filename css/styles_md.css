@@ -1,0 +1,299 @@
+/* шрифты */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+/* цвета для темной и белой темы */
+
+:root {
+    --background: #f7f6f9;
+    --altbackground: #fdfcff;
+    --text: #303030;
+    --accent: #d3a500;
+    --accent-alt: #d3a50050;
+}
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        --background: #000000;
+        --altbackground: #171719;
+        --text: #fefefe;
+        --accent: #9a99ff;
+        --accent-alt: #9a99ff50;
+    }
+}
+
+
+/* для кнопки переключения темы */
+
+.dark-mode {
+    --background: #000000;
+    --altbackground: #171719;
+    --text: #fefefe;
+    --accent: #9a99ff;
+    --accent-alt: #9a99ff50;
+}
+
+@media (prefers-color-scheme: dark) {
+    .dark-mode {
+        --background: #f7f6f9;
+        --altbackground: #fdfcff;
+        --text: #303030;
+        --accent: #d3a500;
+        --accent-alt: #d3a50050;
+    }
+}
+
+
+/* шрифтовые иконки */
+
+.material-symbols-outlined {
+    vertical-align: text-top;
+    margin-right: 5px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 36
+}
+
+
+/* каркас */
+
+body {
+    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Manrope", Helvetica, sans-serif;
+}
+
+
+/* изображения */
+
+
+/* анимация + увеличение картинок */
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.container img {
+    max-height: 600px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -moz-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -moz-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: -moz-zoom-in;
+    cursor: zoom-in;
+    display: block;
+    height: auto;
+    border-radius: 15px;
+}
+
+input[type="checkbox"]:checked~label>img {
+    -moz-transform: scale(1.5);
+    transform: scale(1.5);
+    cursor: -moz-zoom-out;
+    cursor: zoom-out;
+}
+
+
+/* заголовок */
+
+.header {
+    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: block;
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Montserrat", Helvetica, sans-serif;
+    color: var(--accent);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 48px;
+}
+
+
+/* функциональные кнопки сверху */
+
+.top_buttons {
+    .material-symbols-outlined {
+        color: var(--accent)
+    }
+    -moz-transition: color 0.5s cubic-bezier(0.075,
+    0.82,
+    0.165,
+    1);
+    transition: color 0.5s cubic-bezier(0.075,
+    0.82,
+    0.165,
+    1);
+    color:var(--accent);
+    display: -moz-box;
+    display: flex;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    -moz-box-align: center;
+    align-items: center;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+
+/* сам faq */
+
+.content {
+    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--altbackground);
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+/* разделятор + прилипание */
+
+.divider {
+    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: sticky;
+    top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-weight: bolder;
+    background-color: var(--background);
+}
+
+
+/* стилизация */
+
+h1 {
+    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-left: 4px solid var(--accent);
+    color: var(--accent);
+    font-weight: bold;
+    font-size: x-large;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+p {
+    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: var(--text);
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+a {
+    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+mark {
+    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: var(--accent-alt);
+    color: var(--text);
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 24px;
+    border-radius: 5px;
+}
+
+
+/* подписи под изображениями */
+
+aside {
+    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: block;
+    margin: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: smaller;
+    text-align: center;
+}
+
+
+/* спойлер */
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::-moz-list-bullet {
+    list-style-type: none;
+}
+
+summary::marker {
+    display: none;
+}
+
+summary {
+    padding-left: 75px;
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+summary:hover {
+    color: var(--accent);
+}
+
+summary:before {
+    content: "+";
+    margin-right: 0.3em;
+}
+
+details[open]>summary:before {
+    content: "–";
+}
+
+details {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.under_summary {
+    text-align: center;
+    border-top: solid #30303030 3px;
+    border-bottom: solid #30303030 3px;
+    padding: 30px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    user-select: none;
+}
