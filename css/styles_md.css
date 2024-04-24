@@ -181,6 +181,12 @@ input[type="checkbox"]:checked~label>img {
 
 
 /* стилизация */
+.material-symbols-outlined {
+    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
 h1 {
     -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);

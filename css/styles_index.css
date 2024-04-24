@@ -44,6 +44,10 @@
 }
 
 .material-symbols-outlined {
+    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     vertical-align: text-top;
     margin-right: 5px;
     color: var(--accent);
