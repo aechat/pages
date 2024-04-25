@@ -150,8 +150,8 @@
         предыдущего раздела могут помочь, но не всегда. Для потенциального
         решения этой проблемы можно увеличить выделение определенного объема
         оперативной памяти в разделе
-        <mark>Edit &gt; Preferences &gt; Memory &amp; Performance</mark>
-        . Рекомендуется установить минимальное значение для других приложений, а
+        <mark>Edit &gt; Preferences &gt; Memory &amp; Performance</mark>.
+        Рекомендуется установить минимальное значение для других приложений, а
         не наоборот, как это часто делают новички. Также, чтобы оптимизировать
         работу, можно настроить автоматическую очистку кэша через
         <mark>Edit &gt; Keyboard Shortcut</mark>
@@ -952,13 +952,16 @@
         на английский, создайте пустой текстовый документ с именем
         ae_force_english.txt и поместите его в папку Документы вашего
         пользователя.<br /><br />Если не помогло, то переименуйте файл
-        after_effects_ru_RU.dat, находящийся на пути C:\Program
-        Files\Adobe\Adobe After Effects 20XX\Support Files\Dictionaries\ru_ru на
-        after_effects_en_US.dat.<br /><br />Если вы хотите поменять язык в
-        Premiere Pro на английский, то вы можете открыть консоль путём нажатия
-        комбинации клавиш Ctrl + F12, затем нажмите на три полоски рядом с
-        названием окна и выберите Debug Database View . Далее - листаем до
-        ApplicationLanguage и вместо вашего языка пишем en_US. Консоль может
+        <mark>after_effects_ru_RU.dat</mark>, находящийся на пути
+        <mark>
+          C:\Program Files\Adobe\Adobe After Effects 20XX\Support
+          Files\Dictionaries\ru_ru
+        </mark>
+        на <mark>after_effects_en_US.dat</mark>.<br /><br />Если вы хотите
+        поменять язык в Premiere Pro на английский, то вы можете открыть консоль
+        путём нажатия комбинации клавиш Ctrl + F12, затем нажмите на три полоски
+        рядом с названием окна и выберите Debug Database View. Далее - листаем
+        до ApplicationLanguage и вместо вашего языка пишем en_US. Консоль может
         открываться не у всех, для этого либо переустанавливаем программу с
         нужным языком, либо редактируем "Debug Database.txt" вручную (если
         имеется).
@@ -968,16 +971,16 @@
         Чаще всего проблема возникает из-за того, что пользователи не
         распаковывают файл шаблона в отдельную директорию, а пытаются открыть
         .aep файл напрямую. Архиватор не распаковывает все файлы во временную
-        директорию %temp%, и After Effects, в свою очередь, не может определить
-        исходные файлы. Для правильной работы шаблона рекомендуется полностью
-        распаковать его в удобное место.<br /><br />Если вы распаковали шаблон
-        вместе с исходниками, но файлы все равно не подключаются автоматически,
-        вам нужно подключить их вручную. Просто щелкните правой кнопкой мыши на
-        любом потерянном файле в окне Project (вы можете найти потерянные файлы,
-        введя в поиск Missing Footage), затем выберите Replace Footage &gt;
-        File... и укажите путь к потерянному файлу. Если все файлы проекта
-        находятся в одной папке, остальные файлы должны подтянуться
-        автоматически.
+        директорию <mark>%temp%</mark>, и After Effects, в свою очередь, не
+        может определить исходные файлы. Для правильной работы шаблона
+        рекомендуется полностью распаковать его в удобное место.<br /><br />Если
+        вы распаковали шаблон вместе с исходниками, но файлы все равно не
+        подключаются автоматически, вам нужно подключить их вручную. Просто
+        щелкните правой кнопкой мыши на любом потерянном файле в окне Project
+        (вы можете найти потерянные файлы, введя в поиск Missing Footage), затем
+        выберите Replace Footage &gt; File... и укажите путь к потерянному
+        файлу. Если все файлы проекта находятся в одной папке, остальные файлы
+        должны подтянуться автоматически.
       </p>
       <h1>
         4.1.3. Скачал шаблон, а After Effects выводит ошибку "This project must
@@ -1781,7 +1784,49 @@
       сайт, открыв pull request на
       <a href="https://github.com/aechat/pages/">GitHub</a>.
     </aside>
-    <script src="css/yandex_metrica.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+
+      ym(96346999, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/96346999"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
     <script src="css/copytext.js"></script>
   </body>
 </html>
