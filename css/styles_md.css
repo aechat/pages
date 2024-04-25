@@ -347,10 +347,6 @@ details {
     background-color: #00000000;
 }
 
-.noselect {
-    -webkit-touch-callout: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+* {
+    -webkit-tap-highlight-color: transparent;
 }
