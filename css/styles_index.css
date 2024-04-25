@@ -29,9 +29,6 @@
     --altbackground: #171719;
     --text: #fefefe;
     --accent: #9a99ff;
-    .links li:not(:last-child) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -200,6 +197,12 @@ p {
 
 @media (prefers-color-scheme: dark) {
     .links li:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+.dark-mode .links {
+    li:not(:last-child) {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 }
