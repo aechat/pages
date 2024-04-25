@@ -60,7 +60,10 @@
         всегда рекомендуется внимательно ознакомиться с условиями использования
         на каждом конкретном ресурсе для подтверждения соблюдения лицензий.<br /><br />Более
         подробный список стоков Вы можете найти в
-        <a href="https://t.me/c/1531341982/173244">нашем чате</a>.
+        <a href="https://t.me/c/1531341982/173244">нашем чате</a> (если выдаёт
+        ошибку о доступе, сначала войдите в
+        <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">чат по After Effects</a
+        >).
       </p>
       <h1>1.1.3. Что делать, если нет шаблона, который нужен?</h1>
       <p>
@@ -78,8 +81,8 @@
         <a
           href="https://www.youtube.com/watch?v=nogR7eyhYug&amp;list=PLcN7xY5E2wrmIU__8uNIHglZTyZ29RMIM"
           >курс на YouTube</a
-        >. Если вы уже "не смешарик" в After Effects, то можно посмотреть каналы
-        на Youtube, например
+        >. Если вы уже "смешарик" в After Effects, то можно посмотреть каналы на
+        Youtube, например
         <a href="https://www.youtube.com/@BenMarriott">Ben Marriot</a>,
         <a href="https://www.youtube.com/@VideoSmile">VideoSmile</a> или
         <a href="https://www.youtube.com/@AEPlug">AEPlug</a>.
@@ -133,7 +136,7 @@
         производительность в зависимости от нагрузки проекта. Также можно
         предварительно рендерить прокси-файлы в полном качестве для композиций и
         использовать их при окончательном рендере. Подробнее о применении
-        прокси-файлов можно узнать в <a href="faq.html#5.4">разделе 5.4</a>.
+        прокси-файлов можно узнать в <a href="faq_ae.html#5.4">разделе 5.4</a>.
       </p>
       <h1>
         2.1.3. Часто появляется окно "Out of Memory" или "Low memory warning.
@@ -352,7 +355,7 @@
       </h1>
       <p>
         Я бы порекомендовал обратить внимание на
-        <a href="faq.html#4.1.1">пункт 4.1.1</a>, касающийся смены языка, так
+        <a href="faq_ae.html#4.1.1">пункт 4.1.1</a>, касающийся смены языка, так
         как это может решить многие проблемы, особенно если вы планируете
         следовать туториалам. Ниже расположен сворачиваемый список перевода
         эффектов в программе. Этот список может быть полезным при работе с
@@ -360,7 +363,7 @@
       </p>
       <details>
         <summary>
-          Перевод стандартных эффектов в After Effects 24.1 по мнению Adobe.
+          Перевод стандартных эффектов в After Effects 24.1 по мнению Adobe
         </summary>
         <p class="under_summary">
           3D-очки -&gt; 3D Glasses<br />
@@ -987,7 +990,7 @@
         пользователей пересохранить файл .aep через "File &gt; Save As &gt; Save
         Copy As XX.X" или обновить After Effects. Процесс переноса плагинов на
         новую версию подробно описан в
-        <a href="faq.html#2.2.2">разделе 2.2.2</a>.
+        <a href="faq_ae.html#2.2.2">разделе 2.2.2</a>.
       </p>
       <h1>
         4.1.5. Скачал шаблон из AETemp, а After Effects жалуется на отсутствие
@@ -1054,15 +1057,37 @@
         ругается, что там вирусы водятся. Это правда?
       </h1>
       <p>
-        Либо вы отключаете Windows Defender или другой установленный антивирус
-        на вашем ПК и наслаждаетесь работоспособностью пакетов, либо вы
-        покидаете этот ресурс и оформляете подписку или приобретаете
-        определённую программу за свои кровные деньги. В репаках от Кролика
-        антивирусы часто ругаются на файл helper.exe (может помечаться как
-        HackTool или иначе), который распаковывает файлы для обхода проверки
-        лицензии и антивирусы ругаются на наличие галочки с рекламой перед
-        установкой (помечается как AdWare,при снятии галочки рекламы перед
-        установкой, ничего лишнего в систему не устанавливается).
+        В репаках от Кролика антивирусы часто ругаются на файл helper.exe (может
+        помечаться как HackTool или иначе), который распаковывает файлы для
+        обхода проверки лицензии. Антивирусы также ругаются на наличие галочки с
+        рекламой перед установкой (помечается как AdWare, при снятии галочки
+        рекламы перед установкой, ничего лишнего в систему не устанавливается).
+        Virustotal также может срабатывать ложно из-за малоизвестных
+        антивирусов, ниже - наглядный пример обычного ложного срабатывания на
+        скомпилированный файл C++ через MinGW в .exe, содержащий команду на
+        выключение ПК с операционной системой Windows.
+      </p>
+      <video controls="" width="600">
+        <source src="/images/fake_trojan_example.mp4" type="video/mp4" />
+      </video>
+      <p>
+        Если вы хотите предъявить претензии по содержанию репаков - обращайтесь
+        лично к KpoJluk'у на
+        <a href="https://repack.me">repack.me</a>, а не в комментариях или в
+        чаты. Мы - всего лишь перезаливаем программы оттуда в склад и запчасти
+        для тех, у кого нет аккаунта на repack.me и мы не видоизменяем в
+        каком-нибудь формате софт. Цитируем слова Кролика из
+        <a href="https://repack.me/faq.html">его FAQ, пункт 6</a>:<mark
+          >Ни в одной моей сборке никогда не было и не будет какого-либо
+          вредоносного или шпионского программного обеспечения. Реакция
+          антивирусов может быть просто ложной, а также обусловленной
+          технической схожестью между методом активации программы и активностью
+          вредоносного ПО. Поэтому, либо вы доверяете мне, как сотни тысяч
+          других пользователей, и отключаете антивирус на время установки, либо
+          прекращаете использование этого ресурса</mark
+        >. Если вы скачали "репак от кролика" не из repack.me, склада или
+        зачастей, то мы не несём ответственность за ПК и претензии на этот счёт
+        не принимаются.
       </p>
       <h1>
         4.3.2. Поймал ошибку "Не удаётся найти .../helper.exe" при попытке
@@ -1074,6 +1099,322 @@
         способ решения - временное отключение антивируса во время установки.
         Если возникают проблемы, добавьте %temp% вашей системы в белый список
         антивируса на время.
+      </p>
+      <h1>
+        4.3.3. Скачал Adobe со склада, а мне показывают ошибку 0xc0000142 при
+        запуске.
+      </h1>
+      <p>
+        Ваш устаревший компьютер уже не поддерживает современные версии софта.
+        Для свежих версий требуется процессор Intel не старее 6 поколения или
+        Ryzen не старее 1000 серии, а также поддержка инструкций AVX2. Либо вы
+        можете достать старые версии по определённым хештегам в том канале.
+      </p>
+      <div class="container">
+        <input type="checkbox" id="0xc0000142" /><label for="0xc0000142"
+          ><img src="images/0xc0000142.png"
+        /></label>
+      </div>
+      <aside>
+        Скриншот об ошибке 0xc0000142 при запуске After Effects 2024 на
+        неподдерживаемом оборудовании
+      </aside>
+      <p></p>
+      <h1>
+        4.3.4. Скачал Adobe со склада, а мне говорят при запуске, что у меня
+        недействительная лицензия.
+      </h1>
+      <p>
+        Заблокируйте программе доступ в интернет через файрвол или Netlimiter.
+        Если не помогло - скопируйте строчки из списка ниже и вставьте в
+        <mark>C:\Windows\System32\drivers\etc\hosts</mark> или переустановите
+        программу ещё раз.
+      </p>
+      <details>
+        <summary>Адреса для блокирования доступа Adobe в интернет</summary>
+        <aside>
+          Вы можете нажать на текст с ссылками и оно скопируется в буфер обмена.
+        </aside>
+        <p class="under_summary">
+          <mark class="no_mark_color">
+            0.0.0.0 ic.adobe.io 0.0.0.0 cc-api-data.adobe.io<br />
+            0.0.0.0 prod.adobegenuine.com<br />
+            0.0.0.0
+            gocart-web-prod-ue1-alb-1461435473.us-east-1.elb.amazonaws.com<br />
+            0.0.0.0 dyzt55url8.adobe.io<br />
+            0.0.0.0 b5kbg2ggog.adobe.io<br />
+            0.0.0.0 5zgzzv92gn.adobe.io<br />
+            0.0.0.0 0mo5a70cqa.adobe.io<br />
+            0.0.0.0 pojvrj7ho5.adobe.io<br />
+            0.0.0.0 i7pq6fgbsl.adobe.io<br />
+            0.0.0.0 ph0f2h2csf.adobe.io<br />
+            0.0.0.0 r3zj0yju1q.adobe.io<br />
+            0.0.0.0 9ngulmtgqi.adobe.io<br />
+            0.0.0.0 guzg78logz.adobe.io<br />
+            0.0.0.0 2ftem87osk.adobe.io<br />
+            0.0.0.0 1b9khekel6.adobe.io<br />
+            0.0.0.0 3d3wqt96ht.adobe.io<br />
+            0.0.0.0 23ynjitwt5.adobe.io<br />
+            0.0.0.0 4vzokhpsbs.adobe.io<br />
+            0.0.0.0 3ca52znvmj.adobe.io<br />
+            0.0.0.0 r5hacgq5w6.adobe.io<br />
+            0.0.0.0 gw8gfjbs05.adobe.io<br />
+            0.0.0.0 lre1kgz2u4.adobe.io<br />
+            0.0.0.0 ij0gdyrfka.adobe.io<br />
+            0.0.0.0 8ncdzpmmrg.adobe.io<br />
+            0.0.0.0 7sj9n87sls.adobe.io<br />
+            0.0.0.0 7m31guub0q.adobe.io<br />
+            0.0.0.0 7g2gzgk9g1.adobe.io<br />
+            0.0.0.0 cd536oo20y.adobe.io<br />
+            0.0.0.0 dxyeyf6ecy.adobe.io<br />
+            0.0.0.0 jc95y2v12r.adobe.io<br />
+            0.0.0.0 1hzopx6nz7.adobe.io<br />
+            0.0.0.0 m59b4msyph.adobe.io<br />
+            0.0.0.0 69tu0xswvq.adobe.io<br />
+            0.0.0.0 vajcbj9qgq.adobe.io<br />
+            0.0.0.0 p7uxzbht8h.adobe.io<br />
+            0.0.0.0 vcorzsld2a.adobe.io<br />
+            0.0.0.0 p0bjuoe16a.adobe.io<br />
+            0.0.0.0 fqaq3pq1o9.adobe.io<br />
+            0.0.0.0 aoorovjtha.adobe.io<br />
+            0.0.0.0 pv256ds6c99.prod.cloud.adobe.io<br />
+            0.0.0.0 cv2l4573ukh.prod.cloud.adobe.io<br />
+            0.0.0.0 pv24v41zibm.prod.cloud.adobe.io<br />
+            0.0.0.0 iv2nn9r0j2r.prod.cloud.adobe.io<br />
+            0.0.0.0 iv2yt8sqmh0.prod.cloud.adobe.io<br />
+            0.0.0.0 iv218qmzox6.prod.cloud.adobe.io<br />
+            0.0.0.0 cv218qmzox6.prod.cloud.adobe.io<br />
+            0.0.0.0 cv2b0yc07ls.prod.cloud.adobe.io<br />
+            0.0.0.0 cv2nn9r0j2r.prod.cloud.adobe.io<br />
+            0.0.0.0 pv2yt8sqmh0.prod.cloud.adobe.io<br />
+            0.0.0.0 iv256ds6c99.prod.cloud.adobe.io<br />
+            0.0.0.0 pv2zp87w2eo.prod.cloud.adobe.io<br />
+            0.0.0.0 iv2ys4tjt9x.prod.cloud.adobe.io<br />
+            0.0.0.0 cv2ska86hnt.prod.cloud.adobe.io<br />
+            0.0.0.0 iv24b15c1z0.prod.cloud.adobe.io<br />
+            0.0.0.0 cv256ds6c99.prod.cloud.adobe.io<br />
+            0.0.0.0 pv2ska86hnt.prod.cloud.adobe.io<br />
+            0.0.0.0 iv2b0yc07ls.prod.cloud.adobe.io<br />
+            0.0.0.0 iv2l4573ukh.prod.cloud.adobe.io<br />
+            0.0.0.0 cv24v41zibm.prod.cloud.adobe.io<br />
+            0.0.0.0 iv2ska86hnt.prod.cloud.adobe.io<br />
+            0.0.0.0 pv2l4573ukh.prod.cloud.adobe.io<br />
+            0.0.0.0 iv24v41zibm.prod.cloud.adobe.io<br />
+            0.0.0.0 iv2zp87w2eo.prod.cloud.adobe.io<br />
+            0.0.0.0 pv2ys4tjt9x.prod.cloud.adobe.io<br />
+            0.0.0.0 cv2ys4tjt9x.prod.cloud.adobe.io<br />
+            0.0.0.0 cv2fcqvzl1r.prod.cloud.adobe.io<br />
+            0.0.0.0 pv2fcqvzl1r.prod.cloud.adobe.io<br />
+            0.0.0.0 cv24b15c1z0.prod.cloud.adobe.io<br />
+            0.0.0.0 pv24b15c1z0.prod.cloud.adobe.io<br />
+            0.0.0.0 cv2bqhsp36w.prod.cloud.adobe.io<br />
+            0.0.0.0 pv2b0yc07ls.prod.cloud.adobe.io<br />
+            0.0.0.0 pv218qmzox6.prod.cloud.adobe.io<br />
+            0.0.0.0 cv2yt8sqmh0.prod.cloud.adobe.io<br />
+            0.0.0.0 iv2fcqvzl1r.prod.cloud.adobe.io<br />
+            0.0.0.0 pv2bqhsp36w.prod.cloud.adobe.io<br />
+            0.0.0.0 pv2nn9r0j2r.prod.cloud.adobe.io<br />
+            0.0.0.0 cv2zp87w2eo.prod.cloud.adobe.io<br />
+            0.0.0.0 iv2bqhsp36w.prod.cloud.adobe.io<br />
+            0.0.0.0 yj8yx3y8zo.adobestats.io<br />
+            0.0.0.0 mpsige2va9.adobestats.io<br />
+            0.0.0.0 ujqx8lhpz4.adobestats.io<br />
+            0.0.0.0 y2r8jzsv4p.adobestats.io<br />
+            0.0.0.0 eq7dbze88m.adobestats.io<br />
+            0.0.0.0 q9hjwppxeq.adobestats.io<br />
+            0.0.0.0 skg7pqn0al.adobestats.io<br />
+            0.0.0.0 9iay914wzy.adobestats.io<br />
+            0.0.0.0 yuzuoqo0il.adobestats.io<br />
+            0.0.0.0 2o3c6rbyfr.adobestats.io<br />
+            0.0.0.0 vicsj37lhf.adobestats.io<br />
+            0.0.0.0 nhc73ypmli.adobestats.io<br />
+            0.0.0.0 oxiz2n3i4v.adobestats.io<br />
+            0.0.0.0 2qjz50z5lf.adobestats.io<br />
+            0.0.0.0 i2x2ius9o5.adobestats.io<br />
+            0.0.0.0 lnwbupw1s7.adobestats.io<br />
+            0.0.0.0 n746qg9j4i.adobestats.io<br />
+            0.0.0.0 2621x1nzeq.adobestats.io<br />
+            0.0.0.0 r9r6oomgms.adobestats.io<br />
+            0.0.0.0 99pfl4vazm.adobestats.io<br />
+            0.0.0.0 zekdqanici.adobestats.io<br />
+            0.0.0.0 g9cli80sqp.adobestats.io<br />
+            0.0.0.0 dyv9axahup.adobestats.io<br />
+            0.0.0.0 17ov1u3gio.adobestats.io<br />
+            0.0.0.0 7l4xxjhvkt.adobestats.io<br />
+            0.0.0.0 wcxqmuxd4z.adobestats.io<br />
+            0.0.0.0 l558s6jwzy.adobestats.io<br />
+            0.0.0.0 85n85uoa1h.adobestats.io<br />
+            0.0.0.0 zrao5tdh1t.adobestats.io<br />
+            0.0.0.0 eftcpaiu36.adobestats.io<br />
+            0.0.0.0 2qj10f8rdg.adobestats.io<br />
+            0.0.0.0 ffs3xik41x.adobestats.io<br />
+            0.0.0.0 g3y09mbaam.adobestats.io<br />
+            0.0.0.0 x880ulw3h0.adobestats.io<br />
+            0.0.0.0 jaircqa037.adobestats.io<br />
+            0.0.0.0 ppn4fq68w7.adobestats.io<br />
+            0.0.0.0 1ei1f4k9yk.adobestats.io<br />
+            0.0.0.0 6j0onv1tde.adobestats.io<br />
+            0.0.0.0 pljm140ld1.adobestats.io<br />
+            0.0.0.0 50sxgwgngu.adobestats.io<br />
+            0.0.0.0 u31z50xvp9.adobestats.io<br />
+            0.0.0.0 2dhh9vsp39.adobestats.io<br />
+            0.0.0.0 rb0u8l34kr.adobestats.io<br />
+            0.0.0.0 3odrrlydxt.adobestats.io<br />
+            0.0.0.0 3u6k9as4bj.adobestats.io<br />
+            0.0.0.0 curbpindd3.adobestats.io<br />
+            0.0.0.0 4dviy9tb3o.adobestats.io<br />
+            0.0.0.0 yb6j6g0r1n.adobestats.io<br />
+            0.0.0.0 0bj2epfqn1.adobestats.io<br />
+            0.0.0.0 ura7zj55r9.adobestats.io<br />
+            0.0.0.0 xesnl0ss94.adobestats.io<br />
+            0.0.0.0 xbd20b9wqa.adobestats.io<br />
+            0.0.0.0 cr2fouxnpm.adobestats.io<br />
+            0.0.0.0 zmg3v61bbr.adobestats.io<br />
+            0.0.0.0 bk7y1gneyk.adobestats.io<br />
+            0.0.0.0 dx0nvmv4hz.adobestats.io<br />
+            0.0.0.0 eyiu19jd5w.adobestats.io<br />
+            0.0.0.0 561r5c3bz1.adobestats.io<br />
+            0.0.0.0 54cu4v5twu.adobestats.io<br />
+            0.0.0.0 6eidhihhci.adobestats.io<br />
+            0.0.0.0 31q40256l4.adobestats.io<br />
+            0.0.0.0 bs2yhuojzm.adobestats.io<br />
+            0.0.0.0 p50zgina3e.adobestats.io<br />
+            0.0.0.0 yri0bsu0ak.adobestats.io<br />
+            0.0.0.0 zu8yy3jkaz.adobestats.io<br />
+            0.0.0.0 m59cps6x3n.adobestats.io<br />
+            0.0.0.0 kgj0gsg3cf.adobestats.io<br />
+            0.0.0.0 uf0onoepoe.adobestats.io<br />
+            0.0.0.0 28t4psttw7.adobestats.io<br />
+            0.0.0.0 hjs70w1pdi.adobestats.io<br />
+            0.0.0.0 klw4np5a1x.adobestats.io<br />
+            0.0.0.0 lz2x4rks1u.adobestats.io<br />
+            0.0.0.0 pc6sk9bygv.adobestats.io<br />
+            0.0.0.0 t9phy8ywkd.adobestats.io<br />
+            0.0.0.0 dfnm3epsb7.adobestats.io<br />
+            0.0.0.0 5ky0dijg73.adobestats.io<br />
+            0.0.0.0 124hzdrtoi.adobestats.io<br />
+            0.0.0.0 69rxfbohle.adobestats.io<br />
+            0.0.0.0 9uffo0j6wj.adobestats.io<br />
+            0.0.0.0 kwi5n2ruax.adobestats.io<br />
+            0.0.0.0 nh8wam2qd9.adobestats.io<br />
+            0.0.0.0 rm3xrk61n1.adobestats.io<br />
+            0.0.0.0 rmnia8d0tr.adobestats.io<br />
+            0.0.0.0 vrz9w7o7yv.adobestats.io<br />
+            0.0.0.0 5m62o8ud26.adobestats.io<br />
+            0.0.0.0 esx6aswt5e.adobestats.io<br />
+            0.0.0.0 hwfqhlenbg.adobestats.io<br />
+            0.0.0.0 je5ufnklzs.adobestats.io<br />
+            0.0.0.0 jmx50quqz0.adobestats.io<br />
+            0.0.0.0 jsxfc5yij1.adobestats.io<br />
+            0.0.0.0 vfsjlgw02v.adobestats.io<br />
+            0.0.0.0 yshuhythub.adobestats.io<br />
+            0.0.0.0 zrbzvc9mel.adobestats.io<br />
+            0.0.0.0 rj669kv2lc.adobestats.io<br />
+            0.0.0.0 agxqobl83f.adobestats.io<br />
+            0.0.0.0 zr60t8ia88.adobestats.io<br />
+            0.0.0.0 a1y2b7wsna.adobestats.io<br />
+            0.0.0.0 hf6s5jdv95.adobestats.io<br />
+            0.0.0.0 tprqy2lgua.adobestats.io<br />
+            0.0.0.0 c474kdh1ky.adobestats.io<br />
+            0.0.0.0 d101mw99xq.adobestats.io<br />
+            0.0.0.0 oh41yzugiz.adobestats.io<br />
+            0.0.0.0 jwonv590qs.adobestats.io<br />
+            0.0.0.0 7k1t5im229.adobestats.io<br />
+            0.0.0.0 3xuuprv9lg.adobestats.io<br />
+            0.0.0.0 9wm8di7ifk.adobestats.io<br />
+            0.0.0.0 ebvf40engd.adobestats.io<br />
+            0.0.0.0 hq0mnwz735.adobestats.io<br />
+            0.0.0.0 j134yk6hv5.adobestats.io<br />
+            0.0.0.0 j14y4uzge7.adobestats.io<br />
+            0.0.0.0 jye4987hyr.adobestats.io<br />
+            0.0.0.0 kvi8uopy6f.adobestats.io<br />
+            0.0.0.0 lv5yrjxh6i.adobestats.io<br />
+            0.0.0.0 m95pt874uw.adobestats.io<br />
+            0.0.0.0 pdb7v5ul5q.adobestats.io<br />
+            0.0.0.0 px8vklwioh.adobestats.io<br />
+            0.0.0.0 qmyqpp3xs3.adobestats.io<br />
+            0.0.0.0 r1lqxul5sr.adobestats.io<br />
+            0.0.0.0 tf3an24xls.adobestats.io<br />
+            0.0.0.0 tyradj47rp.adobestats.io<br />
+            0.0.0.0 vp7ih9xoxg.adobestats.io<br />
+            0.0.0.0 x5cupsunjc.adobestats.io<br />
+            0.0.0.0 ll8xjr580v.adobestats.io<br />
+            0.0.0.0 n0yaid7q47.adobestats.io<br />
+            0.0.0.0 nhs5jfxg10.adobestats.io<br />
+            0.0.0.0 wz8kjkd9gc.adobestats.io<br />
+            0.0.0.0 zfzx6hae4g.adobestats.io<br />
+            0.0.0.0 6y6ozj4sot.adobestats.io<br />
+            0.0.0.0 qxc5z5sqkv.adobestats.io<br />
+            0.0.0.0 1qwiekvkux.adobestats.io<br />
+          </mark>
+        </p>
+      </details>
+      <h1>
+        4.3.5. Пытаюсь установить Adobe со склада, а мне пишут ошибку 1 или 501.
+      </h1>
+      <p>
+        У вас было криво установлено приложение Creative Cloud. Вы можете его
+        удалить с помощью
+        <a
+          href="https://helpx.adobe.com/ru/creative-cloud/kb/cc-cleaner-tool-installation-problems.html"
+          >официального инструмента для удаления Adobe Creative Cloud Cleaner</a
+        >
+        или попробуйте вручную удалить папку
+        <mark>C:\Program Files (x86)\Common Files\Adobe</mark>, а затем
+        повторить установку.
+      </p>
+      <h1>
+        4.3.6.1. Установил Adobe со склада, но вылезают ошибки про отсутствие
+        MSVCP140.dll, api-ms-win-crt-runtime-l1-1-0.ddl и аналогичные. Что я
+        забыл ещё установить?
+      </h1>
+      <p>
+        Похоже, у вас отсутствует установленный пакет Microsoft Visual C++
+        Redistributable, который можно установить перед установкой или не
+        установлены все доступные обновления для Windows.
+      </p>
+      <h1>
+        4.3.6.2. А если вылезает ошибка про отсутствие точки входа в библиотеке
+        Kernel32.dll?
+      </h1>
+      <p>
+        Если вы используете Windows 7 или 8.1 и вы пытаетесь открыть After
+        Effects 2020 года или выше - у вас просто так не получится это сделать,
+        так как Adobe завершила поддержку этих операционных систем. К счастью,
+        вы можете установить старые версии After Effects до 2019 года
+        включительно.
+      </p>
+      <h1>
+        4.3.6.3. А если вылезает ошибка, что не найден файл D3DCompiler_47.dll?
+      </h1>
+      <p>
+        Распакуйте <a href="images/D3DCompiler_47.zip">D3DCompiler_47.dll </a>в
+        папку с программой, а затем повторите попытку открытия программы. Если
+        ваш браузер жалуется, что возможен вирус - не переживайте. Если данная
+        процедура не помогла - обновите систему до последней версии.
+      </p>
+      <h1>
+        4.3.7. При открытии репака - выскакивает "rsload.net заблокирован в
+        hosts" и установка дальше не идёт.
+      </h1>
+      <p>
+        Очистите свой файл hosts от записей и повторите попытку заново. Также
+        эта ошибка может появляться, если у вас нет этого файла в системе.
+        Подробная инструкция
+        <a href="https://remontka.pro/hosts/">тут</a>.
+      </p>
+      <h1>
+        4.3.8. Случайно забыл убрать галочку с рекламы при установке репака, что
+        делать?
+      </h1>
+      <p>
+        Вы согласились с установкой домашней страницы и поиска от me.fo/hi.ru
+        или с установкой Яндекс.Браузера (как смешно) на первой странице
+        установщика. Удалить все "нововведения" можно через панель управления
+        "Установка и удаление программ". В следующий раз не забывайте убирать.
+        Также вы можете воспользоваться программой
+        <a href="https://unchecky.com/">Unchecky</a>, которая убирает за вас
+        галочки (может не работать в репаках Adobe).
       </p>
       <h1>
         4.4.1. Хочу установить скрипт формата .zxp, а вижу ошибку Error:
@@ -1110,10 +1451,10 @@
         Вы уверены, что After Effects установлен в стандартную директорию? Если
         нет, рекомендуется переустановить программу в стандартную директорию или
         осуществить поиск остатков установщика и распределить их в нужные папки,
-        о которых расписано в <a href="faq.html#4.2.2">разделе 4.2.2</a>.
+        о которых расписано в <a href="faq_ae.html#4.2.2">разделе 4.2.2</a>.
       </p>
       <h1>
-        4.5. Скачал Photoshop из склада, а в нём не работает Generative Fill.
+        4.5.1 Скачал Photoshop из склада, а в нём не работает Generative Fill.
         Что делать?
       </h1>
       <p>
@@ -1128,7 +1469,7 @@
         >
       </p>
       <h1>
-        4.6.1. Скачал Premiere Pro со склада, но не могу транскрибировать текст
+        4.5.2. Скачал Premiere Pro со склада, но не могу транскрибировать текст
         в речь.
       </h1>
       <p>
@@ -1141,7 +1482,7 @@
         и генерации текста на основе Whisper
       </p>
       <h1>
-        4.6.2. Скачал Media Encoder со склада, но он не подключается к Premiere
+        4.5.3. Скачал Media Encoder со склада, но он не подключается к Premiere
         Pro или After Effects.
       </h1>
       <p>
@@ -1149,7 +1490,7 @@
         версий, а также на стандартном расположении пути.
       </p>
       <h1>
-        4.7.1. Установил шрифт, а After Effects слишком лагает из-за этого
+        4.6.1. Установил шрифт, а After Effects слишком лагает из-за этого
         шрифта.
       </h1>
       <p>
@@ -1159,14 +1500,14 @@
         которые могут негативно повлиять на работу приложений Adobe.
       </p>
       <h1>
-        4.7.2. Установил шрифт, а After Effects сбрасывает его на стандартный,
+        4.6.2. Установил шрифт, а After Effects сбрасывает его на стандартный,
         если пишу на кириллице.
       </h1>
       <p>
         Шрифт не обладает поддержкой кириллицы, поищите альтернативную версию.
       </p>
       <h1>
-        4.8. Как безболезненно удалить конкретную программу или все приложения
+        4.7. Как безболезненно удалить конкретную программу или все приложения
         от Adobe?
       </h1>
       <p>
@@ -1174,7 +1515,7 @@
         вас не устраивает, то вы можете воспользоваться Revo Uninstaller или
         <a
           href="https://helpx.adobe.com/ru/creative-cloud/kb/cc-cleaner-tool-installation-problems.html"
-          >официальным инструментом для удаления</a
+          >официальным инструментом для удаления Adobe Creative Cloud Cleaner</a
         >
         от Adobe.
       </p>
@@ -1273,7 +1614,7 @@
         который установлен по умолчанию, не задумываясь о его сути.
         Рекомендуется вместо этого использовать другие кодеки для экспорта
         (например, Quicktime или H.264), более подробная информация о процессе
-        экспорта представлена в <a href="faq.html#5.1">разделе 5.1</a>.
+        экспорта представлена в <a href="faq_ae.html#5.1">разделе 5.1</a>.
       </p>
       <h1 id="5.4">
         5.4. Хочу отрендерить видео, но After Effects сбоит на конкретном
@@ -1409,5 +1750,6 @@
       <a href="https://github.com/aechat/pages/">GitHub</a>.
     </aside>
     <script src="css/yandex_metrica.js"></script>
+    <script src="css/copytext.js"></script>
   </body>
 </html>
