@@ -11,6 +11,7 @@
     --text: #303030;
     --accent: #d3a500;
     --accent-alt: #d3a50050;
+    --status-bar-color: #f7f6f9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +21,7 @@
         --text: #fefefe;
         --accent: #9a99ff;
         --accent-alt: #9a99ff50;
+        --status-bar-color: #000000;
     }
 }
 
@@ -32,6 +34,7 @@
     --text: #fefefe;
     --accent: #9a99ff;
     --accent-alt: #9a99ff50;
+    --status-bar-color: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,6 +44,7 @@
         --text: #303030;
         --accent: #d3a500;
         --accent-alt: #d3a50050;
+        --status-bar-color: #f7f6f9;
     }
 }
 
