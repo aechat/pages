@@ -3,6 +3,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 
+/* убирание полоски скролл-бара */
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
 /* цвета для темной и белой темы */
 
 :root {
@@ -148,9 +155,10 @@ aside {
     -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    text-align: center;
+    text-align: right;
     font-size: smaller;
     opacity: 30%;
+    padding-top: 10px;
 }
 
 a {
