@@ -163,6 +163,7 @@ aside {
     text-align: right;
     font-size: smaller;
     opacity: 30%;
+    padding-left: 20px;
     padding-right: 20px;
     padding-top: 15px;
 }
