@@ -17,6 +17,8 @@
     --altbackground: #fdfcff;
     --text: #303030;
     --accent: #d3a500;
+    --for-border: #00000020;
+    --for-ripple: #d3a50090;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +27,8 @@
         --altbackground: #171719;
         --text: #fefefe;
         --accent: #9a99ff;
+        --for-border: #ffffff20;
+        --for-ripple: #9a99ff90;
     }
 }
 
@@ -36,6 +40,8 @@
     --altbackground: #171719;
     --text: #fefefe;
     --accent: #9a99ff;
+    --for-border: #80808030;
+    --for-ripple: #9a99ff90;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,6 +50,8 @@
         --altbackground: #fdfcff;
         --text: #303030;
         --accent: #d3a500;
+        --for-border: #30303030;
+        --for-ripple: #d3a50090;
     }
 }
 
@@ -143,6 +151,10 @@ body {
     border-radius: 20px;
 }
 
+.links li:not(:last-child) {
+    border-bottom: 1px solid var(--for-border);
+}
+
 aside {
     -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -162,7 +174,10 @@ a {
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     font-size: x-large;
     text-decoration: none;
-    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 h2 {
@@ -172,7 +187,7 @@ h2 {
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     color: var(--accent);
     font-size: large;
-    margin-bottom: -5px;
+    margin: 0px;
 }
 
 p {
@@ -182,6 +197,8 @@ p {
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     color: var(--text);
     font-size: medium;
+    padding-top: 8px;
+    margin: 0px;
 }
 
 .links ul {
@@ -191,8 +208,6 @@ p {
 }
 
 .links li {
-    margin-left: 20px;
-    margin-right: 20px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -213,7 +228,6 @@ p {
 
 .links ul li a {
     display: block;
-    width: 100%;
     height: 100%;
     text-decoration: none;
 }
@@ -224,7 +238,7 @@ p {
 .ripple {
     position: absolute;
     border-radius: 50%;
-    background: var(--accent);
+    background: var(--for-ripple);
     opacity: 100%;
     transform: scale(0);
     animation: ripple-effect 0.5s linear forwards;
