@@ -396,17 +396,12 @@
         /></label>
       </div>
       <h1>
-        2.2.1. А стоит ли вообще обновлять After Effects и Premiere Pro до
-        последних версий?
+        2.2.1. А стоит ли вообще обновлять After Effects до последних версий?
       </h1>
       <p>
         Изучите информацию о последних обновлениях и багах в
         <a href="https://helpx.adobe.com/ru/after-effects/using/whats-new.html"
           >After Effects</a
-        >
-        и
-        <a href="https://helpx.adobe.com/ru/premiere-pro/using/whats-new.html"
-          >Premiere Pro</a
         >
         на официальном сайте Adobe, чтобы сформировать собственное мнение по
         этому вопросу.
@@ -856,44 +851,7 @@
         фотографии. Этот сервис способен распознавать шрифты как на латинице,
         так и на кириллице.
       </p>
-      <h1>
-        2.10. Как избавиться от красных и жёлтых полосок на таймлайне в Premiere
-        Pro?
-      </h1>
-      <p>
-        Для этого есть прекрасная функция "Render In to Out", которая позволяет
-        кэшировать предпросмотр, как в After Effects. По умолчанию в программе
-        стоит "бинд" на Enter, который кэширует "красную" полоску, а жёлтые не
-        трогает. Для решения этой проблемы вы можете зайти в Sequence -&gt;
-        Render In to Out и наслаждаться плавным предпросмотром.
-      </p>
-      <aside>Пункт для рендера предпросмотра в пределах рабочей зоны.</aside>
-      <div class="container">
-        <input type="checkbox" id="render_in_to_out_premierepro" /><label
-          for="render_in_to_out_premierepro"
-          ><img src="images/render_in_to_out_premierepro.png"
-        /></label>
-      </div>
-      <h1>
-        2.11. Установил Premiere Pro последних версий, но мне не нравится новое
-        меню экспорта. Как вернуть старый?
-      </h1>
-      <p>
-        Чтобы вернуть старое меню экспорта в Premiere Pro (работает не во всех
-        версиях и только через Ctrl + M), выполните следующие шаги:<br /><br />1.
-        Откройте консоль, нажав Ctrl + F12.<br />2. Нажмите на три полоски рядом
-        с названием окна и выберите "Debug Database View".<br />3. Пролистайте
-        вниз до <mark>Export.Settings.LaunchAsMode</mark> и замените значение
-        "true" на "false". <br />4. Если этого параметра нет, вы можете добавить
-        его вручную в
-        <mark
-          >%UserProfile%/Documents/Adobe/Premiere Pro/XX.X/Debug
-          Database.txt</mark
-        >.<br /><br />Помните, что данная опция может не поддерживаться в
-        некоторых версиях программы, и ее наличие зависит от конкретной версии
-        Premiere Pro.
-      </p>
-      <h1>2.12. А в чём разница Mocha AE и Mocha Pro?</h1>
+      <h1>2.10. А в чём разница Mocha AE и Mocha Pro?</h1>
       <p>
         Mocha AE и Mocha Pro - разные версии программы Mocha от Boris FX. Mocha
         AE поставляется бесплатно с Adobe After Effects и обладает базовыми
@@ -907,7 +865,7 @@
         >.
       </p>
       <h1>
-        2.13. Видел у кого-то в туториале всплывающую панельку, куда пишешь
+        2.11. Видел у кого-то в туториале всплывающую панельку, куда пишешь
         название эффекта, а он применяется на выделенный слой. Как называется?
       </h1>
       <p>
@@ -920,7 +878,7 @@
         удобство работы с программой с помощью комбинации Ctrl + Space.
       </p>
       <h1>
-        2.14. А обязательно ли ставить "одинаковый год" плагинов BorisFX и
+        2.12. А обязательно ли ставить "одинаковый год" плагинов BorisFX и
         Adobe?
       </h1>
       <p>
@@ -930,7 +888,7 @@
         <a href="https://borisfx.com">сайт</a>.
       </p>
       <h1>
-        2.15. Импортировал файл Illustrator с градиентами в After Effects, а они
+        2.13. Импортировал файл Illustrator с градиентами в After Effects, а они
         не корректно переносятся.
       </h1>
       <p>
@@ -939,7 +897,7 @@
         способами или использовать сторонний плагин
         <a href="https://t.me/AEStorage/4677">Overlord</a>.
       </p>
-      <h1>2.16. А что вообще поддерживает Lottie из эффектов?</h1>
+      <h1>2.14. А что вообще поддерживает Lottie из эффектов?</h1>
       <p>
         На официальном сайте LottieFiles существует
         <a href="https://lottiefiles.com/supported-features"
@@ -951,6 +909,80 @@
         Bodymovin или прогонять каждый кадр через Auto-Trace (возможны побочные
         явления в виде большого веса).
       </p>
+      <h1>
+        2.15.1. Видел у людей другой цвет интерфейса After Effects, как мне
+        изменить акцентный цвет?
+      </h1>
+      <p>
+        Для этого перейдите в консоль с помощью комбинации
+        <mark>Ctrl + F12</mark>, затем прожмите три полоски рядом с заголовком
+        <mark>Console</mark> и выберите <mark>Debug Database View</mark>.
+      </p>
+      <div class="container">
+        <input type="checkbox" id="console_debug_database_view" /><label
+          for="console_debug_database_view"
+          ><img src="images/console_debug_database_view.png"
+        /></label>
+        <p>
+          Затем найдите пункт <mark>Enable_Theme_Colorizing</mark> и установите
+          галку рядом с ним. Если галки нет - напишите <mark>true</mark> вместо
+          <mark>false</mark>. После того, как вы проделали эти действия -
+          отправляйтесь в настройки After Effects:
+          <mark>Edit &gt; Preferences &gt; Apperance</mark> и найдите кнопку
+          <mark>Change Color</mark>. Там вы можете выбрать любой цвет, какой вы
+          хотите видеть в качестве акцентного.
+        </p>
+        <div class="container">
+          <input type="checkbox" id="change_color" /><label for="change_color"
+            ><img src="images/change_color.png"
+          /></label>
+        </div>
+        <h1>2.15.2. А как изменить картинку при запуске After Effects?</h1>
+        <p>
+          Не знаю, для чего это вам надо, но такая возможность тоже
+          присутствует, но неофициальным путём. Но помните: после каждого
+          обновления After Effects - ваше произведение искусства при запуске
+          может пропасть и нужно проделывать действия заново, а также после этих
+          действий никто не несёт ответственность за стабильность работы
+          программы.<br /><br />Для этого скачайте и установите программу
+          <a href="https://angusj.com/resourcehacker/reshacker_setup.exe"
+            >Resource Hacker</a
+          >. После открытия программы, откройте в нём
+          <mark>AfterFXLib.dll</mark>, находящийся по пути
+          <mark
+            >C:\Program Files\Adobe\Adobe After Effects 20XX\Support Files</mark
+          >, откройте папку PNG и найдите изображения <mark>AE_SPLASH</mark>,
+          <mark>AE_SPLASH_AT_2X</mark> и <mark>AE_SPLASH_AT_3TO2X</mark> и
+          сохраните их.
+        </p>
+        <div class="container">
+          <input type="checkbox" id="recource_hacker_ae_splash" /><label
+            for="recource_hacker_ae_splash"
+            ><img src="images/recource_hacker_ae_splash.png"
+          /></label>
+        </div>
+        <aside>
+          Окно Recource Hacker с открытым AfterFXLib.dll.<br /><br />В верхней
+          панели инструментов есть кнопки для сохранения изображения, а при
+          нажатии правой кнопки мыши на элементы слева - выйдет контекстное меню
+          с кнопкой для замены и сохранения ресурсов.
+        </aside>
+        <p>
+          После сохранения - отправляйтесь в любой редактор изображений лепить
+          свои шедевры! Если вы уже закончили работать над загрузочным экраном,
+          откройте Recource Hacker обратно, откройте нужный элемент и прожмите
+          <mark>Ctrl + R</mark> и выберите файл для замены. После замены -
+          сохраните .dll файл, но не забудьте сделать резервные копии перед тем,
+          что-либо изменять.
+        </p>
+        <div class="container">
+          <input type="checkbox" id="after_change_startup_image" /><label
+            for="after_change_startup_image"
+            ><img src="images/after_change_startup_image.png"
+          /></label>
+        </div>
+        <aside>Результат колхозной замены стартового экрана.</aside>
+      </div>
     </div>
     <div class="divider" id="errors">
       <span class="material-symbols-outlined">warning</span>#про_ошибки
@@ -978,6 +1010,7 @@
         рекомендуется перекодировать ваши видеоматериалы в другой кодек,
         например, ProRes 422.
       </p>
+      <!-- заменить для афтера!! -->
       <h1>
         3.3. При импорте видео, исходник сильно пересвечивается. Оператор -
         мудак?
@@ -1013,9 +1046,6 @@
         Окно о несовместимости комплектующих ПК. На данном примере Adobe не
         дружит с драйверами на встроенную видеокарту процессора.
       </aside>
-      <p>
-        В Premiere Pro окно отключается в Edit &gt; Preferences &gt; General.
-      </p>
       <h1>
         3.5. Поймал "Effect cannot allocate a buffer larger than 30000 pixels in
         either dimension"
@@ -1073,14 +1103,7 @@
           C:\Program Files\Adobe\Adobe After Effects 20XX\Support
           Files\Dictionaries\ru_ru
         </mark>
-        на <mark>after_effects_en_US.dat</mark>.<br /><br />Если вы хотите
-        поменять язык в Premiere Pro на английский, то вы можете открыть консоль
-        путём нажатия комбинации клавиш Ctrl + F12, затем нажмите на три полоски
-        рядом с названием окна и выберите Debug Database View. Далее - листаем
-        до ApplicationLanguage и вместо вашего языка пишем en_US. Консоль может
-        открываться не у всех, для этого либо переустанавливаем программу с
-        нужным языком, либо редактируем "Debug Database.txt" вручную (если
-        имеется).
+        на <mark>after_effects_en_US.dat</mark>.<br /><br />
       </p>
       <h1>4.1.2. Скачал шаблон из AETemp, а исходники не подключаются.</h1>
       <p>
@@ -1735,10 +1758,10 @@
       </h1>
       <p>
         Это проблема, связанная с определенными версиями After Effects, Premiere
-        Pro и Media Encoder. Рекомендуется либо использовать AfterCodecs или
-        Voukoder, либо избегать сохранения видео в папках с кириллическими
-        символами в пути. Этот баг был устранен в последних выпусках Adobe,
-        поэтому рекомендуется обновиться.
+        Pro и Media Encoder 2023 года. Рекомендуется либо использовать
+        AfterCodecs или Voukoder, либо избегать сохранения видео в папках с
+        кириллическими символами в пути.<br /><br />Этот баг был устранен в
+        последних выпусках Adobe, поэтому рекомендуется обновиться.
       </p>
       <h1>
         5.3. Хочу отрендерить видео с малым весом, а на выходе остаётся файл с
