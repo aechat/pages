@@ -139,14 +139,15 @@ input[type="checkbox"]:checked~label>img {
 
 .header {
     display: block;
-    max-width: 600px;
+    max-width: min-content;
+    max-height: min-content;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     font-family: "Montserrat", Helvetica, sans-serif;
     color: var(--accent);
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     font-size: 48px;
     -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
