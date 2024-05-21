@@ -33,10 +33,11 @@
     />
   </head>
 
-  <body>
+  <body ondragstart="return false;" ondrop="return false;">
     <div class="top_buttons">
-      <span class="material-symbols-outlined" onclick="copyurl()">share</span
-      ><span class="material-symbols-outlined" onclick="toggleTheme()">
+      <span class="material-symbols-outlined" onmousedown="copyurl()"
+        >share</span
+      ><span class="material-symbols-outlined" onmousedown="toggleTheme()">
         contrast
       </span>
     </div>
@@ -47,7 +48,7 @@
       <aside>Шаблоны</aside>
       <ul>
         <li>
-          <a href="https://t.me/s/aetemp" onclick="createRipple(event)">
+          <a href="https://t.me/s/aetemp" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> video_library </span
               >AETemp
@@ -59,7 +60,7 @@
           </a>
         </li>
         <li>
-          <a href="https://t.me/s/premtemp" onclick="createRipple(event)">
+          <a href="https://t.me/s/premtemp" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> subscriptions </span
               >PRTemp
@@ -68,7 +69,10 @@
           </a>
         </li>
         <li>
-          <a href="https://t.me/s/designworld" onclick="createRipple(event)">
+          <a
+            href="https://t.me/s/designworld"
+            onmousedown="createRipple(event)"
+          >
             <h2>
               <span class="material-symbols-outlined"> palette </span>Design
               World
@@ -82,7 +86,7 @@
         <li>
           <a
             href="https://t.me/HiStockBot?start=509060394"
-            onclick="createRipple(event)"
+            onmousedown="createRipple(event)"
           >
             <h2>
               <span class="material-symbols-outlined"> smart_toy </span
@@ -102,7 +106,7 @@
         <li>
           <a
             href="https://t.me/+Qd9xu7A4TeIwNzY6"
-            onclick="createRipple(event)"
+            onmousedown="createRipple(event)"
           >
             <h2>
               <span class="material-symbols-outlined"> terminal </span>склад
@@ -114,7 +118,7 @@
         <li>
           <a
             href="https://t.me/+gSmpjWyhd5w3ZGFi"
-            onclick="createRipple(event)"
+            onmousedown="createRipple(event)"
           >
             <h2>
               <span class="material-symbols-outlined"> manufacturing </span
@@ -129,7 +133,7 @@
         <li>
           <a
             href="https://t.me/+ZqiaMfQRFgM4YmEy"
-            onclick="createRipple(event)"
+            onmousedown="createRipple(event)"
           >
             <h2>
               <span class="material-symbols-outlined"> nutrition</span>яблоневый
@@ -144,7 +148,7 @@
       <aside>FAQ</aside>
       <ul>
         <li>
-          <a href="faq_ae.html" onclick="createRipple(event)">
+          <a href="faq_ae.html" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> help_center </span>FAQ по
               After Effects
@@ -153,7 +157,7 @@
           </a>
         </li>
         <li>
-          <a href="faq_pr.html" onclick="createRipple(event)">
+          <a href="faq_pr.html" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> help_center </span>FAQ по
               Premiere Pro
@@ -162,7 +166,7 @@
           </a>
         </li>
         <li>
-          <a href="faq_ps.html" onclick="createRipple(event)">
+          <a href="faq_ps.html" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> help_center </span>FAQ по
               Photoshop
@@ -178,7 +182,7 @@
         <li>
           <a
             href="https://t.me/joinchat/F1DdXtG9LephYWUy"
-            onclick="createRipple(event)"
+            onmousedown="createRipple(event)"
           >
             <h2><span class="material-symbols-outlined"> chat </span>AEChat</h2>
             <p>Чат для обсуждения вопросов по After Effects и Premiere Pro</p>
@@ -194,7 +198,7 @@
           </aside>
         </li>
         <li>
-          <a href="https://t.me/ru_montage" onclick="createRipple(event)">
+          <a href="https://t.me/ru_montage" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> cut </span>ru_montage
             </h2>
@@ -206,7 +210,10 @@
           </a>
         </li>
         <li>
-          <a href="https://t.me/Technical_Chat" onclick="createRipple(event)">
+          <a
+            href="https://t.me/Technical_Chat"
+            onmousedown="createRipple(event)"
+          >
             <h2>
               <span class="material-symbols-outlined"> display_settings</span
               >Technical Chat
@@ -218,7 +225,7 @@
           </a>
         </li>
         <li>
-          <a href="https://t.me/Sound_Tut" onclick="createRipple(event)">
+          <a href="https://t.me/Sound_Tut" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> volume_up </span>Sound
               Chat
@@ -230,7 +237,7 @@
           </a>
         </li>
         <li>
-          <a href="https://t.me/UpWorkTut" onclick="createRipple(event)">
+          <a href="https://t.me/UpWorkTut" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> work </span>Work Chat
             </h2>
@@ -241,7 +248,10 @@
           </a>
         </li>
         <li>
-          <a href="https://t.me/Blender3DChat" onclick="createRipple(event)">
+          <a
+            href="https://t.me/Blender3DChat"
+            onmousedown="createRipple(event)"
+          >
             <h2>
               <span class="material-symbols-outlined"> deployed_code </span
               >Blender 3D Chat
@@ -253,7 +263,7 @@
           </a>
         </li>
         <li>
-          <a href="https://t.me/Cinema4DChat" onclick="createRipple(event)">
+          <a href="https://t.me/Cinema4DChat" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> thread_unread </span
               >Cinema 4D Chat
@@ -265,7 +275,7 @@
           </a>
         </li>
         <li>
-          <a href="https://t.me/UE_Chat" onclick="createRipple(event)">
+          <a href="https://t.me/UE_Chat" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> tactic </span>Unreal
               Engine Chat
@@ -277,7 +287,7 @@
           </a>
         </li>
         <li>
-          <a href="https://t.me/HoudiniTut" onclick="createRipple(event)">
+          <a href="https://t.me/HoudiniTut" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> lens_blur </span>Houdini
               Chat
@@ -291,7 +301,7 @@
         <li>
           <a
             href="https://t.me/NeuralNetworksTut"
-            onclick="createRipple(event)"
+            onmousedown="createRipple(event)"
           >
             <h2>
               <span class="material-symbols-outlined"> reviews </span>Neural
@@ -309,7 +319,7 @@
       <aside>Черные списки</aside>
       <ul>
         <li>
-          <a href="https://t.me/cgblacklist" onclick="createRipple(event)">
+          <a href="https://t.me/cgblacklist" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> do_not_disturb_off </span
               >CG Blacklist
@@ -317,7 +327,7 @@
           </a>
         </li>
         <li>
-          <a href="https://t.me/kinostop" onclick="createRipple(event)">
+          <a href="https://t.me/kinostop" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> do_not_disturb_off </span
               >Чёрный список киноиндустрии
@@ -325,7 +335,7 @@
           </a>
         </li>
         <li>
-          <a href="https://t.me/AEnedozakaz" onclick="createRipple(event)">
+          <a href="https://t.me/AEnedozakaz" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> do_not_disturb_off </span
               >AEНедозаказчики
@@ -335,7 +345,7 @@
         <li>
           <a
             href="https://t.me/Brickspacer_blacklist"
-            onclick="createRipple(event)"
+            onmousedown="createRipple(event)"
           >
             <h2>
               <span class="material-symbols-outlined"> do_not_disturb_off </span
