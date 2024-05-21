@@ -90,7 +90,7 @@
         адресу
         <a href="https://t.me/HiStockBot?start=509060394">@HiStockBot</a>.
       </p>
-      <h1>1.2. С чего можно начать обучение монтажу и программе в целом?</h1>
+      <h1>1.2. С чего можно начать обучение работы в After Effects?</h1>
       <p>
         Если вы просто хотите с азов изучить After Effects, то рекомендуем этот
         <a
@@ -132,8 +132,23 @@
           >видео от VideoSmile</a
         >.
       </p>
+      <h1>2.1.2.1. А как поставить рендер на процессоре?</h1>
+      <p>
+        Для этого перейдите в <mark>File &gt; Project Manager...</mark> или
+        прожмите комбинацию клавиш <mark>Ctrl + Alt + Shift + K</mark> и во
+        вкладке <mark>Video Rendering and Effects</mark> вы можете выбрать на
+        чём рендерить ваш проект. Пункт
+        <mark>Mercury Software Only</mark> позволяет программе рендерить проект
+        преимущественно через процессор, но сторонние эффекты, принудительно
+        использующие GPU (например Depth Scanner), всё также будут считаться
+        через видеокарту. Данный способ рендера считается самым стабильным и
+        позволяет исключить большинство артефактов на финальном видео. Пункт
+        <mark>Mercury GPU Acceleration (XXXXX)</mark> позволяет After Effects
+        использовать видеокарту, но программа не будет гарантировано считать
+        через неё, об этом в следующем пункте FAQ.
+      </p>
       <h1>
-        2.1.2. А как заставить After Effects использовать всю мощность
+        2.1.2.2. А как заставить After Effects использовать всю мощность
         процессора и видеокарты?
       </h1>
       <p>
@@ -152,6 +167,7 @@
         использовать их при окончательном рендере. Подробнее о применении
         прокси-файлов можно узнать в <a href="#5.4">разделе 5.4</a>.
       </p>
+
       <h1>
         2.1.3. Часто появляется окно "Out of Memory" или "Low memory warning.
         RAM use has been extended for previews.".
@@ -301,13 +317,12 @@
         <mark>VFX Suite</mark> и создать "заливку" через него на нужных слоях, а
         потом из этой "заливки" сделать маску для Adjustment Layer. Подробнее об
         этом способе вы можете посмотреть в видео ниже от
-        <a href="https://t.me/Pavelusha">@pavelusha</a>. <br /><br />
-        <video controls="" width="800">
-          <source
-            src="/images/selective_adjustment_layer.mp4"
-            type="video/mp4"
-          /></video
-        ><br />
+        <a href="https://t.me/Pavelusha">@pavelusha</a>.
+      </p>
+      <video controls="" width="800">
+        <source src="/images/selective_adjustment_layer.mp4" type="video/mp4" />
+      </video>
+      <p>
         Аналогично можно обойтись и без сторонних решений, сделав прекомпозицию
         нужных слоёв, применив Fill с белым цветом и указав полученную маску как
         Track Matte для Adjustment Layer.

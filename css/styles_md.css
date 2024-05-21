@@ -97,7 +97,7 @@ input[type="checkbox"] {
     cursor: zoom-in;
     display: block;
     height: auto;
-    border-radius: 15px;
+    border-radius: 20px;
     -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     -o-transition: -o-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -107,14 +107,9 @@ input[type="checkbox"] {
 }
 
 video {
-    max-height: 600px;
     max-width: 100%;
-    margin-top: -15px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
     height: auto;
-    border-radius: 15px;
+    border-radius: 20px;
     -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     -o-transition: -o-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
