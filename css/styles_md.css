@@ -366,13 +366,3 @@ details {
     border-bottom: solid #30303030 3px;
     padding: 30px;
 }
-
-
-/* для страницы 404 */
-
-.non_page h1 {
-    color: var(--accent);
-    border-left: none;
-    font-size: 64px;
-    text-align: center;
-}
