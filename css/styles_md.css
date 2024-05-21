@@ -294,6 +294,14 @@ mark {
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.no_mark_color {
+    background-color: #00000000;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 
 /* подписи под изображениями */
 
@@ -359,10 +367,12 @@ details {
     padding: 30px;
 }
 
-.no_mark_color {
-    background-color: #00000000;
-}
 
-* {
-    -webkit-tap-highlight-color: transparent;
+/* для страницы 404 */
+
+.non_page h1 {
+    color: var(--accent);
+    border-left: none;
+    font-size: 64px;
+    text-align: center;
 }
