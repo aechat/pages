@@ -70,9 +70,6 @@
 /* каркас */
 
 body {
-    -webkit-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     display: flexbox;
     max-width: 800px;
@@ -86,65 +83,46 @@ body {
 
 /* заглавная часть сайта */
 
-.logo {
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    display: block;
-    max-width: min-content;
-    max-height: min-content;
-    text-align: center;
+.header {
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     margin-left: auto;
     margin-right: auto;
-    font-family: "Montserrat", Helvetica, sans-serif;
-    color: var(--accent);
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 48px;
-}
-
-.logo:hover {
-    transform: scale(0.9);
-}
-
-.top_buttons {
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -moz-box;
+    position: sticky;
+    top: 0;
+    height: 65px;
+    z-index: 100;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
+    background-color: var(--background);
     align-items: center;
-    padding: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    list-style-type: none;
+}
+
+#menu_toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.menu_button {
+    align-items: center;
+}
+
+.logo {
+    font-family: "Montserrat";
+    color: var(--accent);
+    font-weight: 900;
+    font-size: 24px;
 }
 
 
 /* ссылки */
 
 .links {
-    -webkit-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin-left: auto;
+    margin-right: auto;
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     margin-bottom: 25px;
     background-color: var(--altbackground);
@@ -156,9 +134,6 @@ body {
 }
 
 aside {
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     text-align: right;
     font-size: smaller;
@@ -169,9 +144,6 @@ aside {
 }
 
 a {
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     font-size: x-large;
     text-decoration: none;
@@ -182,9 +154,6 @@ a {
 }
 
 h2 {
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     color: var(--accent);
     font-size: large;
@@ -192,9 +161,6 @@ h2 {
 }
 
 p {
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     color: var(--text);
     font-size: medium;
@@ -221,9 +187,6 @@ p {
 }
 
 .links li:not(:last-child) {
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-bottom 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-bottom 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-bottom 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-bottom 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -261,4 +224,11 @@ p {
 
 * {
     -webkit-tap-highlight-color: transparent;
+}
+
+
+/* убрать выделение текста */
+
+* {
+    user-select: none;
 }
