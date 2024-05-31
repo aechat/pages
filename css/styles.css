@@ -18,7 +18,8 @@
     --text: #303030;
     --accent: #d3a500;
     --accent-alt: #d3a50050;
-    --status-bar-color: #f7f6f9;
+    --for-border: #00000020;
+    --for-ripple: #d3a50090;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +29,8 @@
         --text: #fefefe;
         --accent: #9a99ff;
         --accent-alt: #9a99ff50;
-        --status-bar-color: #000000;
+        --for-border: #ffffff20;
+        --for-ripple: #9a99ff90;
     }
 }
 
@@ -41,7 +43,8 @@
     --text: #fefefe;
     --accent: #9a99ff;
     --accent-alt: #9a99ff50;
-    --status-bar-color: #000000;
+    --for-border: #80808030;
+    --for-ripple: #9a99ff90;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,38 +53,198 @@
         --altbackground: #fdfcff;
         --text: #303030;
         --accent: #d3a500;
-        --accent-alt: #d3a50050;
-        --status-bar-color: #f7f6f9;
+        --for-border: #30303030;
+        --for-ripple: #d3a50090;
     }
 }
 
-
-/* шрифтовые иконки */
-
 .material-symbols-outlined {
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     vertical-align: text-top;
     margin-right: 5px;
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 36;
+    color: var(--accent);
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 36
 }
 
 
 /* каркас */
 
 body {
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: flexbox;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
     background-color: var(--background);
     color: var(--text);
     font-family: "Manrope", Helvetica, sans-serif;
-    -webkit-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 
-/* изображения */
+/* заглавная часть сайта */
+
+.header {
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: var(--accent);
+    margin-left: auto;
+    margin-right: auto;
+    position: sticky;
+    top: 0;
+    height: 65px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--background);
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    list-style-type: none;
+}
+
+#menu_toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.menu_button {
+    align-items: center;
+}
+
+.logo {
+    font-family: "Montserrat";
+    color: var(--accent);
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    margin-right: auto;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+
+/* ссылки */
+
+.links {
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* margin-bottom: 25px; */
+    background-color: var(--altbackground);
+    border-radius: 20px;
+}
+
+.links li:not(:last-child) {
+    border-bottom: 1px solid var(--for-border);
+}
+
+aside {
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    text-align: right;
+    font-size: smaller;
+    opacity: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+a {
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: x-large;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+h2 {
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: var(--accent);
+    font-size: large;
+    margin: 0px;
+}
+
+p {
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: var(--text);
+    font-size: medium;
+    padding-top: 8px;
+    margin: 0px;
+}
+
+.links ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.links li:first-child {
+    padding-top: 3px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.links li:last-child {
+    padding-bottom: 3px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.links li:not(:last-child) {
+    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-bottom 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.links ul li a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+}
+
+
+/* анимация нажатия */
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--for-ripple);
+    opacity: 100%;
+    transform: scale(0);
+    animation: ripple-effect 0.5s linear forwards;
+}
+
+@keyframes ripple-effect {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+/* убрать синюю обводку при нажатии на ссылки с мобилок */
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* убрать выделение текста */
+
+* {
+    user-select: none;
+}
+
+
+/* для faq и прочих markdown-like страниц */
 
 input[type="checkbox"] {
     display: none;
@@ -129,66 +292,10 @@ input[type="checkbox"]:checked~label>img {
     cursor: zoom-out;
 }
 
-
-/* заголовок */
-
-.header {
-    display: block;
-    max-width: min-content;
-    max-height: min-content;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: "Montserrat", Helvetica, sans-serif;
-    color: var(--accent);
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 48px;
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+.content * {
+    font-size: medium;
+    /* padding: 0; */
 }
-
-.header:hover {
-    transform: scale(0.9);
-}
-
-
-/* функциональные кнопки сверху */
-
-.top_buttons {
-    color: var(--accent);
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-
-/* сам faq */
 
 .content {
     max-width: 800px;
@@ -204,13 +311,10 @@ input[type="checkbox"]:checked~label>img {
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-
-/* разделятор + прилипание */
-
 .divider {
     position: -webkit-sticky;
     position: sticky;
-    top: 0px;
+    top: 60px;
     z-index: 1000;
     margin-left: auto;
     margin-right: auto;
@@ -220,23 +324,10 @@ input[type="checkbox"]:checked~label>img {
     font-weight: bolder;
     word-wrap: break-word;
     background-color: var(--background);
-    -webkit-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-
-/* стилизация */
-
-.material-symbols-outlined {
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-h1 {
+.content h1 {
     border-left: 4px solid var(--accent);
     color: var(--accent);
     font-weight: bold;
@@ -246,36 +337,28 @@ h1 {
     padding-left: 20px;
     padding-right: 20px;
     word-wrap: break-word;
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-p {
+.content p {
     color: var(--text);
     margin-left: auto;
     margin-right: auto;
     line-height: 1.5;
     padding-left: 25px;
     padding-right: 25px;
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-a {
+.content a {
+    padding: 0;
     color: var(--accent);
     font-weight: bold;
     text-decoration: none;
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-mark {
+.content mark {
     background-color: var(--accent-alt);
     color: var(--text);
     padding-left: 5px;
@@ -283,9 +366,6 @@ mark {
     line-height: 24px;
     border-radius: 5px;
     word-wrap: break-word;
-    -webkit-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -293,14 +373,9 @@ mark {
     background-color: #00000000;
 }
 
-* {
-    -webkit-tap-highlight-color: transparent;
-}
-
-
 /* подписи под изображениями */
 
-aside {
+.content aside {
     display: block;
     margin: 40px;
     max-width: 600px;
@@ -317,6 +392,10 @@ aside {
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 
 /* спойлер */
 
@@ -331,9 +410,6 @@ summary {
     display: block;
     font-weight: bold;
     cursor: pointer;
-    -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 

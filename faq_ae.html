@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/styles_md.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="shortcut icon"
       href="icons/faq_page_icon.ico"
@@ -12,21 +12,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>aefaq</title>
   </head>
-  <body>
+  <body ondragstart="return false;" ondrop="return false;">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <div class="top_buttons">
-      <a href="index.html"
-        ><span class="material-symbols-outlined"> arrow_back_ios </span></a
-      >
-      <span class="material-symbols-outlined" onclick="toggleTheme()">
-        contrast
-      </span>
+
+    <div class="header">
+      <li class="menu">
+        <input id="menu_toggle" type="checkbox" />
+        <label class="menu_button" for="menu_toggle"
+          ><span class="material-symbols-outlined" style="cursor: pointer"
+            >menu</span
+          ></label
+        >
+      </li>
+      <li class="logo">aefaq</li>
+      <li class="toggletheme" style="cursor: pointer" onclick="toggleTheme()">
+        <span class="material-symbols-outlined">contrast</span>
+      </li>
     </div>
+    <script src="css/copyurl.js"></script>
     <script src="css/toggletheme.js"></script>
-    <div class="header">aefaq</div>
     <div class="content">
       <br />
       <center>
