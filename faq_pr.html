@@ -18,7 +18,7 @@
     <meta charset="UTF-8" />
     <title>prfaq</title>
   </head>
-  <body>
+  <body ondragstart="return false;" ondrop="return false;">
     <div class="header">
       <li
         class="menu"
@@ -40,11 +40,26 @@
     <div class="sidemenu hidden">
       <ul>
         <li>
-          <a
-            href="index.html"
-            onmousedown="createRipple(event)"
-            >На главную</a
+          <a href="index.html" onmousedown="createRipple(event)">На главную</a>
+        </li>
+        <li>
+          <a href="#where_find" onmousedown="createRipple(event)">#про_поиск</a>
+        </li>
+        <li>
+          <a href="#from_newbies" onmousedown="createRipple(event)"
+            >#вопросы_от_новичков</a
           >
+        </li>
+        <li>
+          <a href="#errors" onmousedown="createRipple(event)">#про_ошибки</a>
+        </li>
+        <li>
+          <a href="#install_errors" onmousedown="createRipple(event)"
+            >#проблемы_с_установкой</a
+          >
+        </li>
+        <li>
+          <a href="#render" onmousedown="createRipple(event)">#про_рендер</a>
         </li>
         <li>
           <a href="about.html" onmousedown="createRipple(event)">О сайте</a>
@@ -52,6 +67,7 @@
       </ul>
     </div>
     <script src="css/sidemenu.js"></script>
+    <script src="css/ripple_anim.js"></script>
     <script src="css/copyurl.js"></script>
     <script src="css/toggletheme.js"></script>
     <aside>&nbsp;</aside>
@@ -64,17 +80,11 @@
       <center>
         <p>
           На данный момент этот раздел пока что находится на очень ранней стадии
-          заполнения и структурирования контента. Не переживайте - это
-          временно.<br /><br />
-          Если вы хотите поддержать проект - пишите свои предложения по
-          улучшению статьи в
-          <a href="https://github.com/aechat/pages/issues">Issues на GitHub</a>
-          или помогите автору материально на
-          <a href="https://yoomoney.ru/to/410016763684808">ЮMoney</a>.
+          заполнения и структурирования контента. Не переживайте - это временно.
         </p>
       </center>
     </div>
-    <aside>&nbsp;</aside>
+    <aside id="where_find">&nbsp;</aside>
     <div class="content">
       <h1>
         1.1.1. Где скачать Adobe, Twixtor, Magic Bullet Looks, BCC, Sapphire и
@@ -141,7 +151,7 @@
         >, про которого мы упоминали в <a href="faq_ae.html">aefaq</a>.
       </p>
     </div>
-    <aside>#вопросы_от_новичков</aside>
+    <aside id="from_newbies">#вопросы_от_новичков</aside>
     <div class="content">
       <!-- <h1>2.x.x. Почему у меня, б%@#ь, лагает Premiere Pro?</h1>
     <p>Потому что гладиолус.</p>
@@ -264,7 +274,7 @@
         Premiere Pro.
       </p>
     </div>
-    <aside>#про_ошибки</aside>
+    <aside id="errors">#про_ошибки</aside>
     <div class="content">
       <h1>
         3.x.x. При импорте видео, исходник сильно пересвечивается. Оператор -
@@ -318,7 +328,7 @@
         /></label>
       </div>
     </div>
-    <aside>#проблемы_с_установкой</aside>
+    <aside id="install_errors">#проблемы_с_установкой</aside>
     <div class="content">
       <h1>
         4.x.x. Посоветовали сменить язык из-за проблем с шаблонами, но как это
@@ -740,7 +750,7 @@
         >.
       </p>
     </div>
-    <aside>#про_рендер</aside>
+    <aside id="render">#про_рендер</aside>
     <div class="content">
       <h1>
         5.x. Отрендерил видео через Media Encoder или Premiere Pro, а на выходе

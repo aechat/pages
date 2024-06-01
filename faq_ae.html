@@ -38,11 +38,26 @@
     <div class="sidemenu hidden">
       <ul>
         <li>
-          <a
-            href="index.html"
-            onmousedown="createRipple(event)"
-            >На главную</a
+          <a href="index.html" onmousedown="createRipple(event)">На главную</a>
+        </li>
+        <li>
+          <a href="#where_find" onmousedown="createRipple(event)">#про_поиск</a>
+        </li>
+        <li>
+          <a href="#from_newbies" onmousedown="createRipple(event)"
+            >#вопросы_от_новичков</a
           >
+        </li>
+        <li>
+          <a href="#errors" onmousedown="createRipple(event)">#про_ошибки</a>
+        </li>
+        <li>
+          <a href="#install_errors" onmousedown="createRipple(event)"
+            >#проблемы_с_установкой</a
+          >
+        </li>
+        <li>
+          <a href="#render" onmousedown="createRipple(event)">#про_рендер</a>
         </li>
         <li>
           <a href="about.html" onmousedown="createRipple(event)">О сайте</a>
@@ -50,22 +65,10 @@
       </ul>
     </div>
     <script src="css/sidemenu.js"></script>
+    <script src="css/ripple_anim.js"></script>
     <script src="css/copyurl.js"></script>
     <script src="css/toggletheme.js"></script>
-    <aside>&nbsp;</aside>
-    <div class="content">
-      <center>
-        <span class="material-symbols-outlined" style="opacity: 50%">info</span>
-        <p>
-          Если вы хотите поддержать проект - пишите свои предложения по
-          улучшению статьи в
-          <a href="https://github.com/aechat/pages/issues">Issues на GitHub</a>
-          или помогите автору материально на
-          <a href="https://yoomoney.ru/to/410016763684808">ЮMoney</a>.
-        </p>
-      </center>
-    </div>
-    <aside>&nbsp;</aside>
+    <aside id="where_find">&nbsp;</aside>
     <div class="content">
       <h1>
         1.1.1. Где скачать Adobe, Twixtor, Magic Bullet Looks, BCC, Sapphire и
@@ -128,7 +131,7 @@
         <a href="https://www.youtube.com/@AEPlug">AEPlug</a>.
       </p>
     </div>
-    <aside>#вопросы_от_новичков</aside>
+    <aside id="from_newbies">#вопросы_от_новичков</aside>
     <div class="content">
       <h1>2.1.1. Почему у меня, б%@#ь, лагает After Effects?</h1>
       <p>
@@ -1132,7 +1135,7 @@
         <aside>Результат колхозной замены стартового экрана.</aside>
       </div>
     </div>
-    <aside>#про_ошибки</aside>
+    <aside id="errors">#про_ошибки</aside>
     <div class="content">
       <h1>
         3.1. Вылезло "Error: Cached preview needs 2 or more frames for
@@ -1244,7 +1247,7 @@
         ПК.
       </p>
     </div>
-    <aside>#проблемы_с_установкой</aside>
+    <aside id="install_errors">#проблемы_с_установкой</aside>
     <div class="content">
       <h1 id="4.1.1">
         4.1.1. Скачал шаблон из AETemp, а выражения/экспрешены не хотят работать
@@ -1848,7 +1851,7 @@
         от Adobe.
       </p>
     </div>
-    <aside>#про_рендер</aside>
+    <aside id="render">#про_рендер</aside>
     <div class="content">
       <h1 id="5.1">
         5.1. Как корректно выводить видео в .mp4 через After Effects?

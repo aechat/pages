@@ -18,17 +18,19 @@
     <meta charset="UTF-8" />
     <title>psfaq</title>
   </head>
-  <body>
+  <body ondragstart="return false;" ondrop="return false;">
     <style>
       @media (prefers-color-scheme: dark) {
         :root {
           --accent: #31a8ff;
           --accent-alt: #31a8ff50;
+          --for-ripple: #31a8ff90;
         }
       }
       .dark-mode {
         --accent: #31a8ff;
         --accent-alt: #31a8ff50;
+        --for-ripple: #31a8ff90;
       }
     </style>
     <link
@@ -56,10 +58,27 @@
     <div class="sidemenu hidden">
       <ul>
         <li>
-          <a
-            href="index.html"
-            onmousedown="createRipple(event)"
-            >На главную</a
+          <a href="index.html" onmousedown="createRipple(event)">На главную</a>
+        </li>
+        <li>
+          <a href="#where_find" onmousedown="createRipple(event)">#про_поиск</a>
+        </li>
+        <li>
+          <a href="#from_newbies" onmousedown="createRipple(event)"
+            >#вопросы_от_новичков</a
+          >
+        </li>
+        <li>
+          <a href="#errors" onmousedown="createRipple(event)">#про_ошибки</a>
+        </li>
+        <li>
+          <a href="#install_errors" onmousedown="createRipple(event)"
+            >#проблемы_с_установкой</a
+          >
+        </li>
+        <li>
+          <a href="#render" onmousedown="createRipple(event)"
+            >#про_cохранение</a
           >
         </li>
         <li>
@@ -68,6 +87,7 @@
       </ul>
     </div>
     <script src="css/sidemenu.js"></script>
+    <script src="css/ripple_anim.js"></script>
     <script src="css/copyurl.js"></script>
     <script src="css/toggletheme.js"></script>
     <aside>&nbsp;</aside>
@@ -80,31 +100,26 @@
       <center>
         <p>
           На данный момент этот раздел пока что находится на очень ранней стадии
-          заполнения контента из-за отсутствия нужных вопросов. <br /><br />
-          Если вы хотите поддержать проект - пишите свои предложения по
-          улучшению статьи в
-          <a href="https://github.com/aechat/pages/issues">Issues на GitHub</a>
-          или помогите автору материально на
-          <a href="https://yoomoney.ru/to/410016763684808">ЮMoney</a>.
+          заполнения контента из-за отсутствия нужных вопросов.
         </p>
       </center>
     </div>
-    <aside>&nbsp;</aside>
+    <aside id="where_find">&nbsp;</aside>
     <div class="content">
       <h1>1. Автор все ещё в раздумьях о чём тут писать?</h1>
       <p>Конечно, если у вас есть идеи - пишите по ссылке выше.</p>
     </div>
-    <aside>#вопросы_от_новичков</aside>
+    <aside id="from_newbies">#вопросы_от_новичков</aside>
     <div class="content">
       <h1>2.x.x.</h1>
       <p>Ого!</p>
     </div>
-    <aside>#про_ошибки</aside>
+    <aside id="errors">#про_ошибки</aside>
     <div class="content">
       <h1>3.x.x.</h1>
       <p>Жесть!</p>
     </div>
-    <aside>#проблемы_с_установкой</aside>
+    <aside id="install_errors">#проблемы_с_установкой</aside>
     <div class="content">
       <h1>
         4.x.x. Скачал Photoshop из склада, а в нём не работает Generative Fill.
@@ -364,7 +379,7 @@
         >.
       </p>
     </div>
-    <aside>#про_cохранение</aside>
+    <aside id="render">#про_cохранение</aside>
     <div class="content">
       <h1>5.x.x.</h1>
       <p>Да ну на!</p>

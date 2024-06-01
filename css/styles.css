@@ -20,6 +20,7 @@
     --accent-alt: #d3a50050;
     --for-border: #00000020;
     --for-ripple: #d3a50090;
+    --for-shadow: #00000040;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,6 +32,7 @@
         --accent-alt: #9a99ff50;
         --for-border: #ffffff20;
         --for-ripple: #9a99ff90;
+        --for-shadow: #60606040;
     }
 }
 
@@ -45,6 +47,7 @@
     --accent-alt: #9a99ff50;
     --for-border: #80808030;
     --for-ripple: #9a99ff90;
+    --for-shadow: #60606040;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -55,6 +58,7 @@
         --accent: #d3a500;
         --for-border: #30303030;
         --for-ripple: #d3a50090;
+        --for-shadow: #00000040;
     }
 }
 
@@ -84,7 +88,7 @@ body {
 
 .header {
     background-color: var(--background);
-    filter: drop-shadow(0 0 5px #00000030);
+    filter: drop-shadow(0 0 15px var(--for-ripple));
     color: var(--accent);
     margin-left: auto;
     margin-right: auto;
@@ -143,6 +147,36 @@ body {
     border-bottom: 1px solid var(--for-border);
 }
 
+.links ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.links li:first-child {
+    /* padding-top: 3px; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.links li:last-child {
+    /* padding-bottom: 3px; */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.links ul li a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+}
+
 aside {
     text-align: right;
     font-size: smaller;
@@ -175,36 +209,6 @@ p {
     margin: 0px;
 }
 
-.links ul {
-    position: relative;
-    list-style: none;
-    padding: 0;
-}
-
-.links li {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.links li:first-child {
-    /* padding-top: 3px; */
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-.links li:last-child {
-    /* padding-bottom: 3px; */
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.links ul li a {
-    display: block;
-    height: 100%;
-    text-decoration: none;
-}
-
 
 /* анимация нажатия */
 
@@ -231,25 +235,28 @@ p {
 
 /* для гамбургер-меню */
 
-
-/* FIXME: исправить отступы по высоте */
-
 .sidemenu {
-    background-color: var(--altbackground);
-    filter: drop-shadow(0 0 5px #00000030);
+    background-color: var(--background);
+    filter: drop-shadow(0 40px 20px var(--for-shadow));
     margin-top: 10px;
     max-width: 800px;
-    z-index: 50;
+    z-index: 1500;
     position: fixed;
     border-radius: 20px;
+    transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    opacity: 0;
 }
 
 .hidden {
-    display: none;
+    opacity: 0;
 }
 
 .visible {
-    display: block;
+    opacity: 1;
+}
+
+.display-none {
+    visibility: hidden;
 }
 
 .sidemenu ul {
@@ -263,7 +270,6 @@ p {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    ;
 }
 
 .sidemenu p {
@@ -283,15 +289,17 @@ p {
 }
 
 .sidemenu li:first-child {
-    padding-top: 5px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
 .sidemenu li:last-child {
-    padding-bottom: 5px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+.sidemenu li:not(:last-child) {
+    border-bottom: 1px solid var(--for-border);
 }
 
 @media screen and (width<800px) {
@@ -486,7 +494,7 @@ details {
 /* глобальные анимации */
 
 * {
-    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-bottom 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-bottom 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), filter 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 
