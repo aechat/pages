@@ -20,24 +20,42 @@
   </head>
   <body>
     <div class="header">
-      <li class="menu">
+      <li
+        class="menu"
+        style="padding-top: 15px; padding-bottom: 15px"
+        onclick="toggleSidemenu()"
+      >
         <input id="menu_toggle" type="checkbox" />
-        <label class="menu_button" for="menu_toggle"
-          ><span class="material-symbols-outlined" style="cursor: pointer"
+        <label class="menu_button" for="menu_toggle">
+          <span class="material-symbols-outlined" style="cursor: pointer"
             >menu</span
-          ></label
-        >
+          >
+        </label>
       </li>
-      <li class="logo">prfaq</li>
+      <li class="logo" onclick="copyurl()" style="cursor: pointer">prfaq</li>
       <li class="toggletheme" style="cursor: pointer" onclick="toggleTheme()">
         <span class="material-symbols-outlined">contrast</span>
       </li>
     </div>
+    <div class="sidemenu hidden">
+      <ul>
+        <li>
+          <a
+            href="index.html"
+            onmousedown="createRipple(event)"
+            >На главную</a
+          >
+        </li>
+        <li>
+          <a href="about.html" onmousedown="createRipple(event)">О сайте</a>
+        </li>
+      </ul>
+    </div>
+    <script src="css/sidemenu.js"></script>
     <script src="css/copyurl.js"></script>
     <script src="css/toggletheme.js"></script>
     <aside>&nbsp;</aside>
     <div class="content">
-      <br />
       <center>
         <span class="material-symbols-outlined" style="opacity: 50%"
           >warning</span
@@ -343,7 +361,7 @@
         скомпилированный файл C++ через MinGW в .exe, содержащий команду на
         выключение ПК с операционной системой Windows.
       </p>
-      <video controls="" width="600">
+      <video controls="" width="800">
         <source src="/images/fake_trojan_example.mp4" type="video/mp4" />
       </video>
       <p>

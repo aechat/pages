@@ -35,19 +35,38 @@
 
   <body ondragstart="return false;" ondrop="return false;">
     <div class="header">
-      <li class="menu">
+      <li
+        class="menu"
+        style="padding-top: 15px; padding-bottom: 15px"
+        onclick="toggleSidemenu()"
+      >
         <input id="menu_toggle" type="checkbox" />
-        <label class="menu_button" for="menu_toggle"
-          ><span class="material-symbols-outlined" style="cursor: pointer"
+        <label class="menu_button" for="menu_toggle">
+          <span class="material-symbols-outlined" style="cursor: pointer"
             >menu</span
-          ></label
-        >
+          >
+        </label>
       </li>
-      <li class="logo">aelinks</li>
+      <li class="logo" onclick="copyurl()" style="cursor: pointer">aelinks</li>
       <li class="toggletheme" style="cursor: pointer" onclick="toggleTheme()">
         <span class="material-symbols-outlined">contrast</span>
       </li>
     </div>
+    <div class="sidemenu hidden">
+      <ul>
+        <li>
+          <a
+            href="https://github.com/aechat/pages"
+            onmousedown="createRipple(event)"
+            >Исходный код на GitHub</a
+          >
+        </li>
+        <li>
+          <a href="about.html" onmousedown="createRipple(event)">О сайте</a>
+        </li>
+      </ul>
+    </div>
+    <script src="css/sidemenu.js"></script>
     <script src="css/copyurl.js"></script>
     <script src="css/toggletheme.js"></script>
     <aside>Шаблоны</aside>

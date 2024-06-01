@@ -84,6 +84,7 @@ body {
 /* заглавная часть сайта */
 
 .header {
+    background-color: var(--background);
     filter: drop-shadow(0 0 5px #00000030);
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     color: var(--accent);
@@ -96,11 +97,17 @@ body {
     z-index: 100;
     display: flex;
     justify-content: space-between;
-    background-color: var(--background);
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
     list-style-type: none;
+}
+
+@media screen and (width>800px) {
+    .header {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
 }
 
 #menu_toggle {
@@ -131,7 +138,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    /* margin-bottom: 25px; */
     background-color: var(--altbackground);
     border-radius: 20px;
 }
@@ -189,13 +195,13 @@ p {
 }
 
 .links li:first-child {
-    padding-top: 3px;
+    /* padding-top: 3px; */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
 .links li:last-child {
-    padding-bottom: 3px;
+    /* padding-bottom: 3px; */
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -230,6 +236,88 @@ p {
     to {
         transform: scale(2);
         opacity: 0;
+    }
+}
+
+
+/* для гамбургер-меню */
+
+
+/* FIXME: исправить отступы по высоте */
+
+.sidemenu {
+    background-color: var(--altbackground);
+    filter: drop-shadow(0 0 5px #00000030);
+    margin-top: 10px;
+    max-width: 800px;
+    z-index: 50;
+    position: fixed;
+    border-radius: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.sidemenu ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidemenu li {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    ;
+}
+
+.sidemenu p {
+    margin: 0;
+}
+
+.sidemenu a {
+    font-size: medium;
+    line-height: 0.75;
+    color: var(--text);
+}
+
+.sidemenu ul li a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+}
+
+.sidemenu li:first-child {
+    padding-top: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.sidemenu li:last-child {
+    padding-bottom: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+@media screen and (width<800px) {
+    .sidemenu {
+        margin: 0;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .sidemenu li:first-child {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .sidemenu li:last-child {
+        border-bottom-left-radius: 0px;
     }
 }
 
