@@ -70,7 +70,6 @@
 /* каркас */
 
 body {
-    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     display: flexbox;
     max-width: 800px;
     margin-left: auto;
@@ -86,7 +85,6 @@ body {
 .header {
     background-color: var(--background);
     filter: drop-shadow(0 0 5px #00000030);
-    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     color: var(--accent);
     margin-left: auto;
     margin-right: auto;
@@ -137,7 +135,6 @@ body {
 .links {
     margin-left: auto;
     margin-right: auto;
-    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: var(--altbackground);
     border-radius: 20px;
 }
@@ -147,7 +144,6 @@ body {
 }
 
 aside {
-    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     text-align: right;
     font-size: smaller;
     opacity: 30%;
@@ -158,7 +154,6 @@ aside {
 }
 
 a {
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     font-size: x-large;
     text-decoration: none;
     padding-left: 20px;
@@ -168,14 +163,12 @@ a {
 }
 
 h2 {
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     color: var(--accent);
     font-size: large;
     margin: 0px;
 }
 
 p {
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     color: var(--text);
     font-size: medium;
     padding-top: 8px;
@@ -204,10 +197,6 @@ p {
     /* padding-bottom: 3px; */
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-}
-
-.links li:not(:last-child) {
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-bottom 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .links ul li a {
@@ -369,7 +358,6 @@ input[type="checkbox"]:checked~label>img {
     padding-left: 20px;
     word-wrap: break-word;
     background-color: var(--background);
-    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 
@@ -389,7 +377,6 @@ input[type="checkbox"]:checked~label>img {
     border-radius: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .content h1 {
@@ -404,7 +391,6 @@ input[type="checkbox"]:checked~label>img {
     padding-left: 20px;
     padding-right: 20px;
     word-wrap: break-word;
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .content p {
@@ -416,7 +402,6 @@ input[type="checkbox"]:checked~label>img {
     margin-bottom: 10px;
     padding-left: 25px;
     padding-right: 25px;
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .content a {
@@ -424,7 +409,6 @@ input[type="checkbox"]:checked~label>img {
     color: var(--accent);
     font-weight: bold;
     text-decoration: none;
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .content mark {
@@ -435,7 +419,6 @@ input[type="checkbox"]:checked~label>img {
     line-height: 24px;
     border-radius: 5px;
     word-wrap: break-word;
-    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .no_mark_color {
@@ -456,7 +439,6 @@ input[type="checkbox"]:checked~label>img {
     font-weight: bold;
     font-size: smaller;
     text-align: center;
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 
@@ -473,7 +455,6 @@ summary {
     display: block;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 summary:hover {
@@ -499,6 +480,13 @@ details {
     border-top: solid #30303030 3px;
     border-bottom: solid #30303030 3px;
     padding: 30px;
+}
+
+
+/* глобальные анимации */
+
+* {
+    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-bottom 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), border-left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 
