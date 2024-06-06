@@ -20,7 +20,7 @@
     --accent-alt: #d3a50050;
     --for-border: #00000020;
     --for-ripple: #d3a50090;
-    --for-shadow: #00000040;
+    --for-shadow: #00000020;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,7 +58,7 @@
         --accent: #d3a500;
         --for-border: #30303030;
         --for-ripple: #d3a50090;
-        --for-shadow: #00000040;
+        --for-shadow: #00000020;
     }
 }
 
@@ -96,7 +96,6 @@ body {
     top: 0;
     z-index: 1000;
     height: 65px;
-    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -199,14 +198,14 @@ a {
 h2 {
     color: var(--accent);
     font-size: large;
-    margin: 0px;
+    margin: 0;
 }
 
 p {
     color: var(--text);
     font-size: medium;
     padding-top: 8px;
-    margin: 0px;
+    margin: 0;
 }
 
 
@@ -237,26 +236,25 @@ p {
 
 .sidemenu {
     background-color: var(--background);
-    filter: drop-shadow(0 40px 20px var(--for-shadow));
+    filter: drop-shadow(0 20px 20px var(--for-shadow));
     margin-top: 10px;
     max-width: 800px;
     z-index: 1500;
     position: fixed;
     border-radius: 20px;
-    transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     opacity: 0;
+    visibility: hidden;
 }
 
 .hidden {
     opacity: 0;
+    visibility: hidden;
 }
 
 .visible {
     opacity: 1;
-}
-
-.display-none {
-    visibility: hidden;
+    visibility: visible;
 }
 
 .sidemenu ul {
@@ -305,16 +303,16 @@ p {
 @media screen and (width<800px) {
     .sidemenu {
         margin: 0;
-        border-bottom-left-radius: 0px;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
     .sidemenu li:first-child {
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
     .sidemenu li:last-child {
-        border-bottom-left-radius: 0px;
+        border-bottom-left-radius: 0;
     }
 }
 
@@ -326,12 +324,10 @@ input[type="checkbox"] {
 }
 
 .container img {
-    max-height: 600px;
+    max-height: 800px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    cursor: -webkit-zoom-in;
-    cursor: -moz-zoom-in;
     cursor: zoom-in;
     display: block;
     height: auto;
@@ -356,7 +352,6 @@ input[type="checkbox"]:checked~label>img {
 
 .divider {
     font-size: smaller;
-    /* top: 60px; */
     height: 25px;
     z-index: 1000;
     text-align: right;
