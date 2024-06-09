@@ -25,3 +25,17 @@ const sidemenu = document.querySelector(".sidemenu");
 
 header.addEventListener("touchmove", preventScroll, { passive: false });
 sidemenu.addEventListener("touchmove", preventScroll, { passive: false });
+
+// закрытие sidemenu при нажатии на другой контент
+
+document.addEventListener("click", function (event) {
+  if (isToggling) return;
+  if (!sidemenu.contains(event.target)) {
+    if (sidemenu.classList.contains("visible")) {
+      toggleSidemenu();
+    }
+  }
+});
+sidemenu.addEventListener("click", function (event) {
+  event.stopPropagation();
+});
