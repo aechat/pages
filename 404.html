@@ -2,16 +2,44 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>с днём отсутствия страницы!</title>
-  </head>
-  <body ondragstart="return false;" ondrop="return false;">
+    <link
+      rel="shortcut icon"
+      href="icons/main_page_icon.ico"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
+    <title>с днём отсутствия страницы!</title>
+  </head>
+  <style>
+    /* FIXME: необходимо сделать плавную анимацию видео при переключении темы */
+    :root {
+      video {
+        filter: invert(0%);
+      }
+      .dark-mode video {
+        filter: invert(100%);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        video {
+          filter: invert(100%);
+        }
+        .dark-mode video {
+          filter: invert(0%);
+        }
+      }
+    }
+  </style>
+  <body ondragstart="return false;" ondrop="return false;">
     <div class="header">
       <li
         class="menu"
@@ -25,7 +53,7 @@
           >
         </label>
       </li>
-      <li class="logo" onclick="copyurl()" style="cursor: pointer">ae404</li>
+      <li class="logo" onclick="copyurl()" style="cursor: pointer">oops!</li>
       <li class="toggletheme" style="cursor: pointer" onclick="toggleTheme()">
         <span class="material-symbols-outlined">contrast</span>
       </li>
@@ -35,22 +63,33 @@
         <li>
           <a href="index.html" onmousedown="createRipple(event)">На главную</a>
         </li>
+        <h1 style="cursor: default" id="commit_date"></h1>
       </ul>
     </div>
     <script src="css/sidemenu.js"></script>
     <script src="css/ripple_anim.js"></script>
     <script src="css/copyurl.js"></script>
     <script src="css/toggletheme.js"></script>
+    <script src="css/commit_date.js"></script>
     <aside>&nbsp;</aside>
     <div class="content">
       <h1>404. Я куда-то нажал и всё исчезло!</h1>
       <p>Видимо кто-то накосячил с ссылкой и попал сюда.</p>
-      <div class="container">
-        <input type="checkbox" id="404" /><label for="404"
-          ><img src="images/a-hat-in-time-404.gif"
-        /></label>
-      </div>
-      <aside>С кем не бывает.</aside>
+      <center>
+        <video
+          playsinline
+          autoplay
+          muted
+          loop
+          width="500"
+          type="video/webm"
+          src="images/a-hat-in-time-404.webm"
+        ></video>
+      </center>
+      <aside>
+        С кем не бывает. Пожалуйста, вернитесь на главную страницу с помощью
+        меню в "шапке" сайта.
+      </aside>
     </div>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
