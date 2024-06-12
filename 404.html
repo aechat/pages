@@ -63,33 +63,58 @@
         <li>
           <a href="index.html" onmousedown="createRipple(event)">На главную</a>
         </li>
-        <h1 style="cursor: default" id="commit_date"></h1>
+        <!-- ?: бессмыслен на этой странице <h1 style="cursor: default" id="commit_date"></h1> -->
       </ul>
     </div>
     <script src="css/sidemenu.js"></script>
     <script src="css/ripple_anim.js"></script>
     <script src="css/copyurl.js"></script>
     <script src="css/toggletheme.js"></script>
-    <script src="css/commit_date.js"></script>
+    <!-- ?: бессмыслен на этой странице <script src="css/commit_date.js"></script> -->
     <aside>&nbsp;</aside>
+    <div class="links">
+      <ul>
+        <li>
+          <a
+            href="mailto:m1sh3r@ya.ru?subject=Битая ссылка в links"
+            onmousedown="createRipple(event)"
+          >
+            <h2>
+              <span class="material-symbols-outlined"> error </span>Сообщить об
+              ошибке
+            </h2>
+          </a>
+        </li>
+      </ul>
+    </div>
     <div class="content">
       <h1>404. Я куда-то нажал и всё исчезло!</h1>
-      <p>Видимо кто-то накосячил с ссылкой и попал сюда.</p>
-      <center>
-        <video
-          playsinline
-          autoplay
-          muted
-          loop
-          width="500"
-          type="video/webm"
-          src="images/a-hat-in-time-404.webm"
-        ></video>
-      </center>
-      <aside>
-        С кем не бывает. Пожалуйста, вернитесь на главную страницу с помощью
-        меню в "шапке" сайта.
+      <p>
+        Видимо кто-то накосячил с ссылкой и попал сюда. Пожалуйста, вернитесь на
+        главную страницу с помощью меню в "шапке" сайта.
+      </p>
+      <aside style="padding-top: 10px; padding-bottom: 10px" id="errormessage">
+        Ваш браузер блокирует автозапуск звука. Чтобы его включить, нажмите на
+        анимацию.
       </aside>
+      <video
+        playsinline
+        autoplay
+        muted
+        loop
+        id="videoElement"
+        type="video/webm"
+        style="margin-bottom: -30px"
+        src="images/a-hat-in-time-404.webm"
+      ></video>
+      <audio
+        autoplay
+        controls
+        loop
+        id="audioElement"
+        style="height: 0; opacity: 0"
+        src="images/glukoza_nostra.mp3"
+      ></audio>
     </div>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -133,6 +158,31 @@
           alt=""
         /></div
     ></noscript>
+    <!-- autoplay audio -->
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        let audioElement = document.getElementById("audioElement");
+        let videoElement = document.getElementById("videoElement");
+        let errorMessage = document.getElementById("errormessage");
+        audioElement
+          .play()
+          .then(() => {
+            errorMessage.style.display = "none";
+          })
+          .catch((error) => {
+            errorMessage.style.display = "block";
+            videoElement.addEventListener(
+              "click",
+              function () {
+                audioElement.play().catch((error) => {
+                  console.log("Ошибка воспроизведения:", error);
+                });
+              },
+              { once: true }
+            );
+          });
+      });
+    </script>
     <!-- /Yandex.Metrika counter -->
     <script src="css/scroll_with_offset.js"></script>
     <script src="css/copytext.js"></script>
