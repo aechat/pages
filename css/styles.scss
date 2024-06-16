@@ -17,6 +17,12 @@
   }
 }
 
+// fixme: исправить анимацию у sidemenu
+
+.disable-animation * {
+  transition: color 0s, background-color 0s;
+}
+
 body {
   background-color: var(--background);
   color: var(--text);

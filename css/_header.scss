@@ -1,12 +1,11 @@
 @import "variables";
 
-// !: переписать header как тег, а не как класс в html файлах
-
-.header {
+header {
   align-items: center;
-  background-color: var(--background);
+  background-color: var(--header-background);
   color: var(--accent);
   display: flex;
+  backdrop-filter: blur(50px) brightness(125%) saturate(0%);
   filter: drop-shadow(0 0 15px var(--for-ripple));
   height: 65px;
   justify-content: space-between;
@@ -19,7 +18,7 @@
 }
 
 @media screen and (width > 800px) {
-  .header {
+  header {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
