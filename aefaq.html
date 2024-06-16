@@ -9,21 +9,20 @@
       href="icons/faq_page_icon.ico"
       type="image/x-icon"
     />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>aefaq</title>
-  </head>
-  <body ondragstart="return false;" ondrop="return false;">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
+    <title>aefaq</title>
+  </head>
+
+  <body ondragstart="return false;" ondrop="return false;">
     <div class="header">
-      <li
-        class="menu"
-        style="padding-top: 15px; padding-bottom: 15px"
-        onclick="toggleSidemenu()"
-      >
-        <input id="menu_toggle" type="checkbox" />
+      <li class="menu" onclick="toggleSidemenu()">
         <label class="menu_button" for="menu_toggle">
           <span class="material-symbols-outlined" style="cursor: pointer"
             >menu</span
@@ -41,47 +40,419 @@
           <a href="index.html" onmousedown="createRipple(event)">На главную</a>
         </li>
         <li>
-          <a href="#where_find" onmousedown="createRipple(event)">#про_поиск</a>
+          <a href="about.html" onmousedown="createRipple(event)">О сайте</a>
+        </li>
+        <h2>Разделы:</h2>
+        <li>
+          <a href="#where_find" onmousedown="createRipple(event)"
+            >Полезные материалы</a
+          >
         </li>
         <li>
           <a href="#from_newbies" onmousedown="createRipple(event)"
-            >#вопросы_от_новичков</a
+            >Вопросы от новичков</a
           >
         </li>
         <li>
-          <a href="#errors" onmousedown="createRipple(event)">#про_ошибки</a>
+          <a href="#errors" onmousedown="createRipple(event)">Частые ошибки</a>
         </li>
         <li>
           <a href="#install_errors" onmousedown="createRipple(event)"
-            >#проблемы_с_установкой</a
+            >Проблемы с установкой</a
           >
         </li>
         <li>
-          <a href="#render" onmousedown="createRipple(event)">#про_рендер</a>
+          <a href="#render" onmousedown="createRipple(event)">Про рендер</a>
         </li>
-        <li>
-          <a href="about.html" onmousedown="createRipple(event)">О сайте</a>
-        </li>
+        <h2 style="cursor: default" id="commit_date"></h2>
       </ul>
     </div>
-    <script src="css/sidemenu.js"></script>
-    <script src="css/ripple_anim.js"></script>
-    <script src="css/copyurl.js"></script>
-    <script src="css/toggletheme.js"></script>
-    <aside id="where_find">&nbsp;</aside>
-    <div class="content"></div>
-    <aside id="from_newbies">#вопросы_от_новичков</aside>
-    <div class="content"></div>
-    <aside id="errors">#про_ошибки</aside>
-    <div class="content"></div>
-    <aside id="install_errors">#проблемы_с_установкой</aside>
+    <script src="js/scroll_with_offset.js"></script>
+    <script src="js/copytext.js"></script>
+    <script src="js/sidemenu.js"></script>
+    <script src="js/ripple_anim.js"></script>
+    <script src="js/copyurl.js"></script>
+    <script src="js/toggletheme.js"></script>
+    <script src="js/commit_date.js"></script>
+    <script src="js/photo_zoom.js"></script>
+    <aside id="where_find">Полезные материалы</aside>
     <div class="content">
+      <h2>
+        Где скачать шаблоны, программы для творчества, а также плагины к ним?
+      </h2>
+      <p>
+        На <a href="index.html">главной странице</a> в разделе "Ресурсы" и в
+        закрепленном сообщении в
+        <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a> вы всегда
+        можете найти наши каналы для шаблонов и программ. Например, в
+        <a href="https://t.me/s/aetemp">AETemp</a> можно найти звуки, переходы и
+        шаблоны с помощью хештегов: <mark>#звуки</mark> <mark>#переходы</mark>
+        <mark>#шаблоны</mark> <mark>#плагины</mark>. А в
+        <a href="https://t.me/+Qd9xu7A4TeIwNzY6">складе стройматериалов</a> вы
+        можете найти конкретные программы или плагины для Windows, например:
+        <mark>#aftereffects</mark> <mark>#magicbullet</mark>
+        <mark>#borisfx</mark> или <mark>#twixtor</mark>
+      </p>
+      <h2>
+        Не нашёл нужный шаблон, но у меня есть на него ссылка. Как мне его
+        получить?
+      </h2>
+      <p>
+        У нас имеется бот
+        <a href="https://t.me/HiStockBot?start=509060394">HiStock в Telegram</a>
+        для оперативной покупки шаблонов с платформ
+        <a href="https://elements.envato.com">Envato Elements</a> (файлы из
+        Videohive, Shutter Stock не принимаются),
+        <a href="https://.freepik.com/">Freepik</a>,
+        <a href="https://motionarray.com/">Motion Array</a> и
+        <a href="https://artlist.io/">Artlist</a> по выгодным ценам.
+      </p>
+      <h2>Где взять бесплатные стоковые видео для видеороликов?</h2>
+      <p>
+        Существует множество бесплатных видео-стоков онлайн, среди которых
+        многие предоставляют материалы с лицензией Creative Commons Zero (CC0),
+        что означает возможность использования их в своих коммерческих проектах,
+        не указывая авторство. Перед использованием материалов, необходимо
+        внимательно ознакомиться с условиями использования на каждом конкретном
+        ресурсе. Ниже перечислены популярные источники видео:
+      </p>
+      <p>
+        <a href="https://www.pexels.com/videos/">Pexels</a>,
+        <a href="https://pixabay.com/videos/">Pixabay</a>,
+        <a href="https://www.videvo.net/">Videvo</a>,
+        <a href="https://coverr.co/">Coverr</a>,
+        <a href="https://www.splitshire.com">SplitShire</a>,
+        <a href="https://mazwai.com/">Mazvai</a>,
+        <a href="https://www.videezy.com/">Videezy</a>,
+        <a href="https://www.vidsplay.com/">Vidsplay</a>,<a
+          href="https://cutestockfootage.com/"
+          >CuteStockFootage</a
+        >,
+        <a href="http://mitchmartinez.com/free-4k-red-epic-stock-footage/"
+          >Mitch Martinez</a
+        >, <a href="https://mixkit.co/">Mixkit</a>,
+        <a href="https://www.xstockvideo.com/">XStockVideos</a>,
+        <a href="https://www.clipstill.com/">Clipstill</a>,
+        <a href="https://vimeo.com/groups/freehd/">Phil Fred на Vimeo</a>,
+        <a href="https://www.ignitemotion.com/">IgniteMotion</a> и
+        <a
+          href="https://www.youtube.com/playlist?list=PLTDgOUcX23hZdwKWhKhWp3H2D5nmWhpvv"
+          >абстрактные фоны на YouTube</a
+        >
+      </p>
+      <p>
+        Некоторые ресурсы могут быть заблокированы на территории РФ или других
+        стран, используйте <a href="https://censortracker.org/">обходы</a> для
+        доступа на данные ресурсы.
+      </p>
+      <h2>Где взять бесплатную статичную графику?</h2>
+      <p>
+        У нас есть канал
+        <a href="https://t.me/s/DesignWorld">Design World в Telegram</a> с
+        полезными материалами для графических редакторов, как Photoshop и
+        Illustrator. В данном канале есть навигация по каналу для нахождения
+        всякой всячины, например: <mark>#текстуры</mark> <mark>#шрифты</mark>
+        <mark>#кисти</mark> <mark>#паттерны</mark>
+      </p>
+      <p>
+        Если вам не хватает контента из
+        <a href="https://t.me/s/DesignWorld">Design World</a>, то ниже
+        предоставлен список различных сайтов с бесплатными графическими
+        материалами:
+      </p>
+      <p>
+        <!-- fixme: написать сайты для статичных картинок -->
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </p>
+      <h2>
+        С фото и видео разобрались, но я хочу найти бесплатные звуки, где они
+        находятся?
+      </h2>
+      <p>
+        Если вам не хватает ассортимента из
+        <a href="https://t.me/s/aetemp">AETemp</a>, то ниже представлен список
+        сайтов с бесплатными звуками:
+      </p>
+      <p>
+        <a href="https://www.audiomicro.com/free-sound-effects">Audiomicro</a>,
+        <a href="https://www.zapsplat.com/">Zapsplat</a>,
+        <a href="https://www.freesfx.co.uk/">FreeSFX</a>,
+        <a href="https://www.freesoundslibrary.com/">FreeSoundLibrary</a>,
+        <a href="https://soundbible.com/">SoundBible</a>,
+        <a href="https://www.soundeffectsplus.com/">soundeffects+</a> и
+        <a href="https://freesound.org/">freesound</a>
+      </p>
+      <p>
+        Перед использованием звуков в коммерческих целях - обязательно прочтите
+        условия использования и лицензии, чтобы не попасть в неприятную
+        ситуацию.
+      </p>
+      <h2>Хочу влиться в After Effects, с чего мне начать?</h2>
+      <p>
+        Для изучения After Effects с нуля - рекомендуем пройти
+        <a
+          href="https://www.youtube.com/watch?v=nogR7eyhYug&amp;list=PLcN7xY5E2wrmIU__8uNIHglZTyZ29RMIM"
+          >курс от Ильи Зернова</a
+        >
+        для того, чтобы разобраться в интерфейсе программы и не задавать глупых
+        вопросов уже в начале пути. Если вы уже достаточно уверенный
+        пользователь программы, но не знаете куда дальше направляться -
+        рекомендуем посетить каналы
+        <a href="https://www.youtube.com/@BenMarriott">Ben Marriot</a>,
+        <a href="https://www.youtube.com/@JakeInMotion">Jake In Motion</a>,
+        <a href="https://www.youtube.com/@TutoView">Tutorial View+</a>,
+        <a href="https://www.youtube.com/@VideoSmile">VideoSmile</a> и
+        <a href="https://www.youtube.com/@AEPlug">AEPlug</a>. Удачи в
+        начинаниях!
+      </p>
     </div>
-    <aside id="render">#про_рендер</aside>
+    <aside id="from_newbies">Вопросы от новичков</aside>
     <div class="content">
-        
+      <h2>Почему у меня, б%@#ь, лагает After Effects и в чём же причина?</h2>
+      <p>
+        Никто не может назвать конкретную причину этого явления, ведь всё
+        упирается в то, что вы делаете в вашем проекте: делаете
+        неоптимизированные "эдиты", собираете простую композицию или пытаетесь
+        монтировать часовое видео в программе, которая изначально для этого не
+        презначалась.
+      </p>
+      <p>
+        Для начала проверьте ваш компьютер на соответствие
+        <a
+          href="https://helpx.adobe.com/ru/after-effects/system-requirements.html"
+          >системным требованиям
+        </a>
+        программы, ведь для адекватной работы - необходимо как минимум 16 ГБ ОЗУ
+        и процессор от Intel минимум 8-го поколения или AMD Ryzer минимум 1000
+        серии. Но несмотря на это, можно запустить программу и на более слабом
+        железе, главное соблюдать минимальные требования.
+      </p>
+      <p>
+        Предположим, что ваша рабочая станция прекрасно соответствует системным
+        требованиям, но вы не учли тот факт, что вы используете сторонние
+        плагины. А зачастую именно сторонние плагины и есть проблема ваших
+        "лагов". Старайтесь не устанавливать в программу всевозможные плагины из
+        разных источников и не мешать в проекте сторонние эффекты с одинаковой
+        сутью, но от разных брендов, например <mark>BCC Camera Shake</mark> и
+        <mark>uni.shake</mark>, ведь они могут тормозить из-за разных принципов
+        просчёта кадра.
+      </p>
+      <p>
+        Для того, чтобы выяснить, сколько времени занимает просчёт кадра из-за
+        эффекта, разработчики внедрили в After Effects функцию
+        <mark>Render Time</mark>.
+      </p>
+      <img
+        src="images/render_time_example.png"
+        alt="Демонстрация функции Render Time"
+      />
+      <aside>
+        На Solid были применены эффекты от Boris FX Sapphire, которые могут
+        значительно отнимать ваше время для рендера
+      </aside>
+      <p>
+        Есть ещё отдельная категория проблем пользователей связанная с
+        оптимизацией и гигиеной проекта, касающаяся исходников видео, фото и
+        аудио.
+      </p>
+      <p>
+        Если вы используете <mark>H.264</mark> или любое видео .mp4 с интернета
+        или различных видеохостингов - то переконвертируйте их в
+        <mark>Apple Prores 422</mark> или <mark>DNxHR</mark> через Media Encoder
+        или <a href="https://www.shutterencoder.com/">Shutter Encoder</a>, так
+        как такие видео зачастую конвертируются неизвестно во что и могут плохо
+        крутиться программой. Более подробную информацию об области применения
+        кодеков вы можете посмотреть в
+        <a href="https://www.youtube.com/watch?v=MprgQSTqL9E"
+          >видео от VideoSmile</a
+        >.
+      </p>
+      <p>
+        Если у вас используются видео-исходники с переменным FPS, то такие видео
+        также надо переконвертировать через вышеназванные утилиты в постоянный
+        FPS. Этот совет касается и видео с переменным битрейтом.
+      </p>
+      <p>
+        Все аудио, использующиеся в проекте, стоит перевести в .wav, ведь оно
+        может проигрываться рывками, замедленно или с другими звуковыми багами.
+      </p>
+      <p>
+        Иногда важную роль в производительности играет накопитель, на котором
+        лежат исходники. Если вы с M.2 SSD ничего не почувствуете, то при
+        использовании тяжеловесных исходников с HDD могут начаться проблемы.
+        Если у вас есть SSD с большим объёмом памяти - следует перенести весь
+        проект туда и продолжить работу.
+      </p>
+      <h2>
+        Для чего некоторые пользователи ставят рендер на процессор и как это
+        сделать?
+      </h2>
+      <p>
+        Использование рендера на процессоре уменьшает количество возможных
+        артефактов и приколов после рендера вашего проекта, нежели при
+        использовании псевдо-ускорения на GPU. При рендере на процессоре ваше
+        время рендера может незначительно измениться в худшую сторону, но
+        зачастую - остается плюс-минус таким же.
+      </p>
+      <p>
+        Для включения рендера на процессоре - перейдите в
+        <mark>File &gt; Project Manager</mark> или нажмите комбинацию клавиш
+        <mark>Ctrl + Alt + Shift + K</mark> и во вкладке Video Rendering and
+        Effects вы можете выбрать на чём рендерить ваш проект.
+      </p>
+      <img
+        src="images/project_manager_mercury.png"
+        alt="Окно Project Manager"
+      />
+      <aside>Окно Project Manager с выбором типа рендеринга</aside>
+      <p>
+        Пункт <mark>Mercury Software Only</mark> позволяет программе рендерить
+        проект преимущественно через процессор, но сторонние эффекты,
+        принудительно использующие GPU (например Depth Scanner), всё также будут
+        считаться через видеокарту.
+      </p>
+      <p>
+        Пункт <mark>Mercury GPU Acceleration (CUDA / OpenCL)</mark> позволяет
+        After Effects использовать видеокарту, но программа не будет
+        гарантировано считать все эффекты через неё и возможны проблемы при
+        использовании в долгосрочной перспективе.
+      </p>
+      <h2>
+        Как заставить After Effects использовать всю можность процессора и
+        видеокарты?
+      </h2>
+      <p>
+        Вы можете задействовать весь потенциал вашего процессора, включив
+        функцию Multi-Frame Rendering в настройках программы. Эта функция
+        позволит рендерить несколько кадров одновременно, используя всю
+        вычислительную мощь процессора.
+      </p>
+      <img
+        src="images/enable_multiframe_render.png"
+        alt="Включение Multi-Frame рендера"
+      />
+      <aside>
+        Данная опция находится в Edit &gt; Preferences &gt; Memory &amp;
+        Perfomance
+      </aside>
+      <p>
+        В настройках можно ограничить использование процессора при Multi-Frame
+        рендере для того, чтобы дать другим программам возможность использования
+        процессора.
+      </p>
+      <p>
+        Пожалуйста - не путайте значения и внимательно читайте пункт настройки:
+        25% в настройке означает тот факт, что 75% вашего процессора будет
+        уделено After Effects при использовании Multi-Frame рендера. Если вы
+        установите там 90%, то After Effects будет использовать всего лишь 10%
+        мощностей процессора и такая функция становится просто бессмысленной.
+      </p>
+      <p>
+        Поговорим и про видеокарту: After Effects до сих пор не умеет полностью
+        использовать графический процессор (GPU), даже если сторонние эффекты
+        поддерживают его - программа не обязана в полной мере задействовать
+        видеокарту. Основное воздействие на видео и эффекты происходит с
+        акцентом на центральный процессор (CPU), особенно при использовании
+        множества различных плагинов от разных разработчиков, что может снизить
+        эффективность GPU-рендера.
+      </p>
+      <h2>Предпросмотр идёт как будто в slow-mo, что делать?</h2>
+      <p>
+        Для начала проверьте настройки вашего окна Preview и убедитесь, что
+        параметр FPS установлен на Auto и что две опции кэширования
+        <mark>Cache before playback </mark> и
+        <mark>If caching, play caching frames</mark> активированы. Это позволит
+        воспроизводить предпросмотр из кэша, минуя рендер в реальном времени, и
+        при необходимости сохранять данные на диск или оперативную память, в
+        зависимости от текущего состояния кэша.
+      </p>
+      <img src="images/preview_settings.png" alt="Окно Preview" />
+      <aside>Окно Preview для демонстрации настроек для предпросмотра</aside>
+      <!-- fixme: рассказать почему видео проигрывается как слоумо -->
+      <p>Почему это так происходит?</p>
     </div>
-    <br /><br />
+    <aside id="errors">Частые ошибки</aside>
+    <div class="content">
+      <h2>
+        Часто появляется окно "Out of Memory" или "Low memory warning. RAM use
+        has been extended for previews."
+      </h2>
+      <p>
+        В данном случае виден налицо факт переполнения оперативной памяти,
+        вызванный неоптимизированностью проекта или неправильными настройками
+        проекта и программы. Убедитесь что вы не используете картинки с большим
+        разрешением, не используете больше 8 бит цвета в проекте и не
+        перегружаете себя множеством эффектов.
+      </p>
+      <p>
+        Для решения этой проблемы могу дать вам несколько советов: очищайте кэш
+        с помощью <mark>Edit &gt; Purge &gt; All Cache</mark>, перекодируйте
+        исходники в монтажный кодек, установите программу
+        <a href="https://github.com/henrypp/memreduct/releases">Mem Reduct</a>
+        для автоматической очистки оперативной памяти при её заполнении или по
+        времени и активируйте файл подкачки в настройках ПК (если вы используете
+        Windows):
+        <mark>
+          Параметры &gt; О системе &gt; Дополнительные параметры системы &gt;
+          Быстродействие &gt; Виртуальная память
+        </mark>
+        и укажите параметры, как на видео ниже.
+      </p>
+      <video
+        autoplay=""
+        loop=""
+        style="filter: saturate(0)"
+        src="images/set_pagefile.webm"
+        type="video/webm"
+      ></video>
+      <aside>Установка файла подкачки на Windows 11</aside>
+      <p>
+        Бывает такое, что некоторые неуверенные пользователи After Effects могут
+        выделить неправильное количество оперативной памяти в
+        <mark>Edit &gt; Preferences &gt; Memory &amp; Perfomance</mark>,
+        покопавшись в настройках не вникая в их суть.
+      </p>
+      <p>
+        Проблема заключается в том, что пользователь зачем-то выделяет
+        максимально возможное количество ОЗУ не самой программе, а другим
+        используемым программам в фоне, думая что он выделяет всю память для
+        After Effects. На скриншоте показана типичная ошибка новичка, который
+        выделил 14.4 ГБ ОЗУ остальным программам, а для After Effects оставил
+        всего лишь 1 ГБ ОЗУ и впоследствии натыкается на ошибки про нехватку
+        оперативной памяти.
+      </p>
+      <img
+        src="images/how_not_to_allocate_memory.png"
+        alt="Как не надо выделять память"
+      />
+      <aside>Неправильное выделение оперативной памяти</aside>
+
+      <p>
+        Для правильного выделения памяти - зажмите число и потяните его
+        максимально влево или укажите <mark>0</mark>, нажав на число выделяемой
+        оперативной памяти для других программ, и нажмите Enter.
+      </p>
+      <img
+        src="images/how_to_allocate_memory.png"
+        alt="Как надо выделять память"
+      />
+      <aside>
+        Правильное выделение оперативной памяти. В данном случае, ниже 3 ГБ
+        установить не получится
+      </aside>
+
+      <!-- fixme: написать про копозы-прокси-файлы -->
+      <!-- fixme: Также можно предварительно рендерить прокси-файлы в полном качестве для композиций и использовать их при окончательном рендере. Подробнее о применении прокси-файлов можно узнать в [разделе 5.4](#5.4). -->
+    </div>
+    <aside id="install_errors">Проблемы с установкой</aside>
+    <div class="content"></div>
+    <aside id="render">Про рендер</aside>
+    <div class="content"></div>
+    <aside>&nbsp;</aside>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
@@ -125,7 +496,5 @@
         /></div
     ></noscript>
     <!-- /Yandex.Metrika counter -->
-    <script src="css/scroll_with_offset.js"></script>
-    <script src="css/copytext.js"></script>
   </body>
 </html>

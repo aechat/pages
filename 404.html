@@ -41,12 +41,7 @@
   </style>
   <body ondragstart="return false;" ondrop="return false;">
     <div class="header">
-      <li
-        class="menu"
-        style="padding-top: 15px; padding-bottom: 15px"
-        onclick="toggleSidemenu()"
-      >
-        <input id="menu_toggle" type="checkbox" />
+      <li class="menu" onclick="toggleSidemenu()">
         <label class="menu_button" for="menu_toggle">
           <span class="material-symbols-outlined" style="cursor: pointer"
             >menu</span
@@ -63,14 +58,16 @@
         <li>
           <a href="index.html" onmousedown="createRipple(event)">На главную</a>
         </li>
-        <!-- ?: бессмыслен на этой странице <h1 style="cursor: default" id="commit_date"></h1> -->
+        <!-- ?: бессмыслен на этой странице <h2 style="cursor: default" id="commit_date"></h2> -->
       </ul>
     </div>
-    <script src="css/sidemenu.js"></script>
-    <script src="css/ripple_anim.js"></script>
-    <script src="css/copyurl.js"></script>
-    <script src="css/toggletheme.js"></script>
-    <!-- ?: бессмыслен на этой странице <script src="css/commit_date.js"></script> -->
+    <script src="js/scroll_with_offset.js"></script>
+    <script src="js/copytext.js"></script>
+    <script src="js/sidemenu.js"></script>
+    <script src="js/ripple_anim.js"></script>
+    <script src="js/copyurl.js"></script>
+    <script src="js/toggletheme.js"></script>
+    <!-- ?: бессмыслен на этой странице <script src="js/commit_date.js"></script> -->
     <aside>&nbsp;</aside>
     <div class="links">
       <ul>
@@ -88,7 +85,7 @@
       </ul>
     </div>
     <div class="content">
-      <h1>404. Я куда-то нажал и всё исчезло!</h1>
+      <h2>404. Я куда-то нажал и всё исчезло!</h2>
       <p>
         Видимо кто-то накосячил с ссылкой и попал сюда. Пожалуйста, вернитесь на
         главную страницу с помощью меню в "шапке" сайта.
@@ -184,7 +181,5 @@
       });
     </script>
     <!-- /Yandex.Metrika counter -->
-    <script src="css/scroll_with_offset.js"></script>
-    <script src="css/copytext.js"></script>
   </body>
 </html>

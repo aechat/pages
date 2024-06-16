@@ -14,10 +14,12 @@
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
-    <meta charset="UTF-8" />
     <title>psfaq</title>
   </head>
+
   <body ondragstart="return false;" ondrop="return false;">
     <style>
       @media (prefers-color-scheme: dark) {
@@ -27,6 +29,7 @@
           --for-ripple: #31a8ff90;
         }
       }
+
       .dark-mode {
         --accent: #31a8ff;
         --accent-alt: #31a8ff50;
@@ -38,12 +41,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <div class="header">
-      <li
-        class="menu"
-        style="padding-top: 15px; padding-bottom: 15px"
-        onclick="toggleSidemenu()"
-      >
-        <input id="menu_toggle" type="checkbox" />
+      <li class="menu" onclick="toggleSidemenu()">
         <label class="menu_button" for="menu_toggle">
           <span class="material-symbols-outlined" style="cursor: pointer"
             >menu</span
@@ -61,309 +59,70 @@
           <a href="index.html" onmousedown="createRipple(event)">На главную</a>
         </li>
         <li>
-          <a href="#where_find" onmousedown="createRipple(event)">#про_поиск</a>
+          <a href="about.html" onmousedown="createRipple(event)">О сайте</a>
+        </li>
+        <h2>Разделы:</h2>
+        <li>
+          <a href="#where_find" onmousedown="createRipple(event)"
+            >Полезные материалы</a
+          >
         </li>
         <li>
           <a href="#from_newbies" onmousedown="createRipple(event)"
-            >#вопросы_от_новичков</a
+            >Вопросы от новичков</a
           >
         </li>
         <li>
-          <a href="#errors" onmousedown="createRipple(event)">#про_ошибки</a>
+          <a href="#errors" onmousedown="createRipple(event)">Частые ошибки</a>
         </li>
         <li>
           <a href="#install_errors" onmousedown="createRipple(event)"
-            >#проблемы_с_установкой</a
+            >Проблемы с установкой</a
           >
         </li>
         <li>
-          <a href="#render" onmousedown="createRipple(event)"
-            >#про_cохранение</a
-          >
+          <a href="#render" onmousedown="createRipple(event)">Про сохранение</a>
         </li>
-        <li>
-          <a href="about.html" onmousedown="createRipple(event)">О сайте</a>
-        </li>
+        <h2 style="cursor: default" id="commit_date"></h2>
       </ul>
     </div>
-    <script src="css/sidemenu.js"></script>
-    <script src="css/ripple_anim.js"></script>
-    <script src="css/copyurl.js"></script>
-    <script src="css/toggletheme.js"></script>
+    <script src="js/scroll_with_offset.js"></script>
+    <script src="js/copytext.js"></script>
+    <script src="js/sidemenu.js"></script>
+    <script src="js/ripple_anim.js"></script>
+    <script src="js/copyurl.js"></script>
+    <script src="js/toggletheme.js"></script>
+    <script src="js/commit_date.js"></script>
+    <script src="js/photo_zoom.js"></script>
+    <aside id="where_find">Полезные материалы</aside>
+    <div class="content">
+      <h2>
+        Где скачать шаблоны, программы для творчества, а также плагины к ним?
+      </h2>
+      <p>
+        На <a href="index.html">главной странице</a> в разделе
+        &quot;Ресурсы&quot; и в закрепленном сообщении в
+        <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a> вы всегда
+        можете найти наши каналы для шаблонов и программ. Например, в
+        <a href="https://t.me/s/designworld">Design World</a> можно найти
+        различные текстуры, кисти, паттерны и многое другое для Photoshop и
+        Illustrator с помощью соответствующих хештегов: с соответствующих
+        хештегов: <mark>#текстуры</mark> <mark>#кисти</mark>
+        <mark>#паттерны</mark> . А в
+        <a href="https://t.me/+Qd9xu7A4TeIwNzY6">складе стройматериалов</a> вы
+        можете найти конкретные программы, например: <mark>#photoshop</mark>
+        <mark>#illustrator</mark> или <mark>#borisfx</mark>
+      </p>
+    </div>
+    <aside id="from_newbies">Вопросы от новичков</aside>
+    <div class="content"></div>
+    <aside id="errors">Частые ошибки</aside>
+    <div class="content"></div>
+    <aside id="install_errors">Проблемы с установкой</aside>
+    <div class="content"></div>
+    <aside id="render">Про сохранение</aside>
+    <div class="content"></div>
     <aside>&nbsp;</aside>
-    <aside id="where_find">&nbsp;</aside>
-    <div class="content">
-    </div>
-    <aside id="from_newbies">#вопросы_от_новичков</aside>
-    <div class="content">
-    </div>
-    <aside id="errors">#про_ошибки</aside>
-    <div class="content">
-    </div>
-    <aside id="install_errors">#проблемы_с_установкой</aside>
-    <div class="content">
-      <h1>
-        4.x.x. Скачал Photoshop из склада, а в нём не работает Generative Fill.
-        Что делать?
-      </h1>
-      <p>
-        Забыть про эту функцию на нелегальных версиях. Firefly является
-        серверной функцией и обрабатывается на серверах Adobe. Единственным
-        текущим решением является оформление подписки Creative Cloud или
-        использование плагинов для соединения Photoshop и Stable Diffusion
-        (требуется мощный ПК). Если у вас слабый ПК - вы можете установить
-        упрощённую сборку Stable Diffusion Forge из
-        <a href="https://github.com/lllyasviel/stable-diffusion-webui-forge"
-          >GitHub</a
-        >
-      </p>
-      <h1>
-        4.x.x. Скачал Photoshop со склада, а мне говорят при запуске, что у меня
-        недействительная лицензия.
-      </h1>
-      <p>
-        Заблокируйте программе доступ в интернет через файрвол или Netlimiter.
-        Если не помогло - скопируйте строчки из списка ниже и вставьте в
-        <mark>C:\Windows\System32\drivers\etc\hosts</mark> или переустановите
-        программу ещё раз.
-      </p>
-      <details>
-        <summary>Адреса для блокировки доступа Adobe в интернет</summary>
-        <aside>
-          Вы можете нажать на текст с ссылками и оно скопируется в буфер обмена.
-        </aside>
-        <p class="under_summary">
-          <mark class="no_mark_color">
-            0.0.0.0 ic.adobe.io<br />
-            0.0.0.0 cc-api-data.adobe.io<br />
-            0.0.0.0 prod.adobegenuine.com<br />
-            0.0.0.0
-            gocart-web-prod-ue1-alb-1461435473.us-east-1.elb.amazonaws.com<br />
-            0.0.0.0 dyzt55url8.adobe.io<br />
-            0.0.0.0 b5kbg2ggog.adobe.io<br />
-            0.0.0.0 5zgzzv92gn.adobe.io<br />
-            0.0.0.0 0mo5a70cqa.adobe.io<br />
-            0.0.0.0 pojvrj7ho5.adobe.io<br />
-            0.0.0.0 i7pq6fgbsl.adobe.io<br />
-            0.0.0.0 ph0f2h2csf.adobe.io<br />
-            0.0.0.0 r3zj0yju1q.adobe.io<br />
-            0.0.0.0 9ngulmtgqi.adobe.io<br />
-            0.0.0.0 guzg78logz.adobe.io<br />
-            0.0.0.0 2ftem87osk.adobe.io<br />
-            0.0.0.0 1b9khekel6.adobe.io<br />
-            0.0.0.0 3d3wqt96ht.adobe.io<br />
-            0.0.0.0 23ynjitwt5.adobe.io<br />
-            0.0.0.0 4vzokhpsbs.adobe.io<br />
-            0.0.0.0 3ca52znvmj.adobe.io<br />
-            0.0.0.0 r5hacgq5w6.adobe.io<br />
-            0.0.0.0 gw8gfjbs05.adobe.io<br />
-            0.0.0.0 lre1kgz2u4.adobe.io<br />
-            0.0.0.0 ij0gdyrfka.adobe.io<br />
-            0.0.0.0 8ncdzpmmrg.adobe.io<br />
-            0.0.0.0 7sj9n87sls.adobe.io<br />
-            0.0.0.0 7m31guub0q.adobe.io<br />
-            0.0.0.0 7g2gzgk9g1.adobe.io<br />
-            0.0.0.0 cd536oo20y.adobe.io<br />
-            0.0.0.0 dxyeyf6ecy.adobe.io<br />
-            0.0.0.0 jc95y2v12r.adobe.io<br />
-            0.0.0.0 1hzopx6nz7.adobe.io<br />
-            0.0.0.0 m59b4msyph.adobe.io<br />
-            0.0.0.0 69tu0xswvq.adobe.io<br />
-            0.0.0.0 vajcbj9qgq.adobe.io<br />
-            0.0.0.0 p7uxzbht8h.adobe.io<br />
-            0.0.0.0 vcorzsld2a.adobe.io<br />
-            0.0.0.0 p0bjuoe16a.adobe.io<br />
-            0.0.0.0 fqaq3pq1o9.adobe.io<br />
-            0.0.0.0 aoorovjtha.adobe.io<br />
-            0.0.0.0 pv256ds6c99.prod.cloud.adobe.io<br />
-            0.0.0.0 cv2l4573ukh.prod.cloud.adobe.io<br />
-            0.0.0.0 pv24v41zibm.prod.cloud.adobe.io<br />
-            0.0.0.0 iv2nn9r0j2r.prod.cloud.adobe.io<br />
-            0.0.0.0 iv2yt8sqmh0.prod.cloud.adobe.io<br />
-            0.0.0.0 iv218qmzox6.prod.cloud.adobe.io<br />
-            0.0.0.0 cv218qmzox6.prod.cloud.adobe.io<br />
-            0.0.0.0 cv2b0yc07ls.prod.cloud.adobe.io<br />
-            0.0.0.0 cv2nn9r0j2r.prod.cloud.adobe.io<br />
-            0.0.0.0 pv2yt8sqmh0.prod.cloud.adobe.io<br />
-            0.0.0.0 iv256ds6c99.prod.cloud.adobe.io<br />
-            0.0.0.0 pv2zp87w2eo.prod.cloud.adobe.io<br />
-            0.0.0.0 iv2ys4tjt9x.prod.cloud.adobe.io<br />
-            0.0.0.0 cv2ska86hnt.prod.cloud.adobe.io<br />
-            0.0.0.0 iv24b15c1z0.prod.cloud.adobe.io<br />
-            0.0.0.0 cv256ds6c99.prod.cloud.adobe.io<br />
-            0.0.0.0 pv2ska86hnt.prod.cloud.adobe.io<br />
-            0.0.0.0 iv2b0yc07ls.prod.cloud.adobe.io<br />
-            0.0.0.0 iv2l4573ukh.prod.cloud.adobe.io<br />
-            0.0.0.0 cv24v41zibm.prod.cloud.adobe.io<br />
-            0.0.0.0 iv2ska86hnt.prod.cloud.adobe.io<br />
-            0.0.0.0 pv2l4573ukh.prod.cloud.adobe.io<br />
-            0.0.0.0 iv24v41zibm.prod.cloud.adobe.io<br />
-            0.0.0.0 iv2zp87w2eo.prod.cloud.adobe.io<br />
-            0.0.0.0 pv2ys4tjt9x.prod.cloud.adobe.io<br />
-            0.0.0.0 cv2ys4tjt9x.prod.cloud.adobe.io<br />
-            0.0.0.0 cv2fcqvzl1r.prod.cloud.adobe.io<br />
-            0.0.0.0 pv2fcqvzl1r.prod.cloud.adobe.io<br />
-            0.0.0.0 cv24b15c1z0.prod.cloud.adobe.io<br />
-            0.0.0.0 pv24b15c1z0.prod.cloud.adobe.io<br />
-            0.0.0.0 cv2bqhsp36w.prod.cloud.adobe.io<br />
-            0.0.0.0 pv2b0yc07ls.prod.cloud.adobe.io<br />
-            0.0.0.0 pv218qmzox6.prod.cloud.adobe.io<br />
-            0.0.0.0 cv2yt8sqmh0.prod.cloud.adobe.io<br />
-            0.0.0.0 iv2fcqvzl1r.prod.cloud.adobe.io<br />
-            0.0.0.0 pv2bqhsp36w.prod.cloud.adobe.io<br />
-            0.0.0.0 pv2nn9r0j2r.prod.cloud.adobe.io<br />
-            0.0.0.0 cv2zp87w2eo.prod.cloud.adobe.io<br />
-            0.0.0.0 iv2bqhsp36w.prod.cloud.adobe.io<br />
-            0.0.0.0 yj8yx3y8zo.adobestats.io<br />
-            0.0.0.0 mpsige2va9.adobestats.io<br />
-            0.0.0.0 ujqx8lhpz4.adobestats.io<br />
-            0.0.0.0 y2r8jzsv4p.adobestats.io<br />
-            0.0.0.0 eq7dbze88m.adobestats.io<br />
-            0.0.0.0 q9hjwppxeq.adobestats.io<br />
-            0.0.0.0 skg7pqn0al.adobestats.io<br />
-            0.0.0.0 9iay914wzy.adobestats.io<br />
-            0.0.0.0 yuzuoqo0il.adobestats.io<br />
-            0.0.0.0 2o3c6rbyfr.adobestats.io<br />
-            0.0.0.0 vicsj37lhf.adobestats.io<br />
-            0.0.0.0 nhc73ypmli.adobestats.io<br />
-            0.0.0.0 oxiz2n3i4v.adobestats.io<br />
-            0.0.0.0 2qjz50z5lf.adobestats.io<br />
-            0.0.0.0 i2x2ius9o5.adobestats.io<br />
-            0.0.0.0 lnwbupw1s7.adobestats.io<br />
-            0.0.0.0 n746qg9j4i.adobestats.io<br />
-            0.0.0.0 2621x1nzeq.adobestats.io<br />
-            0.0.0.0 r9r6oomgms.adobestats.io<br />
-            0.0.0.0 99pfl4vazm.adobestats.io<br />
-            0.0.0.0 zekdqanici.adobestats.io<br />
-            0.0.0.0 g9cli80sqp.adobestats.io<br />
-            0.0.0.0 dyv9axahup.adobestats.io<br />
-            0.0.0.0 17ov1u3gio.adobestats.io<br />
-            0.0.0.0 7l4xxjhvkt.adobestats.io<br />
-            0.0.0.0 wcxqmuxd4z.adobestats.io<br />
-            0.0.0.0 l558s6jwzy.adobestats.io<br />
-            0.0.0.0 85n85uoa1h.adobestats.io<br />
-            0.0.0.0 zrao5tdh1t.adobestats.io<br />
-            0.0.0.0 eftcpaiu36.adobestats.io<br />
-            0.0.0.0 2qj10f8rdg.adobestats.io<br />
-            0.0.0.0 ffs3xik41x.adobestats.io<br />
-            0.0.0.0 g3y09mbaam.adobestats.io<br />
-            0.0.0.0 x880ulw3h0.adobestats.io<br />
-            0.0.0.0 jaircqa037.adobestats.io<br />
-            0.0.0.0 ppn4fq68w7.adobestats.io<br />
-            0.0.0.0 1ei1f4k9yk.adobestats.io<br />
-            0.0.0.0 6j0onv1tde.adobestats.io<br />
-            0.0.0.0 pljm140ld1.adobestats.io<br />
-            0.0.0.0 50sxgwgngu.adobestats.io<br />
-            0.0.0.0 u31z50xvp9.adobestats.io<br />
-            0.0.0.0 2dhh9vsp39.adobestats.io<br />
-            0.0.0.0 rb0u8l34kr.adobestats.io<br />
-            0.0.0.0 3odrrlydxt.adobestats.io<br />
-            0.0.0.0 3u6k9as4bj.adobestats.io<br />
-            0.0.0.0 curbpindd3.adobestats.io<br />
-            0.0.0.0 4dviy9tb3o.adobestats.io<br />
-            0.0.0.0 yb6j6g0r1n.adobestats.io<br />
-            0.0.0.0 0bj2epfqn1.adobestats.io<br />
-            0.0.0.0 ura7zj55r9.adobestats.io<br />
-            0.0.0.0 xesnl0ss94.adobestats.io<br />
-            0.0.0.0 xbd20b9wqa.adobestats.io<br />
-            0.0.0.0 cr2fouxnpm.adobestats.io<br />
-            0.0.0.0 zmg3v61bbr.adobestats.io<br />
-            0.0.0.0 bk7y1gneyk.adobestats.io<br />
-            0.0.0.0 dx0nvmv4hz.adobestats.io<br />
-            0.0.0.0 eyiu19jd5w.adobestats.io<br />
-            0.0.0.0 561r5c3bz1.adobestats.io<br />
-            0.0.0.0 54cu4v5twu.adobestats.io<br />
-            0.0.0.0 6eidhihhci.adobestats.io<br />
-            0.0.0.0 31q40256l4.adobestats.io<br />
-            0.0.0.0 bs2yhuojzm.adobestats.io<br />
-            0.0.0.0 p50zgina3e.adobestats.io<br />
-            0.0.0.0 yri0bsu0ak.adobestats.io<br />
-            0.0.0.0 zu8yy3jkaz.adobestats.io<br />
-            0.0.0.0 m59cps6x3n.adobestats.io<br />
-            0.0.0.0 kgj0gsg3cf.adobestats.io<br />
-            0.0.0.0 uf0onoepoe.adobestats.io<br />
-            0.0.0.0 28t4psttw7.adobestats.io<br />
-            0.0.0.0 hjs70w1pdi.adobestats.io<br />
-            0.0.0.0 klw4np5a1x.adobestats.io<br />
-            0.0.0.0 lz2x4rks1u.adobestats.io<br />
-            0.0.0.0 pc6sk9bygv.adobestats.io<br />
-            0.0.0.0 t9phy8ywkd.adobestats.io<br />
-            0.0.0.0 dfnm3epsb7.adobestats.io<br />
-            0.0.0.0 5ky0dijg73.adobestats.io<br />
-            0.0.0.0 124hzdrtoi.adobestats.io<br />
-            0.0.0.0 69rxfbohle.adobestats.io<br />
-            0.0.0.0 9uffo0j6wj.adobestats.io<br />
-            0.0.0.0 kwi5n2ruax.adobestats.io<br />
-            0.0.0.0 nh8wam2qd9.adobestats.io<br />
-            0.0.0.0 rm3xrk61n1.adobestats.io<br />
-            0.0.0.0 rmnia8d0tr.adobestats.io<br />
-            0.0.0.0 vrz9w7o7yv.adobestats.io<br />
-            0.0.0.0 5m62o8ud26.adobestats.io<br />
-            0.0.0.0 esx6aswt5e.adobestats.io<br />
-            0.0.0.0 hwfqhlenbg.adobestats.io<br />
-            0.0.0.0 je5ufnklzs.adobestats.io<br />
-            0.0.0.0 jmx50quqz0.adobestats.io<br />
-            0.0.0.0 jsxfc5yij1.adobestats.io<br />
-            0.0.0.0 vfsjlgw02v.adobestats.io<br />
-            0.0.0.0 yshuhythub.adobestats.io<br />
-            0.0.0.0 zrbzvc9mel.adobestats.io<br />
-            0.0.0.0 rj669kv2lc.adobestats.io<br />
-            0.0.0.0 agxqobl83f.adobestats.io<br />
-            0.0.0.0 zr60t8ia88.adobestats.io<br />
-            0.0.0.0 a1y2b7wsna.adobestats.io<br />
-            0.0.0.0 hf6s5jdv95.adobestats.io<br />
-            0.0.0.0 tprqy2lgua.adobestats.io<br />
-            0.0.0.0 c474kdh1ky.adobestats.io<br />
-            0.0.0.0 d101mw99xq.adobestats.io<br />
-            0.0.0.0 oh41yzugiz.adobestats.io<br />
-            0.0.0.0 jwonv590qs.adobestats.io<br />
-            0.0.0.0 7k1t5im229.adobestats.io<br />
-            0.0.0.0 3xuuprv9lg.adobestats.io<br />
-            0.0.0.0 9wm8di7ifk.adobestats.io<br />
-            0.0.0.0 ebvf40engd.adobestats.io<br />
-            0.0.0.0 hq0mnwz735.adobestats.io<br />
-            0.0.0.0 j134yk6hv5.adobestats.io<br />
-            0.0.0.0 j14y4uzge7.adobestats.io<br />
-            0.0.0.0 jye4987hyr.adobestats.io<br />
-            0.0.0.0 kvi8uopy6f.adobestats.io<br />
-            0.0.0.0 lv5yrjxh6i.adobestats.io<br />
-            0.0.0.0 m95pt874uw.adobestats.io<br />
-            0.0.0.0 pdb7v5ul5q.adobestats.io<br />
-            0.0.0.0 px8vklwioh.adobestats.io<br />
-            0.0.0.0 qmyqpp3xs3.adobestats.io<br />
-            0.0.0.0 r1lqxul5sr.adobestats.io<br />
-            0.0.0.0 tf3an24xls.adobestats.io<br />
-            0.0.0.0 tyradj47rp.adobestats.io<br />
-            0.0.0.0 vp7ih9xoxg.adobestats.io<br />
-            0.0.0.0 x5cupsunjc.adobestats.io<br />
-            0.0.0.0 ll8xjr580v.adobestats.io<br />
-            0.0.0.0 n0yaid7q47.adobestats.io<br />
-            0.0.0.0 nhs5jfxg10.adobestats.io<br />
-            0.0.0.0 wz8kjkd9gc.adobestats.io<br />
-            0.0.0.0 zfzx6hae4g.adobestats.io<br />
-            0.0.0.0 6y6ozj4sot.adobestats.io<br />
-            0.0.0.0 qxc5z5sqkv.adobestats.io<br />
-            0.0.0.0 1qwiekvkux.adobestats.io<br />
-          </mark>
-        </p>
-      </details>
-      <h1>
-        4.x.x. А если вылезает ошибка "Приложение Adobe Creative Cloud,
-        необходимое для устранения проблемы отсутствует или повреждено..."?
-      </h1>
-      <p>
-        До установки программ у вас остались хвосты от предыдущих установок,
-        которые до конца не очищены. Для этого удалите все программы с помощью
-        <a
-          href="https://helpx.adobe.com/ru/creative-cloud/kb/cc-cleaner-tool-installation-problems.html"
-          >официального инструмента для удаления Adobe Creative Cloud Cleaner</a
-        >.
-      </p>
-    </div>
-    <aside id="render">#про_cохранение</aside>
-    <div class="content">
-    </div>
-    <br /><br />
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
@@ -407,7 +166,5 @@
         /></div
     ></noscript>
     <!-- /Yandex.Metrika counter -->
-    <script src="css/scroll_with_offset.js"></script>
-    <script src="css/copytext.js"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- fixme: переделать иконки из google fonts в локальные + изменить favicon -->
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -34,14 +35,10 @@
       content="Сборник ссылок от AEChat. Тут вы можете найти интересные каналы, чаты и FAQ!"
     />
   </head>
+
   <body ondragstart="return false;" ondrop="return false;">
     <div class="header">
-      <li
-        class="menu"
-        style="padding-top: 15px; padding-bottom: 15px"
-        onclick="toggleSidemenu()"
-      >
-        <input id="menu_toggle" type="checkbox" />
+      <li class="menu" onclick="toggleSidemenu()">
         <label class="menu_button" for="menu_toggle">
           <span class="material-symbols-outlined" style="cursor: pointer"
             >menu</span
@@ -65,14 +62,14 @@
         <li>
           <a href="about.html" onmousedown="createRipple(event)">О сайте</a>
         </li>
-        <h1 style="cursor: default" id="commit_date"></h1>
+        <h2 style="cursor: default" id="commit_date"></h2>
       </ul>
     </div>
-    <script src="css/sidemenu.js"></script>
-    <script src="css/ripple_anim.js"></script>
-    <script src="css/copyurl.js"></script>
-    <script src="css/toggletheme.js"></script>
-    <script src="css/commit_date.js"></script>
+    <script src="js/sidemenu.js"></script>
+    <script src="js/ripple_anim.js"></script>
+    <script src="js/copyurl.js"></script>
+    <script src="js/toggletheme.js"></script>
+    <script src="js/commit_date.js"></script>
     <aside>Ответы на частые вопросы</aside>
     <div class="links">
       <ul>
@@ -124,7 +121,7 @@
           <a href="https://t.me/s/premtemp" onmousedown="createRipple(event)">
             <h2>
               <span class="material-symbols-outlined"> subscriptions </span
-              >PRTemp
+              >PremTemp
             </h2>
             <p>Аналог AETemp, но для Premiere Pro</p>
           </a>

@@ -9,28 +9,27 @@
       href="icons/faq_page_icon.ico"
       type="image/x-icon"
     />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>aeabout</title>
-  </head>
-  <body ondragstart="return false;" ondrop="return false;">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
+    <title>about</title>
+  </head>
+
+  <body ondragstart="return false;" ondrop="return false;">
     <div class="header">
-      <li
-        class="menu"
-        style="padding-top: 15px; padding-bottom: 15px"
-        onclick="toggleSidemenu()"
-      >
-        <input id="menu_toggle" type="checkbox" />
+      <li class="menu" onclick="toggleSidemenu()">
         <label class="menu_button" for="menu_toggle">
           <span class="material-symbols-outlined" style="cursor: pointer"
             >menu</span
           >
         </label>
       </li>
-      <li class="logo" onclick="copyurl()" style="cursor: pointer">aeabout</li>
+      <li class="logo" onclick="copyurl()" style="cursor: pointer">about</li>
       <li class="toggletheme" style="cursor: pointer" onclick="toggleTheme()">
         <span class="material-symbols-outlined">contrast</span>
       </li>
@@ -40,21 +39,42 @@
         <li>
           <a href="index.html" onmousedown="createRipple(event)">На главную</a>
         </li>
+        <h2 style="cursor: default" id="commit_date"></h2>
       </ul>
     </div>
-    <script src="css/sidemenu.js"></script>
-    <script src="css/ripple_anim.js"></script>
-    <script src="css/copyurl.js"></script>
-    <script src="css/toggletheme.js"></script>
+    <script src="js/scroll_with_offset.js"></script>
+    <script src="js/copytext.js"></script>
+    <script src="js/sidemenu.js"></script>
+    <script src="js/ripple_anim.js"></script>
+    <script src="js/copyurl.js"></script>
+    <script src="js/toggletheme.js"></script>
+    <script src="js/commit_date.js"></script>
     <aside>&nbsp;</aside>
     <div class="content">
-      <h1>Для чего этот сайт?</h1>
-      <p>123</p>
+      <h2>Для чего этот сайт?</h2>
+      <p>
+        Данный "портал" был создан для того, чтобы ответить на надоедливые
+        вопросы от новичков про программы от Adobe, а также на вопросы о
+        нахождении контента или чатов. И так как некоторая информация явно не
+        очевидна - пришлось собирать вопросы и ответы в одном месте.
+      </p>
+      <h2>Кто авторы?</h2>
+      <p>
+        <a href="https://t.me/m1sh3r">Мишер</a> и команда администраторов
+        <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a>.
+      </p>
     </div>
     <aside>&nbsp;</aside>
     <div class="content">
-      <h1>А как отблагодарить автора?</h1>
-      <p>123</p>
+      <h2>А как отблагодарить автора?</h2>
+      <p>
+        Вы можете отправить донат на
+        <a href="https://one-qr.ru/v?lO4brOBVmLCaEYFL">YooMoney или Сбербанк</a>
+        или написать свои пожелания на
+        <a href="mailto:m1sh3r@ya.ru?subject=Вопрос по aelinks">почту</a> или на
+        <a href="https://github.com/aechat/pages/issues">Issues в Github</a> для
+        улучшения материала.
+      </p>
     </div>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -99,7 +119,5 @@
         /></div
     ></noscript>
     <!-- /Yandex.Metrika counter -->
-    <script src="css/scroll_with_offset.js"></script>
-    <script src="css/copytext.js"></script>
   </body>
 </html>
