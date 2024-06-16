@@ -535,6 +535,56 @@
   font-style: normal;
   src: url("../fonts/JetBrainsMono.woff2") format("woff2");
 }
+:root {
+  --accent-alt: #d3a50050;
+  --accent: #d3a500;
+  --altbackground: #fdfcff;
+  --background: #f7f6f9;
+  --for-aside: #30303080;
+  --for-border: #00000020;
+  --for-ripple: #d3a50090;
+  --for-shadow: #00000020;
+  --text: #303030;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-alt: #9a99ff50;
+    --accent: #9a99ff;
+    --altbackground: #171719;
+    --background: #000000;
+    --for-aside: #fefefe50;
+    --for-border: #ffffff20;
+    --for-ripple: #9a99ff90;
+    --for-shadow: #60606040;
+    --text: #fefefe;
+  }
+}
+.dark-mode {
+  --accent-alt: #9a99ff50;
+  --accent: #9a99ff;
+  --altbackground: #171719;
+  --background: #000000;
+  --for-aside: #fefefe50;
+  --for-border: #80808030;
+  --for-ripple: #9a99ff90;
+  --for-shadow: #60606040;
+  --text: #fefefe;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark-mode {
+    --accent-alt: #d3a50050;
+    --accent: #d3a500;
+    --altbackground: #fdfcff;
+    --background: #f7f6f9;
+    --for-aside: #30303080;
+    --for-border: #30303030;
+    --for-ripple: #d3a50090;
+    --for-shadow: #00000020;
+    --text: #303030;
+  }
+}
 @-webkit-keyframes ripple-effect {
   from {
     opacity: 1;

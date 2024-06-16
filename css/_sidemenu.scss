@@ -8,7 +8,8 @@
   max-width: 800px;
   opacity: 0;
   position: fixed;
-  transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   visibility: hidden;
   z-index: 1500;
 
