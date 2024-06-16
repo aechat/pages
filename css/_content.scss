@@ -1,0 +1,130 @@
+@import "variables";
+
+.content {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  background-color: var(--altbackground);
+  border-radius: 20px;
+  margin-block: auto;
+  max-width: 800px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  white-space: wrap;
+  word-wrap: break-word;
+
+  a {
+    align-items: center;
+    color: var(--accent);
+    display: inline-flex;
+    font-weight: 700;
+    padding: 0;
+    text-decoration: none;
+
+    &:before {
+      content: "travel_explore";
+      font-family: "Material Symbols Outlined";
+      font-size: 12px;
+      padding-right: 3px;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      opacity: 75%;
+    }
+  }
+
+  aside {
+    margin-block: auto;
+    font-size: 14px;
+    padding: 25px;
+    text-align: center;
+    text-transform: none;
+  }
+
+  audio {
+    border-radius: 0;
+    width: 100%;
+  }
+
+  code {
+    background-color: #303030;
+    border-radius: 15px;
+    color: #fefefe;
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    margin: 20px;
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  h2 {
+    border-left: 4px solid var(--accent);
+    color: var(--accent);
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-block: 10px;
+    margin-inline: auto;
+    padding-block: 3px;
+    padding-inline: 20px;
+    text-transform: uppercase;
+    word-wrap: break-word;
+  }
+
+  img {
+    border-radius: 20px;
+    display: block;
+    height: auto;
+    margin-inline: auto;
+    max-height: 800px;
+    max-width: 100%;
+  }
+
+  mark {
+    align-items: center;
+    background-color: var(--accent-alt);
+    border-radius: 8px;
+    color: var(--text);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    line-height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    word-wrap: break-word;
+
+    &:after {
+      color: var(--accent);
+      content: "content_copy";
+      font-family: "Material Symbols Outlined";
+      font-size: 14px;
+      padding-left: 5px;
+      padding-right: 1px;
+      vertical-align: middle;
+    }
+
+    &:active {
+      background-color: var(--for-ripple);
+    }
+  }
+
+  p {
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-block: 20px;
+    margin-inline: auto;
+    padding-inline: 25px;
+  }
+
+  video {
+    border-radius: 20px;
+    max-height: 500px;
+    width: 100%;
+  }
+}
