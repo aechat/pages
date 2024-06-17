@@ -22,7 +22,7 @@ function preventScroll(event) {
   event.preventDefault();
 }
 
-const header = document.querySelector(".header");
+const header = document.querySelector("header");
 const sidemenu = document.querySelector(".sidemenu");
 
 header.addEventListener("touchmove", preventScroll, { passive: false });
@@ -38,6 +38,15 @@ document.addEventListener("click", function (event) {
     }
   }
 });
+
 sidemenu.addEventListener("click", function (event) {
   event.stopPropagation();
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    if (sidemenu.classList.contains("visible")) {
+      toggleSidemenu();
+    }
+  }
 });
