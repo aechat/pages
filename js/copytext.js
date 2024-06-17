@@ -5,11 +5,21 @@ function extractTextFromHTML(htmlString) {
   return extractedText;
 }
 
+function showCopiedNotification() {
+  var copiedElement = document.querySelector(".copied");
+  copiedElement.innerText = "Текст скопирован в буфер обмена";
+  copiedElement.classList.add("visible");
+
+  setTimeout(function () {
+    copiedElement.classList.remove("visible");
+  }, 2500);
+}
+
 function copyTextToClipboard(text) {
   if (navigator.clipboard) {
     navigator.clipboard.writeText(text).then(
       function () {
-        alert("Текст скопирован в буфер обмена!");
+        showCopiedNotification();
       },
       function (err) {
         alert("Ошибка при копировании текста: " + err);
@@ -22,10 +32,11 @@ function copyTextToClipboard(text) {
     textarea.select();
     try {
       var successful = document.execCommand("copy");
-      var msg = successful
-        ? "Текст скопирован в буфер обмена!"
-        : "Не удалось скопировать текст :(";
-      alert(msg);
+      if (successful) {
+        showCopiedNotification();
+      } else {
+        alert("Не удалось скопировать текст :(");
+      }
     } catch (err) {
       alert("Ошибка при копировании текста: " + err);
     }
