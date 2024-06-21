@@ -1,3 +1,4 @@
+@import "reset";
 @import "header";
 @import "content";
 @import "links";
@@ -5,12 +6,15 @@
 @import "fonts";
 @import "variables";
 
+// * {
+//   outline: 1px solid red;
+// }
+
 @keyframes ripple-effect {
   from {
     opacity: 1;
     transform: scale(0);
   }
-
   to {
     opacity: 0;
     transform: scale(2);
@@ -20,13 +24,14 @@
 // fixme: исправить анимацию у sidemenu
 
 .disable-animation * {
-  transition: color 0s, background-color 0s;
+  transition:
+    color 0s,
+    background-color 0s;
 }
 
 body {
   background-color: var(--background);
   color: var(--text);
-  display: flexbox;
   font-family: "Inter", sans-serif;
   font-weight: 350;
   margin-inline: auto;
@@ -44,9 +49,31 @@ aside {
   text-transform: uppercase;
 }
 
+.copied {
+  filter: drop-shadow(0 20px 20px var(--for-shadow));
+  color: var(--text);
+  font-weight: bold;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(25px) brightness(125%) saturate(50%);
+  background-color: var(--header-background);
+  max-width: 500px;
+  border-radius: 20px;
+  padding-inline: 20px;
+  padding-block: 20px;
+  text-align: center;
+  z-index: 1000;
+}
+
 .material-symbols-outlined {
   color: var(--accent);
-  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 36;
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 500,
+    "GRAD" 0,
+    "opsz" 36;
   vertical-align: text-bottom;
 }
 

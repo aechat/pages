@@ -1,27 +1,31 @@
 @import "variables";
 
-.content {
-  * {
-    margin: 0;
-    padding: 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
 
+.content {
   background-color: var(--altbackground);
-  border-radius: 20px;
+  border-radius: $border-radius;
   margin-block: auto;
   max-width: 800px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding: 10px 0;
   white-space: wrap;
   word-wrap: break-word;
 
-  a {
+  a,
+  mark {
     align-items: center;
-    color: var(--accent);
     display: inline-flex;
+    text-decoration: none;
+    word-wrap: break-word;
+  }
+
+  a {
+    color: var(--accent);
     font-weight: 700;
     padding: 0;
-    text-decoration: none;
 
     &:before {
       content: "travel_explore";
@@ -37,21 +41,22 @@
   }
 
   aside {
-    margin-block: auto;
     font-size: 14px;
+    margin-block: auto;
     padding: 25px;
     text-align: center;
     text-transform: none;
   }
 
-  audio {
-    border-radius: 0;
+  audio,
+  video {
+    border-radius: $border-radius;
     width: 100%;
   }
 
   code {
     background-color: #303030;
-    border-radius: 15px;
+    border-radius: $border-radius;
     color: #fefefe;
     display: block;
     font-family: "JetBrains Mono", monospace;
@@ -61,50 +66,58 @@
   }
 
   h2 {
-    border-left: 4px solid var(--accent);
     color: var(--accent);
     font-family: "Montserrat";
     font-size: 24px;
     font-weight: 700;
     line-height: 1.25;
     margin-block: 10px;
-    margin-inline: auto;
-    padding-block: 3px;
-    padding-inline: 20px;
+    padding: 3px 25px;
+    position: relative;
     text-transform: uppercase;
     word-wrap: break-word;
+    z-index: 0;
+
+    &::before {
+      background-color: var(--accent);
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 5px;
+    }
   }
 
   img {
-    border-radius: 20px;
+    border-radius: $border-radius;
     display: block;
     height: auto;
     margin-inline: auto;
     max-height: 800px;
     max-width: 100%;
+    position: relative;
+    z-index: 1;
   }
 
   mark {
-    align-items: center;
     background-color: var(--accent-alt);
     border-radius: 8px;
     color: var(--text);
     cursor: pointer;
-    display: inline-flex;
     font-family: "JetBrains Mono", monospace;
     font-size: 14px;
     line-height: 24px;
-    padding-left: 5px;
-    padding-right: 5px;
-    word-wrap: break-word;
+    padding: 0 5px;
 
     &:after {
       color: var(--accent);
       content: "content_copy";
       font-family: "Material Symbols Outlined";
       font-size: 14px;
-      padding-left: 5px;
-      padding-right: 1px;
+      padding: 0 1px 0 5px;
       vertical-align: middle;
     }
 
@@ -117,14 +130,7 @@
     color: var(--text);
     font-size: 16px;
     line-height: 1.5;
-    margin-block: 20px;
-    margin-inline: auto;
-    padding-inline: 25px;
-  }
-
-  video {
-    border-radius: 20px;
-    max-height: 500px;
-    width: 100%;
+    margin: 20px auto;
+    padding: 0 25px;
   }
 }
