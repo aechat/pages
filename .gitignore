@@ -4,3 +4,6 @@
 /scss
 /images/old
 /markdown
+node_modules
+package-lock.json
+package.json
