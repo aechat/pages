@@ -180,9 +180,9 @@ template,
   --for-aside: rgba(48, 48, 48, 0.5019607843);
   --for-border: rgba(0, 0, 0, 0.1254901961);
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
-  --for-shadow: rgba(0, 0, 0, 0.1254901961);
+  --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --text: #303030;
-  --header-background: rgba(253, 252, 255, 0.8156862745);
+  --header-background: rgba(253, 252, 255, 0.7529411765);
 }
 
 .light {
@@ -193,9 +193,9 @@ template,
   --for-aside: rgba(48, 48, 48, 0.5019607843);
   --for-border: rgba(0, 0, 0, 0.1254901961);
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
-  --for-shadow: rgba(0, 0, 0, 0.1254901961);
+  --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --text: #303030;
-  --header-background: rgba(253, 252, 255, 0.8156862745);
+  --header-background: rgba(253, 252, 255, 0.7529411765);
 }
 
 .dark {
@@ -206,9 +206,9 @@ template,
   --for-aside: rgba(254, 254, 254, 0.3137254902);
   --for-border: rgba(128, 128, 128, 0.1882352941);
   --for-ripple: rgba(154, 153, 255, 0.5647058824);
-  --for-shadow: rgba(96, 96, 96, 0.2509803922);
+  --for-shadow: rgba(128, 128, 128, 0.1882352941);
   --text: #fefefe;
-  --header-background: rgba(23, 23, 25, 0.8156862745);
+  --header-background: rgba(21, 21, 21, 0.6274509804);
 }
 
 header {
@@ -257,9 +257,9 @@ header {
   --for-aside: rgba(48, 48, 48, 0.5019607843);
   --for-border: rgba(0, 0, 0, 0.1254901961);
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
-  --for-shadow: rgba(0, 0, 0, 0.1254901961);
+  --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --text: #303030;
-  --header-background: rgba(253, 252, 255, 0.8156862745);
+  --header-background: rgba(253, 252, 255, 0.7529411765);
 }
 
 .light {
@@ -270,9 +270,9 @@ header {
   --for-aside: rgba(48, 48, 48, 0.5019607843);
   --for-border: rgba(0, 0, 0, 0.1254901961);
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
-  --for-shadow: rgba(0, 0, 0, 0.1254901961);
+  --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --text: #303030;
-  --header-background: rgba(253, 252, 255, 0.8156862745);
+  --header-background: rgba(253, 252, 255, 0.7529411765);
 }
 
 .dark {
@@ -283,9 +283,9 @@ header {
   --for-aside: rgba(254, 254, 254, 0.3137254902);
   --for-border: rgba(128, 128, 128, 0.1882352941);
   --for-ripple: rgba(154, 153, 255, 0.5647058824);
-  --for-shadow: rgba(96, 96, 96, 0.2509803922);
+  --for-shadow: rgba(128, 128, 128, 0.1882352941);
   --text: #fefefe;
-  --header-background: rgba(23, 23, 25, 0.8156862745);
+  --header-background: rgba(21, 21, 21, 0.6274509804);
 }
 
 * {
@@ -425,9 +425,9 @@ header {
   --for-aside: rgba(48, 48, 48, 0.5019607843);
   --for-border: rgba(0, 0, 0, 0.1254901961);
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
-  --for-shadow: rgba(0, 0, 0, 0.1254901961);
+  --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --text: #303030;
-  --header-background: rgba(253, 252, 255, 0.8156862745);
+  --header-background: rgba(253, 252, 255, 0.7529411765);
 }
 
 .light {
@@ -438,9 +438,9 @@ header {
   --for-aside: rgba(48, 48, 48, 0.5019607843);
   --for-border: rgba(0, 0, 0, 0.1254901961);
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
-  --for-shadow: rgba(0, 0, 0, 0.1254901961);
+  --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --text: #303030;
-  --header-background: rgba(253, 252, 255, 0.8156862745);
+  --header-background: rgba(253, 252, 255, 0.7529411765);
 }
 
 .dark {
@@ -451,9 +451,9 @@ header {
   --for-aside: rgba(254, 254, 254, 0.3137254902);
   --for-border: rgba(128, 128, 128, 0.1882352941);
   --for-ripple: rgba(154, 153, 255, 0.5647058824);
-  --for-shadow: rgba(96, 96, 96, 0.2509803922);
+  --for-shadow: rgba(128, 128, 128, 0.1882352941);
   --text: #fefefe;
-  --header-background: rgba(23, 23, 25, 0.8156862745);
+  --header-background: rgba(21, 21, 21, 0.6274509804);
 }
 
 .links {
@@ -529,9 +529,9 @@ header {
   --for-aside: rgba(48, 48, 48, 0.5019607843);
   --for-border: rgba(0, 0, 0, 0.1254901961);
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
-  --for-shadow: rgba(0, 0, 0, 0.1254901961);
+  --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --text: #303030;
-  --header-background: rgba(253, 252, 255, 0.8156862745);
+  --header-background: rgba(253, 252, 255, 0.7529411765);
 }
 
 .light {
@@ -542,9 +542,9 @@ header {
   --for-aside: rgba(48, 48, 48, 0.5019607843);
   --for-border: rgba(0, 0, 0, 0.1254901961);
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
-  --for-shadow: rgba(0, 0, 0, 0.1254901961);
+  --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --text: #303030;
-  --header-background: rgba(253, 252, 255, 0.8156862745);
+  --header-background: rgba(253, 252, 255, 0.7529411765);
 }
 
 .dark {
@@ -555,16 +555,18 @@ header {
   --for-aside: rgba(254, 254, 254, 0.3137254902);
   --for-border: rgba(128, 128, 128, 0.1882352941);
   --for-ripple: rgba(154, 153, 255, 0.5647058824);
-  --for-shadow: rgba(96, 96, 96, 0.2509803922);
+  --for-shadow: rgba(128, 128, 128, 0.1882352941);
   --text: #fefefe;
-  --header-background: rgba(23, 23, 25, 0.8156862745);
+  --header-background: rgba(21, 21, 21, 0.6274509804);
 }
 
 .sidemenu {
-  background-color: var(--background);
+  background-color: var(--header-background);
   border-radius: 20px;
-  -webkit-filter: drop-shadow(0 20px 20px var(--for-shadow));
-          filter: drop-shadow(0 20px 20px var(--for-shadow));
+  -webkit-backdrop-filter: blur(25px) saturate(50%);
+          backdrop-filter: blur(25px) saturate(50%);
+  -webkit-filter: drop-shadow(0px 10px 25px var(--for-shadow));
+          filter: drop-shadow(0px 10px 25px var(--for-shadow));
   -webkit-margin-before: 10px;
           margin-block-start: 10px;
   max-width: 800px;
@@ -673,9 +675,9 @@ header {
   --for-aside: rgba(48, 48, 48, 0.5019607843);
   --for-border: rgba(0, 0, 0, 0.1254901961);
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
-  --for-shadow: rgba(0, 0, 0, 0.1254901961);
+  --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --text: #303030;
-  --header-background: rgba(253, 252, 255, 0.8156862745);
+  --header-background: rgba(253, 252, 255, 0.7529411765);
 }
 
 .light {
@@ -686,9 +688,9 @@ header {
   --for-aside: rgba(48, 48, 48, 0.5019607843);
   --for-border: rgba(0, 0, 0, 0.1254901961);
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
-  --for-shadow: rgba(0, 0, 0, 0.1254901961);
+  --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --text: #303030;
-  --header-background: rgba(253, 252, 255, 0.8156862745);
+  --header-background: rgba(253, 252, 255, 0.7529411765);
 }
 
 .dark {
@@ -699,9 +701,9 @@ header {
   --for-aside: rgba(254, 254, 254, 0.3137254902);
   --for-border: rgba(128, 128, 128, 0.1882352941);
   --for-ripple: rgba(154, 153, 255, 0.5647058824);
-  --for-shadow: rgba(96, 96, 96, 0.2509803922);
+  --for-shadow: rgba(128, 128, 128, 0.1882352941);
   --text: #fefefe;
-  --header-background: rgba(23, 23, 25, 0.8156862745);
+  --header-background: rgba(21, 21, 21, 0.6274509804);
 }
 
 @-webkit-keyframes ripple-effect {
