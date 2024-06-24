@@ -30,6 +30,7 @@
 }
 
 body {
+  padding-top: 65px;
   background-color: var(--background);
   color: var(--text);
   font-family: "Inter", sans-serif;
@@ -82,11 +83,14 @@ aside {
 }
 
 footer {
-  background-color: var(--altbackground);
+  opacity: 50%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  font-family: "Montserrat", sans-serif;
-  padding: 50px;
+  font-family: "Inter", sans-serif;
+  font-size: small;
+  padding-inline: 50px;
+  padding-block: 30px;
+  line-height: 1.25;
   text-align: center;
 }
 
@@ -127,8 +131,4 @@ footer {
 .visible {
   opacity: 1;
   visibility: visible;
-}
-
-::-webkit-scrollbar {
-  width: 0;
 }
