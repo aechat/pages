@@ -347,12 +347,25 @@ header {
 .content code {
   display: block;
   max-width: 800px;
-  margin: 20px;
-  padding: 20px;
+  padding-inline: 30px;
+  padding-block: 25px;
   background-color: #303030;
   border-radius: 20px;
   font-family: "JetBrains Mono", monospace;
   color: #fefefe;
+}
+.content code::after {
+  content: "content_copy";
+  padding: 0 1px 0 5px;
+  font-size: 14px;
+  font-family: "Material Symbols Outlined";
+  color: var(--accent);
+  vertical-align: middle;
+  word-break: keep-all;
+}
+.content code:hover {
+  background: #454545;
+  cursor: pointer;
 }
 .content h2 {
   margin-block: 10px;
@@ -380,6 +393,9 @@ header {
 }
 .content img {
   margin-inline: auto;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
   display: block;
   position: relative;
   z-index: 1;
@@ -442,14 +458,13 @@ header {
 }
 .content table {
   max-width: 800px;
-  margin-inline: 20px;
+  margin-inline: auto;
   background-color: var(--background);
   border-radius: 20px;
   padding-block: 10px;
   padding-inline: 15px;
   text-align: center;
   border-collapse: collapse;
-  margin-inline: auto;
 }
 .content td,
 .content th {
