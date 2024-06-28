@@ -1,8 +1,10 @@
 @import "variables";
+
 * {
   margin: 0;
   padding: 0;
 }
+
 .content {
   margin-block: auto;
   max-width: 800px;
@@ -12,11 +14,13 @@
   word-wrap: break-word;
   white-space: wrap;
   line-height: 1.5;
+
   a {
     padding: 0;
     font-weight: 700;
     color: var(--accent);
     text-decoration: none;
+
     &:before {
       content: "travel_explore";
       padding-right: 3px;
@@ -24,10 +28,12 @@
       font-family: "Material Symbols Outlined";
       vertical-align: middle;
     }
+
     &:hover {
       opacity: 75%;
     }
   }
+
   aside,
   caption {
     margin-block: auto;
@@ -36,6 +42,7 @@
     text-align: center;
     text-transform: none;
   }
+
   audio,
   video,
   iframe {
@@ -43,29 +50,42 @@
     border-radius: $border-radius;
     border: none;
   }
+
   code {
     display: block;
     max-width: 800px;
-    padding-inline: 30px;
+    padding-inline-start: 30px;
+    padding-inline-end: 60px;
     padding-block: 25px;
     background-color: #303030;
     border-radius: $border-radius;
     font-family: "JetBrains Mono", monospace;
     color: #fefefe;
-    &::after {
-      content: "content_copy";
-      padding: 0 1px 0 5px;
-      font-size: 14px;
-      font-family: "Material Symbols Outlined";
-      color: var(--accent);
-      vertical-align: middle;
-      word-break: keep-all;
-    }
+    position: relative;
+
     &:hover {
-      background: #454545;
+      opacity: 80%;
       cursor: pointer;
     }
+
+    &:active {
+      opacity: 100%;
+      filter: brightness(80%);
+    }
+
+    &::before {
+      content: "content_copy";
+      font-family: "Material Symbols Outlined";
+      font-size: 2em;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--accent);
+      opacity: 0.5;
+    }
   }
+
   h2 {
     margin-block: 10px;
     position: relative;
@@ -78,6 +98,7 @@
     color: var(--accent);
     text-transform: uppercase;
     word-wrap: break-word;
+
     &::before {
       content: "";
       position: absolute;
@@ -90,6 +111,7 @@
       border-bottom-right-radius: $border-radius;
     }
   }
+
   img {
     margin-inline: auto;
     cursor: zoom-in;
@@ -98,9 +120,10 @@
     z-index: 1;
     max-width: 100%;
     height: auto;
-    max-height: 800px;
+    max-height: 600px;
     border-radius: $border-radius;
   }
+
   mark {
     display: inline-flex;
     align-items: center;
@@ -115,6 +138,7 @@
     text-decoration: none;
     word-wrap: break-word;
     word-break: break-all;
+
     &:after {
       content: "content_copy";
       padding: 0 1px 0 5px;
@@ -124,57 +148,120 @@
       vertical-align: middle;
       word-break: keep-all;
     }
+
+    &:hover {
+      opacity: 80%;
+    }
+
     &:active {
       background-color: var(--for-ripple);
+      opacity: 100%;
     }
   }
+
   p {
     margin: 20px auto;
     padding: 0 25px;
     font-size: 16px;
     color: var(--text);
   }
+
+  .important {
+    margin-inline: 20px;
+    font-weight: 700;
+    background-color: var(--accent-alt);
+    border-radius: $border-radius;
+    padding-inline-start: 20px;
+    padding-inline-end: 70px;
+    padding-block: 15px;
+    position: relative;
+
+    &::before {
+      content: "warning";
+      font-family: "Material Symbols Outlined";
+      font-size: 3em;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(-25%, -50%);
+      color: var(--text);
+      opacity: 0.25;
+    }
+
+    ul {
+      margin-inline: 20px;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: disc;
+    }
+
+    li::marker {
+      color: var(--accent);
+    }
+  }
+
   ul {
     margin-inline: 25px;
+    padding-inline: 20px;
+    margin-bottom: 20px;
+
+    &:only-child {
+      margin-bottom: 0;
+    }
   }
+
   li {
-    margin-inline-start: 25px;
-    padding-block-end: 20px;
     list-style-type: disc;
+
   }
+
+  li::marker {
+    color: var(--accent);
+  }
+
+
+
   table {
     max-width: 800px;
     margin-inline: auto;
     background-color: var(--background);
     border-radius: $border-radius;
-    padding-block: $main-padding * 0.5;
-    padding-inline: $main-padding * 0.75;
+    padding-block: 20px * 0.5;
+    padding-inline: 20px * 0.75;
     text-align: center;
     border-collapse: collapse;
   }
+
   td,
   th {
     padding-inline: 15px;
     padding-block: 5px;
     border: 1px solid var(--for-border);
   }
+
   td {
     word-wrap: break-word;
     word-break: break-all;
     white-space: normal;
   }
+
   td:first-child,
   th:first-child {
     border-left: none;
   }
+
   td:last-child,
   th:last-child {
     border-right: none;
   }
+
   tr:first-child td,
   tr:first-child th {
     border-top: none;
   }
+
   tr:last-child td,
   tr:last-child th {
     border-bottom: none;

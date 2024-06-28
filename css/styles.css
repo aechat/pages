@@ -347,25 +347,41 @@ header {
 .content code {
   display: block;
   max-width: 800px;
-  padding-inline: 30px;
+  -webkit-padding-start: 30px;
+     -moz-padding-start: 30px;
+          padding-inline-start: 30px;
+  -webkit-padding-end: 60px;
+     -moz-padding-end: 60px;
+          padding-inline-end: 60px;
   padding-block: 25px;
   background-color: #303030;
   border-radius: 20px;
   font-family: "JetBrains Mono", monospace;
   color: #fefefe;
-}
-.content code::after {
-  content: "content_copy";
-  padding: 0 1px 0 5px;
-  font-size: 14px;
-  font-family: "Material Symbols Outlined";
-  color: var(--accent);
-  vertical-align: middle;
-  word-break: keep-all;
+  position: relative;
 }
 .content code:hover {
-  background: #454545;
+  opacity: 80%;
   cursor: pointer;
+}
+.content code:active {
+  opacity: 100%;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+.content code::before {
+  content: "content_copy";
+  font-family: "Material Symbols Outlined";
+  font-size: 2em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: var(--accent);
+  opacity: 0.5;
 }
 .content h2 {
   margin-block: 10px;
@@ -401,7 +417,7 @@ header {
   z-index: 1;
   max-width: 100%;
   height: auto;
-  max-height: 800px;
+  max-height: 600px;
   border-radius: 20px;
 }
 .content mark {
@@ -436,8 +452,12 @@ header {
   vertical-align: middle;
   word-break: keep-all;
 }
+.content mark:hover {
+  opacity: 80%;
+}
 .content mark:active {
   background-color: var(--for-ripple);
+  opacity: 100%;
 }
 .content p {
   margin: 20px auto;
@@ -445,16 +465,57 @@ header {
   font-size: 16px;
   color: var(--text);
 }
+.content .important {
+  margin-inline: 20px;
+  font-weight: 700;
+  background-color: var(--accent-alt);
+  border-radius: 20px;
+  -webkit-padding-start: 20px;
+     -moz-padding-start: 20px;
+          padding-inline-start: 20px;
+  -webkit-padding-end: 70px;
+     -moz-padding-end: 70px;
+          padding-inline-end: 70px;
+  padding-block: 15px;
+  position: relative;
+}
+.content .important::before {
+  content: "warning";
+  font-family: "Material Symbols Outlined";
+  font-size: 3em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(-25%, -50%);
+     -moz-transform: translate(-25%, -50%);
+      -ms-transform: translate(-25%, -50%);
+          transform: translate(-25%, -50%);
+  color: var(--text);
+  opacity: 0.25;
+}
+.content .important ul {
+  margin-inline: 20px;
+  padding: 0;
+}
+.content .important li {
+  list-style-type: disc;
+}
+.content .important li::marker {
+  color: var(--accent);
+}
 .content ul {
   margin-inline: 25px;
+  padding-inline: 20px;
+  margin-bottom: 20px;
+}
+.content ul:only-child {
+  margin-bottom: 0;
 }
 .content li {
-  -webkit-margin-start: 25px;
-     -moz-margin-start: 25px;
-          margin-inline-start: 25px;
-  -webkit-padding-after: 20px;
-          padding-block-end: 20px;
   list-style-type: disc;
+}
+.content li::marker {
+  color: var(--accent);
 }
 .content table {
   max-width: 800px;
@@ -582,6 +643,10 @@ header {
   height: 100%;
   text-decoration: none;
 }
+.links .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 36;
+  padding-right: 5px;
+}
 
 .logo {
   color: var(--accent);
@@ -591,11 +656,6 @@ header {
   margin: 0;
   padding: 10px;
   text-align: center;
-}
-
-.links .material-symbols-outlined {
-  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 36;
-  padding-right: 5px;
 }
 
 :root {
