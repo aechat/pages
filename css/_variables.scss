@@ -6,27 +6,21 @@ $light: (accent-alt: #dcaf1450,
   for-border: #00000020,
   for-ripple: #dcaf1490,
   for-shadow: #00000040,
+  for-table: #f1f1f1,
   text: #303030,
   header-background: #fdfcffc0);
 
 $dark: (accent-alt: #9a99ff50,
   accent: #9a99ff,
-  altbackground: #171719,
+  altbackground: #171717,
   background: #000000,
   for-aside: #fefefe50,
   for-border: #80808030,
   for-ripple: #9a99ff90,
   for-shadow: #80808030,
+  for-table: #252525,
   text: #fefefe,
   header-background: #151515c0);
-
-:root {
-
-  @each $key,
-  $value in $light {
-    --#{$key}: #{$value};
-  }
-}
 
 .light {
 
