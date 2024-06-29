@@ -25,12 +25,12 @@
       content: "travel_explore";
       padding-right: 3px;
       font-size: 12px;
-      font-family: "Material Symbols Outlined";
+      font-family: "Material Symbols Outlined", system-ui;
       vertical-align: middle;
     }
 
     &:hover {
-      opacity: 75%;
+      opacity: 0.75;
     }
   }
 
@@ -71,12 +71,13 @@
     &:active {
       opacity: 100%;
       filter: brightness(80%);
+      transform: scale(0.95);
     }
 
     &::before {
       content: "content_copy";
-      font-family: "Material Symbols Outlined";
-      font-size: 2em;
+      font-family: "Material Symbols Outlined", system-ui;
+      font-size: 28px;
       position: absolute;
       right: 0;
       top: 50%;
@@ -156,6 +157,7 @@
     &:active {
       background-color: var(--for-ripple);
       opacity: 100%;
+      transform: scale(0.95);
     }
   }
 
@@ -164,6 +166,17 @@
     padding: 0 25px;
     font-size: 16px;
     color: var(--text);
+  }
+
+  summary {
+    cursor: pointer;
+    text-decoration: dotted;
+  }
+
+  details {
+    margin: 20px;
+    padding: 10px;
+    cursor: default;
   }
 
   .important {
@@ -189,11 +202,13 @@
     }
 
     ul {
-      margin-inline: 20px;
+      margin-inline-start: 25px;
       padding: 0;
+      margin: 0;
     }
 
     li {
+      margin-inline-start: 20px;
       list-style-type: disc;
     }
 
@@ -204,7 +219,7 @@
 
   ul {
     margin-inline: 25px;
-    padding-inline: 20px;
+    padding-inline-start: 20px;
     margin-bottom: 20px;
 
     &:only-child {
@@ -214,14 +229,11 @@
 
   li {
     list-style-type: disc;
-
   }
 
   li::marker {
     color: var(--accent);
   }
-
-
 
   table {
     max-width: 800px;

@@ -22,6 +22,14 @@
   }
 }
 
+// !: сделать более оптимизированные анимации
+
+* {
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
 .disable-animation * {
   transition:
     color 0s,
@@ -102,11 +110,6 @@ footer {
   transform: scale(0);
 }
 
-* {
-  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
-}
 
 ::-webkit-scrollbar {
   width: 0;

@@ -26,4 +26,14 @@ header {
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
   }
+
+  li {
+    cursor: pointer;
+  }
+
+  span {
+    &:active {
+      transform: scale(0.8);
+    }
+  }
 }

@@ -2,74 +2,144 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link
+      href="css/styles.css"
+      rel="stylesheet" />
     <link
       type="image/x-icon"
       href="icons/faq_page_icon.ico"
-      rel="shortcut icon"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+      rel="shortcut icon" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
       rel="stylesheet"
-      as="style"
-    />
+      as="style" />
     <title>aefaq</title>
   </head>
-  <body ondragstart="return false;" ondrop="return false;">
+  <body
+    class="light"
+    ondragstart="return false;"
+    ondrop="return false;">
     <header>
-      <li class="menu" onclick="toggleSidemenu()">
-        <label class="menu_button" for="menu_toggle">
-          <span class="material-symbols-outlined" style="cursor: pointer"
-            >menu</span
-          >
-        </label>
+      <li
+        class="menu"
+        onclick="toggleSidemenu('.left_sidemenu')">
+        <span class="material-symbols-outlined">menu</span>
       </li>
-      <li class="logo" onclick="copyurl()" style="cursor: pointer">aefaq</li>
-      <li class="toggletheme" style="cursor: pointer" onclick="toggleTheme()">
+      <li
+        class="logo"
+        onclick="copyurl()">
+        aefaq
+      </li>
+      <li
+        class="toggletheme"
+        onclick="toggleSidemenu('.right_sidemenu')">
         <span class="material-symbols-outlined">contrast</span>
       </li>
     </header>
-    <div class="sidemenu hidden">
-      <ul>
-        <li>
-          <a href="index.html" onmousedown="createRipple(event)">На главную</a>
-        </li>
-        <li>
-          <a href="about.html" onmousedown="createRipple(event)">О сайте</a>
-        </li>
-        <h2>Разделы:</h2>
-        <li>
-          <a href="#where_find" onmousedown="createRipple(event)"
-            >Полезные материалы</a
-          >
-        </li>
-        <li>
-          <a href="#from_newbies" onmousedown="createRipple(event)"
-            >Вопросы от новичков</a
-          >
-        </li>
-        <li>
-          <a href="#errors" onmousedown="createRipple(event)">Частые ошибки</a>
-        </li>
-        <li>
-          <a href="#install_errors" onmousedown="createRipple(event)"
-            >Проблемы с установкой</a
-          >
-        </li>
-        <li>
-          <a href="#render" onmousedown="createRipple(event)">Про рендер</a>
-        </li>
-        <h2 id="commit_date" style="cursor: default"></h2>
-      </ul>
+    <div class="container_sidemenu">
+      <div class="left_sidemenu hidden">
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              title="На главную"
+              onmousedown="createRipple(event)"
+              >На главную</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              title="О сайте"
+              onmousedown="createRipple(event)"
+              >О сайте</a
+            >
+          </li>
+          <h2>Разделы:</h2>
+          <li>
+            <a
+              href="#where_find"
+              title="Полезные материалы"
+              onmousedown="createRipple(event)"
+              >Полезные материалы</a
+            >
+          </li>
+          <li>
+            <a
+              href="#from_newbies"
+              title="Вопросы от новичков"
+              onmousedown="createRipple(event)"
+              >Вопросы от новичков</a
+            >
+          </li>
+          <li>
+            <a
+              href="#errors"
+              title="Частые ошибки"
+              onmousedown="createRipple(event)"
+              >Частые ошибки</a
+            >
+          </li>
+          <li>
+            <a
+              href="#install_errors"
+              title="Проблемы с установкой"
+              onmousedown="createRipple(event)"
+              >Проблемы с установкой</a
+            >
+          </li>
+          <li>
+            <a
+              href="#render"
+              title="Про рендер"
+              onmousedown="createRipple(event)"
+              >Про рендер</a
+            >
+          </li>
+          <h2
+            id="commit_date"
+            style="cursor: default">
+            Тут должна быть дата коммита
+          </h2>
+        </ul>
+      </div>
+      <div class="right_sidemenu hidden">
+        <ul>
+          <li>
+            <button
+              onclick="toggleTheme('light')"
+              onmousedown="createRipple(event)"
+              data-theme="light">
+              Светлая тема
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="toggleTheme('dark')"
+              onmousedown="createRipple(event)"
+              data-theme="dark">
+              Темная тема
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="setSystemTheme()"
+              onmousedown="createRipple(event)"
+              data-theme="system">
+              Системная тема
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-    <script src="js/scroll_with_offset.js"></script>
     <script src="js/copytext.js"></script>
+    <script src="js/scroll_with_offset.js"></script>
     <script src="js/sidemenu.js"></script>
     <script src="js/ripple_anim.js"></script>
-    <script src="js/copyurl.js"></script>
     <script src="js/toggletheme.js"></script>
-    <script src="js/commit_date.js"></script>
     <script src="js/photo_zoom.js"></script>
     <div class="copied hidden"></div>
     <aside id="where_find">Полезные материалы</aside>
@@ -79,7 +149,9 @@
       </h2>
       <p>
         На
-        <a href="index.html" title="Главная страница aelinks"
+        <a
+          href="index.html"
+          title="Главная страница aelinks"
           >главной странице</a
         >
         в разделе ”Ресурсы" и в закрепленном сообщении в
@@ -89,7 +161,9 @@
           >AEChat</a
         >
         вы всегда можете найти наши каналы для шаблонов и программ. Например, в
-        <a href="https://t.me/s/aetemp" title="Канал AETemp в Telegram"
+        <a
+          href="https://t.me/s/aetemp"
+          title="Канал AETemp в Telegram"
           >AETemp</a
         >
         можно найти звуки, переходы и шаблоны с помощью хештегов:
@@ -116,14 +190,29 @@
           >HiStock в Telegram</a
         >
         для оперативной покупки шаблонов с платформ
-        <a href="https://elements.envato.com" title="Envato Elements"
+        <a
+          href="https://elements.envato.com"
+          title="Envato Elements"
           >Envato Elements</a
         >
         (файлы из Videohive, Shutter Stock не принимаются),
-        <a href="https://freepik.com/" title="Freepik">Freepik</a>,
-        <a href="https://motionarray.com/" title="Motion Array">Motion Array</a>
-        и <a href="https://artlist.io/" title="Artlist">Artlist</a> по выгодным
-        ценам.
+        <a
+          href="https://freepik.com/"
+          title="Freepik"
+          >Freepik</a
+        >,
+        <a
+          href="https://motionarray.com/"
+          title="Motion Array"
+          >Motion Array</a
+        >
+        и
+        <a
+          href="https://artlist.io/"
+          title="Artlist"
+          >Artlist</a
+        >
+        по выгодным ценам.
       </p>
       <h2>Где взять бесплатные стоковые видео для видеороликов?</h2>
       <p>
@@ -135,32 +224,78 @@
         ресурсе. Ниже перечислены популярные источники видео:
       </p>
       <p>
-        <a href="https://www.pexels.com/videos/" title="Pexels">Pexels</a>,
-        <a href="https://pixabay.com/videos/" title="Pixabay">Pixabay</a>,
-        <a href="https://www.videvo.net/" title="Videvo">Videvo</a>,
-        <a href="https://coverr.co/" title="Coverr">Coverr</a>,
-        <a href="https://www.splitshire.com" title="SplitShire">SplitShire</a>,
-        <a href="https://mazwai.com/" title="Mazvai">Mazvai</a>,
-        <a href="https://www.videezy.com/" title="Videezy">Videezy</a>,
-        <a href="https://www.vidsplay.com/" title="Vidsplay">Vidsplay</a>,<a
+        <a
+          href="https://www.pexels.com/videos/"
+          title="Pexels"
+          >Pexels</a
+        >,
+        <a
+          href="https://pixabay.com/videos/"
+          title="Pixabay"
+          >Pixabay</a
+        >,
+        <a
+          href="https://www.videvo.net/"
+          title="Videvo"
+          >Videvo</a
+        >,
+        <a
+          href="https://coverr.co/"
+          title="Coverr"
+          >Coverr</a
+        >,
+        <a
+          href="https://www.splitshire.com"
+          title="SplitShire"
+          >SplitShire</a
+        >,
+        <a
+          href="https://mazwai.com/"
+          title="Mazvai"
+          >Mazvai</a
+        >,
+        <a
+          href="https://www.videezy.com/"
+          title="Videezy"
+          >Videezy</a
+        >,
+        <a
+          href="https://www.vidsplay.com/"
+          title="Vidsplay"
+          >Vidsplay</a
+        >,<a
           href="https://cutestockfootage.com/"
           title="CuteStockFootage"
           >CuteStockFootage</a
         >,
         <a
-          href="http://mitchmartinez.com/free-4k-red-epic-stock-footage/"
+          href="https://mitchmartinez.com/free-4k-red-epic-stock-footage/"
           title="Mitch Martinez"
           >Mitch Martinez</a
-        >, <a href="https://mixkit.co/" title="Mixkit">Mixkit</a>,
-        <a href="https://www.xstockvideo.com/" title="XStockVideos"
+        >,
+        <a
+          href="https://mixkit.co/"
+          title="Mixkit"
+          >Mixkit</a
+        >,
+        <a
+          href="https://www.xstockvideo.com/"
+          title="XStockVideos"
           >XStockVideos</a
-        >, <a href="https://www.clipstill.com/" title="Clipstill">Clipstill</a>,
+        >,
+        <a
+          href="https://www.clipstill.com/"
+          title="Clipstill"
+          >Clipstill</a
+        >,
         <a
           href="https://vimeo.com/groups/freehd/"
           title="Пользователь Phil Fred на Vimeo"
           >Phil Fred на Vimeo</a
         >,
-        <a href="https://www.ignitemotion.com/" title="IgniteMotion"
+        <a
+          href="https://www.ignitemotion.com/"
+          title="IgniteMotion"
           >IgniteMotion</a
         >
         и
@@ -202,40 +337,120 @@
         >, то ниже предоставлен список различных сайтов с бесплатными
         графическими материалами:
       </p>
-      <p>
-        <!-- fixme: написать сайты для статичных картинок -->
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-      </p>
+      <ul>
+        <li>
+          <a
+            href="https://unsplash.com/"
+            title="Unsplash"
+            >Unsplash</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://pickupimage.com/ru/"
+            title="Pickup Image"
+            >Pickup Image</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.flaticon.com/ru/"
+            title="Flaticon"
+            >Flaticon</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.stockio.com/"
+            title="Stockio"
+            >Stockio</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://creazilla.com/ru"
+            title="Creazilla"
+            >Creazilla</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.uidownload.com/ru"
+            title="UIDownload"
+            >UIDownload</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://stock.adobe.com/ru/free"
+            title="Adobe Stock"
+            >Adobe Stock</a
+          >
+        </li>
+      </ul>
       <h2>
         С фото и видео разобрались, но я хочу найти бесплатные звуки, где они
         находятся?
       </h2>
       <p>
         Если вам не хватает ассортимента из
-        <a href="https://t.me/s/aetemp" title="Канал AETemp в Telegram"
+        <a
+          href="https://t.me/s/aetemp"
+          title="Канал AETemp в Telegram"
           >AETemp</a
         >, то ниже представлен список сайтов с бесплатными звуками:
       </p>
-      <p>
-        <a
-          href="https://www.audiomicro.com/free-sound-effects"
-          title="Audiomicro"
-          >Audiomicro</a
-        >, <a href="https://www.zapsplat.com/" title="Zapsplat">Zapsplat</a>,
-        <a href="https://www.freesfx.co.uk/" title="FreeSFX">FreeSFX</a>,
-        <a href="https://www.freesoundslibrary.com/" title="FreeSoundLibrary"
-          >FreeSoundLibrary</a
-        >, <a href="https://soundbible.com/" title="SoundBible">SoundBible</a>,
-        <a href="https://www.soundeffectsplus.com/" title="soundeffects+"
-          >soundeffects+</a
-        >
-        и
-        <a href="https://freesound.org/" title="freesound">freesound</a>
-      </p>
+      <ul>
+        <li>
+          <a
+            href="https://www.audiomicro.com/free-sound-effects"
+            title="Audiomicro"
+            >Audiomicro</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.zapsplat.com/"
+            title="Zapsplat"
+            >Zapsplat</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.freesfx.co.uk/"
+            title="FreeSFX"
+            >FreeSFX</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.freesoundslibrary.com/"
+            title="FreeSoundLibrary"
+            >FreeSoundLibrary</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://soundbible.com/"
+            title="SoundBible"
+            >SoundBible</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.soundeffectsplus.com/"
+            title="soundeffects+"
+            >soundeffects+</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://freesound.org/"
+            title="freesound"
+            >freesound</a
+          >
+        </li>
+      </ul>
       <p>
         Перед использованием звуков в коммерческих целях - обязательно прочтите
         условия использования и лицензии, чтобы не попасть в неприятную
@@ -250,16 +465,25 @@
           >LikeFont</a
         >
         для определения шрифта по фотографии. Этот сервис способен распознавать
-        шрифты как на латинице, так и на кириллице.
-        <!-- fixme: написать про то как им пользоваться -->
+        шрифты как на латинице, так и на кириллице. Как начать им пользоваться?
+        Просто зайдите на сайт и загрузите своё изображение с помощью проводника
+        или <mark>Ctrl + V</mark>.
+      </p>
+      <img
+        src="source/likefont_mainpage.png"
+        alt="Главная страница LikeFont"
+        title="Главная страница LikeFont" />
+      <!-- fixme: написать про то как им пользоваться -->
+      <aside>Главная страница LikeFont</aside>
+      <p>
+        <!-- fixme: -->
       </p>
       <h2>Хочу влиться в After Effects, с чего мне начать?</h2>
       <p>
         Для изучения After Effects с нуля - рекомендуем пройти курс от
         <a
           href="https://www.youtube.com/channel/UCmLY17yagzLy6GRiI1nVBow"
-          title="Канал Ильи Зернова на YouTube"
-        >
+          title="Канал Ильи Зернова на YouTube">
           Ильи Зернова
         </a>
         для того, чтобы разобраться в интерфейсе программы и не задавать тупые
@@ -271,25 +495,40 @@
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen=""
-      ></iframe>
+        allowfullscreen=""></iframe>
       <p>
         Если вы уже достаточно уверенный пользователь программы, но не знаете
         куда дальше направляться - рекомендуем посетить каналы
-        <a href="https://www.youtube.com/@BenMarriott" title="Ben Marriot"
+        <a
+          href="https://www.youtube.com/@BenMarriott"
+          title="Ben Marriot"
           >Ben Marriot</a
         >,
-        <a href="https://www.youtube.com/@JakeInMotion" title="Jake In Motion"
+        <a
+          href="https://www.youtube.com/@JakeInMotion"
+          title="Jake In Motion"
           >Jake In Motion</a
         >,
-        <a href="https://www.youtube.com/@TutoView" title="Jake In Motion"
+        <a
+          href="https://www.youtube.com/@TutoView"
+          title="Jake In Motion"
           >Tutorial View+</a
         >,
-        <a href="https://www.youtube.com/@VideoSmile" title="VideoSmile"
+        <a
+          href="https://www.youtube.com/@VideoSmile"
+          title="VideoSmile"
           >VideoSmile</a
         >
-        и <a href="https://www.youtube.com/@AEPlug" title="AEPlug">AEPlug</a>.
-        Удачи в начинаниях!
+        и
+        <a
+          href="https://www.youtube.com/@AEPlug"
+          title="AEPlug"
+          >AEPlug</a
+        >. Удачи в начинаниях!
+      </p>
+      <h2>Какие есть популярные термины при использовании After Effects?</h2>
+      <p>
+        <!-- fixme: -->
       </p>
       <h2>Как узнать об официальных нововведениях и багах в After Effects?</h2>
       <p>
@@ -372,15 +611,14 @@
         просчёта кадра.
       </p>
       <p>
-        Для того, чтобы выяснить, сколько времени занимает просчёт кадра из-за
+        Для того чтобы выяснить, сколько времени занимает просчёт кадра из-за
         эффекта, разработчики внедрили в After Effects функцию
         <mark>Render Time</mark>.
       </p>
       <img
         src="source/render_time_example.png"
         alt="Демонстрация функции Render Time"
-        title="Демонстрация функции Render Time"
-      />
+        title="Демонстрация функции Render Time" />
       <aside>
         На Solid были применены эффекты от Boris FX Sapphire, которые могут
         значительно отнимать ваше время для рендера
@@ -395,11 +633,13 @@
         или различных видеохостингов - то переконвертируйте их в
         <mark>Apple Prores 422</mark> или <mark>DNxHR</mark> через Media Encoder
         или
-        <a href="https://www.shutterencoder.com/" title="Сайт Shutter Encoder"
+        <a
+          href="https://www.shutterencoder.com/"
+          title="Сайт Shutter Encoder"
           >Shutter Encoder</a
         >, так как такие видео зачастую конвертируются неизвестно во что и могут
-        плохо крутиться программой. Более подробную информацию об области
-        применения кодеков вы можете посмотреть в видео от
+        плохо крутиться программой. Более подробную информацию про область
+        применения различных кодеков вы можете посмотреть в видео от
         <a
           href="https://www.youtube.com/@VideoSmile"
           title="Канал VideoSmile на YouTube"
@@ -412,8 +652,7 @@
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen=""
-      ></iframe>
+        allowfullscreen=""></iframe>
       <p>
         Если у вас используются видео-исходники с переменным FPS, то такие видео
         также надо переконвертировать через вышеназванные утилиты в постоянный
@@ -430,6 +669,52 @@
         использовании тяжеловесных исходников с HDD могут начаться проблемы.
         Если у вас есть SSD с большим объёмом памяти - следует перенести весь
         проект туда и продолжить работу.
+      </p>
+      <h2>
+        Как заставить After Effects использовать всю можность процессора и
+        видеокарты?
+      </h2>
+      <p>
+        Вы можете задействовать весь потенциал вашего процессора, включив
+        функцию <mark>Multi-Frame Rendering</mark> в настройках программы. Эта
+        функция позволит рендерить несколько кадров одновременно, используя всю
+        вычислительную мощь процессора.
+      </p>
+      <p>
+        В настройках можно ограничить использование процессора при Multi-Frame
+        рендере для того, чтобы дать другим программам возможность использования
+        процессора.
+      </p>
+      <img
+        src="source/enable_multiframe_render.png"
+        alt="Включение Multi-Frame рендера"
+        title="Включение Multi-Frame рендера" />
+      <aside>
+        Данная опция находится в Edit &gt; Preferences &gt; Memory &amp;
+        Perfomance
+      </aside>
+      <div class="important">
+        Пожалуйста - не путайте значения и внимательно читайте пункт настройки:
+        25% в настройке означает тот факт, что 75% вашего процессора будет
+        уделено для After Effects при использовании Multi-Frame рендера. Если вы
+        установите в этой настройке 90%, то After Effects будет использовать
+        всего лишь 10% мощностей процессора и такая функция становится просто
+        бессмысленной.
+      </div>
+      <p>
+        Поговорим и про видеокарту: After Effects до сих пор не умеет полностью
+        использовать графический процессор (GPU), даже если сторонние эффекты
+        поддерживают его - программа не обязана в полной мере задействовать
+        видеокарту. Основное воздействие на видео и эффекты происходит с
+        акцентом на центральный процессор (CPU), особенно при использовании
+        множества различных плагинов от разных разработчиков, что может снизить
+        эффективность GPU-рендера.
+      </p>
+      <p>
+        Вы ещё спросите: а почему в Premiere Pro видеокарта спокойно
+        задействуется, а в After Effects через одно место? Ответ прост: Premiere
+        Pro и After Effects - программы для совершенно разных задач,
+        соответственно там используются разные подходы ко всем действиям!
       </p>
       <h2>
         Для чего некоторые пользователи ставят рендер на процессор и как это
@@ -451,8 +736,7 @@
       <img
         src="source/project_manager_mercury.png"
         alt="Окно Project Manager"
-        title="Окно Project Manager"
-      />
+        title="Окно Project Manager" />
       <aside>Окно Project Manager с выбором типа рендеринга</aside>
       <p>
         Пункт <mark>Mercury Software Only</mark> позволяет программе рендерить
@@ -493,10 +777,15 @@
         Для быстрой смены языка After Effects на английский язык вы можете
         создать пустой текстовый документ с названием
         <mark>ae_force_english.txt</mark> и поместить в папку "Документы" вашего
-        пользователя.
+        пользователя. Также вы можете воспользоваться командой для терминала
+        Windows, чтобы создать текстовый документ, если вам лень создавать
+        пустой файл вручную в проводнике.
       </p>
+      <code>
+        echo.&gt;"C:\Users\%USERNAME%\Documents\ae_force_english.txt"
+      </code>
       <p>
-        Если не помогло, то переименуйте файл
+        Если это не помогло - переименуйте файл
         <mark>after_effects_ru_RU.dat</mark>, находящийся на пути
         <mark>
           C:\Program Files\Adobe\Adobe After Effects 20XX\Support
@@ -505,52 +794,24 @@
         на <mark>after_effects_en_US.dat</mark>
       </p>
       <h2>
-        Как заставить After Effects использовать всю можность процессора и
-        видеокарты?
+        Я принципиально установил After Effects на русском языке, но не знаю,
+        как звучат эффекты на английском языке
       </h2>
       <p>
-        Вы можете задействовать весь потенциал вашего процессора, включив
-        функцию <mark>Multi-Frame Rendering</mark> в настройках программы. Эта
-        функция позволит рендерить несколько кадров одновременно, используя всю
-        вычислительную мощь процессора.
+        А зря, ведь могли бы и сменить язык. В раскрывающемся списке расположен
+        список перевода эффектов.
       </p>
-      <p>
-        В настройках можно ограничить использование процессора при Multi-Frame
-        рендере для того, чтобы дать другим программам возможность использования
-        процессора.
-      </p>
-      <img
-        src="source/enable_multiframe_render.png"
-        alt="Включение Multi-Frame рендера"
-        title="Включение Multi-Frame рендера"
-      />
-      <aside>
-        Данная опция находится в Edit &gt; Preferences &gt; Memory &amp;
-        Perfomance
-      </aside>
-      <p>
-        Пожалуйста - не путайте значения и внимательно читайте пункт настройки:
-        25% в настройке означает тот факт, что 75% вашего процессора будет
-        уделено After Effects при использовании Multi-Frame рендера. Если вы
-        установите там 90%, то After Effects будет использовать всего лишь 10%
-        мощностей процессора и такая функция становится просто бессмысленной.
-      </p>
-      <p>
-        Поговорим и про видеокарту: After Effects до сих пор не умеет полностью
-        использовать графический процессор (GPU), даже если сторонние эффекты
-        поддерживают его - программа не обязана в полной мере задействовать
-        видеокарту. Основное воздействие на видео и эффекты происходит с
-        акцентом на центральный процессор (CPU), особенно при использовании
-        множества различных плагинов от разных разработчиков, что может снизить
-        эффективность GPU-рендера.
-      </p>
-      <p>
-        Вы ещё спросите: а почему в Premiere Pro видеокарта спокойно
-        задействуется, а в After Effects через одно место? Ответ прост: Premiere
-        Pro и After Effects - программы для совершенно разных задач,
-        соответственно там используются разные подходы ко всем действиям!
-      </p>
-      <h2>Предпросмотр идёт как будто в slow-mo, что делать?</h2>
+      <div class="important">
+        Перевод и наличие эффектов может отличаться в зависимости от версии
+        программы
+      </div>
+      <details>
+        <summary>
+          Перевод стандартных эффектов с русского языка на английский
+        </summary>
+        <!-- fixme: -->
+      </details>
+      <h2>Предпросмотр идёт как будто в slow motion, что делать?</h2>
       <p>
         Для начала проверьте настройки вашего окна Preview и убедитесь, что
         параметр FPS установлен на Auto и что две опции кэширования
@@ -563,51 +824,64 @@
       <img
         src="source/preview_settings.png"
         alt="Окно Preview"
-        title="Окно Preview"
-      />
+        title="Окно Preview" />
       <aside>Окно Preview для демонстрации настроек для предпросмотра</aside>
       <p>
         Если у вас имеется достаточный объем оперативной памяти или возникают
         проблемы с записью кэша на диск, вы можете выключить опцию кэширования в
-        Edit &gt; Preferences &gt; Media &amp; Disk Cache.
+        <mark>Edit &gt; Preferences &gt; Media &amp; Disk Cache</mark>.
       </p>
       <img
         src="source/disable_disk_cache.png"
         alt="Пункт для отключения Disk Cache в настройках"
-        title="Пункт для отключения Disk Cache в настройках"
-      />
+        title="Пункт для отключения Disk Cache в настройках" />
       <aside>
-        Пункт disk cache отвечает за кэширование вашего проекта на диск
+        Пункт Disk Cache отвечает за кэширование вашего проекта на диск
       </aside>
       <p>
         Иногда возникают ситуации, когда при использовании беспроводных
         наушников или неправильного аудиовыхода программа пытается
         синхронизировать изображение и звук, но получается всё через одно место.
         В таких случаях рекомендуется либо обновить аудиодрайверы, либо изменить
-        аудиовыход на другой и уменьшить задержку (Latency) в Edit &gt;
-        Preferences &gt; Audio Hardware.
+        аудиовыход на другой и уменьшить задержку (Latency) в
+        <mark> Edit &gt; Preferences &gt; Audio Hardware </mark>.
       </p>
       <img
         src="source/reduce_audio_latency.png"
         alt="Уменьшение задержки аудио в настройках"
-        title="Уменьшение задержки аудио в настройках"
-      />
+        title="Уменьшение задержки аудио в настройках" />
       <aside>
         Настройка уменьшения задержки звука. По умолчанию установлено значение
         200
       </aside>
       <!-- fixme: рассказать почему видео проигрывается как слоумо -->
-      <p>Почему это так происходит?</p>
+      <p>
+        Почему это так происходит? Если вы пытаетесь воспроизвести предпросмотр
+        композиции, предварительно не кэшируя, то ваш ПК попытается просчитать
+        каждый кадр на лету. Иногда это удаётся и без тормозов, если проект
+        несложный, но чаще всего при сложных сценах After Effects просто не
+        успевает просчитать кадр до тех пор, пока он не появится на экране. В
+        окне <mark>Info</mark> вы всегда можете посмотреть информацию о текущем
+        FPS вашего предпросмотра.
+      </p>
+      <img
+        src="source/info_not_realtime.png"
+        alt="Окно информации о предпросмотре"
+        title="Окно информации о предпросмотре" />
+      <aside>Окно информации о предпросмотре не в реальном времени</aside>
+      <p>
+        Если предпросмотр будет воспроизводиться не в реальном времени - в окне
+        будет информация о <mark>NOT Realtime</mark> с текущим фреймрейтом.
+      </p>
       <h2>Видео в предпросмотре проигрывается в ужасном качестве!</h2>
       <p>
-        Убедитесь, что в окне Preview установлено значение не Auto или другое
-        значение, отличное от Full.
+        Убедитесь, что в окне Preview установлено значение не
+        <mark>Auto</mark> или другое значение, отличное от <mark>Full</mark>.
       </p>
       <img
         src="source/set_resolution_in_preview_window.png"
         alt="Установка разрешения предпросмотра в окне Preview"
-        title="Установка разрешения предпросмотра в окне Preview"
-      />
+        title="Установка разрешения предпросмотра в окне Preview" />
       <aside>Установка разрешения предпросмотра в окне Preview</aside>
       <p>
         Также проверьте разрешение предпросмотра именно в окне, где отображается
@@ -616,8 +890,7 @@
       <img
         src="source/set_resolution_in_composition_view.png"
         alt="Установка разрешения предпросмотра в окне вида композиции"
-        title="Установка разрешения предпросмотра в окне вида композиции"
-      />
+        title="Установка разрешения предпросмотра в окне вида композиции" />
       <aside>Установка разрешения предпросмотра в окне вида композиции</aside>
       <p>
         Если это не помогло, то качество предпросмотра может быть подвержено
@@ -627,8 +900,7 @@
       <img
         src="source/disable_adaptive_resolution.png"
         alt="Отключение адаптивного разрешения при передвижении метки воспроизведения"
-        title="Отключение адаптивного разрешения при передвижении метки воспроизведения"
-      />
+        title="Отключение адаптивного разрешения при передвижении метки воспроизведения" />
       <aside>
         Отключение адаптивного разрешения при передвижении метки воспроизведения
       </aside>
@@ -656,14 +928,17 @@
       <img
         src="source/continuously_rasterize.png"
         alt="Continuously Rasterize"
-        title="Continuously Rasterize"
-      />
+        title="Continuously Rasterize" />
       <aside>
         Установка Continuously Rasterize, в простонародье ”звёздочка" или
         "солнышко"
       </aside>
-      <h2>Как убрать пикселизацию при перемещении курсора на таймлайне?</h2>
-      <p>fixme:</p>
+      <h2>
+        Как убрать пикселизацию при перемещении временной метки на таймлайне?
+      </h2>
+      <p>
+        <!-- fixme: -->
+      </p>
       <h2>Как улучшить качество исходников?</h2>
       <p>
         Если вы пришли с TikTok или YouTube от ”мамкиных эдиторов", которые
@@ -675,7 +950,7 @@
         В качестве эффективного способа хоть как-то улучшить качество исходного
         материала могу посоветовать использовать нейросети для этого, например
         <mark>Topaz Video</mark> или <mark>Topaz Photo</mark>. Если вы не хотите
-        использовать Stadalone-программы, то вы можете воспользоваться
+        использовать Standalone-программы, то вы можете воспользоваться
         сторонними плагинами, например BorisFX Continuum, в который добавили
         новый AI Upscaler.
       </p>
@@ -685,8 +960,7 @@
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen=""
-      ></iframe>
+        allowfullscreen=""></iframe>
       <h2>Как применить Adjustment Layer только для нужных слоёв?</h2>
       <p>
         Изначально After Effects не поддерживает данную функцию, но никто не
@@ -698,7 +972,9 @@
         вы можете сделать заливку для нужных слоёв, а затем из этой заливки
         сделать маску для Adjustment Layer. Подробнее об этом способе вы можете
         посмотреть в видео ниже от
-        <a href="https://t.me/Pavelusha" title="@pavelusha в Telegram"
+        <a
+          href="https://t.me/Pavelusha"
+          title="@pavelusha в Telegram"
           >@pavelusha</a
         >.
       </p>
@@ -706,8 +982,7 @@
         src="source/selective_adjustment_layer.mp4"
         type="video/mp4"
         preload=""
-        controls=""
-      ></video>
+        controls=""></video>
       <aside>
         Создание маски для Adjustment Layer с помощью Red Giant SuperComp
       </aside>
@@ -724,7 +999,9 @@
         перекодировать в монтажный кодек, а потом натыкаются на эти проблемы.
         Решение простое - перекодируйте ваши исходники в
         <mark>Apple ProRes 422</mark> через
-        <a href="https://www.shutterencoder.com/en" title="Сайт Shutter Encoder"
+        <a
+          href="https://www.shutterencoder.com/en"
+          title="Сайт Shutter Encoder"
           >Shutter Encoder</a
         >
         или Adobe Media Encoder, а потом замените их в проекте с помощью функции
@@ -733,8 +1010,7 @@
       <img
         src="source/replace_footage_in_project.png"
         alt="Замена футажей в окне Project"
-        title="Замена футажей в окне Project"
-      />
+        title="Замена футажей в окне Project" />
       <aside>Замена футажей в окне Project</aside>
       <p>
         После замены исходников - экспортируйте ваш проект в нужный вам тип
@@ -750,8 +1026,7 @@
       <img
         src="source/edit_preferences_import.png"
         alt="Edit - Preferences - Import"
-        title="Edit - Preferences - Import"
-      />
+        title="Edit - Preferences - Import" />
       <aside>
         Пункт для отключения аппаратного декодирования исходников в настройках
         программы
@@ -761,14 +1036,16 @@
         отличается, чем в проигрывателе
       </h2>
       <p>
-        Из-за того что After Effects не понимает, с каким типом исходника ему
-        работать - он преобразоывает все кадры без пропусков на таймлайне, из-за
-        этого и выходит, что длина видео меньше, чем предполагалось. Для
+        After Effects преобразует все кадры без пропусков на временной шкале,
+        потому что не понимает, с каким типом источника ему работать. В
+        результате чего длина видео оказывается меньше, чем хотелось бы. Для
         исправления этой проблемы нужно интерпретировать исходник через
         <mark>Interpret Footage &gt; Conform to frame rate</mark> и выставить
         нужный FPS, желательно совпадающий с FPS композиции в окне Project, либо
         перекодировать видео через
-        <a href="https://www.shutterencoder.com/en" title="Сайт Shutter Encoder"
+        <a
+          href="https://www.shutterencoder.com/en"
+          title="Сайт Shutter Encoder"
           >Shutter Encoder</a
         >
         с постоянным FPS.
@@ -776,15 +1053,16 @@
       <img
         src="source/interpreting_fps.png"
         alt="Окно Interpret Footage"
-        title="Окно Interpret Footage"
-      />
+        title="Окно Interpret Footage" />
       <aside>Окно Interpret Footage</aside>
       <h2>
         Как импортировать исходники, которые не поддерживает After Effects?
       </h2>
       <p>
         Попробуйте использовать плагин
-        <a href="https://www.autokroma.com/Influx" title="Сайт Autokroma Influx"
+        <a
+          href="https://www.autokroma.com/Influx"
+          title="Сайт Autokroma Influx"
           >Autokroma Influx</a
         >. Он облегчает импорт некоторых файлов, которые не поддерживаются в
         After Effects, Media Encoder или Premiere Pro.
@@ -792,11 +1070,12 @@
       <p>
         Если это не решит проблему, вы можете перекодировать исходные файлы в
         монтажный кодек с помощью
-        <a href="https://www.shutterencoder.com/en" title="Сайт Shutter Encoder"
+        <a
+          href="https://www.shutterencoder.com/en"
+          title="Сайт Shutter Encoder"
           >Shutter Encoder</a
         >.
       </p>
-      <!-- !: -->
       <h2>Как избавиться от ступенчатого градиента?</h2>
       <p>
         Для начала немного теории о том, почему градиент становится негладким:
@@ -806,15 +1085,19 @@
       <img
         src="source/color_banding.png"
         alt="Пример Color Banding"
-        title="Пример Color Banding"
-      />
+        title="Пример Color Banding" />
       <aside>Пример Color Banding</aside>
       <p>
-        Это происходит из-за нехватки цветов, так как 8-бит не покрывает весь
-        спектр цветов. Также это может быть из-за использования видеокодеков,
-        которые слишком сжимают цвета, например <mark>H.264</mark>. Ниже
-        прикреплено видео с подробным объяснением о том, почему темные и
-        неконтрастные видео портят ваше видео:
+        Это происходит из-за недостаточной цветовой глубины, так как 8-битное
+        представление не может отобразить все промежуточные оттенки цветов,
+        присутствующие в градиенте. Также это может быть из-за использования
+        видеокодеков, которые слишком сжимают цвета, например
+        <mark>H.264</mark>.
+      </p>
+      <p>
+        Ниже прикреплено видео с подробным объяснением о том, почему видео с
+        низкой яркостью и недостаточной контрастностью ухудшают качество вашего
+        видео:
       </p>
       <iframe
         height="450"
@@ -822,8 +1105,7 @@
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen=""
-      ></iframe>
+        allowfullscreen=""></iframe>
       <p>
         В большинстве случаев эта проблема решается повышением битности в
         проекте. Для этого откройте <mark>Project Settings</mark> при помощи
@@ -834,8 +1116,7 @@
       <img
         src="source/set_bit_depth.png"
         alt="Установка битности в проекте"
-        title="Установка битности в проекте"
-      />
+        title="Установка битности в проекте" />
       <aside>Окно Project Settings с открытой вкладкой Color</aside>
       <p>
         Учтите, что при повышении глубины цвета ресурсы вашего ПК будут
@@ -845,7 +1126,7 @@
       <p>
         Уменьшить эффект "бандинга" может помочь и обычный шум. Для этого
         создайте <mark>Adjustment Layer</mark> поверх всех слоёв и примените
-        эффект Noise с значением от 1 до 5 процентов.
+        эффект Noise со значением от 1 до 5 процентов.
       </p>
       <h2>
         Установил After Effects 2023 или выше, хочу повторить туториал по
@@ -874,20 +1155,18 @@
         Для отключения этой функции, выберите в панели инструментов любой
         инструмент, например <mark>Текст</mark> и нажмите рядом с ним
         <mark>Auto-Open Panel</mark>. Возможно, эту же процедуру надо повторить
-        с инструментом <mark>Кисть</mark>).
+        с инструментом <mark>Кисть</mark>.
       </p>
       <img
         src="source/auto_open_panel.png"
         alt="Auto-Open Panel"
-        title="Auto-Open Panel"
-      />
+        title="Auto-Open Panel" />
       <aside>Опция "Auto-Open Panel" при выбранном инструменте "Текст"</aside>
       <p>
         Подробнее об этой новой функции вы можете прочитать на
         <a
           href="https://helpx.adobe.com/ru/after-effects/using/properties-panel.html"
-          title="Быстрая анимация с помощью панели «Свойства» в After Effects"
-        >
+          title="Быстрая анимация с помощью панели «Свойства» в After Effects">
           официальном сайте Adobe</a
         >.
       </p>
@@ -907,12 +1186,15 @@
         В After Effects 2019 от KpoJluk не могу выделить объект в Rotobrush
       </h2>
       <p>
-        Эта сборка действительно имеет такой баг, решается откатом до CC 2018
-        или установкой аналогичной версии от m0nkrus. Но у меня к таким
-        пользователям вопрос: зачем вы используете старые версии программ, когда
-        уже есть более новые, в которых исправлены недочёты? Пора уже
-        обновляться до более свежих версий, если вы, конечно, не сидите на
-        Windows 7 или Windows 8.1.
+        Эта сборка действительно имеет такой баг, решается откатом до версии
+        <mark>CC 2018</mark> или установкой аналогичной версии от
+        <mark>m0nkrus</mark>.
+      </p>
+      <p>
+        У меня к таким пользователям вопрос: почему вы продолжаете использовать
+        старые версии программ, когда в новых версиях разработчики исправляют
+        ошибки? Не пора ли перейти на более современные версии? Если вы
+        используете Windows 7 или Windows 8.1 - к вам вопросов нет.
       </p>
       <h2>
         Как продублировать композицию так, чтобы две композиции были независимы
@@ -920,13 +1202,21 @@
       </h2>
       <p>
         Чтобы сделать две композиции независимыми, их не нужно копировать на
-        таймлайне. Для решения этой проблемы воспользуйтесь скриптом
+        таймлайне. Это происходит потому что вы копируете "ссылку" на одну и ту
+        же композицию и они не будет дублироваться автоматически.
+      </p>
+      <p>
+        Если у вас внутри композиции находятся подкомпозиции, то для быстрого
+        решения этой проблемы вы можете воспользоваться сторонним скриптом
         <a
           href="https://aescripts.com/true-comp-duplicator/"
           title="True Comp Duplicator на aescripts"
           >True Comp Duplicator</a
         >
-        или продублируйте композицию в окне Project.
+      </p>
+      <p>
+        Если у вас внутри композиции нет подкомпозиций, то вы можете
+        продублировать без плагинов с помощью окна Project.
       </p>
       <iframe
         height="500"
@@ -939,7 +1229,7 @@
       <p>
         Для сохранения текущего кадра, вы можете нажать на комбинацию клавиш
         <mark>Ctrl + Alt + S</mark> или перейдите в
-        <mark>Composition > Save Frame As > File</mark>.
+        <mark>Composition &gt; Save Frame As &gt; File</mark>.
       </p>
       <img
         src="source/save_frame_as.png"
@@ -950,7 +1240,7 @@
         котором вы можете выбрать нужный формат. По умолчанию After Effects
         сохраняет в формате Photoshop, но вы всегда можете изменить настройки по
         умолчанию через редактор шаблонов для рендера в
-        <mark>Output Module > Make Template</mark>.
+        <mark>Output Module &gt; Make Template</mark>.
       </p>
       <img
         src="source/output_modules_template_photo.png"
@@ -960,39 +1250,103 @@
       <p>
         Если вам этот способ неудобен, вы можете сохранить текущий кадр через
         сторонний плагин
-        <a href="https://www.videocopilot.net/blog/?s=fx%20console">FXConsole</a
+        <a
+          href="https://www.videocopilot.net/blog/?s=fx%20console"
+          title="Сайт для скачивания FX Console"
+          >FX Console</a
         >. При открытии панели эффектов через <mark>Ctrl + Space</mark> вы
         можете нажать на иконку фотоаппарата для сохранения текущего кадра.
       </p>
       <img
         src="source/fxconsole_takephoto.png"
-        alt="Окно FXConsole"
-        title="Окно FXConsole" />
-      <aside>Окно FXConsole</aside>
+        alt="Окно FX Console"
+        title="Окно FX Console" />
+      <aside>Окно FX Console</aside>
       <p>
         После нажатия на неё, вам предложат выбрать путь для сохранения и формат
         изображения.
       </p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
+      <h2>
+        Переместил слой из одной композиции в другую, но оно куда-то улетело из
+        таймлайна
+      </h2>
+      <p>
+        Для перемещения вашего слоя на таймлайне после или перед временной
+        меткой в After Effects, используйте клавиши <mark>[</mark> или
+        <mark>]</mark>.
+      </p>
+      <h2>
+        Почему у меня первый кадр в композиции начинается не с нулевой секунды?
+      </h2>
+      <p>
+        Такое может произойти, если вы при создании прекомпоза нажали на пункт
+        <mark
+          >Adjust composition duration to the time span of the selected
+          layers</mark
+        >.
+      </p>
+      <p>
+        Для исправления времени начала, вам следует зайти в настройки композиции
+        через <mark>Ctrl + K</mark> и указать нужное число в графе
+        <mark>Start Timecode</mark>. В нашем случае - это <mark>0</mark>.
+      </p>
+      <h2>Что такое "секретное меню" в After Effects и для чего оно нужно?</h2>
+      <p>
+        Разработчики из Adobe действительно скрыли некоторые функции от
+        любопытных глаз и поместила их в отдельную категорию
+        <mark>Secret</mark>. Но там ничего интересного нет. Прям совсем.
+      </p>
+      <p>
+        Для того чтобы его открыть, нужно открыть любой пункт настроек в
+        <mark> Edit &gt; Preferences </mark> с зажатой клавишей
+        <mark>Shift</mark>. Учтите, что клавиша <mark>Shift</mark> должна быть
+        зажата перед открытием любого пункта настроек до тех пор, пока окно с
+        настройками не откроется. После открытия вы можете заметить и открыть в
+        списке настроек пункт Secret.
+      </p>
+      <img
+        src="source/secret_settings.png"
+        alt="Секретные настройки"
+        title="Секретные настройки" />
+      <aside>Псевдо-секретные настройки</aside>
+      <p>
+        В данном меню находятся два пункта: <mark>Disable Layer Cache</mark> и
+        <mark>Ignore Sequence Rendering Errors</mark>. Первая настройка
+        позволяет отключить кэш слоя и автоматически очищать каждый X кадр при
+        рендере предпросмотра. Второй пункт позволяет программе забить болт на
+        ошибки при рендере последовательности изображений.
+      </p>
+      <div class="important">
+        Изменение этих параметров может серьёзно сказаться на стабильности
+        программы. Выполняйте действия на свой страх и риск!
+      </div>
+      <p>
+        Данные настройки могут вам помочь, если вы испытываете проблемы с
+        переполнением оперативной памяти при рендере.
+      </p>
     </div>
     <aside id="errors">Частые ошибки</aside>
     <div class="content">
+      <aside>
+        After Effects часто предлагает решение ошибки, которую он выдаёт.
+        Пожалуйста, не ленитесь переводить вашу ошибку через переводчик и искать
+        ответ в интернете!
+      </aside>
       <h2>
         Часто появляется окно “Out of Memory” или “Low memory warning. RAM use
-        has been extended for previews.”
+        has been extended for previews”
       </h2>
       <p>
         В данном случае виден налицо факт переполнения оперативной памяти,
         вызванный неоптимизированностью проекта или неправильными настройками
-        проекта и программы. Убедитесь что вы не используете картинки с большим
-        разрешением, не используете больше 8 бит цвета в проекте и не
-        перегружаете себя множеством эффектов.
+        проекта и программы.
       </p>
+      <div class="important">
+        Убедитесь что вы не используете исходники с большим разрешением, не
+        используете больше 8 бит цвета в проекте и не перегружаете себя
+        множеством эффектов.
+      </div>
+      <!-- fixme: добавить картинку ошибки -->
       <p>
         Для решения этой проблемы могу дать вам несколько советов: очищайте кэш
         с помощью <mark>Edit &gt; Purge &gt; All Cache</mark>, перекодируйте
@@ -1016,14 +1370,13 @@
         type="video/webm"
         autoplay=""
         loop=""
-        style="filter: saturate(0)"
-      ></video>
+        style="filter: saturate(0)"></video>
       <aside>Установка файла подкачки на Windows 11</aside>
       <p>
         Бывает такое, что некоторые неуверенные пользователи After Effects могут
         выделить неправильное количество оперативной памяти в
-        <mark>Edit &gt; Preferences &gt; Memory &amp; Perfomance</mark>,
-        покопавшись в настройках не вникая в их суть.
+        <mark>Edit &gt; Preferences &gt; Memory &amp; Performance</mark>,
+        неправильно прочитав настройку.
       </p>
       <p>
         Проблема заключается в том, что пользователь зачем-то выделяет
@@ -1037,8 +1390,7 @@
       <img
         src="source/how_not_to_allocate_memory.png"
         alt="Как не надо выделять память"
-        title="Как не надо выделять память"
-      />
+        title="Как не надо выделять память" />
       <aside>
         Неправильное выделение оперативной памяти.<br />В таком случае для After
         Effects останется выделено всего лишь 1 ГБ ОЗУ
@@ -1051,17 +1403,13 @@
       <img
         src="source/how_to_allocate_memory.png"
         alt="Как надо выделять память"
-        title="Как надо выделять память"
-      />
+        title="Как надо выделять память" />
       <aside>
         Правильное выделение оперативной памяти.<br />В данном случае, ниже 3 ГБ
         ОЗУ установить не получится
       </aside>
       <p>
-        fixme: написать про копозы-прокси-файлы fixme: Также можно
-        предварительно рендерить прокси-файлы в полном качестве для композиций и
-        использовать их при окончательном рендере. Подробнее о применении
-        прокси-файлов можно узнать в [разделе 5.4](#5.4).
+        <!-- fixme: написать про композы-прокси-файлы. Также можно предварительно рендерить прокси-файлы в полном качестве для композиций и использовать их при окончательном рендере. Подробнее о применении прокси-файлов можно узнать в [разделе 5.4](#5.4). -->
       </p>
       <h2>Error: Cached preview need 2 or more frames for playback</h2>
       <p>
@@ -1079,6 +1427,25 @@
         разных разработчиков, которые могут конфликтовать друг с другом.
       </p>
       <h2>
+        Unable to allocate enough memory to render the current frame (XXXX x
+        XXXX @ X bpc). Either decrease the memory requirements for the rendering
+        frame, or install more RAM
+      </h2>
+      <p>
+        Данная ошибка часто появляется при использовании огромных по разрешению
+        исходников, нагруженных эффектов или высокой битности в проекте (16 или
+        32 бита вместо 8). В ошибке буквально есть решение проблемы: нужно
+        уменьшать требования программы к оперативной памяти путём оптимизации
+        вашего проекта.
+      </p>
+      <p>
+        Обычно помогают советы, написанные выше, но если у вас действительно
+        мало ОЗУ, то вряд ли что-то можно сделать, не переделывая весь проект.
+        Либо вам всё же придётся раскошелиться и купить больше оперативной
+        памяти. На данный момент минимально-комфортное количество оперативной
+        памяти для работы в After Effects - это 32 Гб.
+      </p>
+      <h2>
         Effect cannot allocate a buffer larger than 30000 pixels in either
         dimension
       </h2>
@@ -1087,63 +1454,127 @@
         <mark>CC Repetile</mark> или что-то похожее, то эта ошибка возникает
         из-за того что у вас либо слишком большой исходник, либо вы слишком
         перекрутили значения так, что на каждую ось для картинки вышло более
-        30000 пикселей, которые After Effects не может обработать. Размер 30000
-        пикселей по каждой оси представляет собой фактическое ограничение для
-        размеров изображения или видео. И оно не отключается, увы.
+        30000 пикселей, которые After Effects не может обработать.
       </p>
+      <div class="important">
+        30000 пикселей у слоя на каждую ось - это действительно максимальное
+        значение для After Effects. Само собой это ограничение нельзя обойти,
+        увы.
+      </div>
       <p>
         В качестве решения необходимо уменьшить значения для используемых
-        плагинов или уменьшить разрешение исходников удобным для вас способом
+        плагинов или уменьшить разрешение исходников удобным для вас способом.
       </p>
       <h2>
         This effect may slow down Preview and Export as it is optimized
         Multi-Frame Render
       </h2>
-      <p></p>
+      <p>
+        <!-- fixme: -->
+      </p>
       <h2>
         ”Не удалось преобразовать символов Unicode” или "Не удалось загрузить
         псевдоэффекты"
       </h2>
-      <p></p>
+      <p>
+        <!-- fixme: -->
+      </p>
       <h2>Красный экран при использовании Twixtor или BorisFX Sapphire</h2>
-      <p>123</p>
+      <p>
+        <!-- fixme: -->
+      </p>
       <h2>
         This project must be converted from version XX.X.X (Windows/Mac OS). The
         original file will be unchanged
       </h2>
-      <p></p>
+      <p>
+        <!-- fixme: -->
+      </p>
       <h2>
         The file you are attempting to open was created with After Effects
         version XX.X.X (Windows/Mac OS) and cannot be opened with this version
       </h2>
-      <p></p>
+      <p>
+        <!-- fixme: -->
+      </p>
       <h2>
         After Effects warning: Cinema 4D must be installed in order to use the
         Cinema 4D renderer
       </h2>
-      <p></p>
+      <p>
+        Данное предупреждение показывает, что вы не можете пользоваться рендером
+        Cinema 4D из After Effects, потому что у вас не установлена его "большая
+        версия".
+      </p>
+      <p>
+        Для решения проблемы - просто установите полноценную
+        <mark>Maxon Cinema 4D</mark>. Обычно в ошибке указывается, какая нужна
+        минимальная версия для запуска рендер-движка:
+      </p>
+      <ul>
+        <li>
+          Для After Effects 24.1 и выше требуется установить
+          <mark>Cinema 4D 2024.x.x</mark>
+        </li>
+        <li>
+          Для After Effects 23.1-24.0 требуется установить
+          <mark>Cinema 4D 2023.x.x</mark>
+        </li>
+        <li>
+          Для After Effects старше 23.0 требуется установить
+          <mark>Cinema 4D R25.117</mark> (R26.xxx не подходит)
+        </li>
+      </ul>
       <h2>
         Frame rate mismatch, or footage with fields found. For best Roto Brush
         &amp; Refine Edge results, set the composition to XX fps to match the
         layer source
       </h2>
-      <p></p>
+      <p>
+        Данное предупреждение показывает, что вы пытаетесь сделать ротоскоп
+        исходника, фреймрейт которого не совпадает с фреймрейтом композиции.
+        Программа прямым текстом говорит, что нужно установить FPS из текста о
+        предупреждении для композиции через <mark>Ctrl + K</mark>.
+      </p>
+      <p>
+        Никто не запрещает пользовать функцией Rotobrush прямо на прекомпозиции,
+        если вы не хотите менять FPS основной композиции. Также никто не
+        запрещает интерпретировать футаж в один FPS через
+        <mark>Interpret Footage &gt; Conform to frame rate</mark> в окне
+        Project.
+      </p>
+      <p>
+        Если ни один способ вам не подошёл - перекодируйте видео через любой
+        конвертер, например
+        <a
+          href="https://www.shutterencoder.com/en/"
+          title="Сайт Shutter Encoder"
+          >Shutter Encoder</a
+        >, с нужным FPS и замените его в проекте с помощью
+        <mark>Replace Footage &gt; File</mark> в окне проекта.
+      </p>
       <h2>
-        This project must be converted from version XX.X.X (Windows/Mac OS). The
+        This project must be converted from version XX.X.X (Windows/macOS). The
         original file will be unchanged
       </h2>
-      <p></p>
+      <p>
+        <!-- fixme: -->
+      </p>
       <h2>
         The file you are attempting to open was created with After Effects
-        version XX.X.X (Windows/Mac OS) and cannot be opened with this version
+        version XX.X.X (Windows/macOS) and cannot be opened with this version
       </h2>
-      <p></p>
+      <p>
+        <!-- fixme: -->
+      </p>
       <h2>
         Приложение Adobe Creative Cloud, необходимое для устранения проблемы
         отсутствует или повреждено
       </h2>
-      <p></p>
-      <h2>System Compability Report при запуске After Effects</h2>
+      <p>
+        <!-- fixme: -->
+      </p>
+      <h2>System Compatibility Report при запуске After Effects</h2>
       <p>
         Паниковать не надо! Для продолжения запуска, нажмите на кнопку
         <mark>Continue with known issues</mark>. В таком случае запуск программы
@@ -1153,8 +1584,7 @@
       <img
         src="source/system_compatibility_report.png"
         alt="System Compatibility Report"
-        title="System Compatibility Report"
-      />
+        title="System Compatibility Report" />
       <aside>
         Ошибка совместимости из-за устаревших драйверов на встроенную видеокарту
         на процессор Intel Core i7-7700
@@ -1185,8 +1615,7 @@
       <img
         src="source/0xc0000142.png"
         alt="Ошибка 0xc0000142"
-        title="Ошибка 0xc0000142"
-      />
+        title="Ошибка 0xc0000142" />
       <p>
         Для решения этой проблемы, установите After Effects 2023 или старее из
         <a
@@ -1196,7 +1625,7 @@
         >.
       </p>
       <h2>
-        Ошибка про отсутствие MSVCP140.dll, api-ms-win-crt-runtime-l1-1-0.ddl и
+        Ошибка про отсутствие MSVCP140.dll, api-ms-win-crt-runtime-l1-1-0.dll и
         аналогичные
       </h2>
       <p>
@@ -1221,7 +1650,7 @@
       </h2>
       <p>
         Вы не можете открыть очень старые проекты с использованием устаревшего
-        движка <mark>Ray-Traced 3D</mark>в новых версиях After Effects (от
+        движка <mark>Ray-Traced 3D</mark> в новых версиях After Effects (от
         2020). Для этого придётся устанавливать After Effects CS6 или 2019, где
         эта функция доживала последние дни, и открывать проект там.
       </p>
@@ -1233,8 +1662,15 @@
       <p>
         Ниже предупреждения прилагается список отсутствующих шрифтов, которые не
         установлены на вашем компьютере. Если автор шаблона или проекта забыл
-        предоставить шрифты, то их вам нужно будет установить вручную.
+        предоставить шрифты, то их вам нужно будет найти и установить вручную.
       </p>
+      <img
+        src="source/font_not_found.png"
+        alt="Шрифт не найден"
+        title="Шрифт не найден" />
+      <aside>
+        Предупреждение о том, что шрифт не найден и будет заменён на стандартный
+      </aside>
       <p>
         Если вы установили шрифт, но предупреждение никуда не пропало - замените
         шрифты вручную, так как шрифт автора проекта и ваш шрифт, установленный
@@ -1252,53 +1688,37 @@
       </p>
       <p>
         Ниже ошибки обычно прилагается список плагинов, которые отсутствуют на
-        вашем компьютере. Но бывают такие случаи, что при открытии очень старых
-        проектов теряются часть плагинов, которые частично возможно или
-        невозможно использовать.
+        вашем компьютере и их необходимо установить для корректного запуска
+        проекта.
+      </p>
+      <img
+        src="source/missing_effects.png"
+        alt="Потерянные эффекты"
+        title="Потерянные эффекты" />
+      <aside>
+        Предупреждение о том, что указанные плагины не установлены или
+        некорректно загружаются
+      </aside>
+      <p>
+        Бывают такие случаи, что при открытии очень старых проектов теряются
+        часть плагинов, которые частично возможно или невозможно использовать в
+        новых версиях After Effects. Если у вас отображается ошибка о том, что
+        невозможно найти стандартный эффект "... Blur", то вам нужно применить
+        стандартный скрипт
+        <mark>UpdateLegacyBlurs.jsx</mark>, находящийся в
+        <mark>File &gt; Scripts</mark>.
       </p>
     </div>
     <aside id="install_errors">Проблемы с установкой</aside>
     <div class="content">
       <h2></h2>
-      <p></p>
+      <p>
+        <!-- fixme: -->
+      </p>
       <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
-      <h2></h2>
-      <p></p>
+      <p>
+        <!-- fixme: -->
+      </p>
     </div>
     <aside id="render">Про рендер</aside>
     <div class="content">
@@ -1326,8 +1746,7 @@
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen=""
-      ></iframe>
+        allowfullscreen=""></iframe>
       <p>
         Самое главное правило, которое применяется для всех видео: сохраняйте
         частоту кадров исходного видео, она не должна отличаться после
@@ -1344,23 +1763,28 @@
         кадрами в секунду.
       </p>
       <p>
-        Для того чтобы опубликовать видео на YouTube, оно должно соответствовать
-        требованиям площадки:
+        Для того чтобы опубликовать видео на
+        <a
+          href="https://youtube.com"
+          title="YouTube"
+          >YouTube</a
+        >, оно должно соответствовать требованиям площадки:
       </p>
-      <ul>
-        <li>
-          Видео должно иметь переменный или постоянный битрейт, ограничения на
-          него нет, но лучше соблюдать таблицу битрейтов.
-        </li>
-        <li>Контейнер должен быть <mark>.mp4</mark></li>
-        <li>Видеокодек - <mark>H.264</mark></li>
-        <li>
-          Аудиокодек - <mark>AAC</mark> с частотой дискретизации 48 кГц или 96
-          кГц.
-        </li>
-        <li>Видео должно содержать стерео или 5.1 каналы для аудио.</li>
-      </ul>
-      <aside style="padding-top: 0">
+      <div class="important">
+        <ul>
+          <li>
+            Видео должно иметь переменный или постоянный битрейт, ограничения на
+            него нет, но лучше соблюдать таблицу битрейтов
+          </li>
+          <li>Контейнер должен быть <mark>.mp4</mark></li>
+          <li>
+            Видеокодек - <mark>H.264</mark>, аудиокодек - <mark>AAC</mark> с
+            частотой дискретизации 48 кГц или 96 кГц.
+          </li>
+          <li>Видео должно содержать стерео или 5.1 каналы для аудио</li>
+        </ul>
+      </div>
+      <aside>
         Таблица рекомендуемого битрейта для вывода в YouTube при использовании
         SDR
       </aside>
@@ -1461,18 +1885,20 @@
         </tbody>
       </table>
       <p>Для TikTok требования следующие:</p>
-      <ul>
-        <li>
-          площадка даёт возможность загрузить видео до 250 Мб, если вы
-          выкладываете с устройства на iOS и до 75 Мб, если вы выкладываете с
-          устройства на Android.
-        </li>
-        <li>В качестве видеокодека должно использоваться <mark>H.264</mark></li>
-        <li>Контейнер может быть <mark>.mp4</mark> или <mark>.mov</mark></li>
-      </ul>
-      <aside style="padding-top: 0">
-        Таблица рекомендуемого битрейта для вывода в TikTok
-      </aside>
+      <div class="important">
+        <ul>
+          <li>
+            Площадка даёт возможность загрузить видео до 250 Мб, если вы
+            выкладываете с устройства на iOS и до 75 Мб, если вы выкладываете с
+            устройства на Android.
+          </li>
+          <li>Контейнер должен быть <mark>.mp4</mark> или <mark>.mov</mark></li>
+          <li>
+            В качестве видеокодека должно использоваться <mark>H.264</mark>
+          </li>
+        </ul>
+      </div>
+      <aside>Таблица рекомендуемого битрейта для вывода в TikTok</aside>
       <table>
         <thead>
           <tr>
@@ -1481,14 +1907,6 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>4K*</td>
-            <td>30-60 Мбит/с</td>
-          </tr>
-          <tr>
-            <td>2K*</td>
-            <td>10-20 Мбит/с</td>
-          </tr>
           <tr>
             <td>1080p</td>
             <td>5-8 Мбит/с</td>
@@ -1499,45 +1917,93 @@
           </tr>
         </tbody>
       </table>
-      <aside>
-        *при условии, что площадка даст вам загрузить в такое разрешение, в
-        противном случае - произойдет конвертация до 1080p
-      </aside>
       <p>Для Instagram* необходимо соблюдать следующие условия:</p>
-      <ul>
-        <li>
-          Соотношение сторон видео должно быть <mark>4:5</mark>,
-          <mark>16:9</mark> или <mark>4:3</mark>, если вы собираетесь
-          выкладывать в обычный пост.
-        </li>
-        <li>
-          Соотношение сторон видео должно быть <mark>9:16</mark>, если
-          выкладываете видео для IGTV, Stories или Reels.
-        </li>
-        <li>
-          Видео может содержать любое количество FPS, но желательно
-          придерживаться стандарту 24, 25 или 30 FPS, так как при использовании
-          видео с 60 FPS нужно больше битрейта, а Instagram* любит пережимать
-          видео под себя.
-        </li>
-      </ul>
+      <div class="important">
+        <ul>
+          <li>
+            Соотношение сторон видео должно быть <mark>4:5</mark>,
+            <mark>16:9</mark> или <mark>4:3</mark>, если вы собираетесь
+            выкладывать в обычный пост.
+          </li>
+          <li>
+            Соотношение сторон видео должно быть <mark>9:16</mark>, если
+            выкладываете видео для IGTV, Stories или Reels.
+          </li>
+          <li>
+            Видео может содержать любое количество FPS, но желательно
+            придерживаться стандарту 24, 25 или 30 FPS, так как при
+            использовании видео с 60 FPS нужно больше битрейта, а Instagram*
+            любит пережимать видео под себя.
+          </li>
+        </ul>
+      </div>
       <aside>
         *Instagram и Meta признаны экстремистскими организациями и запрещены на
         территории Российской Федерации.
       </aside>
       <h2>Как выводить из After Effects видео в .mp4?</h2>
+      <!-- fixme: дописать про рендер -->
       <p>
-        Вы можете воспользоваться сторонними плагинами
-        <a href="">AfterCodecs</a> или <a href="">Voukoder</a>. Также с After
-        Effects 2023 вернулась возможность нативно выводить в H.264, а значит -
-        вы можете экспортировать видео в контейнер .mp4 сразу из программы без
-        использования Media Encoder.
+        Вместе с выходом обновления After Effects 2023 вернулась возможность
+        нативно выводить в <mark>H.264</mark>, а значит - вы можете
+        экспортировать видео в контейнер <mark>.mp4</mark> сразу из программы
+        без использования Media Encoder.
+      </p>
+      <p>
+        Если вам не нравится стандартный кодек, или у вас старая версия After
+        Effects, вы можете воспользоваться сторонними плагинами
+        <a
+          href="https://www.autokroma.com/AfterCodecs/Download"
+          title="Сайт AfterCodecs"
+          >AfterCodecs</a
+        >
+        или
+        <a
+          href="https://www.voukoder.org/forum/thread/783-downloads-instructions/"
+          title="Сайт Voukoder для загрузки"
+          >Voukoder</a
+        >.
+      </p>
+      <h2>Как выводить .gif из After Effects?</h2>
+      <p>
+        <!-- fixme: -->
       </p>
       <h2>
         Почему из каждого угла советуют не использовать Media Encoder для
         рендера композиций из After Effects?
       </h2>
-      <p>fixme:</p>
+      <p>
+        Если вы собираетесь вывести из After Effects небольшую композицию, то
+        гораздо быстрее и легче вам будет просчитать внутри программы, не
+        прибегая к внешнему модулю рендера.
+      </p>
+      <p>
+        Media Encoder при просчёте сложных сцен умеет сам останавливать рендер,
+        не объяснив причину. Также при рендере через Media Encoder вы можете
+        наткнуться на потерю исходников, различные артефакты и кривой просчёт
+        плагинов с потерей лицензии. Да, бывают случаи, что появляются водяные
+        знаки якобы от отсутствия лицензии от плагинов.
+      </p>
+      <p>
+        Ещё при рендере из Media Encoder - вы не получите стабильную работу
+        функции Multi-Frame Render, которая отлично работает при рендере из
+        самого After Effects.
+      </p>
+      <p>
+        Поэтому мы с каждого угла рекомендуем не ориентироваться на старые
+        обучающие видео по экспорту и не использовать Media Encoder для вывода
+        композиций из After Effects. Данная программа была предназначена для
+        совершенно другой цели: конвертация исходников из одного формата и
+        кодека в другой и создание прокси для Premiere Pro.
+      </p>
+      <p>
+        Если вам нужно поставить на очередь просчёта несколько композиций из
+        After Effects, то вы можете создать пустой проект-болванку,
+        импортировать все нужные проекты через <mark>Ctrl + I</mark> и кинуть их
+        в очередь рендера внутри самой программы через <mark>Ctrl + M</mark>.
+        Таким образом вы получите более стабильный рендер и нормальную поддержку
+        Multi-Frame Render.
+      </p>
       <h2>
         Почему при выводе в .mp4 через встроенный кодек H.264 сохраняется файл с
         памятью 1 Кб?
@@ -1551,38 +2017,65 @@
         <li>Не используйте кириллицу в пути для вывода</li>
         <li>
           Используйте
-          <a href="https://www.autokroma.com/AfterCodecs/">AfterCodecs</a> или
-          <a href="https://www.voukoder.org/">Voukoder</a> вместо стандартного
-          способа рендера
+          <a
+            href="https://www.autokroma.com/AfterCodecs/"
+            title="Сайт AfterCodecs"
+            >AfterCodecs</a
+          >
+          или
+          <a
+            href="https://www.voukoder.org/"
+            title="Сайт Voukoder"
+            >Voukoder</a
+          >
+          вместо стандартного способа рендера
         </li>
-        <li>Обновите After Effects до 23.6 или выше</li>
+        <li>
+          Обновите After Effects до 23.6 или выше, данный баг уже был исправлен
+          в поздних версиях
+        </li>
       </ul>
+      <h2>Почему после рендера контент смещается влево или вправо?</h2>
+      <p>
+        Это тоже один из старых багов программ версий 23.1, 23.2, 23.3, 23.4 и
+        23.5 при использовании Media Encoder в качестве рендера. Просто обновите
+        все After Effects и Media Encoder, желательно ещё и Premiere Pro, если у
+        вас имеется, до 23.6 или выше.
+      </p>
       <h2>Как сохранить свои пресеты для рендера файлов?</h2>
-      <p></p>
+      <p>
+        <!-- fixme: -->
+      </p>
       <h2>Как вывести из After Effects файлы с альфа-каналом?</h2>
       <p>
         Есть некоторые пользователи которые хотят вывести .mp4 с альфа-каналом,
         и я их разочарую: это не получится сделать (если не использовать HEVC
-        H.265 на Mac OS).
+        H.265 на macOS).
       </p>
       <p>
         Прежде чем выводить видео с альфа-каналом, убедитесь в том, что он у вас
         имеется в проекте. Для этого существует кнопка
-        <mark>Toggle Transparence Grid</mark>, которая подставляет сетку в виде
+        <mark>Toggle Transparency Grid</mark>, которая подставляет сетку в виде
         шашечной доски для отображения прозрачных частей в вашем проекте.
       </p>
-      <img src="source/view_alpha_channel.png" alt="" />
+      <img
+        src="source/view_alpha_channel.png"
+        alt="Отображение альфа-канала"
+        title="Отображение альфа-канала" />
       <aside>Отображение альфа-канала</aside>
       <p>
         Если всё в порядке, то время переходить в Render Queue с помощью
         комбинации клавиш <mark>Ctrl + M</mark>. Откройте Output Module и
-        установите в Format пункт Quicktime. Затем перейдите в раздел Format
+        установите в Format пункт QuickTime. Затем перейдите в раздел Format
         Options и выберите там <mark>Apple ProRes 4444</mark> или
         <mark>GoPro Cineform</mark> в разделе Video Codec. Затем установите
         параметр RGB + Alpha в пункте Channels. После выполнения всех шагов, вы
         можете приступить к экспорту видео с альфа-каналом.
       </p>
-      <img src="source/render_with_alpha_channel.png" alt="" />
+      <img
+        src="source/render_with_alpha_channel.png"
+        alt=""
+        title="" />
       <aside>Корректные настройки для вывода видео с альфа-каналом</aside>
       <p>
         После рендера вы можете использовать ваше видео в последующем монтаже
@@ -1590,23 +2083,55 @@
       </p>
       <p>
         Если вы хотите просмотреть такое видео, но у вас оно не открывается, то
-        вы должны установить сторонний видеоплеер, например
-        <a href="https://www.videolan.org/vlc/">VLC</a> или
-        <a href="https://github.com/clsid2/mpc-hc/releases">MPC-HC</a>. Учтите,
-        что не все видеопроигрыватели корректно выводят контент с альфа-каналом.
+        вы должны установить сторонний видео плеер, например
+        <a
+          href="https://www.videolan.org/vlc/"
+          title="VLC"
+          >VLC</a
+        >
+        или
+        <a
+          href="https://github.com/clsid2/mpc-hc/releases"
+          title="MPC-HC"
+          >MPC-HC</a
+        >. Учтите, что не все видео проигрыватели корректно выводят контент с
+        альфа-каналом.
       </p>
       <h2>
         Как отрендерить видео, если After Effects сбоит на конкретном участке?
       </h2>
-      <p>fixme:</p>
+      <p>
+        <!-- fixme: -->
+      </p>
       <h2>Почему при выводе видео получается видео с размером 10 ГБ и выше?</h2>
-      <p>fixme:</p>
+      <p>
+        По умолчанию в настройках вывода в старых версиях After Effects, где ещё
+        не вернули кодекс H.264, стоит контейнер AVI с параметром без сжатия.
+        После рендера многие новички не понимают, в чём же прикол, когда
+        натыкаются на очень большой файл и "неверное" расширение у видео.
+      </p>
+      <p>
+        Поэтому рекомендуется использовать другие варианты для экспорта,
+        например Quicktime, H.264 или другие кодеки, занимающие меньше места на
+        жёстком диске.
+      </p>
+      <p>
+        Если вы хотите сохранить настройки для рендера, которые вы задали, чтобы
+        они применялись по умолчанию для новых проектов, то существует функция
+        <mark>Output Module Templates</mark>.
+      </p>
       <h2></h2>
-      <p>fixme:</p>
+      <p>
+        <!-- fixme: -->
+      </p>
       <h2></h2>
-      <p>fixme:</p>
+      <p>
+        <!-- fixme: -->
+      </p>
       <h2></h2>
-      <p>fixme:</p>
+      <p>
+        <!-- fixme: -->
+      </p>
     </div>
     <footer>
       При копировании контента, пожалуйста, укажите в качестве источника этот
@@ -1651,8 +2176,7 @@
         <img
           src="https://mc.yandex.ru/watch/96346999"
           alt
-          style="position: absolute; left: -9999px"
-        /></div
+          style="position: absolute; left: -9999px" /></div
     ></noscript>
     <!-- /Yandex.Metrika counter -->
   </body>
