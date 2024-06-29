@@ -201,29 +201,13 @@ template,
 }
 
 header {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: var(--header-background);
   color: var(--accent);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-backdrop-filter: blur(25px) saturate(80%);
           backdrop-filter: blur(25px) saturate(80%);
   -webkit-filter: drop-shadow(0 0 15px var(--for-shadow));
           filter: drop-shadow(0 0 15px var(--for-shadow));
   height: 65px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  list-style-type: none;
   padding-inline: 20px;
   position: fixed;
   top: 0;
@@ -246,6 +230,28 @@ header {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+}
+header ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  list-style-type: none;
 }
 header li {
   cursor: pointer;
@@ -711,6 +717,14 @@ header span:active {
   z-index: 1500;
   visibility: hidden;
 }
+.container_sidemenu .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 24;
+  font-size: 18px;
+  -webkit-padding-end: 8px;
+     -moz-padding-end: 8px;
+          padding-inline-end: 8px;
+  color: var(--text);
+}
 
 .left_sidemenu {
   background-color: var(--header-background);
@@ -728,14 +742,32 @@ header span:active {
   visibility: hidden;
 }
 .left_sidemenu a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
   color: var(--text);
-  padding: 15px;
-}
-.left_sidemenu h2 {
-  color: var(--text);
-  font-size: smaller;
+  text-align: left;
   padding-inline: 15px;
   padding-block: 10px;
+  background: none;
+}
+.left_sidemenu aside {
+  color: var(--text);
+  font-size: 12px;
+  padding: 10px 15px;
+  margin: 0;
+  text-align: center;
+  text-transform: none;
+  opacity: 75%;
+  font-weight: bold;
 }
 .left_sidemenu li {
   cursor: pointer;
@@ -763,7 +795,6 @@ header span:active {
   position: relative;
 }
 .left_sidemenu ul li a {
-  display: block;
   height: 100%;
   text-decoration: none;
 }
@@ -781,22 +812,25 @@ header span:active {
   -moz-transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   visibility: hidden;
-  text-align: right;
 }
 .right_sidemenu button {
   border: none;
-  display: inline-block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--text);
-  text-align: right;
-  padding: 15px;
-  width: 100%;
-  background: none;
-}
-.right_sidemenu h2 {
-  color: var(--text);
-  font-size: smaller;
+  text-align: center;
   padding-inline: 15px;
   padding-block: 10px;
+  width: 100%;
+  background: none;
 }
 .right_sidemenu li {
   cursor: pointer;
@@ -823,13 +857,8 @@ header span:active {
   padding: 0;
   position: relative;
 }
-.right_sidemenu ul li a {
-  display: block;
-  height: 100%;
-  text-decoration: none;
-}
 .right_sidemenu .selected {
-  list-style-type: disc;
+  background: var(--accent-alt);
 }
 
 @media screen and (width < 800px) {

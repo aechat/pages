@@ -20,58 +20,93 @@
   </head>
 
   <body
-    class="light"
-    ondragstart="return false;"
-    ondrop="return false;">
-    <header>
+  class="light"
+  ondragstart="return false;"
+  ondrop="return false;">
+  <header>
+    <ul>
       <li
         class="menu"
-        onclick="toggleSidemenu()">
-        <label
-          class="menu_button"
-          for="menu_toggle">
-          <span
-            class="material-symbols-outlined"
-            style="cursor: pointer"
-            >menu</span
-          >
-        </label>
+        onclick="toggleSidemenu('.left_sidemenu')">
+        <span class="material-symbols-outlined">menu</span>
       </li>
       <li
         class="logo"
-        onclick="copyurl()"
-        style="cursor: pointer">
+        onclick="copyurl()">
         about
       </li>
       <li
         class="toggletheme"
-        style="cursor: pointer"
-        onclick="toggleTheme()">
+        onclick="toggleSidemenu('.right_sidemenu')">
         <span class="material-symbols-outlined">contrast</span>
       </li>
-    </header>
-    <div class="sidemenu hidden">
+    </ul>
+  </header>
+  <div class="container_sidemenu">
+    <div class="left_sidemenu hidden">
       <ul>
         <li>
           <a
             href="index.html"
+            title="На главную"
             onmousedown="createRipple(event)"
-            >На главную</a
+            ><span class="material-symbols-outlined"> home </span>
+            <p>На главную</p></a
           >
         </li>
-        <h2
-          style="cursor: default"
-          id="commit_date"></h2>
+        <li>
+          <a
+            href="about.html"
+            title="О сайте"
+            onmousedown="createRipple(event)"
+            ><span class="material-symbols-outlined"> info </span>
+            <p>О сайте</p></a
+          >
+        </li>
+        <aside
+          id="commit_date"
+          style="cursor: default">
+          Тут должна быть дата изменения страницы
+        </aside>
       </ul>
     </div>
-    <script src="js/scroll_with_offset.js"></script>
-    <script src="js/copytext.js"></script>
-    <script src="js/sidemenu.js"></script>
-    <script src="js/ripple_anim.js"></script>
-    <script src="js/copyurl.js"></script>
-    <script src="js/toggletheme.js"></script>
-    <script src="js/commit_date.js"></script>
-    <div class="copied hidden"></div>
+    <div class="right_sidemenu hidden">
+      <ul>
+        <li>
+          <button
+            onclick="setSystemTheme()"
+            onmousedown="createRipple(event)"
+            data-theme="system">
+            <span class="material-symbols-outlined"> hide_source </span
+            >Системная
+          </button>
+        </li>
+        <li>
+          <button
+            onclick="toggleTheme('light')"
+            onmousedown="createRipple(event)"
+            data-theme="light">
+            <span class="material-symbols-outlined"> light_mode </span>Светлая
+          </button>
+        </li>
+        <li>
+          <button
+            onclick="toggleTheme('dark')"
+            onmousedown="createRipple(event)"
+            data-theme="dark">
+            <span class="material-symbols-outlined"> dark_mode </span>Тёмная
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="js/copytext.js"></script>
+  <script src="js/scroll_with_offset.js"></script>
+  <script src="js/sidemenu.js"></script>
+  <script src="js/ripple_anim.js"></script>
+  <script src="js/toggletheme.js"></script>
+  <script src="js/photo_zoom.js"></script>
+  <div class="copied hidden"></div>
     <aside>&nbsp;</aside>
     <div class="content">
       <h2>Для чего этот сайт?</h2>

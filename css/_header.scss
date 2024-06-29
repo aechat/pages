@@ -1,15 +1,11 @@
 @import "variables";
 
 header {
-  align-items: center;
   background-color: var(--header-background);
   color: var(--accent);
-  display: flex;
   backdrop-filter: blur(25px) saturate(80%);
   filter: drop-shadow(0 0 15px var(--for-shadow));
   height: 65px;
-  justify-content: space-between;
-  list-style-type: none;
   padding-inline: 20px;
   position: fixed;
   top: 0;
@@ -25,6 +21,15 @@ header {
     transform: translateX(-50%);
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    list-style-type: none;
   }
 
   li {

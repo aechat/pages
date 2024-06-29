@@ -19,101 +19,141 @@
     <title>prfaq</title>
   </head>
 
-  <body class="light"
+  <body
+    class="light"
     ondragstart="return false;"
     ondrop="return false;">
     <header>
-      <li
-        class="menu"
-        onclick="toggleSidemenu()">
-        <label
-          class="menu_button"
-          for="menu_toggle">
-          <span
-            class="material-symbols-outlined"
-            style="cursor: pointer"
-            >menu</span
-          >
-        </label>
-      </li>
-      <li
-        class="logo"
-        onclick="copyurl()"
-        style="cursor: pointer">
-        prfaq
-      </li>
-      <li
-        class="toggletheme"
-        style="cursor: pointer"
-        onclick="toggleTheme()">
-        <span class="material-symbols-outlined">contrast</span>
-      </li>
-    </header>
-    <div class="sidemenu hidden">
       <ul>
-        <li>
-          <a
-            href="index.html"
-            onmousedown="createRipple(event)"
-            >На главную</a
-          >
+        <li
+          class="menu"
+          onclick="toggleSidemenu('.left_sidemenu')">
+          <span class="material-symbols-outlined">menu</span>
         </li>
-        <li>
-          <a
-            href="about.html"
-            onmousedown="createRipple(event)"
-            >О сайте</a
-          >
+        <li
+          class="logo"
+          onclick="copyurl()">
+          prfaq
         </li>
-        <h2>Разделы:</h2>
-        <li>
-          <a
-            href="#where_find"
-            onmousedown="createRipple(event)"
-            >Полезные материалы</a
-          >
+        <li
+          class="toggletheme"
+          onclick="toggleSidemenu('.right_sidemenu')">
+          <span class="material-symbols-outlined">contrast</span>
         </li>
-        <li>
-          <a
-            href="#from_newbies"
-            onmousedown="createRipple(event)"
-            >Вопросы от новичков</a
-          >
-        </li>
-        <li>
-          <a
-            href="#errors"
-            onmousedown="createRipple(event)"
-            >Частые ошибки</a
-          >
-        </li>
-        <li>
-          <a
-            href="#install_errors"
-            onmousedown="createRipple(event)"
-            >Проблемы с установкой</a
-          >
-        </li>
-        <li>
-          <a
-            href="#render"
-            onmousedown="createRipple(event)"
-            >Про рендер</a
-          >
-        </li>
-        <h2
-          style="cursor: default"
-          id="commit_date"></h2>
       </ul>
+    </header>
+    <div class="container_sidemenu">
+      <div class="left_sidemenu hidden">
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              title="На главную"
+              onmousedown="createRipple(event)"
+              ><span class="material-symbols-outlined"> home </span>
+              <p>На главную</p></a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              title="О сайте"
+              onmousedown="createRipple(event)"
+              ><span class="material-symbols-outlined"> info </span>
+              <p>О сайте</p></a
+            >
+          </li>
+          <aside>Разделы:</aside>
+          <li>
+            <a
+              href="#where_find"
+              title="Полезные материалы"
+              onmousedown="createRipple(event)">
+              <span class="material-symbols-outlined"> bookmark_heart </span>
+              <p>Полезные материалы</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#from_newbies"
+              title="Вопросы от новичков"
+              onmousedown="createRipple(event)">
+              <span class="material-symbols-outlined">school</span>
+              <p>Вопросы от новичков</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#errors"
+              title="Частые ошибки"
+              onmousedown="createRipple(event)">
+              <span class="material-symbols-outlined">warning</span>
+              <p>Частые ошибки</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#install_errors"
+              title="Проблемы с установкой"
+              onmousedown="createRipple(event)">
+              <span class="material-symbols-outlined">deployed_code_alert</span>
+              <p>Проблемы с установкой</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#render"
+              title="Про рендер"
+              onmousedown="createRipple(event)">
+              <span class="material-symbols-outlined">movie_edit</span>
+              <p>Про рендер</p>
+            </a>
+          </li>
+
+          <aside
+            id="commit_date"
+            style="cursor: default">
+            Тут должна быть дата изменения страницы
+          </aside>
+        </ul>
+      </div>
+      <div class="right_sidemenu hidden">
+        <ul>
+          <li>
+            <button
+              onclick="setSystemTheme()"
+              onmousedown="createRipple(event)"
+              data-theme="system">
+              <span class="material-symbols-outlined"> hide_source </span
+              >Системная
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="toggleTheme('light')"
+              onmousedown="createRipple(event)"
+              data-theme="light">
+              <span class="material-symbols-outlined"> light_mode </span>Светлая
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="toggleTheme('dark')"
+              onmousedown="createRipple(event)"
+              data-theme="dark">
+              <span class="material-symbols-outlined"> dark_mode </span>Тёмная
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-    <script src="js/scroll_with_offset.js"></script>
     <script src="js/copytext.js"></script>
+    <script src="js/scroll_with_offset.js"></script>
     <script src="js/sidemenu.js"></script>
     <script src="js/ripple_anim.js"></script>
-    <script src="js/copyurl.js"></script>
     <script src="js/toggletheme.js"></script>
-    <script src="js/commit_date.js"></script>
     <script src="js/photo_zoom.js"></script>
+    <div class="copied hidden"></div>
     <div class="copied hidden"></div>
     <aside id="where_find">Полезные материалы</aside>
     <div class="content"></div>
