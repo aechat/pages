@@ -1,31 +1,31 @@
 @import "variables";
 
 * {
-  margin: 0;
+  margin : 0;
   padding: 0;
 }
 
 .content {
-  margin-block: auto;
-  max-width: 800px;
-  padding: 10px 0;
+  margin-block    : auto;
+  max-width       : 800px;
+  padding         : 10px 0;
   background-color: var(--altbackground);
-  border-radius: $border-radius;
-  word-wrap: break-word;
-  white-space: wrap;
-  line-height: 1.5;
+  border-radius   : $border-radius;
+  word-wrap       : break-word;
+  white-space     : wrap;
+  line-height     : 1.75;
 
   a {
-    padding: 0;
-    font-weight: 700;
-    color: var(--accent);
+    padding        : 0;
+    font-weight    : 700;
+    color          : var(--accent);
     text-decoration: none;
 
     &:before {
-      content: "travel_explore";
-      padding-right: 3px;
-      font-size: 12px;
-      font-family: "Material Symbols Outlined", system-ui;
+      content       : "travel_explore";
+      padding-right : 3px;
+      font-size     : 12px;
+      font-family   : "Material Symbols Outlined", system-ui;
       vertical-align: middle;
     }
 
@@ -36,118 +36,118 @@
 
   aside,
   caption {
-    margin-block: auto;
-    padding: 25px;
-    font-size: 14px;
-    text-align: center;
+    margin-block  : auto;
+    padding       : 25px;
+    font-size     : 14px;
+    text-align    : center;
     text-transform: none;
   }
 
   audio,
   video,
   iframe {
-    width: 100%;
+    width        : 100%;
     border-radius: $border-radius;
-    border: none;
+    border       : none;
   }
 
   code {
-    display: block;
-    max-width: 800px;
+    display             : block;
+    max-width           : 800px;
     padding-inline-start: 30px;
-    padding-inline-end: 60px;
-    padding-block: 25px;
-    background-color: #303030;
-    border-radius: $border-radius;
-    font-family: "JetBrains Mono", monospace;
-    color: #fefefe;
-    position: relative;
+    padding-inline-end  : 60px;
+    padding-block       : 25px;
+    background-color    : #303030;
+    border-radius       : $border-radius;
+    font-family         : "JetBrains Mono", monospace;
+    color               : #fefefe;
+    position            : relative;
 
     &:hover {
       opacity: 80%;
-      cursor: pointer;
+      cursor : pointer;
     }
 
     &:active {
-      opacity: 100%;
-      filter: brightness(80%);
+      opacity  : 100%;
+      filter   : brightness(80%);
       transform: scale(0.95);
     }
 
     &::before {
-      content: "content_copy";
+      content    : "content_copy";
       font-family: "Material Symbols Outlined", system-ui;
-      font-size: 28px;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      color: var(--accent);
-      opacity: 0.5;
+      font-size  : 28px;
+      position   : absolute;
+      right      : 0;
+      top        : 50%;
+      transform  : translate(-50%, -50%);
+      color      : var(--accent);
+      opacity    : 0.5;
     }
   }
 
   h2 {
-    margin-block: 10px;
-    position: relative;
-    z-index: 0;
-    padding: 3px 25px;
-    font-size: 24px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    line-height: 1.25;
-    color: var(--accent);
+    margin-block  : 10px;
+    position      : relative;
+    z-index       : 0;
+    padding       : 3px 25px;
+    font-size     : 24px;
+    font-family   : "Montserrat", sans-serif;
+    font-weight   : 700;
+    line-height   : 1.25;
+    color         : var(--accent);
     text-transform: uppercase;
-    word-wrap: break-word;
+    word-wrap     : break-word;
 
     &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 4px;
-      background-color: var(--accent);
-      border-top-right-radius: $border-radius;
+      content                   : "";
+      position                  : absolute;
+      top                       : 0;
+      bottom                    : 0;
+      left                      : 0;
+      width                     : 4px;
+      background-color          : var(--accent);
+      border-top-right-radius   : $border-radius;
       border-bottom-right-radius: $border-radius;
     }
   }
 
   img {
     margin-inline: auto;
-    cursor: zoom-in;
-    display: block;
-    position: relative;
-    z-index: 1;
-    max-width: 100%;
-    height: auto;
-    max-height: 600px;
+    cursor       : zoom-in;
+    display      : block;
+    position     : relative;
+    z-index      : 1;
+    max-width    : 100%;
+    height       : auto;
+    max-height   : 600px;
     border-radius: $border-radius;
   }
 
   mark {
-    display: inline-flex;
-    align-items: center;
-    padding: 0 5px;
+    display         : inline-flex;
+    align-items     : center;
+    padding         : 0 5px;
     background-color: var(--accent-alt);
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 14px;
-    font-family: "JetBrains Mono", monospace;
-    line-height: 24px;
-    color: var(--text);
-    text-decoration: none;
-    word-wrap: break-word;
-    word-break: break-all;
+    cursor          : pointer;
+    border-radius   : 8px;
+    font-size       : 14px;
+    font-family     : "JetBrains Mono", monospace;
+    line-height     : 24px;
+    color           : var(--text);
+    text-decoration : none;
+    word-wrap       : break-word;
+    word-break      : break-all;
 
     &:after {
-      content: "content_copy";
-      padding: 0 1px 0 5px;
-      font-size: 14px;
-      font-family: "Material Symbols Outlined";
-      color: var(--accent);
+      content       : "content_copy";
+      padding       : 0 1px 0 5px;
+      font-size     : 14px;
+      font-family   : "Material Symbols Outlined";
+      color         : var(--accent);
       vertical-align: middle;
-      word-break: keep-all;
+      word-break    : keep-all;
     }
 
     &:hover {
@@ -156,60 +156,68 @@
 
     &:active {
       background-color: var(--for-ripple);
-      opacity: 100%;
-      transform: scale(0.95);
+      opacity         : 100%;
+      transform       : scale(0.99);
     }
   }
 
   p {
-    margin: 20px auto;
-    padding: 0 25px;
+    margin   : 20px auto;
+    padding  : 0 25px;
     font-size: 16px;
-    color: var(--text);
+    color    : var(--text);
   }
 
   summary {
-    cursor: pointer;
-    text-decoration: dotted;
+    background-color: var(--background);
+    margin          : 20px;
+    border-radius   : $border-radius;
+    padding         : 15px;
+    cursor          : pointer;
   }
 
   details {
-    margin: 20px;
-    padding: 10px;
-    cursor: default;
+    margin-inline: auto;
+    cursor       : default;
   }
 
   .important {
-    margin-inline: 20px;
-    font-weight: 700;
-    background-color: var(--accent-alt);
-    border-radius: $border-radius;
+    margin-inline       : 20px;
+    font-weight         : 700;
+    background-color    : var(--accent-alt);
+    border-radius       : $border-radius;
     padding-inline-start: 20px;
-    padding-inline-end: 70px;
-    padding-block: 15px;
-    position: relative;
+    padding-inline-end  : 70px;
+    padding-block       : 15px;
+    margin-block        : 20px;
+    position            : relative;
 
     &::before {
-      content: "warning";
+      content    : "warning";
       font-family: "Material Symbols Outlined";
-      font-size: 3em;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translate(-25%, -50%);
-      color: var(--text);
-      opacity: 0.25;
+      font-size  : 3em;
+      position   : absolute;
+      right      : 0;
+      top        : 50%;
+      transform  : translate(-25%, -50%);
+      color      : var(--text);
+      opacity    : 0.25;
+    }
+
+    a {
+      text-decoration: underline !important;
+      color          : var(--text);
     }
 
     ul {
       margin-inline-start: 25px;
-      padding: 0;
-      margin: 0;
+      padding            : 0;
+      margin             : 0;
     }
 
     li {
       margin-inline-start: 20px;
-      list-style-type: disc;
+      list-style-type    : disc;
     }
 
     li::marker {
@@ -218,9 +226,9 @@
   }
 
   ul {
-    margin-inline: 25px;
+    margin-inline       : 25px;
     padding-inline-start: 20px;
-    margin-bottom: 20px;
+    margin-bottom       : 20px;
 
     &:only-child {
       margin-bottom: 0;
@@ -228,7 +236,29 @@
   }
 
   li {
+    margin-block   : 10px;
     list-style-type: disc;
+  }
+
+  blockquote {
+    margin-inline   : 20px;
+    background-color: var(--for-table);
+    border-radius   : $border-radius;
+    padding-inline  : 20px;
+    padding-block   : 15px;
+    margin-block    : 20px;
+    position        : relative;
+
+    footer {
+      text-align         : right;
+      padding-block-start: 10px;
+      padding-block-end  : 0;
+      padding-inline     : 0;
+    }
+
+    a {
+      color: var(--text);
+    }
   }
 
   li::marker {
@@ -236,26 +266,48 @@
   }
 
   table {
-    max-width: 800px;
-    margin-inline: auto;
+    max-width       : 800px;
+    margin-inline   : auto;
     background-color: var(--for-table);
-    border-radius: $border-radius;
-    padding-block: 20px * 0.5;
-    padding-inline: 20px * 0.75;
-    text-align: center;
-    border-collapse: collapse;
+    border-radius   : $border-radius;
+    text-align      : center;
+    border-collapse : collapse;
   }
 
   td,
   th {
-    padding-inline: 15px;
-    padding-block: 5px;
-    border: 1px solid var(--for-border);
+    padding-inline: 10px;
+    padding-block : 5px;
+    border        : 1px solid var(--for-border);
   }
 
-  td {
-    word-wrap: break-word;
-    word-break: break-all;
+  @media (max-width: 600px) {
+    table {
+      font-size  : 12px;
+      word-wrap  : normal;
+      word-break : keep-all;
+      white-space: normal;
+    }
+  }
+
+  @media (max-width: 350px) {
+    table {
+      word-wrap  : break-word;
+      word-break : break-all;
+      white-space: normal;
+
+      td,
+      th {
+        padding-inline: 3px;
+        padding-block : 5px;
+      }
+    }
+  }
+
+  @media (min-width: 600px) {
+    font-size  : 16px;
+    word-wrap  : normal;
+    word-break : keep-all;
     white-space: normal;
   }
 
@@ -269,7 +321,6 @@
     border-right: none;
   }
 
-  tr:first-child td,
   tr:first-child th {
     border-top: none;
   }

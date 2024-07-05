@@ -12,7 +12,7 @@ function toggleTheme(theme) {
   localStorage.setItem("theme", theme);
   document
     .querySelectorAll(".right_sidemenu button")
-    .forEach(item => item.classList.remove("selected"));
+    .forEach((item) => item.classList.remove("selected"));
   document.querySelector(`[data-theme="${theme}"]`).classList.add("selected");
 }
 
@@ -33,7 +33,7 @@ function setSystemTheme() {
   applySystemTheme();
   document
     .querySelectorAll(".right_sidemenu button")
-    .forEach(item => item.classList.remove("selected"));
+    .forEach((item) => item.classList.remove("selected"));
   document.querySelector(`[data-theme="system"]`).classList.add("selected");
 }
 

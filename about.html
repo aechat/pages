@@ -18,95 +18,86 @@
       as="style" />
     <title>about</title>
   </head>
-
   <body
-  class="light"
-  ondragstart="return false;"
-  ondrop="return false;">
-  <header>
-    <ul>
-      <li
-        class="menu"
-        onclick="toggleSidemenu('.left_sidemenu')">
-        <span class="material-symbols-outlined">menu</span>
-      </li>
-      <li
-        class="logo"
-        onclick="copyurl()">
-        about
-      </li>
-      <li
-        class="toggletheme"
-        onclick="toggleSidemenu('.right_sidemenu')">
-        <span class="material-symbols-outlined">contrast</span>
-      </li>
-    </ul>
-  </header>
-  <div class="container_sidemenu">
-    <div class="left_sidemenu hidden">
-      <ul>
-        <li>
-          <a
-            href="index.html"
-            title="На главную"
-            onmousedown="createRipple(event)"
-            ><span class="material-symbols-outlined"> home </span>
-            <p>На главную</p></a
-          >
-        </li>
-        <li>
-          <a
-            href="about.html"
-            title="О сайте"
-            onmousedown="createRipple(event)"
-            ><span class="material-symbols-outlined"> info </span>
-            <p>О сайте</p></a
-          >
-        </li>
-        <aside
-          id="commit_date"
-          style="cursor: default">
-          Тут должна быть дата изменения страницы
-        </aside>
-      </ul>
+    class="light"
+    ondragstart="return false;"
+    ondrop="return false;">
+    <header>
+        <button
+          class="menu"
+          onclick="toggleSidemenu('.left_sidemenu')">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+        <button
+          class="logo"
+          onclick="copyURL()">
+          about
+        </button>
+        <button
+          class="toggletheme"
+          onclick="toggleSidemenu('.right_sidemenu')">
+          <span class="material-symbols-outlined">contrast</span>
+        </button>
+    </header>
+    <div class="container_sidemenu">
+      <div class="left_sidemenu hidden">
+        <ul>
+          <li>
+            <a
+              href="index.html"
+              title="На главную"
+              onmousedown="createRipple(event)"
+              ><span class="material-symbols-outlined"> home </span>
+              <p>На главную</p></a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              title="О сайте"
+              onmousedown="createRipple(event)"
+              ><span class="material-symbols-outlined"> info </span>
+              <p>О сайте</p></a
+            >
+          </li>
+          <h2
+            id="commit_date"
+            style="cursor: default">
+            Тут должна быть дата изменения страницы
+          </h2>
+        </ul>
+      </div>
+      <div class="right_sidemenu hidden">
+        <ul>
+          <li>
+            <button
+              onclick="setSystemTheme()"
+              onmousedown="createRipple(event)"
+              data-theme="system">
+              <span class="material-symbols-outlined"> hide_source </span
+              >Системная
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="toggleTheme('light')"
+              onmousedown="createRipple(event)"
+              data-theme="light">
+              <span class="material-symbols-outlined"> light_mode </span>Светлая
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="toggleTheme('dark')"
+              onmousedown="createRipple(event)"
+              data-theme="dark">
+              <span class="material-symbols-outlined"> dark_mode </span>Тёмная
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="right_sidemenu hidden">
-      <ul>
-        <li>
-          <button
-            onclick="setSystemTheme()"
-            onmousedown="createRipple(event)"
-            data-theme="system">
-            <span class="material-symbols-outlined"> hide_source </span
-            >Системная
-          </button>
-        </li>
-        <li>
-          <button
-            onclick="toggleTheme('light')"
-            onmousedown="createRipple(event)"
-            data-theme="light">
-            <span class="material-symbols-outlined"> light_mode </span>Светлая
-          </button>
-        </li>
-        <li>
-          <button
-            onclick="toggleTheme('dark')"
-            onmousedown="createRipple(event)"
-            data-theme="dark">
-            <span class="material-symbols-outlined"> dark_mode </span>Тёмная
-          </button>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <script src="js/copytext.js"></script>
-  <script src="js/scroll_with_offset.js"></script>
-  <script src="js/sidemenu.js"></script>
-  <script src="js/ripple_anim.js"></script>
-  <script src="js/toggletheme.js"></script>
-  <script src="js/photo_zoom.js"></script>
-  <div class="copied hidden"></div>
+    <div class="copied hidden"></div>
     <aside>&nbsp;</aside>
     <div class="content">
       <h2>Для чего этот сайт?</h2>
@@ -134,47 +125,14 @@
         улучшения материала.
       </p>
     </div>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-      (function (m, e, t, r, i, k, a) {
-        m[i] =
-          m[i] ||
-          function () {
-            (m[i].a = m[i].a || []).push(arguments);
-          };
-        m[i].l = 1 * new Date();
-        for (var j = 0; j < document.scripts.length; j++) {
-          if (document.scripts[j].src === r) {
-            return;
-          }
-        }
-        (k = e.createElement(t)),
-          (a = e.getElementsByTagName(t)[0]),
-          (k.async = 1),
-          (k.src = r),
-          a.parentNode.insertBefore(k, a);
-      })(
-        window,
-        document,
-        "script",
-        "https://mc.yandex.ru/metrika/tag.js",
-        "ym"
-      );
-
-      ym(96346999, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-        webvisor: true,
-      });
-    </script>
-    <noscript
-      ><div>
+    <noscript>
+      <div>
         <img
           src="https://mc.yandex.ru/watch/96346999"
-          style="position: absolute; left: -9999px"
-          alt="" /></div
-    ></noscript>
-    <!-- /Yandex.Metrika counter -->
+          alt
+          style="position: absolute; left: -9999px" />
+      </div>
+    </noscript>
+    <script src="bundle.js"></script>
   </body>
 </html>

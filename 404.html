@@ -36,23 +36,21 @@
     ondragstart="return false;"
     ondrop="return false;">
     <header>
-      <ul>
-        <li
+        <button
           class="menu"
           onclick="toggleSidemenu('.left_sidemenu')">
           <span class="material-symbols-outlined">menu</span>
-        </li>
-        <li
+        </button>
+        <button
           class="logo"
-          onclick="copyurl()">
+          onclick="copyURL()">
           oops!
-        </li>
-        <li
+        </button>
+        <button
           class="toggletheme"
           onclick="toggleSidemenu('.right_sidemenu')">
           <span class="material-symbols-outlined">contrast</span>
-        </li>
-      </ul>
+        </button>
     </header>
     <div class="container_sidemenu">
       <div class="left_sidemenu hidden">
@@ -75,11 +73,11 @@
               <p>О сайте</p></a
             >
           </li>
-          <aside
+          <h2
             id="commit_date"
             style="cursor: default">
             Тут должна быть дата изменения страницы
-          </aside>
+          </h2>
         </ul>
       </div>
       <div class="right_sidemenu hidden">
@@ -165,48 +163,16 @@
         src="source/glukoza_nostra.mp3"></audio>
     </div>
     <footer>Глюк’oZы-девочки, все летим на стрелочки</footer>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-      (function (m, e, t, r, i, k, a) {
-        m[i] =
-          m[i] ||
-          function () {
-            (m[i].a = m[i].a || []).push(arguments);
-          };
-        m[i].l = 1 * new Date();
-        for (var j = 0; j < document.scripts.length; j++) {
-          if (document.scripts[j].src === r) {
-            return;
-          }
-        }
-        (k = e.createElement(t)),
-          (a = e.getElementsByTagName(t)[0]),
-          (k.async = 1),
-          (k.src = r),
-          a.parentNode.insertBefore(k, a);
-      })(
-        window,
-        document,
-        "script",
-        "https://mc.yandex.ru/metrika/tag.js",
-        "ym"
-      );
-      ym(96346999, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-        webvisor: true,
-      });
-    </script>
     <noscript>
       <div>
         <img
           src="https://mc.yandex.ru/watch/96346999"
-          style="position: absolute; left: -9999px"
-          alt="" />
+          alt
+          style="position: absolute; left: -9999px" />
       </div>
     </noscript>
-    <!-- autoplay audio -->
+    <script src="bundle.js"></script>
+    <!-- !: autoplay audio -->
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
         let audioElement = document.getElementById("audioElement");
@@ -233,6 +199,6 @@
           });
       });
     </script>
-    <!-- /Yandex.Metrika counter -->
+    <!-- !: end autoplay audio -->
   </body>
 </html>

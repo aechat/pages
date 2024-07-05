@@ -1,39 +1,42 @@
 @import "variables";
 
 header {
+  display         : flex;
+  flex-wrap       : nowrap;
+  justify-content : space-between;
+  align-items     : center;
   background-color: var(--header-background);
-  color: var(--accent);
-  backdrop-filter: blur(25px) saturate(80%);
-  filter: drop-shadow(0 0 15px var(--for-shadow));
-  height: 65px;
-  padding-inline: 20px;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  left: 0;
-  right: 0;
-  box-sizing: border-box;
-  z-index: 3;
+  color           : var(--accent);
+  backdrop-filter : blur(25px) saturate(80%);
+  filter          : drop-shadow(0 0 15px var(--for-shadow));
+  height          : 65px;
+  padding-inline  : 20px;
+  position        : fixed;
+  top             : 0;
+  width           : 100vw;
+  left            : 0;
+  right           : 0;
+  box-sizing      : border-box;
+  z-index         : 3;
 
   @media screen and (min-width: 800px) {
-    max-width: 800px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-bottom-left-radius: $border-radius;
+    max-width                 : 800px;
+    left                      : 50%;
+    transform                 : translateX(-50%);
+    border-bottom-left-radius : $border-radius;
     border-bottom-right-radius: $border-radius;
   }
 
   ul {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+
+    height         : 100%;
     list-style-type: none;
   }
 
-  li {
-    cursor: pointer;
+  button {
+    cursor    : pointer;
+    background: none;
+    border    : none;
   }
 
   span {

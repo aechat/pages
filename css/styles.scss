@@ -1,10 +1,10 @@
-@import "reset";
-@import "header";
-@import "content";
-@import "links";
-@import "sidemenu";
-@import "fonts";
-@import "variables";
+@use "reset";
+@use "header";
+@use "content";
+@use "links";
+@use "sidemenu";
+@use "fonts";
+@use "variables";
 
 // * {
 //   outline: 1px solid red;
@@ -12,12 +12,12 @@
 
 @keyframes ripple-effect {
   from {
-    opacity: 1;
+    opacity  : 1;
     transform: scale(0);
   }
 
   to {
-    opacity: 0;
+    opacity  : 0;
     transform: scale(2);
   }
 }
@@ -25,9 +25,9 @@
 // !: сделать более оптимизированные анимации
 
 * {
-  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition                 : transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   -webkit-tap-highlight-color: transparent;
-  user-select: none;
+  user-select                : none;
 }
 
 .disable-animation * {
@@ -37,42 +37,42 @@
 }
 
 body {
-  padding-top: 65px;
+  padding-top     : 65px;
   background-color: var(--background);
-  color: var(--text);
-  font-family: "Inter", sans-serif;
-  font-weight: 350;
-  margin-inline: auto;
-  max-width: 800px;
-  overflow-x: hidden;
+  color           : var(--text);
+  font-family     : "Inter", sans-serif;
+  font-weight     : 350;
+  margin-inline   : auto;
+  max-width       : 800px;
+  overflow-x      : hidden;
 }
 
 aside {
-  color: var(--for-aside);
-  font-size: 12px;
-  font-weight: 300;
-  margin-block: 16px;
+  color         : var(--for-aside);
+  font-size     : 12px;
+  font-weight   : 300;
+  margin-block  : 16px;
   padding-inline: 20px;
-  text-align: right;
+  text-align    : right;
   text-transform: uppercase;
 }
 
 .copied {
-  filter: drop-shadow(0 20px 20px var(--for-shadow));
-  color: var(--text);
-  font-weight: bold;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  backdrop-filter: blur(25px) brightness(125%) saturate(50%);
+  filter          : drop-shadow(0 20px 20px var(--for-shadow));
+  color           : var(--text);
+  font-weight     : bold;
+  position        : fixed;
+  top             : 50%;
+  left            : 50%;
+  transform       : translate(-50%, -50%);
+  backdrop-filter : blur(25px) brightness(125%) saturate(50%);
   background-color: var(--header-background);
-  max-width: 500px;
-  border-radius: 20px;
-  padding-inline: 20px;
-  padding-block: 20px;
-  text-align: center;
-  z-index: 1000;
+  max-width       : 500px;
+  border-radius   : 20px;
+  padding-inline  : 20px;
+  padding-block   : 20px;
+  text-align      : center;
+  z-index         : 1000;
 }
 
 .material-symbols-outlined {
@@ -90,24 +90,24 @@ aside {
 }
 
 footer {
-  opacity: 50%;
-  border-top-left-radius: 20px;
+  opacity                : 50%;
+  border-top-left-radius : 20px;
   border-top-right-radius: 20px;
-  font-family: "Inter", sans-serif;
-  font-size: small;
-  padding-inline: 50px;
-  padding-block: 30px;
-  line-height: 1.25;
-  text-align: center;
+  font-family            : "Inter", sans-serif;
+  font-size              : small;
+  padding-inline         : 50px;
+  padding-block          : 30px;
+  line-height            : 1.25;
+  text-align             : center;
 }
 
 .ripple {
-  animation: ripple-effect 0.5s linear forwards;
-  background: var(--for-ripple);
+  animation    : ripple-effect 0.5s linear forwards;
+  background   : var(--for-ripple);
   border-radius: 50%;
-  opacity: 100%;
-  position: absolute;
-  transform: scale(0);
+  opacity      : 100%;
+  position     : absolute;
+  transform    : scale(0);
 }
 
 
@@ -120,17 +120,17 @@ footer {
 }
 
 #menu_toggle {
-  height: 0;
+  height : 0;
   opacity: 0;
-  width: 0;
+  width  : 0;
 }
 
 .hidden {
-  opacity: 0;
+  opacity   : 0;
   visibility: hidden;
 }
 
 .visible {
-  opacity: 1;
+  opacity   : 1;
   visibility: visible;
 }
