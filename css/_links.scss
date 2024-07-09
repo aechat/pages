@@ -2,12 +2,12 @@
 
 .links {
   background-color: var(--altbackground);
-  border-radius   : $border-radius;
+  border-radius   : 20px;
   margin-inline   : auto;
 
   a {
-    padding-inline : $border-radius;
-    padding-block  : $border-radius * 0.75;
+    padding        : 15px 20px;
+    color          : var(--text);
     text-decoration: none;
   }
 
@@ -25,13 +25,13 @@
     position: relative;
 
     &:first-child {
-      border-top-left-radius : $border-radius;
-      border-top-right-radius: $border-radius;
+      border-top-left-radius : 20px;
+      border-top-right-radius: 20px;
     }
 
     &:last-child {
-      border-bottom-left-radius : $border-radius;
-      border-bottom-right-radius: $border-radius;
+      border-bottom-left-radius : 20px;
+      border-bottom-right-radius: 20px;
     }
 
     &:not(:last-child) {
@@ -43,7 +43,7 @@
     color      : var(--text);
     font-size  : 16px;
     margin     : 0;
-    padding-top: 20px * 0.25;
+    padding-top: 5px;
   }
 
   ul {
@@ -64,16 +64,6 @@
       "wght"700,
       "GRAD"0,
       "opsz"36;
-    padding-right: $border-radius * 0.25;
+    padding-right: 5px;
   }
-}
-
-.logo {
-  color      : var(--accent);
-  font-family: "Montserrat", sans-serif;
-  font-size  : 24px;
-  font-weight: 900;
-  margin     : 0;
-  padding    : 20px * 0.5;
-  text-align : center;
 }

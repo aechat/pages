@@ -28,6 +28,8 @@
   transition                 : transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   -webkit-tap-highlight-color: transparent;
   user-select                : none;
+  
+  font-variant-ligatures: none;
 }
 
 .disable-animation * {
@@ -47,7 +49,7 @@ body {
   overflow-x      : hidden;
 }
 
-aside {
+section {
   color         : var(--for-aside);
   font-size     : 12px;
   font-weight   : 300;
@@ -85,15 +87,10 @@ aside {
   vertical-align: text-bottom;
 }
 
-.no_mark_color {
-  background-color: #00000000;
-}
-
 footer {
   opacity                : 50%;
   border-top-left-radius : 20px;
   border-top-right-radius: 20px;
-  font-family            : "Inter", sans-serif;
   font-size              : small;
   padding-inline         : 50px;
   padding-block          : 30px;

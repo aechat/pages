@@ -8,6 +8,7 @@ header {
   background-color: var(--header-background);
   color           : var(--accent);
   backdrop-filter : blur(25px) saturate(80%);
+  font-family     : "Montserrat", sans-serif;
   filter          : drop-shadow(0 0 15px var(--for-shadow));
   height          : 65px;
   padding-inline  : 20px;
@@ -23,8 +24,8 @@ header {
     max-width                 : 800px;
     left                      : 50%;
     transform                 : translateX(-50%);
-    border-bottom-left-radius : $border-radius;
-    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius : 20px;
+    border-bottom-right-radius: 20px;
   }
 
   ul {
@@ -44,4 +45,14 @@ header {
       transform: scale(0.8);
     }
   }
+}
+
+.logo {
+  font-family: "Montserrat", sans-serif;
+  font-size  : 24px;
+  font-weight: 900;
+  margin     : 0;
+  padding    : 10px 0;
+  text-align : center;
+  color      : var(--accent);
 }

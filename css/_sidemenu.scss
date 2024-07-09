@@ -10,7 +10,7 @@
   top            : 80px;
   z-index        : 1500;
   visibility     : hidden;
-
+overflow-x: visible;
   .material-symbols-outlined {
     font-variation-settings:
       'FILL'0,
@@ -63,13 +63,13 @@
     position: relative;
 
     &:first-child {
-      border-top-left-radius : $border-radius;
-      border-top-right-radius: $border-radius;
+      border-top-left-radius : 20px;
+      border-top-right-radius: 20px;
     }
 
     &:last-child {
-      border-bottom-left-radius : $border-radius;
-      border-bottom-right-radius: $border-radius;
+      border-bottom-left-radius : 20px;
+      border-bottom-right-radius: 20px;
     }
 
     &:not(:last-child) {
@@ -121,13 +121,13 @@
     position: relative;
 
     &:first-child {
-      border-top-left-radius : $border-radius;
-      border-top-right-radius: $border-radius;
+      border-top-left-radius : 20px;
+      border-top-right-radius: 20px;
     }
 
     &:last-child {
-      border-bottom-left-radius : $border-radius;
-      border-bottom-right-radius: $border-radius;
+      border-bottom-left-radius : 20px;
+      border-bottom-right-radius: 20px;
     }
 
     &:not(:last-child) {

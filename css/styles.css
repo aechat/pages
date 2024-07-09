@@ -3,8 +3,9 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body {
+* {
   margin: 0;
+  padding: 0;
 }
 
 main {
@@ -25,7 +26,7 @@ hr {
 }
 
 pre {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 
@@ -48,7 +49,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 
@@ -223,6 +224,7 @@ header {
   color: var(--accent);
   -webkit-backdrop-filter: blur(25px) saturate(80%);
           backdrop-filter: blur(25px) saturate(80%);
+  font-family: "Montserrat", sans-serif;
   -webkit-filter: drop-shadow(0 0 15px var(--for-shadow));
           filter: drop-shadow(0 0 15px var(--for-shadow));
   height: 65px;
@@ -263,6 +265,16 @@ header span:active {
      -moz-transform: scale(0.8);
       -ms-transform: scale(0.8);
           transform: scale(0.8);
+}
+
+.logo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  color: var(--accent);
 }
 
 .light {
@@ -324,10 +336,10 @@ header span:active {
 .content a:hover {
   opacity: 0.75;
 }
-.content aside,
-.content caption {
-  margin-block: auto;
-  padding: 25px;
+.content figcaption {
+  padding-inline: 25px;
+  padding-block: 10px;
+  opacity: 0.5;
   font-size: 14px;
   text-align: center;
   text-transform: none;
@@ -363,12 +375,8 @@ header span:active {
   opacity: 100%;
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
-  -webkit-transform: scale(0.95);
-     -moz-transform: scale(0.95);
-      -ms-transform: scale(0.95);
-          transform: scale(0.95);
 }
-.content code::before {
+.content code::after {
   content: "content_copy";
   font-family: "Material Symbols Outlined", system-ui;
   font-size: 28px;
@@ -420,17 +428,13 @@ header span:active {
   border-radius: 20px;
 }
 .content mark {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: inline;
   -webkit-box-align: center;
   -webkit-align-items: center;
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 5px;
+  padding: 4px;
   background-color: var(--accent-alt);
   cursor: pointer;
   border-radius: 8px;
@@ -439,14 +443,11 @@ header span:active {
   line-height: 24px;
   color: var(--text);
   text-decoration: none;
-  word-wrap: break-word;
-  word-break: break-all;
 }
-.content mark:after {
-  content: "content_copy";
-  padding: 0 1px 0 5px;
+.content mark span {
+  padding: 0 5px 0 1px;
   font-size: 14px;
-  font-family: "Material Symbols Outlined";
+  font-family: "Material Symbols Outlined", system-ui;
   color: var(--accent);
   vertical-align: middle;
   word-break: keep-all;
@@ -457,14 +458,9 @@ header span:active {
 .content mark:active {
   background-color: var(--for-ripple);
   opacity: 100%;
-  -webkit-transform: scale(0.99);
-     -moz-transform: scale(0.99);
-      -ms-transform: scale(0.99);
-          transform: scale(0.99);
 }
 .content p {
-  margin: 20px auto;
-  padding: 0 25px;
+  margin: 20px 25px;
   font-size: 16px;
   color: var(--text);
 }
@@ -494,9 +490,12 @@ header span:active {
   margin-block: 20px;
   position: relative;
 }
+.content .important ul {
+  margin-inline: 0px;
+}
 .content .important::before {
   content: "warning";
-  font-family: "Material Symbols Outlined";
+  font-family: "Material Symbols Outlined", system-ui;
   font-size: 3em;
   position: absolute;
   right: 0;
@@ -512,43 +511,22 @@ header span:active {
   text-decoration: underline !important;
   color: var(--text);
 }
-.content .important ul {
-  -webkit-margin-start: 25px;
-     -moz-margin-start: 25px;
-          margin-inline-start: 25px;
-  padding: 0;
-  margin: 0;
-}
-.content .important li {
-  -webkit-margin-start: 20px;
-     -moz-margin-start: 20px;
-          margin-inline-start: 20px;
-  list-style-type: disc;
-}
-.content .important li::marker {
-  color: var(--accent);
-}
 .content ul {
   margin-inline: 25px;
-  -webkit-padding-start: 20px;
-     -moz-padding-start: 20px;
-          padding-inline-start: 20px;
-  margin-bottom: 20px;
-}
-.content ul:only-child {
-  margin-bottom: 0;
 }
 .content li {
-  margin-block: 10px;
+  list-style-position: inside;
   list-style-type: disc;
+  margin-block: 5px;
+}
+.content li::marker {
+  color: var(--accent);
 }
 .content blockquote {
-  margin-inline: 20px;
+  margin: 20px;
   background-color: var(--for-table);
   border-radius: 20px;
-  padding-inline: 20px;
-  padding-block: 15px;
-  margin-block: 20px;
+  padding: 20px 20px 15px;
   position: relative;
 }
 .content blockquote footer {
@@ -562,12 +540,9 @@ header span:active {
 .content blockquote a {
   color: var(--text);
 }
-.content li::marker {
-  color: var(--accent);
-}
 .content table {
   max-width: 800px;
-  margin-inline: auto;
+  margin: 0 auto;
   background-color: var(--for-table);
   border-radius: 20px;
   text-align: center;
@@ -575,36 +550,27 @@ header span:active {
 }
 .content td,
 .content th {
-  padding-inline: 10px;
-  padding-block: 5px;
+  padding: 5px 10px;
   border: 1px solid var(--for-border);
 }
 @media (max-width: 600px) {
   .content table {
     font-size: 12px;
-    word-wrap: normal;
-    word-break: keep-all;
-    white-space: normal;
   }
 }
 @media (max-width: 350px) {
   .content table {
     word-wrap: break-word;
     word-break: break-all;
-    white-space: normal;
   }
   .content table td,
   .content table th {
-    padding-inline: 3px;
-    padding-block: 5px;
+    padding: 5px 3px;
   }
 }
 @media (min-width: 600px) {
-  .content {
+  .content table {
     font-size: 16px;
-    word-wrap: normal;
-    word-break: keep-all;
-    white-space: normal;
   }
 }
 .content td:first-child,
@@ -657,8 +623,8 @@ header span:active {
   margin-inline: auto;
 }
 .links a {
-  padding-inline: 20px;
-  padding-block: 15px;
+  padding: 15px 20px;
+  color: var(--text);
   text-decoration: none;
 }
 .links h2 {
@@ -703,16 +669,6 @@ header span:active {
 .links .material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 36;
   padding-right: 5px;
-}
-
-.logo {
-  color: var(--accent);
-  font-family: "Montserrat", sans-serif;
-  font-size: 24px;
-  font-weight: 900;
-  margin: 0;
-  padding: 10px;
-  text-align: center;
 }
 
 .light {
@@ -765,6 +721,7 @@ header span:active {
   top: 80px;
   z-index: 1500;
   visibility: hidden;
+  overflow-x: visible;
 }
 .container_sidemenu .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 24;
@@ -1033,6 +990,9 @@ header span:active {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-font-variant-ligatures: none;
+     -moz-font-variant-ligatures: none;
+          font-variant-ligatures: none;
 }
 
 .disable-animation * {
@@ -1053,7 +1013,7 @@ body {
   overflow-x: hidden;
 }
 
-aside {
+section {
   color: var(--for-aside);
   font-size: 12px;
   font-weight: 300;
@@ -1092,15 +1052,10 @@ aside {
   vertical-align: text-bottom;
 }
 
-.no_mark_color {
-  background-color: rgba(0, 0, 0, 0);
-}
-
 footer {
   opacity: 50%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  font-family: "Inter", sans-serif;
   font-size: small;
   padding-inline: 50px;
   padding-block: 30px;

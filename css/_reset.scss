@@ -3,8 +3,9 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0;
+* {
+  margin : 0;
+  padding: 0;
 }
 
 main {
@@ -23,7 +24,7 @@ hr {
 }
 
 pre {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size  : 1em;
 }
 
@@ -45,7 +46,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size  : 1em;
 }
 
@@ -83,6 +84,7 @@ textarea {
   line-height: 1.15;
   margin     : 0;
 }
+
 
 button,
 input {
