@@ -23,21 +23,21 @@
     ondragstart="return false;"
     ondrop="return false;">
     <header>
-        <button
-          class="menu"
-          onclick="toggleSidemenu('.left_sidemenu')">
-          <span class="material-symbols-outlined">menu</span>
-        </button>
-        <button
-          class="logo"
-          onclick="copyURL()">
-          about
-        </button>
-        <button
-          class="toggletheme"
-          onclick="toggleSidemenu('.right_sidemenu')">
-          <span class="material-symbols-outlined">contrast</span>
-        </button>
+      <button
+        class="menu"
+        onclick="toggleSidemenu('.left_sidemenu')">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <button
+        class="logo"
+        onclick="copyURL()">
+        about
+      </button>
+      <button
+        class="toggletheme"
+        onclick="toggleSidemenu('.right_sidemenu')">
+        <span class="material-symbols-outlined">contrast</span>
+      </button>
     </header>
     <div class="container_sidemenu">
       <div class="left_sidemenu hidden">
@@ -48,24 +48,15 @@
               title="На главную"
               onmousedown="createRipple(event)"
               ><span class="material-symbols-outlined"> home </span>
-              <p>На главную</p></a
-            >
+              <p>На главную</p>
+            </a>
           </li>
-          <li>
-            <a
-              href="about.html"
-              title="О сайте"
-              onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined"> info </span>
-              <p>О сайте</p></a
-            >
-          </li>
-          <h2
-            id="commit_date"
-            style="cursor: default">
-            Тут должна быть дата изменения страницы
-          </h2>
         </ul>
+        <h2
+          id="commit_date"
+          style="cursor: default">
+          Тут должна быть дата изменения страницы
+        </h2>
       </div>
       <div class="right_sidemenu hidden">
         <ul>
@@ -98,38 +89,56 @@
       </div>
     </div>
     <div class="copied hidden"></div>
-    <section>&nbsp;</section>
+    <section>О сайте</section>
     <div class="content">
       <h2>Для чего этот сайт?</h2>
       <p>
         Данный "портал" был создан для того, чтобы ответить на надоедливые
         вопросы от новичков про программы от Adobe, а также на вопросы о
-        нахождении контента или чатов. И так как некоторая информация явно не
-        очевидна - пришлось собирать вопросы и ответы в одном месте.
+        нахождении контента или чатов. Надеюсь, я с этой задачей справился.
       </p>
       <h2>Кто авторы?</h2>
       <p>
-        <a href="https://t.me/m1sh3r">Мишер</a> и команда администраторов
-        <a href="https://t.me/joinchat/F1DdXtG9LephYWUy">AEChat</a>.
+        Основная часть сайта была создана
+        <a
+          href="https://t.me/m1sh3r"
+          title="Контакт пользователя m1sh3r в Telegram"
+          >Ми&#x301;шером</a
+        >, а контент наполнялся благодаря команде администраторов и участников
+        <a
+          href="https://t.me/joinchat/F1DdXtG9LephYWUy"
+          title="AEChat в Telegram"
+          >AEChat</a
+        >.
       </p>
-    </div>
-    <section>&nbsp;</section>
-    <div class="content">
-      <h2>А как отблагодарить автора?</h2>
+      <h2>Как отблагодарить автора?</h2>
       <p>
         Вы можете отправить донат на
-        <a href="https://one-qr.ru/v?lO4brOBVmLCaEYFL">YooMoney или Сбербанк</a
+        <a
+          href="https://one-qr.ru/v?lO4brOBVmLCaEYFL"
+          title="Поддержать Мишера"
+          >YooMoney или Сбербанк</a
         >. Также вы можете написать свои пожелания на
-        <a href="mailto:m1sh3r@ya.ru?subject=Вопрос по aelinks">почту</a> или на
-        <a href="https://github.com/aechat/pages/issues">Issues в Github</a> для
-        улучшения материала.
+        <a
+          href="mailto:m1sh3r@ya.ru?subject=Вопрос по aelinks"
+          title="Задать вопрос по aelinks"
+          >почту</a
+        >
+        или на
+        <a
+          href="https://github.com/aechat/pages/issues"
+          title="Issues в Github"
+          >Issues в Github</a
+        >
+        для улучшения материала.
       </p>
     </div>
     <noscript>
       <div>
         <img
           src="https://mc.yandex.ru/watch/96346999"
-          alt
+          title=""
+          alt=""
           style="position: absolute; left: -9999px" />
       </div>
     </noscript>

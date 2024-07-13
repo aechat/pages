@@ -347,7 +347,10 @@ header span:active {
 .content audio,
 .content video,
 .content iframe {
+  max-width: 800px;
   width: 100%;
+  height: 56.25vw;
+  max-height: 500px;
   border-radius: 20px;
   border: none;
 }
@@ -475,42 +478,6 @@ header span:active {
   margin-inline: auto;
   cursor: default;
 }
-.content .important {
-  margin-inline: 20px;
-  font-weight: 700;
-  background-color: var(--accent-alt);
-  border-radius: 20px;
-  -webkit-padding-start: 20px;
-     -moz-padding-start: 20px;
-          padding-inline-start: 20px;
-  -webkit-padding-end: 70px;
-     -moz-padding-end: 70px;
-          padding-inline-end: 70px;
-  padding-block: 15px;
-  margin-block: 20px;
-  position: relative;
-}
-.content .important ul {
-  margin-inline: 0px;
-}
-.content .important::before {
-  content: "warning";
-  font-family: "Material Symbols Outlined", system-ui;
-  font-size: 3em;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translate(-25%, -50%);
-     -moz-transform: translate(-25%, -50%);
-      -ms-transform: translate(-25%, -50%);
-          transform: translate(-25%, -50%);
-  color: var(--text);
-  opacity: 0.25;
-}
-.content .important a {
-  text-decoration: underline !important;
-  color: var(--text);
-}
 .content ul {
   margin-inline: 25px;
 }
@@ -589,6 +556,42 @@ header span:active {
   border-bottom: none;
 }
 
+.important {
+  font-weight: 700;
+  background-color: var(--accent-alt);
+  border-radius: 20px;
+  -webkit-padding-start: 25px;
+     -moz-padding-start: 25px;
+          padding-inline-start: 25px;
+  -webkit-padding-end: 80px;
+     -moz-padding-end: 80px;
+          padding-inline-end: 80px;
+  padding-block: 15px;
+  margin-block: 20px;
+  position: relative;
+}
+.important ul {
+  margin-inline: 0;
+}
+.important::before {
+  content: "warning";
+  font-family: "Material Symbols Outlined", system-ui;
+  font-size: 3em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(-35%, -50%);
+     -moz-transform: translate(-35%, -50%);
+      -ms-transform: translate(-35%, -50%);
+          transform: translate(-35%, -50%);
+  color: var(--text);
+  opacity: 0.25;
+}
+.important a {
+  text-decoration: underline;
+  color: var(--text);
+}
+
 .light {
   --accent-alt: rgba(220, 175, 20, 0.3137254902);
   --accent: #dcaf14;
@@ -649,6 +652,14 @@ header span:active {
 }
 .links li:not(:last-child) {
   border-bottom: 1px solid var(--for-border);
+}
+.links section {
+  padding-inline: 25px;
+  padding-block: 10px;
+  opacity: 0.75;
+  font-size: 14px;
+  text-align: center;
+  text-transform: none;
 }
 .links p {
   color: var(--text);
