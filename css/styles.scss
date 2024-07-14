@@ -22,13 +22,17 @@
   }
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
 // !: сделать более оптимизированные анимации
 
 * {
   transition                 : transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   -webkit-tap-highlight-color: transparent;
   user-select                : none;
-  
+
   font-variant-ligatures: none;
 }
 
