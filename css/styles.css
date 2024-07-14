@@ -417,12 +417,14 @@ header span:active {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+.content .content_spoiler details {
+  margin-block: 20px;
+}
 .content .content_spoiler summary {
-  margin-block: 10px;
   position: relative;
   z-index: 0;
   padding: 3px 25px;
-  font-size: 24px;
+  font-size: 22px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   line-height: 1.25;
@@ -430,13 +432,25 @@ header span:active {
   text-transform: uppercase;
   word-wrap: break-word;
 }
+.content .content_spoiler summary[open]::marker {
+  content: "- ";
+}
+.content .content_spoiler summary::marker {
+  content: "+ ";
+}
+.content .content_spoiler summary:first-child {
+  margin-top: 10px;
+}
+.content .content_spoiler summary:last-of-type {
+  margin-bottom: 10px;
+}
 .content .content_spoiler summary::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  width: 4px;
+  width: 3px;
   background-color: var(--accent);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;

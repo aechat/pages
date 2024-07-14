@@ -28,6 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 function undoSpoilers() {
   const contentAreas = document.querySelectorAll(".content");
   contentAreas.forEach((content) => {
