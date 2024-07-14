@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("DOMContentLoaded", () => {
   console.log("DOMContentLoaded event fired");
   const contentAreas = document.querySelectorAll(".content");
   contentAreas.forEach((content) => {

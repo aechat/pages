@@ -10,7 +10,8 @@
   top            : 80px;
   z-index        : 1500;
   visibility     : hidden;
-overflow-x: visible;
+  overflow-x     : visible;
+
   .material-symbols-outlined {
     font-variation-settings:
       'FILL'0,
@@ -92,6 +93,23 @@ overflow-x: visible;
       text-decoration: none;
     }
   }
+
+  .selected {
+    background: var(--accent-alt);
+  }
+
+  button {
+    border        : none;
+    display       : flex;
+    align-items   : center;
+    color         : var(--text);
+    text-align    : center;
+    padding-inline: 15px;
+    padding-block : 10px;
+    width         : 100%;
+    background    : none;
+  }
+
 }
 
 .right_sidemenu {
