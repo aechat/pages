@@ -1,6 +1,6 @@
 async function getLastCommitDate() {
   const owner = "aechat";
-  const repo = "pages";
+  const repo = "links";
 
   const currentUrl = window.location.pathname;
   const filePath = currentUrl.startsWith("/")
