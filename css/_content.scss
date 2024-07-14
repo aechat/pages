@@ -116,6 +116,32 @@
     }
   }
 
+  .content_spoiler summary {
+    margin-block  : 10px;
+    position      : relative;
+    z-index       : 0;
+    padding       : 3px 25px;
+    font-size     : 24px;
+    font-family   : "Montserrat", sans-serif;
+    font-weight   : 700;
+    line-height   : 1.25;
+    color         : var(--accent);
+    text-transform: uppercase;
+    word-wrap     : break-word;
+
+    &::before {
+      content                   : "";
+      position                  : absolute;
+      top                       : 0;
+      bottom                    : 0;
+      left                      : 0;
+      width                     : 4px;
+      background-color          : var(--accent);
+      border-top-right-radius   : 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+
   img {
     margin-inline: auto;
     cursor       : zoom-in;
@@ -169,11 +195,7 @@
   }
 
   summary {
-    background-color: var(--background);
-    margin          : 20px;
-    border-radius   : 20px;
-    padding         : 15px;
-    cursor          : pointer;
+    cursor: pointer;
   }
 
   details {
