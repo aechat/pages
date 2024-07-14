@@ -2,10 +2,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const containers = document.querySelectorAll(".content");
   containers.forEach((container, containerIndex) => {
     const h2s = container.querySelectorAll("h2");
-    h2s.forEach((h2, h2Index) => {
-      h2.textContent = `${containerIndex + 1}.${h2Index + 1}. ${
-        h2.textContent
-      }`;
+    const summaries = container.querySelectorAll("details.content_spoiler");
+    [...h2s, ...summaries].forEach((element, index) => {
+      element.textContent = `${containerIndex + 1}.${index + 1}. ${element.textContent}`;
+      element.id = `${containerIndex + 1}.${index + 1}`;
+      if (
+        element.tagName === "DETAILS" &&
+        element.classList.contains("content_spoiler")
+      ) {
+        element.id += `${containerIndex + 1}.${index + 1}`;
+      }
     });
   });
 });
@@ -35,6 +41,60 @@ document.addEventListener("DOMContentLoaded", function () {
 //       observer.observe(video);
 //   });
 // });
+window.addEventListener("DOMContentLoaded", () => {
+  console.log("DOMContentLoaded event fired");
+  const contentAreas = document.querySelectorAll(".content");
+  contentAreas.forEach((content) => {
+    const h2Elements = content.querySelectorAll("h2");
+    console.log(`Found ${h2Elements.length} h2 elements`);
+    h2Elements.forEach((h2, index) => {
+      console.log(`Processing h2 element ${index + 1}`);
+      const nextH2 = h2Elements[index + 1];
+      const contentToSpread = [];
+      let currentElement = h2.nextElementSibling;
+      while (currentElement && currentElement !== nextH2) {
+        if (currentElement.tagName === "H2") {
+          break;
+        }
+        contentToSpread.push(currentElement);
+        currentElement = currentElement.nextElementSibling;
+      }
+      const spoiler = document.createElement("details");
+      spoiler.classList.add("content_spoiler");
+      const summary = document.createElement("summary");
+      summary.textContent = h2.textContent;
+      spoiler.appendChild(summary);
+      spoiler.append(...contentToSpread);
+      h2.parentNode.replaceChild(spoiler, h2);
+      console.log(`h2 заменён ${index + 1} спойлером`);
+    });
+  });
+});
+
+
+function undoSpoilers() {
+  const contentAreas = document.querySelectorAll(".content");
+  contentAreas.forEach((content) => {
+    const spoilers = content.querySelectorAll("details.content_spoiler");
+    const deleteSpoilers = (spoiler) => {
+      const parent = spoiler.parentNode;
+      parent.removeChild(spoiler);
+    };
+    let lastNode = content.firstChild;
+    spoilers.forEach((spoiler) => {
+      const summary = spoiler.querySelector("summary");
+      const h2 = document.createElement("h2");
+      h2.textContent = summary.textContent;
+      lastNode = content.insertBefore(h2, lastNode.nextSibling);
+      const contentToAppend = [...spoiler.querySelectorAll(":scope > summary ~ *")];
+      contentToAppend.forEach((node) => {
+        lastNode = content.insertBefore(node, lastNode.nextSibling);
+      });
+      deleteSpoilers(spoiler);
+    });
+  });
+}
+
 async function getLastCommitDate() {
   const owner = "aechat";
   const repo = "links";
@@ -245,9 +305,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
-      const offset = 80;
       window.scrollTo({
-        top: targetElement.offsetTop - offset,
         behavior: "smooth",
       });
     }

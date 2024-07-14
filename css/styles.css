@@ -417,6 +417,44 @@ header span:active {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+.content .content_spoiler details {
+  margin-block: 20px;
+}
+.content .content_spoiler summary {
+  position: relative;
+  z-index: 0;
+  padding: 3px 25px;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--accent);
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+.content .content_spoiler summary[open]::marker {
+  content: "- ";
+}
+.content .content_spoiler summary::marker {
+  content: "+ ";
+}
+.content .content_spoiler summary:first-child {
+  margin-top: 10px;
+}
+.content .content_spoiler summary:last-of-type {
+  margin-bottom: 10px;
+}
+.content .content_spoiler summary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  background-color: var(--accent);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 .content img {
   margin-inline: auto;
   cursor: -webkit-zoom-in;
@@ -468,10 +506,6 @@ header span:active {
   color: var(--text);
 }
 .content summary {
-  background-color: var(--background);
-  margin: 20px;
-  border-radius: 20px;
-  padding: 15px;
   cursor: pointer;
 }
 .content details {
@@ -815,6 +849,28 @@ header span:active {
   height: 100%;
   text-decoration: none;
 }
+.left_sidemenu .selected {
+  background: var(--accent-alt);
+}
+.left_sidemenu button {
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--text);
+  text-align: center;
+  padding-inline: 15px;
+  padding-block: 10px;
+  width: 100%;
+  background: none;
+}
 
 .right_sidemenu {
   background-color: var(--header-background);
@@ -989,6 +1045,10 @@ header span:active {
             transform: scale(2);
   }
 }
+html {
+  scroll-padding-top: 80px;
+}
+
 * {
   -webkit-transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
