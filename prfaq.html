@@ -67,7 +67,7 @@
         class="toggletheme"
         onclick="toggleSidemenu('.right_sidemenu')"
       >
-        <span class="material-symbols-outlined">contrast</span>
+        <span class="material-symbols-outlined">colors</span>
       </button>
     </header>
     <div class="container_sidemenu">
@@ -90,14 +90,6 @@
               ><span class="material-symbols-outlined"> info </span>
               <p>О сайте</p>
             </a>
-          </li>      <li>
-            <button
-              onclick="undoSpoilers()"
-              onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined">expand_all</span>Раскрыть все
-              спойлеры
-            </button>
           </li>
         </ul>
         <summary>Разделы:</summary>
@@ -847,6 +839,11 @@
           выбора нового файла. Укажите его и файл подхватится, затем вы сможете продолжить
           работу.
         </p>
+      <h2>Появились горизонтальный или вертикальные чёрные полосы на предпросмотре</h2>
+      <p>
+        Это баг некоторых версий драйверов Nvidia, попробуйте установить драйвера из
+        линейки Studio.
+      </p>
       </details>
       <details>
         <summary>Пропала визуализация аудио на таймлайне</summary>
@@ -886,6 +883,22 @@
           <figcaption>Настройка аудио-выхода</figcaption>
         </figure>
       </details>
+      <h2>
+        Вылетает Premiere Pro и Media Encoder после установки плагинов BorisFX Sapphire
+      </h2>
+      <p>Для этого установите режим совместимости с Windows 8 в параметрах ярлыка у программы с которой вы испытываете проблемы.</p>
+      <figure>
+        <img
+          src="source/compatibility_media_encoder.png"
+          alt="Установка режима совместимости для Media Encoder"
+          title="Установка режима совместимости для Media Encoder"
+        />
+        <figcaption>Установка режима совместимости на примере Media Encoder</figcaption>
+      </figure>
+      <p>
+        После проделанных действий, попробуйте запустить программу ещё раз. Если это не
+        помогло, удалите BorisFX Sapphire или переустановите Premiere Pro и Media Encoder.
+      </p>
     </div>
     <section id="install_errors">Проблемы с установкой</section>
     <div class="content">
