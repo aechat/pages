@@ -44,6 +44,18 @@
     text-transform: none;
   }
 
+  summary {
+    background    : var(--for-table);
+    padding-block : 10px;
+    color: var(--accent);
+    padding-inline: 25px;
+    margin-block  : 5px;
+    border-radius : 20px;
+    font-size: 18px;
+    font-family   : 'Montserrat', sans-serif;
+  }
+
+
   audio,
   video,
   iframe {
