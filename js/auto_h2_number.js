@@ -3,11 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
   containers.forEach((container, containerIndex) => {
     const h2s = container.querySelectorAll("summary");
     [...h2s].forEach((element, index) => {
-      if (element.tagName === "SUMMARY" && !element.parentElement.closest("details > summary")) {
+      if (
+        element.tagName === "SUMMARY" &&
+        !element.parentElement.closest("details > summary")
+      ) {
         element.id = `${containerIndex + 1}.${index + 1}`;
       }
       element.textContent = `${containerIndex + 1}.${index + 1}. ${element.textContent}`;
     });
   });
 });
-

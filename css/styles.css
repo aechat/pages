@@ -183,6 +183,7 @@ template,
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
   --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --for-table: #f1f1f1;
+  --for-summary: rgba(220, 175, 20, 0.062745098);
   --text: #303030;
   --header-background: rgba(253, 252, 255, 0.7529411765);
 }
@@ -197,6 +198,7 @@ template,
   --for-ripple: rgba(154, 153, 255, 0.5647058824);
   --for-shadow: rgba(128, 128, 128, 0.1882352941);
   --for-table: #252525;
+  --for-summary: rgba(154, 153, 255, 0.062745098);
   --text: #fefefe;
   --header-background: rgba(21, 21, 21, 0.7529411765);
 }
@@ -287,6 +289,7 @@ header span:active {
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
   --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --for-table: #f1f1f1;
+  --for-summary: rgba(220, 175, 20, 0.062745098);
   --text: #303030;
   --header-background: rgba(253, 252, 255, 0.7529411765);
 }
@@ -301,6 +304,7 @@ header span:active {
   --for-ripple: rgba(154, 153, 255, 0.5647058824);
   --for-shadow: rgba(128, 128, 128, 0.1882352941);
   --for-table: #252525;
+  --for-summary: rgba(154, 153, 255, 0.062745098);
   --text: #fefefe;
   --header-background: rgba(21, 21, 21, 0.7529411765);
 }
@@ -345,14 +349,35 @@ header span:active {
   text-transform: none;
 }
 .content summary {
-  background: var(--for-table);
-  padding-block: 10px;
-  color: var(--accent);
-  padding-inline: 25px;
-  margin-block: 5px;
-  border-radius: 20px;
-  font-size: 18px;
+  margin-block: 10px;
+  position: relative;
+  z-index: 0;
+  padding: 10px 25px;
+  font-size: 22px;
   font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--accent);
+  text-transform: uppercase;
+  word-wrap: break-word;
+  background-color: var(--for-summary);
+}
+.content summary[open]::marker {
+  content: "- ";
+}
+.content summary::marker {
+  content: "+ ";
+}
+.content summary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  background-color: var(--accent);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .content audio,
 .content video,
@@ -423,44 +448,6 @@ header span:active {
   bottom: 0;
   left: 0;
   width: 4px;
-  background-color: var(--accent);
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-.content .content_spoiler details {
-  margin-block: 20px;
-}
-.content .content_spoiler summary {
-  position: relative;
-  z-index: 0;
-  padding: 3px 25px;
-  font-size: 22px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  line-height: 1.25;
-  color: var(--accent);
-  text-transform: uppercase;
-  word-wrap: break-word;
-}
-.content .content_spoiler summary[open]::marker {
-  content: "- ";
-}
-.content .content_spoiler summary::marker {
-  content: "+ ";
-}
-.content .content_spoiler summary:first-child {
-  margin-top: 10px;
-}
-.content .content_spoiler summary:last-of-type {
-  margin-bottom: 10px;
-}
-.content .content_spoiler summary::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 3px;
   background-color: var(--accent);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -646,6 +633,7 @@ header span:active {
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
   --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --for-table: #f1f1f1;
+  --for-summary: rgba(220, 175, 20, 0.062745098);
   --text: #303030;
   --header-background: rgba(253, 252, 255, 0.7529411765);
 }
@@ -660,6 +648,7 @@ header span:active {
   --for-ripple: rgba(154, 153, 255, 0.5647058824);
   --for-shadow: rgba(128, 128, 128, 0.1882352941);
   --for-table: #252525;
+  --for-summary: rgba(154, 153, 255, 0.062745098);
   --text: #fefefe;
   --header-background: rgba(21, 21, 21, 0.7529411765);
 }
@@ -736,6 +725,7 @@ header span:active {
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
   --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --for-table: #f1f1f1;
+  --for-summary: rgba(220, 175, 20, 0.062745098);
   --text: #303030;
   --header-background: rgba(253, 252, 255, 0.7529411765);
 }
@@ -750,6 +740,7 @@ header span:active {
   --for-ripple: rgba(154, 153, 255, 0.5647058824);
   --for-shadow: rgba(128, 128, 128, 0.1882352941);
   --for-table: #252525;
+  --for-summary: rgba(154, 153, 255, 0.062745098);
   --text: #fefefe;
   --header-background: rgba(21, 21, 21, 0.7529411765);
 }
@@ -997,6 +988,7 @@ header span:active {
   --for-ripple: rgba(220, 175, 20, 0.5647058824);
   --for-shadow: rgba(0, 0, 0, 0.2509803922);
   --for-table: #f1f1f1;
+  --for-summary: rgba(220, 175, 20, 0.062745098);
   --text: #303030;
   --header-background: rgba(253, 252, 255, 0.7529411765);
 }
@@ -1011,6 +1003,7 @@ header span:active {
   --for-ripple: rgba(154, 153, 255, 0.5647058824);
   --for-shadow: rgba(128, 128, 128, 0.1882352941);
   --for-table: #252525;
+  --for-summary: rgba(154, 153, 255, 0.062745098);
   --text: #fefefe;
   --header-background: rgba(21, 21, 21, 0.7529411765);
 }

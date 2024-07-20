@@ -45,14 +45,38 @@
   }
 
   summary {
-    background    : var(--for-table);
-    padding-block : 10px;
-    color: var(--accent);
-    padding-inline: 25px;
-    margin-block  : 5px;
-    border-radius : 20px;
-    font-size: 18px;
-    font-family   : 'Montserrat', sans-serif;
+    margin-block    : 10px;
+    position        : relative;
+    z-index         : 0;
+    padding         : 10px 25px;
+    font-size       : 22px;
+    font-family     : "Montserrat", sans-serif;
+    font-weight     : 700;
+    line-height     : 1.25;
+    color           : var(--accent);
+    text-transform  : uppercase;
+    word-wrap       : break-word;
+    background-color: var(--for-summary);
+
+    &[open]::marker {
+      content: "- ";
+    }
+
+    &::marker {
+      content: "+ ";
+    }
+
+    &::before {
+      content                   : "";
+      position                  : absolute;
+      top                       : 0;
+      bottom                    : 0;
+      left                      : 0;
+      width                     : 3px;
+      background-color          : var(--accent);
+      border-top-right-radius   : 20px;
+      border-bottom-right-radius: 20px;
+    }
   }
 
 
@@ -128,50 +152,7 @@
     }
   }
 
-  .content_spoiler details {
-    margin-block: 20px;
-  }
 
-  .content_spoiler summary {
-    position      : relative;
-    z-index       : 0;
-    padding       : 3px 25px;
-    font-size     : 22px;
-    font-family   : "Montserrat", sans-serif;
-    font-weight   : 700;
-    line-height   : 1.25;
-    color         : var(--accent);
-    text-transform: uppercase;
-    word-wrap     : break-word;
-
-    &[open]::marker {
-      content: "- ";
-    }
-
-    &::marker {
-      content: "+ ";
-    }
-
-    &:first-child {
-      margin-top: 10px;
-    }
-
-    &:last-of-type {
-      margin-bottom: 10px;
-    }
-
-    &::before {
-      content                   : "";
-      position                  : absolute;
-      top                       : 0;
-      bottom                    : 0;
-      left                      : 0;
-      width                     : 3px;
-      background-color          : var(--accent);
-      border-top-right-radius   : 20px;
-      border-bottom-right-radius: 20px;
-    }
-  }
 
 
   img {
