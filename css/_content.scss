@@ -45,6 +45,7 @@
   }
 
   summary {
+    cursor          : pointer;
     margin-block    : 10px;
     position        : relative;
     z-index         : 0;
@@ -207,9 +208,6 @@
     color    : var(--text);
   }
 
-  summary {
-    cursor: pointer;
-  }
 
   details {
     margin-inline: auto;
