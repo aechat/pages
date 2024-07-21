@@ -1,6 +1,6 @@
-export let isToggling = false;
+let isToggling = false;
 
-export function toggleSidemenu(menu) {
+function toggleSidemenu(menu) {
   if (isToggling) return;
   isToggling = true;
   const sidemenu = document.querySelector(menu);
@@ -31,8 +31,8 @@ function preventScroll(event) {
 }
 
 const header = document.querySelector("header");
-export const leftSidemenu = document.querySelector(".left_sidemenu");
-export const rightSidemenu = document.querySelector(".right_sidemenu");
+const leftSidemenu = document.querySelector(".left_sidemenu");
+const rightSidemenu = document.querySelector(".right_sidemenu");
 
 header.addEventListener("touchmove", preventScroll, {passive: false});
 leftSidemenu.addEventListener("touchmove", preventScroll, {passive: false});
@@ -45,7 +45,10 @@ document.addEventListener("click", function (event) {
   const leftMenuVisible = leftSidemenu.classList.contains("visible");
   const rightMenuVisible = rightSidemenu.classList.contains("visible");
   if (leftMenuVisible || rightMenuVisible) {
-    if (!leftSidemenu.contains(event.target) && !rightSidemenu.contains(event.target)) {
+    if (
+      !leftSidemenu.contains(event.target) &&
+      !rightSidemenu.contains(event.target)
+    ) {
       if (leftMenuVisible && rightMenuVisible) {
         toggleSidemenu(".left_sidemenu");
         toggleSidemenu(".right_sidemenu");

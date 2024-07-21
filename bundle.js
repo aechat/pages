@@ -14,12 +14,92 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// document.addEventListener("DOMContentLoaded", function() {
+//   const videos = document.querySelectorAll('video');
+
+//   videos.forEach(video => {
+//       video.setAttribute('autoplay', '');
+//       video.setAttribute('preload', 'auto');
+//   });
+
+//   const observer = new IntersectionObserver(entries => {
+//       entries.forEach(entry => {
+//           const video = entry.target;
+//           if (entry.isIntersecting) {
+//               video.play();
+//           } else {
+//               video.pause();
+//           }
+//       });
+//   }, {
+//       threshold: 0.25
+//   });
+
+//   videos.forEach(video => {
+//       observer.observe(video);
+//   });
+// });
+// document.addEventListener("DOMContentLoaded", () => {
+//   wrapContent();
+//   const undoButton = document.querySelector("[data-action='undo-spoilers']");
+//   if (undoButton) {
+//     undoButton.addEventListener("click", undoSpoilers);
+//   }
+// });
+
+// function wrapContent() {
+//   const contentAreas = document.querySelectorAll(".content");
+//   contentAreas.forEach((container) => {
+//     const h2Elements = Array.from(container.querySelectorAll("h2"));
+//     h2Elements.forEach((h2, index) => {
+//       const nextH2 = h2Elements[index + 1];
+//       const contentToSpread = [];
+//       let currentElement = h2.nextElementSibling;
+//       while (currentElement && currentElement !== nextH2) {
+//         contentToSpread.push(currentElement);
+//         currentElement = currentElement.nextElementSibling;
+//       }
+//       const details = document.createElement("details");
+//       details.classList.add("content_spoiler");
+//       const summary = document.createElement("summary");
+//       summary.textContent = h2.textContent;
+//       details.appendChild(summary);
+//       details.append(...contentToSpread);
+//       h2.parentNode.insertBefore(details, h2);
+//     });
+//     container.dataset.spoiled = "true";
+//   });
+// }
+
+// function undoSpoilers() {
+//   const contentAreas = document.querySelectorAll(".content");
+//   contentAreas.forEach((content) => {
+//     const spoilers = content.querySelectorAll("details.content_spoiler");
+//     spoilers.forEach((spoiler) => {
+//       const summary = spoiler.querySelector("summary");
+//       const h2 = document.createElement("h2");
+//       h2.textContent = summary.textContent;
+//       content.insertBefore(h2, spoiler);
+//       const contentToAppend = Array.from(spoiler.querySelectorAll(":scope > summary ~ *"));
+//       contentToAppend.forEach((node) => {
+//         content.insertBefore(node, spoiler);
+//       });
+//       content.removeChild(spoiler);
+//     });
+//   });
+//   this.classList.remove("selected");
+// }
+
+
+
 async function getLastCommitDate() {
   const owner = "aechat";
   const repo = "links";
 
   const currentUrl = window.location.pathname;
-  const filePath = currentUrl.startsWith("/") ? currentUrl.substring(1) : currentUrl;
+  const filePath = currentUrl.startsWith("/")
+    ? currentUrl.substring(1)
+    : currentUrl;
 
   const url = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}`;
 
@@ -46,7 +126,7 @@ async function getLastCommitDate() {
 getLastCommitDate();
 
 function showCopiedUrlNotification() {
-  let copiedElement = document.querySelector(".copied");
+  var copiedElement = document.querySelector(".copied");
   copiedElement.innerText = "Ссылка на этот сайт скопирована в буфер обмена";
   copiedElement.classList.remove("hidden");
   copiedElement.classList.add("visible");
@@ -57,7 +137,7 @@ function showCopiedUrlNotification() {
 }
 
 function copyURL() {
-  let textArea = document.createElement("textarea");
+  var textArea = document.createElement("textarea");
   textArea.value = window.location.href;
   document.body.appendChild(textArea);
   textArea.select();
@@ -67,7 +147,7 @@ function copyURL() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  let logoElement = document.querySelector(".logo");
+  var logoElement = document.querySelector(".logo");
   if (logoElement) {
     logoElement.addEventListener("click", copyURL);
   }
@@ -153,7 +233,6 @@ document.addEventListener("DOMContentLoaded", function () {
     element.appendChild(fragment);
   });
 });
-
 (function (m, e, t, r, i, k, a) {
   m[i] =
     m[i] ||
@@ -196,7 +275,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
 function createRipple(event) {
   const ripple = document.createElement("span");
   ripple.className = "ripple";
@@ -233,9 +311,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-export let isToggling = false;
+let isToggling = false;
 
-export function toggleSidemenu(menu) {
+function toggleSidemenu(menu) {
   if (isToggling) return;
   isToggling = true;
   const sidemenu = document.querySelector(menu);
@@ -266,8 +344,8 @@ function preventScroll(event) {
 }
 
 const header = document.querySelector("header");
-export const leftSidemenu = document.querySelector(".left_sidemenu");
-export const rightSidemenu = document.querySelector(".right_sidemenu");
+const leftSidemenu = document.querySelector(".left_sidemenu");
+const rightSidemenu = document.querySelector(".right_sidemenu");
 
 header.addEventListener("touchmove", preventScroll, {passive: false});
 leftSidemenu.addEventListener("touchmove", preventScroll, {passive: false});
@@ -280,7 +358,10 @@ document.addEventListener("click", function (event) {
   const leftMenuVisible = leftSidemenu.classList.contains("visible");
   const rightMenuVisible = rightSidemenu.classList.contains("visible");
   if (leftMenuVisible || rightMenuVisible) {
-    if (!leftSidemenu.contains(event.target) && !rightSidemenu.contains(event.target)) {
+    if (
+      !leftSidemenu.contains(event.target) &&
+      !rightSidemenu.contains(event.target)
+    ) {
       if (leftMenuVisible && rightMenuVisible) {
         toggleSidemenu(".left_sidemenu");
         toggleSidemenu(".right_sidemenu");
@@ -331,6 +412,8 @@ window.addEventListener("resize", function () {
     }
   }
 });
+
+
 
 function toggleTheme(theme) {
   const body = document.body;

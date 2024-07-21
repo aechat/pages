@@ -3,7 +3,9 @@ async function getLastCommitDate() {
   const repo = "links";
 
   const currentUrl = window.location.pathname;
-  const filePath = currentUrl.startsWith("/") ? currentUrl.substring(1) : currentUrl;
+  const filePath = currentUrl.startsWith("/")
+    ? currentUrl.substring(1)
+    : currentUrl;
 
   const url = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}`;
 
