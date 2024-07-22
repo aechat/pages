@@ -58,23 +58,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // разделение слов для того, чтобы всё влезло
 
-document.addEventListener("DOMContentLoaded", function () {
-  let markElements = document.querySelectorAll("mark");
-  markElements.forEach(function (element) {
-    let text = element.innerText;
-    let words = text.split(/(?<=\))\s*/);
+// document.addEventListener("DOMContentLoaded", function () {
+//   let markElements = document.querySelectorAll("mark");
+//   markElements.forEach(function (element) {
+//     let text = element.innerText;
+//     let words = text.split(/(?<=\))\s*/);
 
-    element.innerHTML = "";
-    let fragment = document.createDocumentFragment();
-    let mark = document.createElement("mark");
-    mark.style.backgroundColor = "transparent";
-    words.forEach(function (word, index) {
-      if (index > 0) {
-        mark.appendChild(document.createTextNode(" "));
-      }
-      mark.appendChild(document.createTextNode(word));
-    });
-    fragment.appendChild(mark);
-    element.appendChild(fragment);
-  });
-});
+//     element.innerHTML = "";
+//     let fragment = document.createDocumentFragment();
+//     let mark = document.createElement("mark");
+//     mark.style.backgroundColor = "transparent";
+//     words.forEach(function (word, index) {
+//       if (index > 0) {
+//         mark.appendChild(document.createTextNode(" "));
+//       }
+//       mark.appendChild(document.createTextNode(word));
+//     });
+//     fragment.appendChild(mark);
+//     element.appendChild(fragment);
+//   });
+// });
