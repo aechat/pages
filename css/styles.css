@@ -557,6 +557,10 @@ header span:active {
   padding: 5px 10px;
   border: 1px solid var(--for-border);
 }
+.content td a::before,
+.content th a::before {
+  content: "videocam";
+}
 @media (max-width: 600px) {
   .content table {
     font-size: 12px;

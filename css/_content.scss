@@ -194,7 +194,7 @@
     &::before {
       color         : var(--accent);
       content       : "content_copy";
-      font-family   : "Material Symbols Outlined",system-ui;
+      font-family   : "Material Symbols Outlined", system-ui;
       font-size     : 14px;
       padding       : 0 3px 0 1px;
       vertical-align: middle;
@@ -274,6 +274,12 @@
   th {
     padding: 5px 10px;
     border : 1px solid var(--for-border);
+
+    a {
+      &::before {
+        content: "videocam";
+      }
+    }
   }
 
   @media (max-width: 600px) {
