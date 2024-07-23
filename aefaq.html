@@ -13,7 +13,7 @@
     />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1"
+      content="width=device-width,initial-scale=1"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -45,6 +45,7 @@
       content="Ответы на частые вопросы по Adobe After Effects"
     />
   </head>
+
   <body
     class="light"
     ondragstart="return false;"
@@ -78,7 +79,7 @@
               href="index.html"
               title="На главную"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined"> home </span>
+              ><span class="material-symbols-outlined">home</span>
               <p>На главную</p>
             </a>
           </li>
@@ -87,9 +88,18 @@
               href="about.html"
               title="О сайте"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined"> info </span>
+              ><span class="material-symbols-outlined">info</span>
               <p>О сайте</p>
             </a>
+          </li>
+          <li>
+            <button
+              onmousedown="createRipple(event)"
+              onclick="expandAllDetails()"
+            >
+              <span class="material-symbols-outlined">unfold_more</span>Раскрыть все
+              спойлеры
+            </button>
           </li>
         </ul>
         <h2>Разделы:</h2>
@@ -99,8 +109,7 @@
               href="#where_find"
               title="Полезные материалы"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined"> bookmark_heart </span>
+              ><span class="material-symbols-outlined">bookmark_heart</span>
               <p>Полезные материалы</p>
             </a>
           </li>
@@ -109,8 +118,7 @@
               href="#from_newbies"
               title="Вопросы от новичков"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined">school</span>
+              ><span class="material-symbols-outlined">school</span>
               <p>Вопросы от новичков</p>
             </a>
           </li>
@@ -119,8 +127,7 @@
               href="#errors"
               title="Частые ошибки"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined">warning</span>
+              ><span class="material-symbols-outlined">warning</span>
               <p>Частые ошибки</p>
             </a>
           </li>
@@ -129,8 +136,7 @@
               href="#install_errors"
               title="Проблемы с установкой"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined">deployed_code_alert</span>
+              ><span class="material-symbols-outlined">deployed_code_alert</span>
               <p>Проблемы с установкой</p>
             </a>
           </li>
@@ -139,8 +145,7 @@
               href="#render"
               title="Про рендер"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined">movie_edit</span>
+              ><span class="material-symbols-outlined">movie_edit</span>
               <p>Про рендер</p>
             </a>
           </li>
@@ -160,7 +165,7 @@
               onclick="setSystemTheme()"
               onmousedown="createRipple(event)"
             >
-              <span class="material-symbols-outlined"> hide_source </span>Системная
+              <span class="material-symbols-outlined">hide_source </span>Системная
             </button>
           </li>
           <li>
@@ -169,7 +174,7 @@
               onclick="toggleTheme('light')"
               onmousedown="createRipple(event)"
             >
-              <span class="material-symbols-outlined"> light_mode </span>Светлая
+              <span class="material-symbols-outlined">light_mode </span>Светлая
             </button>
           </li>
           <li>
@@ -178,7 +183,7 @@
               onclick="toggleTheme('dark')"
               onmousedown="createRipple(event)"
             >
-              <span class="material-symbols-outlined"> dark_mode </span>Тёмная
+              <span class="material-symbols-outlined">dark_mode </span>Тёмная
             </button>
           </li>
         </ul>
@@ -201,35 +206,25 @@
           <a
             href="index.html"
             title="Главная страница links"
-            >главной странице
-          </a>
-          в разделе ”Ресурсы" и в закрепленном сообщении в
+            >главной странице </a
+          >в разделе ”Ресурсы" и в закрепленном сообщении в
           <a
             href="https://t.me/joinchat/F1DdXtG9LephYWUy"
             title="AEChat в Telegram"
-            >AEChat
-          </a>
-          вы всегда можете найти наши каналы для шаблонов и программ. Например, в
+            >AEChat </a
+          >вы всегда можете найти наши каналы для шаблонов и программ. Например, в
           <a
             href="https://t.me/s/aetemp"
             title="Канал AETemp в Telegram"
-            >AETemp
-          </a>
-          можно найти звуки, переходы и шаблоны с помощью хештегов:
-          <mark>#звуки</mark>
-          <mark>#переходы</mark>
-          <mark>#шаблоны</mark>
-          <mark>#плагины</mark>. А в
+            >AETemp </a
+          >можно найти звуки, переходы и шаблоны с помощью хештегов: <mark>#звуки</mark>
+          <mark>#переходы</mark> <mark>#шаблоны</mark> <mark>#плагины</mark>. А в
           <a
             href="https://t.me/+Qd9xu7A4TeIwNzY6"
             title="канал склад стройматериалов в Telegram"
-            >складе стройматериалов
-          </a>
-          вы можете найти конкретные программы или плагины для Windows, например:
-          <mark>#aftereffects</mark>
-          <mark>#magicbullet</mark>
-          <mark>#borisfx</mark>
-          или
+            >складе стройматериалов </a
+          >вы можете найти конкретные программы или плагины для Windows, например:
+          <mark>#aftereffects</mark> <mark>#magicbullet</mark> <mark>#borisfx</mark> или
           <mark>#twixtor</mark>
         </p>
       </details>
@@ -242,13 +237,12 @@
           <a
             href="https://t.me/HiStockBot?start=509060394"
             title="Бот HiStock для покупки шаблонов в Telegram"
-            >HiStock в Telegram
-          </a>
-          для оперативной покупки шаблонов с платформ
+            >HiStock в Telegram </a
+          >для оперативной покупки шаблонов с платформ
           <a
             href="https://elements.envato.com"
             title="Envato Elements"
-            >Envato Elements </a
+            >Envato Elements</a
           >,
           <a
             href="https://freepik.com/"
@@ -258,15 +252,13 @@
           <a
             href="https://motionarray.com/"
             title="Motion Array"
-            >Motion Array
-          </a>
-          и
+            >Motion Array </a
+          >и
           <a
             href="https://artlist.io/"
             title="Artlist"
-            >Artlist
-          </a>
-          по выгодным ценам.
+            >Artlist </a
+          >по выгодным ценам.
         </p>
         <div class="important">
           Файлы из Videohive, Shutter Stock ботом не принимаются по причине того, что
@@ -277,124 +269,124 @@
         <summary>Где взять бесплатные стоковые видео для видеороликов?</summary>
         <p>
           Существует множество бесплатных видео-стоков онлайн, среди которых многие
-          предоставляют материалы с лицензией
-          <mark>Creative Commons Zero (CC0)</mark>, что означает возможность использования
-          их в своих коммерческих проектах, не указывая авторство. Перед использованием
-          материалов, необходимо внимательно ознакомиться с условиями использования на
-          каждом конкретном ресурсе. Ниже перечислены популярные источники видео:
+          предоставляют материалы с лицензией <mark>Creative Commons Zero (CC0)</mark>,
+          что означает возможность использования их в своих коммерческих проектах, не
+          указывая авторство. Перед использованием материалов, необходимо внимательно
+          ознакомиться с условиями использования на каждом конкретном ресурсе. Ниже
+          перечислены популярные источники видео:
         </p>
         <ul>
           <li>
             <a
               href="https://www.pexels.com/videos/"
               title="Pexels"
-              >Pexels
-            </a>
+              >Pexels</a
+            >
           </li>
           <li>
             <a
               href="https://pixabay.com/videos/"
               title="Pixabay"
-              >Pixabay
-            </a>
+              >Pixabay</a
+            >
           </li>
           <li>
             <a
               href="https://www.videvo.net/"
               title="Videvo"
-              >Videvo
-            </a>
+              >Videvo</a
+            >
           </li>
           <li>
             <a
               href="https://coverr.co/"
               title="Coverr"
-              >Coverr
-            </a>
+              >Coverr</a
+            >
           </li>
           <li>
             <a
               href="https://www.splitshire.com"
               title="SplitShire"
-              >SplitShire
-            </a>
+              >SplitShire</a
+            >
           </li>
           <li>
             <a
               href="https://mazwai.com/"
               title="Mazvai"
-              >Mazvai
-            </a>
+              >Mazvai</a
+            >
           </li>
           <li>
             <a
               href="https://www.videezy.com/"
               title="Videezy"
-              >Videezy
-            </a>
+              >Videezy</a
+            >
           </li>
           <li>
             <a
               href="https://www.vidsplay.com/"
               title="Vidsplay"
-              >Vidsplay
-            </a>
+              >Vidsplay</a
+            >
           </li>
           <li>
             <a
               href="https://cutestockfootage.com/"
               title="CuteStockFootage"
-              >CuteStockFootage
-            </a>
+              >CuteStockFootage</a
+            >
           </li>
           <li>
             <a
               href="https://mitchmartinez.com/free-4k-red-epic-stock-footage/"
               title="Mitch Martinez"
-              >Mitch Martinez
-            </a>
+              >Mitch Martinez</a
+            >
           </li>
           <li>
             <a
               href="https://mixkit.co/"
               title="Mixkit"
-              >Mixkit
-            </a>
+              >Mixkit</a
+            >
           </li>
           <li>
             <a
               href="https://www.xstockvideo.com/"
               title="XStockVideos"
-              >XStockVideos
-            </a>
+              >XStockVideos</a
+            >
           </li>
           <li>
             <a
               href="https://www.clipstill.com/"
               title="Clipstill"
-              >Clipstill
-            </a>
+              >Clipstill</a
+            >
           </li>
           <li>
             <a
               href="https://vimeo.com/groups/freehd/"
               title="Пользователь Phil Fred на Vimeo"
-              >Phil Fred на Vimeo
-            </a>
+              >Phil Fred на Vimeo</a
+            >
           </li>
           <li>
             <a
               href="https://www.ignitemotion.com/"
               title="IgniteMotion"
-              >IgniteMotion
-            </a>
+              >IgniteMotion</a
+            >
           </li>
           <li>
             <a
               href="https://www.youtube.com/playlist?list=PLTDgOUcX23hZdwKWhKhWp3H2D5nmWhpvv"
               title="Плейлист на YouTube c абстрактными фонами"
-              >абстрактные фоны на YouTube
-            </a>
+              >абстрактные фоны на YouTube</a
+            >
           </li>
         </ul>
         <p>
@@ -403,9 +395,8 @@
           <a
             href="https://censortracker.org/"
             title="Плагин Censor Tracker для браузеров"
-            >обходы
-          </a>
-          для доступа на данные ресурсы.
+            >обходы </a
+          >для доступа на данные ресурсы.
         </p>
       </details>
       <details>
@@ -415,15 +406,11 @@
           <a
             href="https://t.me/s/DesignWorld"
             title="Канал Design World в Telegram"
-            >Design World в Telegram
-          </a>
-          с полезными материалами для графических редакторов, как Photoshop и Illustrator.
-          В данном канале есть навигация по каналу для нахождения всякой всячины,
-          например:
-          <mark>#текстуры</mark>
-          <mark>#шрифты</mark>
-          <mark>#кисти</mark>
-          <mark>#паттерны</mark>
+            >Design World в Telegram </a
+          >с полезными материалами для графических редакторов, как Photoshop и
+          Illustrator. В данном канале есть навигация по каналу для нахождения всякой
+          всячины, например: <mark>#текстуры</mark> <mark>#шрифты</mark>
+          <mark>#кисти</mark> <mark>#паттерны</mark>
         </p>
         <p>
           Если вам не хватает контента из
@@ -439,50 +426,50 @@
             <a
               href="https://unsplash.com/"
               title="Unsplash"
-              >Unsplash
-            </a>
+              >Unsplash</a
+            >
           </li>
           <li>
             <a
               href="https://pickupimage.com/ru/"
               title="Pickup Image"
-              >Pickup Image
-            </a>
+              >Pickup Image</a
+            >
           </li>
           <li>
             <a
               href="https://www.flaticon.com/ru/"
               title="Flaticon"
-              >Flaticon
-            </a>
+              >Flaticon</a
+            >
           </li>
           <li>
             <a
               href="https://www.stockio.com/"
               title="Stockio"
-              >Stockio
-            </a>
+              >Stockio</a
+            >
           </li>
           <li>
             <a
               href="https://creazilla.com/ru"
               title="Creazilla"
-              >Creazilla
-            </a>
+              >Creazilla</a
+            >
           </li>
           <li>
             <a
               href="https://www.uidownload.com/ru"
               title="UIDownload"
-              >UIDownload
-            </a>
+              >UIDownload</a
+            >
           </li>
           <li>
             <a
               href="https://stock.adobe.com/ru/free"
               title="Adobe Stock"
-              >Adobe Stock
-            </a>
+              >Adobe Stock</a
+            >
           </li>
         </ul>
       </details>
@@ -503,50 +490,50 @@
             <a
               href="https://www.audiomicro.com/free-sound-effects"
               title="Audiomicro"
-              >Audiomicro
-            </a>
+              >Audiomicro</a
+            >
           </li>
           <li>
             <a
               href="https://www.zapsplat.com/"
               title="Zapsplat"
-              >Zapsplat
-            </a>
+              >Zapsplat</a
+            >
           </li>
           <li>
             <a
               href="https://www.freesfx.co.uk/"
               title="FreeSFX"
-              >FreeSFX
-            </a>
+              >FreeSFX</a
+            >
           </li>
           <li>
             <a
               href="https://www.freesoundslibrary.com/"
               title="FreeSoundLibrary"
-              >FreeSoundLibrary
-            </a>
+              >FreeSoundLibrary</a
+            >
           </li>
           <li>
             <a
               href="https://soundbible.com/"
               title="SoundBible"
-              >SoundBible
-            </a>
+              >SoundBible</a
+            >
           </li>
           <li>
             <a
               href="https://www.soundeffectsplus.com/"
               title="soundeffects+"
-              >soundeffects+
-            </a>
+              >soundeffects+</a
+            >
           </li>
           <li>
             <a
               href="https://freesound.org/"
               title="freesound"
-              >freesound
-            </a>
+              >freesound</a
+            >
           </li>
         </ul>
         <p>
@@ -561,9 +548,8 @@
           <a
             href="https://en.likefont.com"
             title="Сервис по нахождению шрифтов LikeFont"
-            >LikeFont
-          </a>
-          для определения шрифта по фотографии. Этот сервис способен распознавать шрифты
+            >LikeFont </a
+          >для определения шрифта по фотографии. Этот сервис способен распознавать шрифты
           как на латинице, так и на кириллице. Как начать им пользоваться? Просто зайдите
           на сайт и загрузите своё изображение с помощью проводника или
           <mark>Ctrl + V</mark>
@@ -597,10 +583,9 @@
         <p>
           Для этого нужно обработать изображения. Необязательно лезть в Photoshop и что-то
           там делать, ведь на сайте уже есть инструменты для обработки изображения,
-          например
-          <mark>Threshold</mark>. Мы его повышаем до максимально возможного значения,
-          чтобы текст стал более читабельным. Также есть инструменты для поворота,
-          отзеркаливания и наклона изображения.
+          например <mark>Threshold</mark>. Мы его повышаем до максимально возможного
+          значения, чтобы текст стал более читабельным. Также есть инструменты для
+          поворота, отзеркаливания и наклона изображения.
         </p>
         <figure>
           <img
@@ -651,10 +636,8 @@
           <a
             href="https://www.youtube.com/channel/UCmLY17yagzLy6GRiI1nVBow"
             title="Канал Ильи Зернова на YouTube"
-          >
-            Ильи Зернова
-          </a>
-          для того чтобы разобраться в интерфейсе программы и не задавать тупые вопросы
+            >Ильи Зернова </a
+          >для того чтобы разобраться в интерфейсе программы и не задавать тупые вопросы
           уже в начале своего пути.
         </p>
         <iframe
@@ -662,7 +645,7 @@
           title="Видеоплеер YouTube"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
         <p>
           Если вы уже достаточно уверенный пользователь программы, но не знаете куда
@@ -749,9 +732,8 @@
             <a
               href="https://github.com/msongz/rd_CompSetter"
               title="rd_compsetter на GitHub"
-              >JSX-скрипт
-            </a>
-            для изменения параметров нескольких композиций, например FPS или разрешение.
+              >JSX-скрипт</a
+            >для изменения параметров нескольких композиций, например FPS или разрешение.
           </li>
           <li>
             <mark>Семплы</mark> или <mark>Sample</mark> - часто применяется в 3D-плагинах
@@ -762,11 +744,9 @@
             объекты и манипулировать с ними.
           </li>
           <li>
-            <mark>Солнышко</mark>
-            или
-            <mark>звёздочка</mark>
-            - пункт <mark>Continuously Rasterize</mark> для уменьшения "пикселей" у
-            векторных объектов.
+            <mark>Солнышко</mark> или <mark>звёздочка</mark> - пункт
+            <mark>Continuously Rasterize</mark> для уменьшения "пикселей" у векторных
+            объектов.
           </li>
           <li>
             <mark>Dynamic Link</mark> - функция для соединения композиций из After Effects
@@ -785,14 +765,14 @@
             <a
               href="https://videocopilot.net/products/element2/"
               title="Element 3D"
-              >Element 3D
-            </a>
-            от VideoCopilot. Он позволяет добавлять 3D-объекты в композицию After Effects.
+              >Element 3D </a
+            >от VideoCopilot. Он позволяет добавлять 3D-объекты в композицию After
+            Effects.
           </li>
           <li><mark>Шейп</mark> - фигура. Коротко и понятно.</li>
           <li>
-            <mark>Перекодируй через шаттер</mark>
-            - призыв к конвертации исходников через программу
+            <mark>Перекодируй через шаттер</mark> - призыв к конвертации исходников через
+            программу
             <a
               href="https://www.shutterencoder.com/"
               title="Сайт Shutter Encoder"
@@ -800,22 +780,18 @@
             >, которая является оболочкой для FFmpeg
           </li>
           <li>
-            <mark>Перелинкуй исходники</mark>
-            - переподключение потерявшихся исходников в окне Project. Для этого надо
-            нажать ПКМ по исходнику с ошибкой и выбрать в меню "Replace Footage".
+            <mark>Перелинкуй исходники</mark> - переподключение потерявшихся исходников в
+            окне Project. Для этого надо нажать ПКМ по исходнику с ошибкой и выбрать в
+            меню "Replace Footage".
           </li>
           <li>
             <mark>Редьюс</mark> или <mark>Reduce Project</mark> - функция After Effects,
             которая удаляет неиспользованные файлы в вашем проекте. Данный пункт находится
-            в
-            <mark>File &gt; Dependencies &gt; Reduce Project</mark>
+            в <mark>File &gt; Dependencies &gt; Reduce Project</mark>
           </li>
           <li>
-            <mark>Улитка</mark>,
-            <mark>спираль</mark>
-            или
-            <mark>лассо</mark>
-            - способ соединения параметров одного слоя к другому. Находится в столбце
+            <mark>Улитка</mark>, <mark>спираль</mark> или <mark>лассо</mark> - способ
+            соединения параметров одного слоя к другому. Находится в столбце
             <mark>Parent &amp; Link</mark> на таймлайне.
           </li>
           <li>
@@ -823,15 +799,12 @@
             применяется с шейповыми слоями.
           </li>
           <li>
-            <mark>Стесняшка</mark>, <mark>шляпка</mark>,
-            <mark>медуза</mark>
-            - речь об переключателе Shy, который позволяет временно скрыть слой на
-            таймлайне.
+            <mark>Стесняшка</mark>, <mark>шляпка</mark>, <mark>медуза</mark> - речь об
+            переключателе Shy, который позволяет временно скрыть слой на таймлайне.
           </li>
           <li>
             <mark>Плагин</mark> - подключаемые эффекты формата <mark>.aex</mark>, часто
-            применяется с выражением
-            <mark>где скачать?</mark>
+            применяется с выражением <mark>где скачать?</mark>
           </li>
           <li>
             <mark>Экстеншон</mark> - расширения, часто запакованы в
@@ -846,12 +819,9 @@
             параметров для рендера
           </li>
           <li>
-            <mark>Ромбики</mark>
-            или
-            <mark>ключи</mark>
-            - ключевые кадры или же метки, на основе которых создаётся анимация. Они
-            указывают на то, как будет выглядеть анимированный элемент в конкретный момент
-            времени.
+            <mark>Ромбики</mark> или <mark>ключи</mark> - ключевые кадры или же метки, на
+            основе которых создаётся анимация. Они указывают на то, как будет выглядеть
+            анимированный элемент в конкретный момент времени.
           </li>
           <li>
             <mark>Усики</mark> - контроллеры скорости в Graph Editor или пути движения в
@@ -863,9 +833,8 @@
             <mark>File &gt; Dependencies &gt; Collect Files</mark>
           </li>
           <li>
-            <mark>Аджастмент</mark>
-            - корректирующий слой, данное выражение идёт от английской локализации, где
-            такой слой называется Adjustment Layer.
+            <mark>Аджастмент</mark> - корректирующий слой, данное выражение идёт от
+            английской локализации, где такой слой называется Adjustment Layer.
           </li>
           <li>
             <mark>Солид</mark> - слой с однотонным цветом. Часто применяется как фон или
@@ -881,14 +850,11 @@
           </li>
           <li>
             <mark>Автотрейс</mark> - автоматическое создание маски или фигуры на основе
-            краёв вашего слоя, находится в
-            <mark>Layer &gt; Auto-trace</mark>
+            краёв вашего слоя, находится в <mark>Layer &gt; Auto-trace</mark>
           </li>
           <li>
-            <mark>Моушен блюр</mark>
-            или
-            <mark>Motion Blur</mark>
-            - размытие в движении, позволяет дать плавное движение объекта.
+            <mark>Моушен блюр</mark> или <mark>Motion Blur</mark> - размытие в движении,
+            позволяет дать плавное движение объекта.
           </li>
           <li>
             <mark>Плейхед</mark> - вертикальная временная метка, которая показывает
@@ -900,57 +866,45 @@
             для того, чтобы пользователь нажал на определённые
           </li>
           <li>
-            <mark>Патч маски</mark>
-            или
-            <mark>патч шейпа</mark> - своеобразная линия или кривая, которая создана для
-            маски или фигурного слоя. Они взаимозаменяемые, поэтому вы можете превратить
-            маску в фигуру и наоборот путём копирования ключей.
+            <mark>Патч маски</mark> или <mark>патч шейпа</mark> - своеобразная линия или
+            кривая, которая создана для маски или фигурного слоя. Они взаимозаменяемые,
+            поэтому вы можете превратить маску в фигуру и наоборот путём копирования
+            ключей.
           </li>
           <li>
-            <mark>Тайлинг</mark>
-            - зеркальная плитка, которая появляется при использовании эффектов по типу CC
-            Repetile или Motion Tile.
+            <mark>Тайлинг</mark> - зеркальная плитка, которая появляется при использовании
+            эффектов по типу CC Repetile или Motion Tile.
           </li>
           <li>
-            <mark>Ракета</mark>
-            - окно Project Settings, в котором можно изменить настройки рендера или
-            цветовых профилей.
+            <mark>Ракета</mark> - окно Project Settings, в котором можно изменить
+            настройки рендера или цветовых профилей.
           </li>
           <li>
-            <mark>Борисовский</mark>
-            или
-            <mark>сапфировский</mark>
-            или
-            <mark>континуумовский</mark>
-            - чаще всего подразумеваются плагины от компании BorisFX, в частности Boris FX
-            Sapphire или Boris FX Continuum. Может употребляться вместе с названием
-            эффекта, например сапфировский шейк или борисовский силуэт, что означает
-            эффект S_Shake и программа BorisFX Silhouette соответственно.
+            <mark>Борисовский</mark> или <mark>сапфировский</mark> или
+            <mark>континуумовский</mark> - чаще всего подразумеваются плагины от компании
+            BorisFX, в частности Boris FX Sapphire или Boris FX Continuum. Может
+            употребляться вместе с названием эффекта, например сапфировский шейк или
+            борисовский силуэт, что означает эффект S_Shake и программа BorisFX Silhouette
+            соответственно.
           </li>
           <li>
-            <mark>Максоновский</mark>
-            или
-            <mark>редгиантовский</mark>
-            - чаще всего подразумеваются плагины от Maxon и Red Giant, например Trapcode
-            Particular или VFX Suite.
+            <mark>Максоновский</mark> или <mark>редгиантовский</mark> - чаще всего
+            подразумеваются плагины от Maxon и Red Giant, например Trapcode Particular или
+            VFX Suite.
           </li>
           <li>
             <mark>Топаз</mark> - часто используется для обозначения сторонних программ от
             Topaz, например Video AI, Photo AI или Gigapixel AI.
           </li>
           <li>
-            <mark>Тречить</mark>
-            или
-            <mark>трекинг</mark> - определение местоположения движущегося объекта во
-            времени с помощью камеры. Часто применяется, если нужно прицепить композицию и
-            какому-нибудь объекту в кадре.
+            <mark>Тречить</mark> или <mark>трекинг</mark> - определение местоположения
+            движущегося объекта во времени с помощью камеры. Часто применяется, если нужно
+            прицепить композицию и какому-нибудь объекту в кадре.
           </li>
           <li>
-            <mark>Мокка</mark>
-            или
-            <mark>моча</mark>
-            - плагин BorisFX Mocha AE или Pro, которая используется для трекинга объектов.
-            К слову, употребление слова "моча" в данном контексте неправильное.
+            <mark>Мокка</mark> или <mark>моча</mark> - плагин BorisFX Mocha AE или Pro,
+            которая используется для трекинга объектов. К слову, употребление слова "моча"
+            в данном контексте неправильное.
           </li>
           <li>
             <mark>Хоткей</mark> - горячие клавиши или же комбинация клавиш, которые должен
@@ -1035,7 +989,7 @@
           <li>Одиночное нажатие <mark>L</mark>: раскрытие громкости слоя</li>
           <li>Двойное нажатие <mark>L</mark>: раскрытие звуковой дорожки слоя</li>
           <li>
-            <mark>Ctrl + T</mark>: инструмент текст, позволяющий создать текстовый слой
+            <mark>Ctrl + T</mark>: инструмент "Текст", позволяющий создать текстовый слой
           </li>
           <li>
             <mark>~</mark> или <mark>Ё</mark> - открыть окно в рабочей области на весь
@@ -1063,9 +1017,8 @@
           <a
             href="https://helpx.adobe.com/ru/after-effects/kb/known-issues-after-effects.html"
             title="Выявленные неполадки в After Effects"
-            >список выявленных неполадок
-          </a>
-          и прикрепляет временные решения.
+            >список выявленных неполадок </a
+          >и прикрепляет временные решения.
         </p>
         <p>
           Если вы задаётесь вопросом, а стоит ли переходить с одной версии на другую: всё
@@ -1077,13 +1030,10 @@
         <p>
           Если вы всё-таки решились обновить программу из одного года в другой, но не
           знаете как это сделать без потери плагинов, то для этого вы можете скопировать
-          старую папку
-          <mark>After Effects 20XX</mark>
-          в
-          <mark>C:\Program Files\Adobe</mark>
-          и переименовать в ту версию, которую вы хотите установить. После этого вы можете
-          открыть установщик новой версии и выполнить установку поверх скопированной
-          папки.
+          старую папку <mark>After Effects 20XX</mark> в
+          <mark>C:\Program Files\Adobe</mark> и переименовать в ту версию, которую вы
+          хотите установить. После этого вы можете открыть установщик новой версии и
+          выполнить установку поверх скопированной папки.
         </p>
         <p>
           При возникновении проблем после процедуры с копией папки рекомендуется провести
@@ -1103,9 +1053,8 @@
           <a
             href="https://lottiefiles.com/supported-features"
             title="Поддерживаемые функции Lottie"
-            >таблица совместимости
-          </a>
-          вашей анимации с браузерами и платформами.
+            >таблица совместимости </a
+          >вашей анимации с браузерами и платформами.
         </p>
         <p>
           Чтобы проверить вашу анимацию на корректную работоспособность, загрузите её в
@@ -1213,8 +1162,7 @@
           </li>
           <li>
             Если у вас видеокарта от Nvidia, то установите галочку на Hardware
-            Acceleration и укажите там
-            <mark>Nvidia NVENC</mark>
+            Acceleration и укажите там <mark>Nvidia NVENC</mark>
           </li>
           <li>Нажать кнопку <mark>Start Function</mark></li>
         </ul>
@@ -1237,9 +1185,8 @@
           <a
             href="https://helpx.adobe.com/ru/after-effects/system-requirements.html"
             title="Системные требования для After Effects"
-            >системным требованиям
-          </a>
-          программы, ведь для адекватной работы - необходимо как минимум 16 ГБ ОЗУ и
+            >системным требованиям </a
+          >программы, ведь для адекватной работы - необходимо как минимум 16 ГБ ОЗУ и
           процессор от Intel минимум 8-го поколения или AMD Ryzen минимум 1000 серии. Но
           несмотря на это, можно запустить программу и на более слабом железе, главное
           соблюдать минимальные требования.
@@ -1250,15 +1197,12 @@
           зачастую именно сторонние плагины и есть проблема ваших ”лагов". Старайтесь не
           устанавливать в программу всевозможные плагины из разных источников и не мешать
           в проекте сторонние эффекты с одинаковой сутью, но от разных брендов, например
-          <mark>BCC Camera Shake</mark>
-          и
-          <mark>uni.shake</mark>, ведь они могут тормозить из-за разных принципов просчёта
-          кадра.
+          <mark>BCC Camera Shake</mark> и <mark>uni.shake</mark>, ведь они могут тормозить
+          из-за разных принципов просчёта кадра.
         </p>
         <p>
           Для того чтобы выяснить, сколько времени занимает просчёт кадра из-за эффекта,
-          разработчики внедрили в After Effects функцию
-          <mark>Render Time</mark>
+          разработчики внедрили в After Effects функцию <mark>Render Time</mark>
         </p>
         <figure>
           <img
@@ -1277,11 +1221,8 @@
         </p>
         <p>
           Если вы используете любое видео <mark>.mp4</mark> с интернета или различных
-          видео хостингов - то переконвертируйте их в
-          <mark>Apple ProRes 422</mark>
-          или
-          <mark>DNxHR</mark>
-          через Media Encoder или
+          видео хостингов - то переконвертируйте их в <mark>Apple ProRes 422</mark> или
+          <mark>DNxHR</mark> через Media Encoder или
           <a
             href="https://www.shutterencoder.com/"
             title="Сайт Shutter Encoder"
@@ -1300,7 +1241,7 @@
           title="Видеоплеер YouTube"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
         <p>
           Если у вас используются видео-исходники с переменным FPS, то такие видео также
@@ -1331,9 +1272,9 @@
         </summary>
         <p>
           Вы можете задействовать весь потенциал вашего процессора, включив функцию
-          <mark>Multi-Frame Rendering</mark>
-          в настройках программы. Эта функция позволит рендерить несколько кадров
-          одновременно, используя всю вычислительную мощь процессора.
+          <mark>Multi-Frame Rendering</mark> в настройках программы. Эта функция позволит
+          рендерить несколько кадров одновременно, используя всю вычислительную мощь
+          процессора.
         </p>
         <p>
           В настройках можно ограничить использование процессора при Multi-Frame рендере
@@ -1385,11 +1326,9 @@
         </p>
         <p>
           Для включения рендера на процессоре - перейдите в
-          <mark>File &gt; Project Manager</mark>
-          или нажмите комбинацию клавиш
-          <mark>Ctrl + Alt + Shift + K</mark>
-          и во вкладке Video Rendering and Effects вы можете выбрать на чём рендерить ваш
-          проект.
+          <mark>File &gt; Project Manager</mark> или нажмите комбинацию клавиш
+          <mark>Ctrl + Alt + Shift + K</mark> и во вкладке Video Rendering and Effects вы
+          можете выбрать на чём рендерить ваш проект.
         </p>
         <figure>
           <img
@@ -1400,37 +1339,30 @@
           <figcaption>Окно Project Manager с выбором типа рендеринга</figcaption>
         </figure>
         <p>
-          Пункт
-          <mark>Mercury Software Only</mark>
-          позволяет программе рендерить проект преимущественно через процессор, но
-          сторонние эффекты, принудительно использующие GPU (например Depth Scanner), всё
-          также будут считаться через видеокарту.
+          Пункт <mark>Mercury Software Only</mark> позволяет программе рендерить проект
+          преимущественно через процессор, но сторонние эффекты, принудительно
+          использующие GPU (например Depth Scanner), всё также будут считаться через
+          видеокарту.
         </p>
         <p>
-          Пункт
-          <mark>Mercury GPU Acceleration (CUDA / OpenCL)</mark>
-          позволяет After Effects использовать видеокарту, но программа не будет
-          гарантировано считать все эффекты через неё и возможны проблемы при
-          использовании в долгосрочной перспективе.
+          Пункт <mark>Mercury GPU Acceleration (CUDA / OpenCL)</mark> позволяет After
+          Effects использовать видеокарту, но программа не будет гарантировано считать все
+          эффекты через неё и возможны проблемы при использовании в долгосрочной
+          перспективе.
         </p>
       </details>
       <details>
         <summary>Как улучшить качество исходников?</summary>
         <p>
           Если вы пришли с TikTok или YouTube от ”мамкиных эдиторов", которые бездумно
-          крутят
-          <mark>Unsharpen Mask</mark>
-          и
-          <mark>Sharpen</mark>
-          на плохом исходнике - то отказывайтесь от такой вредной привычки, ведь оно
-          только губит ваше видео, если вы не делаете это намеренно.
+          крутят <mark>Unsharpen Mask</mark> и <mark>Sharpen</mark> на плохом исходнике -
+          то отказывайтесь от такой вредной привычки, ведь оно только губит ваше видео,
+          если вы не делаете это намеренно.
         </p>
         <p>
           В качестве эффективного способа хоть как-то улучшить качество исходного
           материала могу посоветовать использовать нейросети для этого, например
-          <mark>Topaz Video</mark>
-          или
-          <mark>Topaz Photo</mark>
+          <mark>Topaz Video</mark> или <mark>Topaz Photo</mark>
         </p>
         <iframe
           src="https://www.youtube.com/embed/m7uCZoDKn_I?si=z2dRu2UR-SVfXfNU"
@@ -1442,8 +1374,7 @@
         <p>
           Если вы не хотите использовать Standalone программы, то вы можете
           воспользоваться сторонними плагинами, например BorisFX Continuum, в который
-          добавили эффект
-          <mark>UpRes ML</mark>
+          добавили эффект <mark>UpRes ML</mark>
         </p>
         <iframe
           src="https://www.youtube.com/embed/fTYcNP8ZdTE?si=uRQpydHGms_rdE_s"
@@ -1475,13 +1406,11 @@
         ></iframe>
         <p>
           На данный момент эффективным средством для плавного замедления видео можно
-          назвать относительно новый эффект
-          <mark>Retime ML</mark> из пакета
+          назвать относительно новый эффект <mark>Retime ML</mark> из пакета
           <a
             href="https://borisfx.com/products/continuum/"
             title="Сайт BorisFX Continuum"
-          >
-            BorisFX Continuum</a
+            >BorisFX Continuum</a
           >.
         </p>
         <iframe
@@ -1496,9 +1425,8 @@
           <a
             href="https://topazlabs.com/topaz-video-ai-copy"
             title="Сайт Topaz Video AI"
-            >Topaz Video AI
-          </a>
-          с различными моделями для замедления. Также эта программа помогает улучшить
+            >Topaz Video AI </a
+          >с различными моделями для замедления. Также эта программа помогает улучшить
           качество ваших исходников за счёт увеличения разрешения с помощью искусственного
           интеллекта.
         </p>
@@ -1518,18 +1446,17 @@
           <a
             href="https://t.me/+Qd9xu7A4TeIwNzY6"
             title="склад стройматериалов в Telegram"
-            >складе стройматериалов
-          </a>
-          по хештегам <mark>#twixtor</mark>, <mark>#continuum</mark> и
+            >складе стройматериалов </a
+          >по хештегам <mark>#twixtor</mark>, <mark>#continuum</mark> и
           <mark>#topaz</mark>
         </div>
         <p>
           Если вы не хотите устанавливать сторонние плагины, то вы можете плавно замедлить
           видео стандартными способами After Effects. Для этого импортируйте видео,
-          замедлите его с помощью
-          <mark>ПКМ по слою &gt; Time &gt; Time Stretch</mark>, указав нужный фактор
-          замедления или с помощью растягивания слоя с зажатым <mark>Alt</mark>. Затем
-          снова нажмите <mark>ПКМ по слою &gt; Frame Blending</mark> и выберите
+          замедлите его с помощью <mark>ПКМ по слою &gt; Time &gt; Time Stretch</mark>,
+          указав нужный фактор замедления или с помощью растягивания слоя с зажатым
+          <mark>Alt</mark>. Затем снова нажмите
+          <mark>ПКМ по слою &gt; Frame Blending</mark> и выберите
           <mark>Frame Mix</mark> или <mark>Pixel Motion</mark>
         </p>
       </details>
@@ -1558,15 +1485,14 @@
           allowfullscreen=""
         ></iframe>
         <p>
-          Из сторонних альтернатив могу привести
-          <mark>Magic Bullet Denoiser III</mark> из пакета Red Giant Magic Bullet Suite,
-          <mark>BCC+Denoise ML</mark> из BorisFX Continuum и <mark>DE:Noise</mark> от
-          Re:Vision Effects.
+          Из сторонних альтернатив могу привести <mark>Magic Bullet Denoiser III</mark> из
+          пакета Red Giant Magic Bullet Suite, <mark>BCC+Denoise ML</mark> из BorisFX
+          Continuum и <mark>DE:Noise</mark> от Re:Vision Effects.
         </p>
         <p>
-          Ещё шумы можно убрать с помощью стандартного эффекта
-          <mark>Remove Grain</mark>. Он может работать не так эффективно, как сторонние
-          решения, но его точно можно использовать в своих проектах.
+          Ещё шумы можно убрать с помощью стандартного эффекта <mark>Remove Grain</mark>.
+          Он может работать не так эффективно, как сторонние решения, но его точно можно
+          использовать в своих проектах.
         </p>
       </details>
       <details>
@@ -1598,9 +1524,8 @@
         </ul>
         <p>
           Некоторые пользователи прибегают к использованию более простых инструментов для
-          удаления фона, например
-          <mark>Linear Color Key</mark>, если результат не сильно важен в угоду
-          производительности сцены.
+          удаления фона, например <mark>Linear Color Key</mark>, если результат не сильно
+          важен в угоду производительности сцены.
         </p>
         <p>
           Из сторонних эффективных инструментов для удаления цветного фона могу назвать
@@ -1610,15 +1535,15 @@
           <a
             href="https://www.youtube.com/@MaxonRedgiant"
             title="Maxon Red Giant на YouTube"
-            >Maxon Red Giant
-          </a>
+            >Maxon Red Giant</a
+          >
         </p>
         <iframe
           src="https://www.youtube.com/embed/zYARqiWTArU?si=TEcywbB95N7mR8qe"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
         <p>
           У BorisFX также есть несколько инструментов для удаления цветного фона, например
@@ -1630,7 +1555,7 @@
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
       </details>
       <details>
@@ -1645,7 +1570,7 @@
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
         <p>
           Если результат от применения <mark>Extract</mark> вам не понравился, то вы
@@ -1657,12 +1582,12 @@
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
         <p>
-          Иногда бывает достаточно применить режим наложения <mark>Overlay</mark>, чтобы
-          убрать ненужные цвета. Учтите, что режимы наложения не работают, если под
-          выбранным слоем ничего не находится.
+          Иногда бывает достаточно применить режим наложения
+          <mark>Overlay</mark>, чтобы убрать ненужные цвета. Учтите, что режимы наложения
+          не работают, если под выбранным слоем ничего не находится.
         </p>
       </details>
       <details>
@@ -1683,10 +1608,9 @@
           </li>
           <li>
             При использовании шаблонов или чужих проектов вы с шансом 98% встретитесь с
-            ошибкой
-            <mark>Этот проект содержит ошибки выражений</mark>
-            из-за того, что выражения берут значения слоев на локализации, которым
-            пользовался автор проекта. Частично это решается
+            ошибкой <mark>Этот проект содержит ошибки выражений</mark> из-за того, что
+            выражения берут значения слоев на локализации, которым пользовался автор
+            проекта. Частично это решается
             <a
               href="https://aescripts.com/expressionuniversalizer/"
               title="Expression Universalizer на aescripts"
@@ -1697,8 +1621,8 @@
         <p>
           Для быстрой смены языка After Effects на английский язык достаточно создать
           пустой текстовый документ с названием
-          <mark>ae_force_english.txt</mark>
-          и поместить в папку "Документы" вашего пользователя.
+          <mark>ae_force_english.txt</mark> и поместить в папку "Документы" вашего
+          пользователя.
         </p>
         <img
           src="source/ae_force_english_in_userdocuments.png"
@@ -1709,15 +1633,14 @@
           Также вы можете воспользоваться командой для терминала Windows, чтобы создать
           текстовый документ, если вам лень создавать пустой файл вручную в проводнике.
         </p>
-        <code> echo.&gt;"C:\Users\%USERNAME%\Documents\ae_force_english.txt" </code>
+        <code>echo.&gt;"C:\Users\%USERNAME%\Documents\ae_force_english.txt"</code>
         <p>
           Если это не помогло - переименуйте файл
           <mark>after_effects_ru_RU.dat</mark>, находящийся на пути
-          <mark>
-            C:\Program Files\Adobe\Adobe After Effects 20XX\Support
-            Files\Dictionaries\ru_ru
-          </mark>
-          на
+          <mark
+            >C:\Program Files\Adobe\Adobe After Effects 20XX\Support
+            Files\Dictionaries\ru_ru</mark
+          >на
           <mark>after_effects_en_US.dat</mark>
         </p>
         <div class="important">
@@ -1736,7 +1659,7 @@
         <div class="important">
           Перевод и наличие эффектов может отличаться в зависимости от версии программы
         </div>
-        <!-- fixme: перевёрстать без спойлера с возможностью прокрутки таблицы на маленьких экранах -->
+        <!-- fixme: перевёрстать без спойлера с возможностью прокрутки таблицы на маленьких экранах, дописать ссылки на каждый эффект -->
         <table>
           <thead>
             <tr>
@@ -1757,42 +1680,70 @@
             <tr>
               <td>Извлечение 3D-канала</td>
               <td>3D Channel Extract</td>
-              <td></td>
+              <td>
+                <a href="https://www.youtube.com/watch?v=qAKdcIeku3Q&t=7"
+                  >Видео от Jake in Motion</a
+                >
+              </td>
             </tr>
             <tr>
               <td>Криптоматт</td>
               <td>Cryptomatte</td>
-              <td></td>
+              <td>
+                <a href="https://www.youtube.com/watch?v=_cOG53NWJj4&t=7"
+                  >Видео от Jake in Motion</a
+                >
+              </td>
             </tr>
             <tr>
               <td>Подложка глубины</td>
               <td>Depth Matte</td>
-              <td></td>
+              <td>
+                <a href="https://www.youtube.com/watch?v=qAKdcIeku3Q&t=278"
+                  >Видео от Jake in Motion</a
+                >
+              </td>
             </tr>
             <tr>
               <td>Глубина поля</td>
               <td>Depth of Field</td>
-              <td></td>
+              <td>
+                <a href="https://www.youtube.com/watch?v=qAKdcIeku3Q&t=216"
+                  >Видео от Jake in Motion</a
+                >
+              </td>
             </tr>
             <tr>
               <td>Извлечение</td>
               <td>Extractor</td>
-              <td></td>
+              <td>
+                <a href="https://youtu.be/7DW84Vt5gvQ&t=7">Видео от Jake in Motion</a>
+              </td>
             </tr>
             <tr>
               <td>3D-туман</td>
               <td>Fog 3D</td>
-              <td></td>
+              <td>
+                <a href="https://www.youtube.com/watch?v=qAKdcIeku3Q&t=318"
+                  >Видео от Jake in Motion</a
+                >
+              </td>
             </tr>
             <tr>
               <td>Идентификатор подложки</td>
               <td>ID Matte</td>
-              <td></td>
+              <td>
+                <a href="https://www.youtube.com/watch?v=qAKdcIeku3Q&t=457"
+                  >Видео от Jake in Motion</a
+                >
+              </td>
             </tr>
             <tr>
               <td>IDentifier</td>
               <td>IDentifier</td>
-              <td></td>
+              <td>
+                <a href="https://youtu.be/7DW84Vt5gvQ&t=195">Видео от Jake in Motion</a>
+              </td>
             </tr>
             <tr>
               <td
@@ -1805,17 +1756,17 @@
             <tr>
               <td>Назад</td>
               <td>Backwards</td>
-              <td></td>
+              <td><a href="https://youtu.be/lNYgKQPU2Pk&t=46"></a></td>
             </tr>
             <tr>
               <td>ВЧ и НЧ</td>
               <td>Bass &amp; Treble</td>
-              <td></td>
+              <td><a href="https://youtu.be/lNYgKQPU2Pk&t=79"></a></td>
             </tr>
             <tr>
               <td>Задержка</td>
               <td>Delay</td>
-              <td></td>
+              <td><a href="https://youtu.be/lNYgKQPU2Pk&t=101"></a></td>
             </tr>
             <tr>
               <td>Фланджер и хор</td>
@@ -2473,7 +2424,11 @@
             <tr>
               <td>Клеевой пистолет CC</td>
               <td>CC Glue Gun</td>
-              <td></td>
+              <td>
+                <a href="https://www.youtube.com/watch?v=RjClIwbbV04&t=7"
+                  >Видео от Jake In Motion</a
+                >
+              </td>
             </tr>
             <tr>
               <td>Выброс света 2.5 CC</td>
@@ -3353,15 +3308,13 @@
           <a
             href="https://www.rarlab.com/download.htm"
             title="Официальный сайт WinRAR"
-            >WinRAR
-          </a>
-          для Windows,
+            >WinRAR </a
+          >для Windows,
           <a
             href="https://www.keka.io/ru/"
             title="Официальный сайт keka"
-            >keka
-          </a>
-          для macOS или открыть общий доступ с помощью облачных хранилищ.
+            >keka </a
+          >для macOS или открыть общий доступ с помощью облачных хранилищ.
         </p>
         <p>
           Для этого нужно перейти в
@@ -3412,9 +3365,8 @@
         <code>compact /s /u /i /exe:lzx</code>
         <p>
           Но если вы всё-таки хотите перенести программу на другой диск, то для этого в
-          Windows есть функция символьных ссылок, или же
-          <mark>Symlink</mark>. Подробнее о переносе программы с одного диска на другой -
-          смотрите в видео ниже.
+          Windows есть функция символьных ссылок, или же <mark>Symlink</mark>. Подробнее о
+          переносе программы с одного диска на другой - смотрите в видео ниже.
         </p>
         <div class="important">
           Учтите, что After Effects должен сначала быть установлен в стандартном
@@ -3429,7 +3381,7 @@
           title="Видеоплеер YouTube"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
       </details>
       <details>
@@ -3437,12 +3389,11 @@
         <p>
           Для начала проверьте настройки вашего окна Preview и убедитесь, что параметр FPS
           установлен на Auto и что две опции кэширования
-          <mark>Cache before playback</mark>
-          и
-          <mark>If caching, play caching frames</mark>
-          активированы. Это позволит воспроизводить предпросмотр из кэша, минуя рендер в
-          реальном времени, и при необходимости сохранять данные на диск или оперативную
-          память, в зависимости от текущего состояния кэша.
+          <mark>Cache before playback</mark> и
+          <mark>If caching, play caching frames</mark> активированы. Это позволит
+          воспроизводить предпросмотр из кэша, минуя рендер в реальном времени, и при
+          необходимости сохранять данные на диск или оперативную память, в зависимости от
+          текущего состояния кэша.
         </p>
         <figure>
           <img
@@ -3474,8 +3425,7 @@
           неправильного аудио выхода программа пытается синхронизировать изображение и
           звук, но получается всё через одно место. В таких случаях рекомендуется либо
           обновить аудио драйверы, либо изменить аудио выход на другой и уменьшить
-          задержку (Latency) в
-          <mark>Edit &gt; Preferences &gt; Audio Hardware</mark>
+          задержку (Latency) в <mark>Edit &gt; Preferences &gt; Audio Hardware</mark>
         </p>
         <figure>
           <img
@@ -3492,9 +3442,8 @@
           композиции, предварительно не кэшируя, то ваш ПК попытается просчитать каждый
           кадр на лету. Иногда это удаётся и без тормозов, если проект несложный, но чаще
           всего при сложных сценах After Effects просто не успевает просчитать кадр до тех
-          пор, пока он не появится на экране. В окне
-          <mark>Info</mark>
-          вы всегда можете посмотреть информацию о текущем FPS вашего предпросмотра.
+          пор, пока он не появится на экране. В окне <mark>Info</mark> вы всегда можете
+          посмотреть информацию о текущем FPS вашего предпросмотра.
         </p>
         <figure>
           <img
@@ -3506,9 +3455,7 @@
         </figure>
         <p>
           Если предпросмотр будет воспроизводиться не в реальном времени - в окне будет
-          информация о
-          <mark>NOT Realtime</mark>
-          с текущим фреймрейтом.
+          информация о <mark>NOT Realtime</mark> с текущим фреймрейтом.
         </p>
       </details>
       <details>
@@ -3526,20 +3473,19 @@
         <summary>Как установить свой коэффициент масштабирования предпросмотра?</summary>
         <p>
           Стандартными средствами After Effects не получится сделать, для этого существует
-          стороннее расширение
-          <mark>ae-zoom</mark>, которое вы можете загрузить из
+          стороннее расширение <mark>ae-zoom</mark>, которое вы можете загрузить из
           <a
             href="https://github.com/QuisPic/ae-zoom/releases"
             title="ae-zoom на GitHub"
-            >GitHub
-          </a>
+            >GitHub</a
+          >
         </p>
         <video
           style="height: 235px !important"
           src="https://github.com/QuisPic/ae-zoom/assets/56075863/83c9bc7e-286c-4915-91b2-dc7d1ca1f4b7"
-          controls=""
-          muted=""
-          loop=""
+          controls
+          muted
+          loop
         ></video>
         <p>
           Данное расширение создает простой пользовательский интерфейс, который позволяет
@@ -3567,9 +3513,7 @@
         <summary>Видео в предпросмотре проигрывается в ужасном качестве!</summary>
         <p>
           Убедитесь, что в окне Preview установлено значение не
-          <mark>Auto</mark>
-          или другое значение, отличное от
-          <mark>Full</mark>
+          <mark>Auto</mark> или другое значение, отличное от <mark>Full</mark>
         </p>
         <figure>
           <img
@@ -3614,18 +3558,15 @@
           всегда видит пиксели
         </div>
         <p>
-          Если вы импортировали векторный файл, например
-          <mark>.ai</mark>, и при увеличении размера слоя вы видите пиксели, то вам нужно
-          включить
-          <mark>Continuously Rasterize</mark>
-          для слоя на таймлайне. Этот пункт позволить уменьшить пикселизацию, растрируя
-          векторный слой до нужного разрешения при любых взаимодействиях с ним.
+          Если вы импортировали векторный файл, например <mark>.ai</mark>, и при
+          увеличении размера слоя вы видите пиксели, то вам нужно включить
+          <mark>Continuously Rasterize</mark> для слоя на таймлайне. Этот пункт позволить
+          уменьшить пикселизацию, растрируя векторный слой до нужного разрешения при любых
+          взаимодействиях с ним.
         </p>
         <div class="important">
-          При включенной опции
-          <mark>Continuously Rasterize</mark>
-          могут быть побочные явления, например разрывы слоя при использовании инструмента
-          Puppet Tool
+          При включенной опции <mark>Continuously Rasterize</mark> могут быть побочные
+          явления, например разрывы слоя при использовании инструмента Puppet Tool
         </div>
         <figure>
           <img
@@ -3692,11 +3633,10 @@
           использовать костыли с помощью масок.
         </p>
         <p>
-          Если у вас установлен
-          <mark>VFX Suite от Red Giant</mark>, то вы наверняка слышали об
-          <mark>SuperComp</mark>. О нём и пойдет речь: в нём вы можете сделать заливку для
-          нужных слоёв, а затем из этой заливки сделать маску для Adjustment Layer.
-          Подробнее об этом способе вы можете посмотреть в видео ниже от
+          Если у вас установлен <mark>VFX Suite от Red Giant</mark>, то вы наверняка
+          слышали об <mark>SuperComp</mark>. О нём и пойдет речь: в нём вы можете сделать
+          заливку для нужных слоёв, а затем из этой заливки сделать маску для Adjustment
+          Layer. Подробнее об этом способе вы можете посмотреть в видео ниже от
           <a
             href="https://t.me/Pavelusha"
             title="@pavelusha в Telegram"
@@ -3706,8 +3646,8 @@
         <figure>
           <video
             src="source/selective_adjustment_layer.mp4"
-            preload=""
-            controls=""
+            preload
+            controls
           ></video>
           <figcaption>
             Создание маски для Adjustment Layer с помощью Red Giant SuperComp
@@ -3728,15 +3668,14 @@
           не понимает, с каким типом источника ему работать. В результате чего длина видео
           оказывается меньше, чем хотелось бы. Для исправления этой проблемы нужно
           интерпретировать исходник через
-          <mark>Interpret Footage &gt; Conform to frame rate</mark>
-          и выставить нужный FPS, желательно совпадающий с FPS композиции в окне Project,
-          либо перекодировать видео через
+          <mark>Interpret Footage &gt; Conform to frame rate</mark> и выставить нужный
+          FPS, желательно совпадающий с FPS композиции в окне Project, либо перекодировать
+          видео через
           <a
             href="https://www.shutterencoder.com/en"
             title="Сайт Shutter Encoder"
-            >Shutter Encoder
-          </a>
-          с постоянным FPS.
+            >Shutter Encoder </a
+          >с постоянным FPS.
         </p>
         <figure>
           <img
@@ -3757,6 +3696,8 @@
           <mark>30</mark>, так как Element 3D не умеет корректно работать в композиции с
           такими значениями кадров в секунду.
         </p>
+      </details>
+      <details>
         <summary>
           Как импортировать исходники, которые не поддерживает After Effects?
         </summary>
@@ -3810,16 +3751,13 @@
           title="Видеоплеер YouTube"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
         <p>
           В большинстве случаев эта проблема решается повышением битности в проекте. Для
-          этого откройте
-          <mark>Project Settings</mark>
-          при помощи комбинации клавиш
-          <mark>Ctrl + Alt + Shift + K</mark>
-          и перейдите во вкладку
-          <mark>Color</mark>. Найдите пункт Bit Depth и установите 16 или 32 бита.
+          этого откройте <mark>Project Settings</mark> при помощи комбинации клавиш
+          <mark>Ctrl + Alt + Shift + K</mark> и перейдите во вкладку <mark>Color</mark>.
+          Найдите пункт Bit Depth и установите 16 или 32 бита.
         </p>
         <figure>
           <img
@@ -3836,8 +3774,8 @@
         </div>
         <p>
           Уменьшить эффект "бандинга" может помочь и обычный шум. Для этого создайте
-          <mark>Adjustment Layer</mark>
-          поверх всех слоёв и примените эффект Noise со значением от 1 до 5 процентов.
+          <mark>Adjustment Layer</mark> поверх всех слоёв и примените эффект Noise со
+          значением от 1 до 5 процентов.
         </p>
       </details>
       <details>
@@ -3864,8 +3802,7 @@
         <p>
           У вас и у автора какого-то видео установлены разные виды графика скорости. Для
           этого переключите вид на нужный вам с помощью правой кнопки мыши по графику или
-          второй кнопки снизу в открытом
-          <mark>Graph Editor</mark>
+          второй кнопки снизу в открытом <mark>Graph Editor</mark>
         </p>
         <img
           src="source/change_graph_speed_view.png"
@@ -3910,15 +3847,14 @@
           title="Видеоплеер YouTube"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
       </details>
       <details>
         <summary>Как сделать в Saber прозрачный фон?</summary>
         <p>
-          Для этого в настройках Saber откройте пункт
-          <mark>Render Settings</mark> и укажите в
-          <mark>Composite Settings</mark> параметр
+          Для этого в настройках Saber откройте пункт <mark>Render Settings</mark> и
+          укажите в <mark>Composite Settings</mark> параметр
           <mark>Transparent</mark>
         </p>
       </details>
@@ -3967,11 +3903,8 @@
         </summary>
         <p>
           Для отключения этой функции, выберите в панели инструментов любой инструмент,
-          например
-          <mark>Текст</mark>
-          и нажмите рядом с ним
-          <mark>Auto-Open Panel</mark>. Возможно, эту же процедуру надо повторить с
-          инструментом
+          например <mark>Текст</mark> и нажмите рядом с ним <mark>Auto-Open Panel</mark>.
+          Возможно, эту же процедуру надо повторить с инструментом
           <mark>Кисть</mark>
         </p>
         <figure>
@@ -3989,8 +3922,7 @@
           <a
             href="https://helpx.adobe.com/ru/after-effects/using/properties-panel.html"
             title="Быстрая анимация с помощью панели «Свойства» в After Effects"
-          >
-            официальном сайте Adobe</a
+            >официальном сайте Adobe</a
           >.
         </p>
       </details>
@@ -3999,15 +3931,12 @@
           Почему при использовании 3D-слоёв я не могу изменить параметры наложения?
         </summary>
         <p>
-          Вы используете рендер
-          <mark>Advanced 3D</mark>
-          или
-          <mark>Cinema 4D</mark>, для них не предусмотрена поддержка этой функции.
+          Вы используете рендер <mark>Advanced 3D</mark> или <mark>Cinema 4D</mark>, для
+          них не предусмотрена поддержка этой функции.
         </p>
         <p>
-          Для того чтобы решить эту проблему, переключитесь на
-          <mark>Classic 3D</mark>
-          или используйте эффекты для композитинга.
+          Для того чтобы решить эту проблему, переключитесь на <mark>Classic 3D</mark> или
+          используйте эффекты для композитинга.
         </p>
       </details>
       <details>
@@ -4016,8 +3945,7 @@
         </summary>
         <p>
           Эта сборка действительно имеет такой баг, решается откатом до версии
-          <mark>CC 2018</mark>
-          или установкой аналогичной версии от
+          <mark>CC 2018</mark> или установкой аналогичной версии от
           <mark>m0nkrus</mark>
         </p>
         <p>
@@ -4046,7 +3974,7 @@
           title="Видеоплеер YouTube"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
         <p>
           Если у вас внутри композиции находятся подкомпозиции и их нужно тоже сделать
@@ -4076,8 +4004,8 @@
           <a
             href="https://support.borisfx.com/hc/en-us/articles/10232625711117-I-use-Mocha-AE-what-is-the-difference-between-Mocha-AE-and-Mocha-Pro-Do-I-need-Mocha-Pro"
             title="Различия между Mocha AE и Mocha Pro"
-            >сайте BorisFX
-          </a>
+            >сайте BorisFX</a
+          >
         </p>
       </details>
       <details>
@@ -4091,8 +4019,8 @@
           <a
             href="https://www.videocopilot.net/blog/?s=fx%20console"
             title="Страница для скачивания FX Console"
-            >FX Console от VideoCopilot
-          </a>
+            >FX Console от VideoCopilot</a
+          >
         </p>
         <img
           src="source/fx_console_apply_effect.png"
@@ -4101,16 +4029,14 @@
         />
         <p>
           После установки вы можете быстро применить нужный эффект или пресет, вызвав меню
-          с помощью
-          <mark>Ctrl+Space</mark>
+          с помощью <mark>Ctrl+Space</mark>
         </p>
       </details>
       <details>
         <summary>Как сохранить текущий кадр в отдельный файл?</summary>
         <p>
           Для сохранения текущего кадра, вы можете нажать на комбинацию клавиш
-          <mark>Ctrl + Alt + S</mark>
-          или перейдите в
+          <mark>Ctrl + Alt + S</mark> или перейдите в
           <mark>Composition &gt; Save Frame As &gt; File</mark>
         </p>
         <img
@@ -4122,8 +4048,7 @@
           У вас откроется Render Queue, если вы указали путь для сохранения, в котором вы
           можете выбрать нужный формат. По умолчанию After Effects сохраняет в формате
           Photoshop, но вы всегда можете изменить настройки по умолчанию через редактор
-          шаблонов для рендера в
-          <mark>Output Module &gt; Make Template</mark>
+          шаблонов для рендера в <mark>Output Module &gt; Make Template</mark>
         </p>
         <figure>
           <img
@@ -4140,9 +4065,8 @@
             href="https://www.videocopilot.net/blog/?s=fx%20console"
             title="Сайт для скачивания FX Console"
             >FX Console</a
-          >. При открытии панели эффектов через
-          <mark>Ctrl + Space</mark>
-          вы можете нажать на иконку фотоаппарата для сохранения текущего кадра.
+          >. При открытии панели эффектов через <mark>Ctrl + Space</mark> вы можете нажать
+          на иконку фотоаппарата для сохранения текущего кадра.
         </p>
         <figure>
           <img
@@ -4164,10 +4088,7 @@
         </summary>
         <p>
           Для перемещения вашего слоя на таймлайне после или перед временной меткой в
-          After Effects, используйте клавиши
-          <mark>[</mark>
-          или
-          <mark>]</mark>
+          After Effects, используйте клавиши <mark>[</mark> или <mark>]</mark>
         </p>
       </details>
       <details>
@@ -4181,17 +4102,15 @@
         </p>
         <p>
           Для исправления времени начала, вам следует зайти в настройки композиции через
-          <mark>Ctrl + K</mark>
-          и указать нужное число в графе
-          <mark>Start Timecode</mark>. В нашем случае - это
-          <mark>0</mark>
+          <mark>Ctrl + K</mark> и указать нужное число в графе
+          <mark>Start Timecode</mark>. В нашем случае - это <mark>0</mark>
         </p>
         <video
           src="source/change_start_timecode.mp4"
-          controls=""
-          muted=""
-          preload=""
-          loop=""
+          controls
+          muted
+          preload
+          loop
         ></video>
       </details>
       <details>
@@ -4200,20 +4119,18 @@
         </summary>
         <p>
           Разработчики из Adobe действительно скрыли некоторые функции от любопытных глаз
-          и поместила их в отдельную категорию
-          <mark>Secret</mark>. Но там ничего интересного нет. Прям совсем.
+          и поместила их в отдельную категорию <mark>Secret</mark>. Но там ничего
+          интересного нет. Прям совсем.
         </p>
         <p>
           Для того чтобы его открыть, нужно открыть любой пункт настроек в
-          <mark>Edit &gt; Preferences</mark>
-          с зажатой клавишей
+          <mark>Edit &gt; Preferences</mark> с зажатой клавишей
           <mark>Shift</mark>
         </p>
         <div class="important">
-          Учтите, что клавиша
-          <mark>Shift</mark>
-          должна быть зажата до тех пор, пока окно с настройками не откроется. После
-          открытия вы можете заметить и открыть в списке настроек пункт Secret.
+          Учтите, что клавиша <mark>Shift</mark> должна быть зажата до тех пор, пока окно
+          с настройками не откроется. После открытия вы можете заметить и открыть в списке
+          настроек пункт Secret.
         </div>
         <figure>
           <img
@@ -4224,9 +4141,7 @@
           <figcaption>Псевдо-секретные настройки</figcaption>
         </figure>
         <p>
-          В данном меню находятся два пункта:
-          <mark>Disable Layer Cache</mark>
-          и
+          В данном меню находятся два пункта: <mark>Disable Layer Cache</mark> и
           <mark>Ignore Sequence Rendering Errors</mark>. Первая настройка позволяет
           отключить кэш слоя и автоматически очищать каждый X кадр при рендере
           предпросмотра. Второй пункт позволяет программе забить болт на ошибки при
@@ -4244,9 +4159,8 @@
       <details>
         <summary>Как изменить цвет интерфейса в After Effects?</summary>
         <p>
-          Для этого перейдите в консоль с помощью комбинации
-          <mark>Ctrl + F12</mark>, затем прожмите три полоски рядом с заголовком Console и
-          выберите
+          Для этого перейдите в консоль с помощью комбинации <mark>Ctrl + F12</mark>,
+          затем прожмите три полоски рядом с заголовком Console и выберите
           <mark>Debug Database View</mark>
         </p>
         <img
@@ -4306,27 +4220,24 @@
         />
         <p>
           Для решения этой проблемы могу дать вам несколько советов: очищайте кэш с
-          помощью
-          <mark>Edit &gt; Purge &gt; All Cache</mark>, перекодируйте исходники в монтажный
-          кодек, установите программу
+          помощью <mark>Edit &gt; Purge &gt; All Cache</mark>, перекодируйте исходники в
+          монтажный кодек, установите программу
           <a
             href="https://github.com/henrypp/memreduct/releases"
             title="Mem Reduct на Github"
-            >Mem Reduct
-          </a>
-          для автоматической очистки оперативной памяти при её заполнении или по времени и
-          активируйте файл подкачки в настройках ПК (если вы используете Windows):
-          <mark>
-            Параметры &gt; О системе &gt; Дополнительные параметры системы &gt;
-            Быстродействие &gt; Виртуальная память
-          </mark>
-          и укажите параметры, как на видео ниже.
+            >Mem Reduct </a
+          >для автоматической очистки оперативной памяти при её заполнении или по времени
+          и активируйте файл подкачки в настройках ПК (если вы используете Windows):
+          <mark
+            >Параметры &gt; О системе &gt; Дополнительные параметры системы &gt;
+            Быстродействие &gt; Виртуальная память </mark
+          >и укажите параметры, как на видео ниже.
         </p>
         <figure>
           <video
             src="source/set_pagefile.webm"
-            controls=""
-            loop=""
+            controls
+            loop
             style="filter: saturate(0)"
           ></video>
           <figcaption>Установка файла подкачки на Windows 11</figcaption>
@@ -4358,9 +4269,8 @@
         </figure>
         <p>
           Для правильного выделения памяти - зажмите число и потяните его максимально
-          влево или укажите
-          <mark>0</mark>, нажав на число выделяемой оперативной памяти для других
-          программ, и нажмите Enter.
+          влево или укажите <mark>0</mark>, нажав на число выделяемой оперативной памяти
+          для других программ, и нажмите Enter.
         </p>
         <figure>
           <img
@@ -4395,8 +4305,7 @@
           После успешного создания прокси-файла вы можете продолжить работу. Внесённые
           изменения в композиции нужно будет опять перерендерить, если это необходимо.
           Если вам не нравится эта функция, то вы можете отключить прокси у композиции,
-          нажав
-          <mark>Set Proxy &gt; None</mark>
+          нажав <mark>Set Proxy &gt; None</mark>
         </p>
         <img
           src="source/disable_comp_proxy.png"
@@ -4418,9 +4327,7 @@
         <summary>Error: Cached preview needs 2 or more frames for playback</summary>
         <p>
           Первым делом: очистите кэш предпросмотра. Для этого перейдите в
-          <mark>Edit &gt; Purge</mark>
-          и нажмите на
-          <mark>All Memory and Disk Cache</mark>
+          <mark>Edit &gt; Purge</mark> и нажмите на <mark>All Memory and Disk Cache</mark>
         </p>
         <p>
           Если это не помогло, то тогда убедитесь в том, что ваша рабочая область выделена
@@ -4460,15 +4367,12 @@
         <p>
           Проблемы заключаются в том, что при монтаже - никто не хочет перекодировать в
           монтажный кодек, а потом натыкаются на эти проблемы. Решение простое -
-          перекодируйте ваши исходники в
-          <mark>Apple ProRes 422</mark>
-          через
+          перекодируйте ваши исходники в <mark>Apple ProRes 422</mark> через
           <a
             href="https://www.shutterencoder.com/en"
             title="Сайт Shutter Encoder"
-            >Shutter Encoder
-          </a>
-          или Adobe Media Encoder, а потом замените их в проекте с помощью функции
+            >Shutter Encoder </a
+          >или Adobe Media Encoder, а потом замените их в проекте с помощью функции
           <mark>Replace Footage</mark>
         </p>
         <figure>
@@ -4483,8 +4387,8 @@
         <p>
           Если вы столкнулись с проблемой ”зелёного экрана" после импорта ваших
           исходников, то попробуйте отключить опцию
-          <mark>Enable hardware accelerated decoding</mark>
-          в настройках After Effects. Для доступа к этим настройкам перейдите в
+          <mark>Enable hardware accelerated decoding</mark> в настройках After Effects.
+          Для доступа к этим настройкам перейдите в
           <mark>Edit &gt; Preferences &gt; Import</mark>
         </p>
         <figure>
@@ -4525,12 +4429,11 @@
           Effect cannot allocate a buffer larger than 30000 pixels in either dimension
         </summary>
         <p>
-          Если вы применяете эффекты
-          <mark>Motion Tile</mark>, <mark>CC Repetile</mark>, переходы из AtomX или Motion
-          Bro, или что-то похожее, то эта ошибка возникает из-за того что у вас либо
-          слишком большой исходник, либо вы слишком перекрутили значения так, что на
-          каждую ось для картинки вышло более 30000 пикселей, которые After Effects не
-          может обработать.
+          Если вы применяете эффекты <mark>Motion Tile</mark>, <mark>CC Repetile</mark>,
+          переходы из AtomX или Motion Bro, или что-то похожее, то эта ошибка возникает
+          из-за того что у вас либо слишком большой исходник, либо вы слишком перекрутили
+          значения так, что на каждую ось для картинки вышло более 30000 пикселей, которые
+          After Effects не может обработать.
         </p>
         <div class="important">
           30000 пикселей у слоя на каждую ось - это действительно максимальное значение
@@ -4596,9 +4499,8 @@
           <a
             href="https://community.adobe.com/t5/after-effects-discussions/faq-how-to-reset-trash-preferences-in-after-effects/td-p/10634342"
             title="Сброс настроек After Effects"
-            >сброс настроек After Effects
-          </a>
-          до стандартных или создание новой учётной записи пользователя на самом ПК.
+            >сброс настроек After Effects </a
+          >до стандартных или создание новой учётной записи пользователя на самом ПК.
         </p>
       </details>
       <details>
@@ -4689,8 +4591,7 @@
           </li>
           <li>
             Для After Effects старше 23.0 требуется установить
-            <mark>Cinema 4D R25.117</mark>
-            (R26.xxx не подходит)
+            <mark>Cinema 4D R25.117</mark> (R26.xxx не подходит)
           </li>
         </ul>
       </details>
@@ -4703,15 +4604,13 @@
           Данное предупреждение показывает, что вы пытаетесь сделать ротоскоп исходника,
           фреймрейт которого не совпадает с фреймрейтом композиции. Программа прямым
           текстом говорит, что нужно установить FPS из текста о предупреждении для
-          композиции через
-          <mark>Ctrl + K</mark>
+          композиции через <mark>Ctrl + K</mark>
         </p>
         <p>
           Никто не запрещает пользовать функцией Rotobrush прямо на прекомпозиции, если вы
           не хотите менять FPS основной композиции. Также никто не запрещает
           интерпретировать футаж в один FPS через
-          <mark>Interpret Footage &gt; Conform to frame rate</mark>
-          в окне Project.
+          <mark>Interpret Footage &gt; Conform to frame rate</mark> в окне Project.
         </p>
         <p>
           Если ни один способ вам не подошёл - перекодируйте видео через любой конвертер,
@@ -4721,8 +4620,7 @@
             title="Сайт Shutter Encoder"
             >Shutter Encoder</a
           >, с нужным FPS и замените его в проекте с помощью
-          <mark>Replace Footage &gt; File</mark>
-          в окне проекта.
+          <mark>Replace Footage &gt; File</mark> в окне проекта.
         </p>
       </details>
       <details>
@@ -4747,7 +4645,8 @@
         <p>
           Для отключения этого предупреждения вы можете зайти в
           <mark
-            >Edit &gt; Preferences &gt; Startup &gt; Show System Compatibility Issues </mark
+            >Edit &gt; Preferences &gt; Startup &gt; Show System Compatibility
+            Issues</mark
           >.
         </p>
         <p>
@@ -4772,8 +4671,8 @@
           <a
             href="https://helpx.adobe.com/ru/after-effects/system-requirements.html"
             title="Системные требования After Effects"
-            >сайте Adobe
-          </a>
+            >сайте Adobe</a
+          >
         </p>
         <img
           src="source/0xc0000142.png"
@@ -4820,9 +4719,8 @@
           <a
             href="source/D3DCompiler_47.zip"
             title="Скачать D3DCompiler_47.dll"
-            >D3DCompiler_47.dll
-          </a>
-          в директорию с программой, а затем попробуйте снова открыть её. Если это не
+            >D3DCompiler_47.dll </a
+          >в директорию с программой, а затем попробуйте снова открыть её. Если это не
           помогло - обновите Windows до последней версии.
         </p>
         <div class="important">
@@ -4838,10 +4736,9 @@
         </summary>
         <p>
           Вы не можете открыть очень старые проекты с использованием устаревшего движка
-          <mark>Ray-Traced 3D</mark>
-          в новых версиях After Effects (от 2020). Для этого придётся устанавливать After
-          Effects CS6 или 2019, где эта функция доживала последние дни, и открывать проект
-          там.
+          <mark>Ray-Traced 3D</mark> в новых версиях After Effects (от 2020). Для этого
+          придётся устанавливать After Effects CS6 или 2019, где эта функция доживала
+          последние дни, и открывать проект там.
         </p>
       </details>
       <details>
@@ -4901,8 +4798,7 @@
           плагинов, которые частично возможно или невозможно использовать в новых версиях
           After Effects. Если у вас отображается ошибка о том, что невозможно найти
           стандартный эффект "... Blur", то вам нужно применить стандартный скрипт
-          <mark>UpdateLegacyBlurs.jsx</mark>, находящийся в
-          <mark>File &gt; Scripts</mark>
+          <mark>UpdateLegacyBlurs.jsx</mark>, находящийся в <mark>File &gt; Scripts</mark>
         </p>
       </details>
       <details>
@@ -4924,19 +4820,18 @@
         </summary>
         <p>
           Эти файлы были специально разделены для обхода ограничений Telegram по размеру
-          загружаемых файлов. Для корректной распаковки многотомных архивов воспользуйтесь
+          загружаемых файлов, все части нужно скачать на компьютер. Для корректной
+          распаковки многотомных архивов воспользуйтесь
           <a
             href="https://www.rarlab.com/download.htm"
             title="Официальный сайт WinRAR"
-            >WinRAR
-          </a>
-          для Windows или
+            >WinRAR </a
+          >для Windows или
           <a
             href="https://www.keka.io/ru/"
             title="Официальный сайт keka"
-            >keka
-          </a>
-          для macOS.
+            >keka </a
+          >для macOS.
         </p>
         <div class="important">
           Если в архиве присутствует исполняемый файл <mark>.exe</mark>, то достаточно его
@@ -4960,8 +4855,7 @@
           <li>
             Если в архиве находится файл <mark>.aep</mark> или <mark>.mogrt</mark>, то
             такие файлы просто импортируются в ваш проект с помощью
-            <mark>File &gt; Import</mark>
-            и никуда не устанавливаются.
+            <mark>File &gt; Import</mark> и никуда не устанавливаются.
           </li>
           <li>
             Если в архиве находится файл <mark>.aex</mark>, то такие плагины для Windows
@@ -4971,9 +4865,7 @@
           <li>
             Если в архиве находится файл <mark>.plugin</mark>, то такие плагины для macOS
             распаковываются в общую папку плагинов
-            <mark>
-              ~/Library/Application Support/Adobe/Common/Plug-ins/7.0/MediaCore</mark
-            >
+            <mark>~/Library/Application Support/Adobe/Common/Plug-ins/7.0/MediaCore</mark>
           </li>
           <li>
             Если в архиве находится файл <mark>.jsx</mark>, то такие скрипты
@@ -5012,47 +4904,33 @@
             <a
               href="source/AE.reg"
               title="Файл реестра для активации расширений в программах Adobe"
-              >.reg
-            </a>
-            файл для Windows или выполните
+              >.reg </a
+            >файл для Windows или выполните
             <a
               href="source/install-as-admin.sh"
               title="install-as-admin.sh"
-              >скрипт из файла
-            </a>
-            для macOS. Если вы не можете запустить <mark>.sh</mark> скрипт с помощью
+              >скрипт из файла </a
+            >для macOS. Если вы не можете запустить <mark>.sh</mark> скрипт с помощью
             <mark>chmod -x</mark> на macOS, то введите команды из спойлера в терминал.
           </li>
         </ul>
-        <details>
-          <summary>
-            Команды из файла, которые нужно ввести для активации расширений на macOS
-          </summary>
-          <p>Нажмите на блок с текстом, чтобы скопировать в буфер обмена</p>
-          <code>
-            defaults write com.adobe.CSXS.5 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.6 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.7 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.8 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.9 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.10 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.11 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.12 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.13 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.14 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.15 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.16 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.17 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.18 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.19 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.20 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.21 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.22 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.23 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.24 PlayerDebugMode 1<br />
-            defaults write com.adobe.CSXS.25 PlayerDebugMode 1
-          </code>
-        </details>
+        <code
+          >defaults write com.adobe.CSXS.5 PlayerDebugMode 1<br />defaults write
+          com.adobe.CSXS.6 PlayerDebugMode 1<br />defaults write com.adobe.CSXS.7
+          PlayerDebugMode 1<br />defaults write com.adobe.CSXS.8 PlayerDebugMode 1<br />defaults
+          write com.adobe.CSXS.9 PlayerDebugMode 1<br />defaults write com.adobe.CSXS.10
+          PlayerDebugMode 1<br />defaults write com.adobe.CSXS.11 PlayerDebugMode 1<br />defaults
+          write com.adobe.CSXS.12 PlayerDebugMode 1<br />defaults write com.adobe.CSXS.13
+          PlayerDebugMode 1<br />defaults write com.adobe.CSXS.14 PlayerDebugMode 1<br />defaults
+          write com.adobe.CSXS.15 PlayerDebugMode 1<br />defaults write com.adobe.CSXS.16
+          PlayerDebugMode 1<br />defaults write com.adobe.CSXS.17 PlayerDebugMode 1<br />defaults
+          write com.adobe.CSXS.18 PlayerDebugMode 1<br />defaults write com.adobe.CSXS.19
+          PlayerDebugMode 1<br />defaults write com.adobe.CSXS.20 PlayerDebugMode 1<br />defaults
+          write com.adobe.CSXS.21 PlayerDebugMode 1<br />defaults write com.adobe.CSXS.22
+          PlayerDebugMode 1<br />defaults write com.adobe.CSXS.23 PlayerDebugMode 1<br />defaults
+          write com.adobe.CSXS.24 PlayerDebugMode 1<br />defaults write com.adobe.CSXS.25
+          PlayerDebugMode 1</code
+        >
         <ul>
           <li>
             Если в архиве находится файл <mark>.ffx</mark>, то такие пресеты обычно
@@ -5115,10 +4993,9 @@
         </summary>
         <p>
           Для решения этой проблемы смените язык After Effects на английский создав пустой
-          текстовый документ
-          <mark>ae_force_english.txt</mark> и поместите его в документы вашего
-          пользователя. Если вы по необъяснимым причинам не хотите менять язык, то для
-          этого есть стороннее расширение
+          текстовый документ <mark>ae_force_english.txt</mark> и поместите его в документы
+          вашего пользователя. Если вы по необъяснимым причинам не хотите менять язык, то
+          для этого есть стороннее расширение
           <a
             href="https://aescripts.com/expressionuniversalizer/"
             title="Expression Universalizer на aescripts"
@@ -5165,15 +5042,15 @@
           Эта ошибка возникает когда Windows Defender или сторонний антивирус блокирует
           файл helper.exe, который является распаковщиком дистрибутива. Простейший способ
           решения - временное или полное отключение антивируса во время установки. Если
-          возникают проблемы, добавьте
-          <mark>%TEMP%</mark> вашей системы в белый список антивируса на время.
+          возникают проблемы, добавьте <mark>%TEMP%</mark> вашей системы в белый список
+          антивируса на время.
         </p>
         <iframe
           src="https://www.youtube.com/embed/jCNtEW5LFng?si=yjTQMCZ7OaZUjdLi"
           title="Видеоплеер YouTube"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
         <p>
           Если способ из видео не помог, то рекомендую отключить Windows Defender с
@@ -5209,9 +5086,8 @@
           <a
             href="https://t.me/+Qd9xu7A4TeIwNzY6"
             title="склад стройматериалов в Telegram"
-            >складе стройматериалов
-          </a>
-          битый файл - сообщите об этом в комментариях под нужным постом
+            >складе стройматериалов </a
+          >битый файл - сообщите об этом в комментариях под нужным постом
         </div>
       </details>
       <details>
@@ -5241,21 +5117,18 @@
           <a
             href="https://t.me/+Qd9xu7A4TeIwNzY6"
             title="склад стройматериалов в Telegram"
-            >складе стройматериалов
-          </a>
-          и в
+            >складе стройматериалов </a
+          >и в
           <a
             href="https://t.me/+gSmpjWyhd5w3ZGFi"
             title="запчасти на форд фокус в Telegram"
-            >запчастях на форд фокус
-          </a>
-          с пометкой <mark>репак от кролика</mark> поставляется как есть из сайта
+            >запчастях на форд фокус </a
+          >с пометкой <mark>репак от кролика</mark> поставляется как есть из сайта
           <a
             href="https://repack.me/"
             title="Сайт repack.me"
-            >repack.me
-          </a>
-          и не видоизменяется для плохих целей.
+            >repack.me </a
+          >и не видоизменяется для плохих целей.
         </p>
         <blockquote cite="https://repack.me/faq.html">
           Ни в одной моей сборке никогда не было и не будет какого-либо вредоносного или
@@ -5270,10 +5143,9 @@
               ><a
                 href="https://repack.me/faq.html"
                 title="Сайт KpoJluk'а"
-                >repack.me/faq
-              </a>
-              (пункт 6)
-            </cite>
+                >repack.me/faq </a
+              >(пункт 6)</cite
+            >
           </footer>
         </blockquote>
       </details>
@@ -5321,12 +5193,10 @@
           <a
             href="https://updates.aescripts.com/zxp-installer/"
             title="Правильный ZXP Installer"
-            >ZXP Installer от aescrpits
-          </a>
-          и установить через него. Если вы не желаете использовать сторонний софт, то вы
+            >ZXP Installer от aescrpits </a
+          >и установить через него. Если вы не желаете использовать сторонний софт, то вы
           можете переименовать <mark>.zxp</mark> в <mark>.zip</mark> и распаковать плагин
-          в
-          <mark>C:\Program Files (x86)\Common Files\Adobe\CEP\extensions</mark>
+          в <mark>C:\Program Files (x86)\Common Files\Adobe\CEP\extensions</mark>
         </p>
       </details>
       <details>
@@ -5372,217 +5242,114 @@
           <mark>C:\Windows\System32\drivers\etc\hosts</mark>
         </p>
         <p>Нажмите на блок с текстом, чтобы скопировать в буфер обмена</p>
-        <code>
-          0.0.0.0 ic.adobe.io<br />
-          0.0.0.0 cc-api-data.adobe.io<br />
-          0.0.0.0 prod.adobegenuine.com<br />
-          0.0.0.0 gocart-web-prod-ue1-alb-1461435473.us-east-1.elb.amazonaws.com<br />
-          0.0.0.0 dyzt55url8.adobe.io<br />
-          0.0.0.0 b5kbg2ggog.adobe.io<br />
-          0.0.0.0 5zgzzv92gn.adobe.io<br />
-          0.0.0.0 0mo5a70cqa.adobe.io<br />
-          0.0.0.0 pojvrj7ho5.adobe.io<br />
-          0.0.0.0 i7pq6fgbsl.adobe.io<br />
-          0.0.0.0 ph0f2h2csf.adobe.io<br />
-          0.0.0.0 r3zj0yju1q.adobe.io<br />
-          0.0.0.0 9ngulmtgqi.adobe.io<br />
-          0.0.0.0 guzg78logz.adobe.io<br />
-          0.0.0.0 2ftem87osk.adobe.io<br />
-          0.0.0.0 1b9khekel6.adobe.io<br />
-          0.0.0.0 3d3wqt96ht.adobe.io<br />
-          0.0.0.0 23ynjitwt5.adobe.io<br />
-          0.0.0.0 4vzokhpsbs.adobe.io<br />
-          0.0.0.0 3ca52znvmj.adobe.io<br />
-          0.0.0.0 r5hacgq5w6.adobe.io<br />
-          0.0.0.0 gw8gfjbs05.adobe.io<br />
-          0.0.0.0 lre1kgz2u4.adobe.io<br />
-          0.0.0.0 ij0gdyrfka.adobe.io<br />
-          0.0.0.0 8ncdzpmmrg.adobe.io<br />
-          0.0.0.0 7sj9n87sls.adobe.io<br />
-          0.0.0.0 7m31guub0q.adobe.io<br />
-          0.0.0.0 7g2gzgk9g1.adobe.io<br />
-          0.0.0.0 cd536oo20y.adobe.io<br />
-          0.0.0.0 dxyeyf6ecy.adobe.io<br />
-          0.0.0.0 jc95y2v12r.adobe.io<br />
-          0.0.0.0 1hzopx6nz7.adobe.io<br />
-          0.0.0.0 m59b4msyph.adobe.io<br />
-          0.0.0.0 69tu0xswvq.adobe.io<br />
-          0.0.0.0 vajcbj9qgq.adobe.io<br />
-          0.0.0.0 p7uxzbht8h.adobe.io<br />
-          0.0.0.0 vcorzsld2a.adobe.io<br />
-          0.0.0.0 p0bjuoe16a.adobe.io<br />
-          0.0.0.0 fqaq3pq1o9.adobe.io<br />
-          0.0.0.0 aoorovjtha.adobe.io<br />
-          0.0.0.0 pv256ds6c99.prod.cloud.adobe.io<br />
-          0.0.0.0 cv2l4573ukh.prod.cloud.adobe.io<br />
-          0.0.0.0 pv24v41zibm.prod.cloud.adobe.io<br />
-          0.0.0.0 iv2nn9r0j2r.prod.cloud.adobe.io<br />
-          0.0.0.0 iv2yt8sqmh0.prod.cloud.adobe.io<br />
-          0.0.0.0 iv218qmzox6.prod.cloud.adobe.io<br />
-          0.0.0.0 cv218qmzox6.prod.cloud.adobe.io<br />
-          0.0.0.0 cv2b0yc07ls.prod.cloud.adobe.io<br />
-          0.0.0.0 cv2nn9r0j2r.prod.cloud.adobe.io<br />
-          0.0.0.0 pv2yt8sqmh0.prod.cloud.adobe.io<br />
-          0.0.0.0 iv256ds6c99.prod.cloud.adobe.io<br />
-          0.0.0.0 pv2zp87w2eo.prod.cloud.adobe.io<br />
-          0.0.0.0 iv2ys4tjt9x.prod.cloud.adobe.io<br />
-          0.0.0.0 cv2ska86hnt.prod.cloud.adobe.io<br />
-          0.0.0.0 iv24b15c1z0.prod.cloud.adobe.io<br />
-          0.0.0.0 cv256ds6c99.prod.cloud.adobe.io<br />
-          0.0.0.0 pv2ska86hnt.prod.cloud.adobe.io<br />
-          0.0.0.0 iv2b0yc07ls.prod.cloud.adobe.io<br />
-          0.0.0.0 iv2l4573ukh.prod.cloud.adobe.io<br />
-          0.0.0.0 cv24v41zibm.prod.cloud.adobe.io<br />
-          0.0.0.0 iv2ska86hnt.prod.cloud.adobe.io<br />
-          0.0.0.0 pv2l4573ukh.prod.cloud.adobe.io<br />
-          0.0.0.0 iv24v41zibm.prod.cloud.adobe.io<br />
-          0.0.0.0 iv2zp87w2eo.prod.cloud.adobe.io<br />
-          0.0.0.0 pv2ys4tjt9x.prod.cloud.adobe.io<br />
-          0.0.0.0 cv2ys4tjt9x.prod.cloud.adobe.io<br />
-          0.0.0.0 cv2fcqvzl1r.prod.cloud.adobe.io<br />
-          0.0.0.0 pv2fcqvzl1r.prod.cloud.adobe.io<br />
-          0.0.0.0 cv24b15c1z0.prod.cloud.adobe.io<br />
-          0.0.0.0 pv24b15c1z0.prod.cloud.adobe.io<br />
-          0.0.0.0 cv2bqhsp36w.prod.cloud.adobe.io<br />
-          0.0.0.0 pv2b0yc07ls.prod.cloud.adobe.io<br />
-          0.0.0.0 pv218qmzox6.prod.cloud.adobe.io<br />
-          0.0.0.0 cv2yt8sqmh0.prod.cloud.adobe.io<br />
-          0.0.0.0 iv2fcqvzl1r.prod.cloud.adobe.io<br />
-          0.0.0.0 pv2bqhsp36w.prod.cloud.adobe.io<br />
-          0.0.0.0 pv2nn9r0j2r.prod.cloud.adobe.io<br />
-          0.0.0.0 cv2zp87w2eo.prod.cloud.adobe.io<br />
-          0.0.0.0 iv2bqhsp36w.prod.cloud.adobe.io<br />
-          0.0.0.0 yj8yx3y8zo.adobestats.io<br />
-          0.0.0.0 mpsige2va9.adobestats.io<br />
-          0.0.0.0 ujqx8lhpz4.adobestats.io<br />
-          0.0.0.0 y2r8jzsv4p.adobestats.io<br />
-          0.0.0.0 eq7dbze88m.adobestats.io<br />
-          0.0.0.0 q9hjwppxeq.adobestats.io<br />
-          0.0.0.0 skg7pqn0al.adobestats.io<br />
-          0.0.0.0 9iay914wzy.adobestats.io<br />
-          0.0.0.0 yuzuoqo0il.adobestats.io<br />
-          0.0.0.0 2o3c6rbyfr.adobestats.io<br />
-          0.0.0.0 vicsj37lhf.adobestats.io<br />
-          0.0.0.0 nhc73ypmli.adobestats.io<br />
-          0.0.0.0 oxiz2n3i4v.adobestats.io<br />
-          0.0.0.0 2qjz50z5lf.adobestats.io<br />
-          0.0.0.0 i2x2ius9o5.adobestats.io<br />
-          0.0.0.0 lnwbupw1s7.adobestats.io<br />
-          0.0.0.0 n746qg9j4i.adobestats.io<br />
-          0.0.0.0 2621x1nzeq.adobestats.io<br />
-          0.0.0.0 r9r6oomgms.adobestats.io<br />
-          0.0.0.0 99pfl4vazm.adobestats.io<br />
-          0.0.0.0 zekdqanici.adobestats.io<br />
-          0.0.0.0 g9cli80sqp.adobestats.io<br />
-          0.0.0.0 dyv9axahup.adobestats.io<br />
-          0.0.0.0 17ov1u3gio.adobestats.io<br />
-          0.0.0.0 7l4xxjhvkt.adobestats.io<br />
-          0.0.0.0 wcxqmuxd4z.adobestats.io<br />
-          0.0.0.0 l558s6jwzy.adobestats.io<br />
-          0.0.0.0 85n85uoa1h.adobestats.io<br />
-          0.0.0.0 zrao5tdh1t.adobestats.io<br />
-          0.0.0.0 eftcpaiu36.adobestats.io<br />
-          0.0.0.0 2qj10f8rdg.adobestats.io<br />
-          0.0.0.0 ffs3xik41x.adobestats.io<br />
-          0.0.0.0 g3y09mbaam.adobestats.io<br />
-          0.0.0.0 x880ulw3h0.adobestats.io<br />
-          0.0.0.0 jaircqa037.adobestats.io<br />
-          0.0.0.0 ppn4fq68w7.adobestats.io<br />
-          0.0.0.0 1ei1f4k9yk.adobestats.io<br />
-          0.0.0.0 6j0onv1tde.adobestats.io<br />
-          0.0.0.0 pljm140ld1.adobestats.io<br />
-          0.0.0.0 50sxgwgngu.adobestats.io<br />
-          0.0.0.0 u31z50xvp9.adobestats.io<br />
-          0.0.0.0 2dhh9vsp39.adobestats.io<br />
-          0.0.0.0 rb0u8l34kr.adobestats.io<br />
-          0.0.0.0 3odrrlydxt.adobestats.io<br />
-          0.0.0.0 3u6k9as4bj.adobestats.io<br />
-          0.0.0.0 curbpindd3.adobestats.io<br />
-          0.0.0.0 4dviy9tb3o.adobestats.io<br />
-          0.0.0.0 yb6j6g0r1n.adobestats.io<br />
-          0.0.0.0 0bj2epfqn1.adobestats.io<br />
-          0.0.0.0 ura7zj55r9.adobestats.io<br />
-          0.0.0.0 xesnl0ss94.adobestats.io<br />
-          0.0.0.0 xbd20b9wqa.adobestats.io<br />
-          0.0.0.0 cr2fouxnpm.adobestats.io<br />
-          0.0.0.0 zmg3v61bbr.adobestats.io<br />
-          0.0.0.0 bk7y1gneyk.adobestats.io<br />
-          0.0.0.0 dx0nvmv4hz.adobestats.io<br />
-          0.0.0.0 eyiu19jd5w.adobestats.io<br />
-          0.0.0.0 561r5c3bz1.adobestats.io<br />
-          0.0.0.0 54cu4v5twu.adobestats.io<br />
-          0.0.0.0 6eidhihhci.adobestats.io<br />
-          0.0.0.0 31q40256l4.adobestats.io<br />
-          0.0.0.0 bs2yhuojzm.adobestats.io<br />
-          0.0.0.0 p50zgina3e.adobestats.io<br />
-          0.0.0.0 yri0bsu0ak.adobestats.io<br />
-          0.0.0.0 zu8yy3jkaz.adobestats.io<br />
-          0.0.0.0 m59cps6x3n.adobestats.io<br />
-          0.0.0.0 kgj0gsg3cf.adobestats.io<br />
-          0.0.0.0 uf0onoepoe.adobestats.io<br />
-          0.0.0.0 28t4psttw7.adobestats.io<br />
-          0.0.0.0 hjs70w1pdi.adobestats.io<br />
-          0.0.0.0 klw4np5a1x.adobestats.io<br />
-          0.0.0.0 lz2x4rks1u.adobestats.io<br />
-          0.0.0.0 pc6sk9bygv.adobestats.io<br />
-          0.0.0.0 t9phy8ywkd.adobestats.io<br />
-          0.0.0.0 dfnm3epsb7.adobestats.io<br />
-          0.0.0.0 5ky0dijg73.adobestats.io<br />
-          0.0.0.0 124hzdrtoi.adobestats.io<br />
-          0.0.0.0 69rxfbohle.adobestats.io<br />
-          0.0.0.0 9uffo0j6wj.adobestats.io<br />
-          0.0.0.0 kwi5n2ruax.adobestats.io<br />
-          0.0.0.0 nh8wam2qd9.adobestats.io<br />
-          0.0.0.0 rm3xrk61n1.adobestats.io<br />
-          0.0.0.0 rmnia8d0tr.adobestats.io<br />
-          0.0.0.0 vrz9w7o7yv.adobestats.io<br />
-          0.0.0.0 5m62o8ud26.adobestats.io<br />
-          0.0.0.0 esx6aswt5e.adobestats.io<br />
-          0.0.0.0 hwfqhlenbg.adobestats.io<br />
-          0.0.0.0 je5ufnklzs.adobestats.io<br />
-          0.0.0.0 jmx50quqz0.adobestats.io<br />
-          0.0.0.0 jsxfc5yij1.adobestats.io<br />
-          0.0.0.0 vfsjlgw02v.adobestats.io<br />
-          0.0.0.0 yshuhythub.adobestats.io<br />
-          0.0.0.0 zrbzvc9mel.adobestats.io<br />
-          0.0.0.0 rj669kv2lc.adobestats.io<br />
-          0.0.0.0 agxqobl83f.adobestats.io<br />
-          0.0.0.0 zr60t8ia88.adobestats.io<br />
-          0.0.0.0 a1y2b7wsna.adobestats.io<br />
-          0.0.0.0 hf6s5jdv95.adobestats.io<br />
-          0.0.0.0 tprqy2lgua.adobestats.io<br />
-          0.0.0.0 c474kdh1ky.adobestats.io<br />
-          0.0.0.0 d101mw99xq.adobestats.io<br />
-          0.0.0.0 oh41yzugiz.adobestats.io<br />
-          0.0.0.0 jwonv590qs.adobestats.io<br />
-          0.0.0.0 7k1t5im229.adobestats.io<br />
-          0.0.0.0 3xuuprv9lg.adobestats.io<br />
-          0.0.0.0 9wm8di7ifk.adobestats.io<br />
-          0.0.0.0 ebvf40engd.adobestats.io<br />
-          0.0.0.0 hq0mnwz735.adobestats.io<br />
-          0.0.0.0 j134yk6hv5.adobestats.io<br />
-          0.0.0.0 j14y4uzge7.adobestats.io<br />
-          0.0.0.0 jye4987hyr.adobestats.io<br />
-          0.0.0.0 kvi8uopy6f.adobestats.io<br />
-          0.0.0.0 lv5yrjxh6i.adobestats.io<br />
-          0.0.0.0 m95pt874uw.adobestats.io<br />
-          0.0.0.0 pdb7v5ul5q.adobestats.io<br />
-          0.0.0.0 px8vklwioh.adobestats.io<br />
-          0.0.0.0 qmyqpp3xs3.adobestats.io<br />
-          0.0.0.0 r1lqxul5sr.adobestats.io<br />
-          0.0.0.0 tf3an24xls.adobestats.io<br />
-          0.0.0.0 tyradj47rp.adobestats.io<br />
-          0.0.0.0 vp7ih9xoxg.adobestats.io<br />
-          0.0.0.0 x5cupsunjc.adobestats.io<br />
-          0.0.0.0 ll8xjr580v.adobestats.io<br />
-          0.0.0.0 n0yaid7q47.adobestats.io<br />
-          0.0.0.0 nhs5jfxg10.adobestats.io<br />
-          0.0.0.0 wz8kjkd9gc.adobestats.io<br />
-          0.0.0.0 zfzx6hae4g.adobestats.io<br />
-          0.0.0.0 6y6ozj4sot.adobestats.io<br />
-          0.0.0.0 qxc5z5sqkv.adobestats.io<br />
-          0.0.0.0 1qwiekvkux.adobestats.io<br />
-        </code>
+        <code
+          >0.0.0.0 ic.adobe.io<br />0.0.0.0 cc-api-data.adobe.io<br />0.0.0.0
+          prod.adobegenuine.com<br />0.0.0.0
+          gocart-web-prod-ue1-alb-1461435473.us-east-1.elb.amazonaws.com<br />0.0.0.0
+          dyzt55url8.adobe.io<br />0.0.0.0 b5kbg2ggog.adobe.io<br />0.0.0.0
+          5zgzzv92gn.adobe.io<br />0.0.0.0 0mo5a70cqa.adobe.io<br />0.0.0.0
+          pojvrj7ho5.adobe.io<br />0.0.0.0 i7pq6fgbsl.adobe.io<br />0.0.0.0
+          ph0f2h2csf.adobe.io<br />0.0.0.0 r3zj0yju1q.adobe.io<br />0.0.0.0
+          9ngulmtgqi.adobe.io<br />0.0.0.0 guzg78logz.adobe.io<br />0.0.0.0
+          2ftem87osk.adobe.io<br />0.0.0.0 1b9khekel6.adobe.io<br />0.0.0.0
+          3d3wqt96ht.adobe.io<br />0.0.0.0 23ynjitwt5.adobe.io<br />0.0.0.0
+          4vzokhpsbs.adobe.io<br />0.0.0.0 3ca52znvmj.adobe.io<br />0.0.0.0
+          r5hacgq5w6.adobe.io<br />0.0.0.0 gw8gfjbs05.adobe.io<br />0.0.0.0
+          lre1kgz2u4.adobe.io<br />0.0.0.0 ij0gdyrfka.adobe.io<br />0.0.0.0
+          8ncdzpmmrg.adobe.io<br />0.0.0.0 7sj9n87sls.adobe.io<br />0.0.0.0
+          7m31guub0q.adobe.io<br />0.0.0.0 7g2gzgk9g1.adobe.io<br />0.0.0.0
+          cd536oo20y.adobe.io<br />0.0.0.0 dxyeyf6ecy.adobe.io<br />0.0.0.0
+          jc95y2v12r.adobe.io<br />0.0.0.0 1hzopx6nz7.adobe.io<br />0.0.0.0
+          m59b4msyph.adobe.io<br />0.0.0.0 69tu0xswvq.adobe.io<br />0.0.0.0
+          vajcbj9qgq.adobe.io<br />0.0.0.0 p7uxzbht8h.adobe.io<br />0.0.0.0
+          vcorzsld2a.adobe.io<br />0.0.0.0 p0bjuoe16a.adobe.io<br />0.0.0.0
+          fqaq3pq1o9.adobe.io<br />0.0.0.0 aoorovjtha.adobe.io<br />0.0.0.0
+          pv256ds6c99.prod.cloud.adobe.io<br />0.0.0.0 cv2l4573ukh.prod.cloud.adobe.io<br />0.0.0.0
+          pv24v41zibm.prod.cloud.adobe.io<br />0.0.0.0 iv2nn9r0j2r.prod.cloud.adobe.io<br />0.0.0.0
+          iv2yt8sqmh0.prod.cloud.adobe.io<br />0.0.0.0 iv218qmzox6.prod.cloud.adobe.io<br />0.0.0.0
+          cv218qmzox6.prod.cloud.adobe.io<br />0.0.0.0 cv2b0yc07ls.prod.cloud.adobe.io<br />0.0.0.0
+          cv2nn9r0j2r.prod.cloud.adobe.io<br />0.0.0.0 pv2yt8sqmh0.prod.cloud.adobe.io<br />0.0.0.0
+          iv256ds6c99.prod.cloud.adobe.io<br />0.0.0.0 pv2zp87w2eo.prod.cloud.adobe.io<br />0.0.0.0
+          iv2ys4tjt9x.prod.cloud.adobe.io<br />0.0.0.0 cv2ska86hnt.prod.cloud.adobe.io<br />0.0.0.0
+          iv24b15c1z0.prod.cloud.adobe.io<br />0.0.0.0 cv256ds6c99.prod.cloud.adobe.io<br />0.0.0.0
+          pv2ska86hnt.prod.cloud.adobe.io<br />0.0.0.0 iv2b0yc07ls.prod.cloud.adobe.io<br />0.0.0.0
+          iv2l4573ukh.prod.cloud.adobe.io<br />0.0.0.0 cv24v41zibm.prod.cloud.adobe.io<br />0.0.0.0
+          iv2ska86hnt.prod.cloud.adobe.io<br />0.0.0.0 pv2l4573ukh.prod.cloud.adobe.io<br />0.0.0.0
+          iv24v41zibm.prod.cloud.adobe.io<br />0.0.0.0 iv2zp87w2eo.prod.cloud.adobe.io<br />0.0.0.0
+          pv2ys4tjt9x.prod.cloud.adobe.io<br />0.0.0.0 cv2ys4tjt9x.prod.cloud.adobe.io<br />0.0.0.0
+          cv2fcqvzl1r.prod.cloud.adobe.io<br />0.0.0.0 pv2fcqvzl1r.prod.cloud.adobe.io<br />0.0.0.0
+          cv24b15c1z0.prod.cloud.adobe.io<br />0.0.0.0 pv24b15c1z0.prod.cloud.adobe.io<br />0.0.0.0
+          cv2bqhsp36w.prod.cloud.adobe.io<br />0.0.0.0 pv2b0yc07ls.prod.cloud.adobe.io<br />0.0.0.0
+          pv218qmzox6.prod.cloud.adobe.io<br />0.0.0.0 cv2yt8sqmh0.prod.cloud.adobe.io<br />0.0.0.0
+          iv2fcqvzl1r.prod.cloud.adobe.io<br />0.0.0.0 pv2bqhsp36w.prod.cloud.adobe.io<br />0.0.0.0
+          pv2nn9r0j2r.prod.cloud.adobe.io<br />0.0.0.0 cv2zp87w2eo.prod.cloud.adobe.io<br />0.0.0.0
+          iv2bqhsp36w.prod.cloud.adobe.io<br />0.0.0.0 yj8yx3y8zo.adobestats.io<br />0.0.0.0
+          mpsige2va9.adobestats.io<br />0.0.0.0 ujqx8lhpz4.adobestats.io<br />0.0.0.0
+          y2r8jzsv4p.adobestats.io<br />0.0.0.0 eq7dbze88m.adobestats.io<br />0.0.0.0
+          q9hjwppxeq.adobestats.io<br />0.0.0.0 skg7pqn0al.adobestats.io<br />0.0.0.0
+          9iay914wzy.adobestats.io<br />0.0.0.0 yuzuoqo0il.adobestats.io<br />0.0.0.0
+          2o3c6rbyfr.adobestats.io<br />0.0.0.0 vicsj37lhf.adobestats.io<br />0.0.0.0
+          nhc73ypmli.adobestats.io<br />0.0.0.0 oxiz2n3i4v.adobestats.io<br />0.0.0.0
+          2qjz50z5lf.adobestats.io<br />0.0.0.0 i2x2ius9o5.adobestats.io<br />0.0.0.0
+          lnwbupw1s7.adobestats.io<br />0.0.0.0 n746qg9j4i.adobestats.io<br />0.0.0.0
+          2621x1nzeq.adobestats.io<br />0.0.0.0 r9r6oomgms.adobestats.io<br />0.0.0.0
+          99pfl4vazm.adobestats.io<br />0.0.0.0 zekdqanici.adobestats.io<br />0.0.0.0
+          g9cli80sqp.adobestats.io<br />0.0.0.0 dyv9axahup.adobestats.io<br />0.0.0.0
+          17ov1u3gio.adobestats.io<br />0.0.0.0 7l4xxjhvkt.adobestats.io<br />0.0.0.0
+          wcxqmuxd4z.adobestats.io<br />0.0.0.0 l558s6jwzy.adobestats.io<br />0.0.0.0
+          85n85uoa1h.adobestats.io<br />0.0.0.0 zrao5tdh1t.adobestats.io<br />0.0.0.0
+          eftcpaiu36.adobestats.io<br />0.0.0.0 2qj10f8rdg.adobestats.io<br />0.0.0.0
+          ffs3xik41x.adobestats.io<br />0.0.0.0 g3y09mbaam.adobestats.io<br />0.0.0.0
+          x880ulw3h0.adobestats.io<br />0.0.0.0 jaircqa037.adobestats.io<br />0.0.0.0
+          ppn4fq68w7.adobestats.io<br />0.0.0.0 1ei1f4k9yk.adobestats.io<br />0.0.0.0
+          6j0onv1tde.adobestats.io<br />0.0.0.0 pljm140ld1.adobestats.io<br />0.0.0.0
+          50sxgwgngu.adobestats.io<br />0.0.0.0 u31z50xvp9.adobestats.io<br />0.0.0.0
+          2dhh9vsp39.adobestats.io<br />0.0.0.0 rb0u8l34kr.adobestats.io<br />0.0.0.0
+          3odrrlydxt.adobestats.io<br />0.0.0.0 3u6k9as4bj.adobestats.io<br />0.0.0.0
+          curbpindd3.adobestats.io<br />0.0.0.0 4dviy9tb3o.adobestats.io<br />0.0.0.0
+          yb6j6g0r1n.adobestats.io<br />0.0.0.0 0bj2epfqn1.adobestats.io<br />0.0.0.0
+          ura7zj55r9.adobestats.io<br />0.0.0.0 xesnl0ss94.adobestats.io<br />0.0.0.0
+          xbd20b9wqa.adobestats.io<br />0.0.0.0 cr2fouxnpm.adobestats.io<br />0.0.0.0
+          zmg3v61bbr.adobestats.io<br />0.0.0.0 bk7y1gneyk.adobestats.io<br />0.0.0.0
+          dx0nvmv4hz.adobestats.io<br />0.0.0.0 eyiu19jd5w.adobestats.io<br />0.0.0.0
+          561r5c3bz1.adobestats.io<br />0.0.0.0 54cu4v5twu.adobestats.io<br />0.0.0.0
+          6eidhihhci.adobestats.io<br />0.0.0.0 31q40256l4.adobestats.io<br />0.0.0.0
+          bs2yhuojzm.adobestats.io<br />0.0.0.0 p50zgina3e.adobestats.io<br />0.0.0.0
+          yri0bsu0ak.adobestats.io<br />0.0.0.0 zu8yy3jkaz.adobestats.io<br />0.0.0.0
+          m59cps6x3n.adobestats.io<br />0.0.0.0 kgj0gsg3cf.adobestats.io<br />0.0.0.0
+          uf0onoepoe.adobestats.io<br />0.0.0.0 28t4psttw7.adobestats.io<br />0.0.0.0
+          hjs70w1pdi.adobestats.io<br />0.0.0.0 klw4np5a1x.adobestats.io<br />0.0.0.0
+          lz2x4rks1u.adobestats.io<br />0.0.0.0 pc6sk9bygv.adobestats.io<br />0.0.0.0
+          t9phy8ywkd.adobestats.io<br />0.0.0.0 dfnm3epsb7.adobestats.io<br />0.0.0.0
+          5ky0dijg73.adobestats.io<br />0.0.0.0 124hzdrtoi.adobestats.io<br />0.0.0.0
+          69rxfbohle.adobestats.io<br />0.0.0.0 9uffo0j6wj.adobestats.io<br />0.0.0.0
+          kwi5n2ruax.adobestats.io<br />0.0.0.0 nh8wam2qd9.adobestats.io<br />0.0.0.0
+          rm3xrk61n1.adobestats.io<br />0.0.0.0 rmnia8d0tr.adobestats.io<br />0.0.0.0
+          vrz9w7o7yv.adobestats.io<br />0.0.0.0 5m62o8ud26.adobestats.io<br />0.0.0.0
+          esx6aswt5e.adobestats.io<br />0.0.0.0 hwfqhlenbg.adobestats.io<br />0.0.0.0
+          je5ufnklzs.adobestats.io<br />0.0.0.0 jmx50quqz0.adobestats.io<br />0.0.0.0
+          jsxfc5yij1.adobestats.io<br />0.0.0.0 vfsjlgw02v.adobestats.io<br />0.0.0.0
+          yshuhythub.adobestats.io<br />0.0.0.0 zrbzvc9mel.adobestats.io<br />0.0.0.0
+          rj669kv2lc.adobestats.io<br />0.0.0.0 agxqobl83f.adobestats.io<br />0.0.0.0
+          zr60t8ia88.adobestats.io<br />0.0.0.0 a1y2b7wsna.adobestats.io<br />0.0.0.0
+          hf6s5jdv95.adobestats.io<br />0.0.0.0 tprqy2lgua.adobestats.io<br />0.0.0.0
+          c474kdh1ky.adobestats.io<br />0.0.0.0 d101mw99xq.adobestats.io<br />0.0.0.0
+          oh41yzugiz.adobestats.io<br />0.0.0.0 jwonv590qs.adobestats.io<br />0.0.0.0
+          7k1t5im229.adobestats.io<br />0.0.0.0 3xuuprv9lg.adobestats.io<br />0.0.0.0
+          9wm8di7ifk.adobestats.io<br />0.0.0.0 ebvf40engd.adobestats.io<br />0.0.0.0
+          hq0mnwz735.adobestats.io<br />0.0.0.0 j134yk6hv5.adobestats.io<br />0.0.0.0
+          j14y4uzge7.adobestats.io<br />0.0.0.0 jye4987hyr.adobestats.io<br />0.0.0.0
+          kvi8uopy6f.adobestats.io<br />0.0.0.0 lv5yrjxh6i.adobestats.io<br />0.0.0.0
+          m95pt874uw.adobestats.io<br />0.0.0.0 pdb7v5ul5q.adobestats.io<br />0.0.0.0
+          px8vklwioh.adobestats.io<br />0.0.0.0 qmyqpp3xs3.adobestats.io<br />0.0.0.0
+          r1lqxul5sr.adobestats.io<br />0.0.0.0 tf3an24xls.adobestats.io<br />0.0.0.0
+          tyradj47rp.adobestats.io<br />0.0.0.0 vp7ih9xoxg.adobestats.io<br />0.0.0.0
+          x5cupsunjc.adobestats.io<br />0.0.0.0 ll8xjr580v.adobestats.io<br />0.0.0.0
+          n0yaid7q47.adobestats.io<br />0.0.0.0 nhs5jfxg10.adobestats.io<br />0.0.0.0
+          wz8kjkd9gc.adobestats.io<br />0.0.0.0 zfzx6hae4g.adobestats.io<br />0.0.0.0
+          6y6ozj4sot.adobestats.io<br />0.0.0.0 qxc5z5sqkv.adobestats.io<br />0.0.0.0
+          1qwiekvkux.adobestats.io<br
+        /></code>
       </details>
       <details>
         <summary>Код ошибки 1 или 501 при установке Adobe</summary>
@@ -5592,9 +5359,8 @@
           <a
             href="https://helpx.adobe.com/ru/creative-cloud/kb/cc-cleaner-tool-installation-problems.html"
             title="Adobe Creative Cloud Cleaner"
-            >Adobe Creative Cloud Cleaner
-          </a>
-          или попробуйте вручную удалить папку
+            >Adobe Creative Cloud Cleaner </a
+          >или попробуйте вручную удалить папку
           <mark>C:\Program Files (x86)\Common Files\Adobe</mark>, а затем повторить
           установку.
         </p>
@@ -5608,9 +5374,7 @@
           Такое происходит, если вы пытаетесь установить программы от Adobe 2024 года и
           выше на Windows 10 21H2 или старше. Для решения этой проблемы обновите вашу
           систему до 22H2 или до Windows 11. Текущую сборку Windows вы можете посмотреть
-          через
-          <mark>winver</mark>, открыв его с помощью
-          <mark>Win + R</mark>
+          через <mark>winver</mark>, открыв его с помощью <mark>Win + R</mark>
         </p>
       </details>
       <details>
@@ -5660,7 +5424,7 @@
           title="Видеоплеер YouTube"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
         <p>
           Самое главное правило, которое применяется для всех видео: сохраняйте частоту
@@ -5671,11 +5435,9 @@
         </p>
         <p>
           Прежде чем загрузить куда-нибудь контент с чересстрочной разверткой, сделайте ее
-          прогрессивной. Например, контент в формате
-          <mark>1080i60</mark>
-          следует перевести в
-          <mark>1080p30</mark>, то есть 60 чересстрочных полукадров в секунду следует
-          заменить 30 прогрессивными кадрами в секунду.
+          прогрессивной. Например, контент в формате <mark>1080i60</mark> следует
+          перевести в <mark>1080p30</mark>, то есть 60 чересстрочных полукадров в секунду
+          следует заменить 30 прогрессивными кадрами в секунду.
         </p>
         <p>
           Для того чтобы опубликовать видео на
@@ -5691,15 +5453,10 @@
               Видео должно иметь переменный или постоянный битрейт, ограничения на него
               нет, но лучше соблюдать таблицу битрейтов
             </li>
+            <li>Контейнер должен быть <mark>.mp4</mark></li>
             <li>
-              Контейнер должен быть
-              <mark>.mp4</mark>
-            </li>
-            <li>
-              Видеокодек -
-              <mark>H.264</mark>, аудиокодек -
-              <mark>AAC</mark>
-              с частотой дискретизации 48 кГц или 96 кГц.
+              Видеокодек - <mark>H.264</mark>, аудиокодек - <mark>AAC</mark> с частотой
+              дискретизации 48 кГц или 96 кГц.
             </li>
             <li>Видео должно содержать стерео или 5.1 каналы для аудио</li>
           </ul>
@@ -5814,9 +5571,7 @@
               устройства на iOS и до 75 Мб, если вы выкладываете с устройства на Android.
             </li>
             <li>
-              Контейнер должен быть
-              <mark>.mp4</mark>
-              или
+              Контейнер должен быть <mark>.mp4</mark> или
               <mark>.mov</mark>
             </li>
             <li>
@@ -5850,15 +5605,12 @@
         <div class="important">
           <ul>
             <li>
-              Соотношение сторон видео должно быть
-              <mark>4:5</mark>,
-              <mark>16:9</mark>
-              или
+              Соотношение сторон видео должно быть <mark>4:5</mark>, <mark>16:9</mark> или
               <mark>4:3</mark>, если вы собираетесь выкладывать в обычный пост.
             </li>
             <li>
-              Соотношение сторон видео должно быть
-              <mark>9:16</mark>, если выкладываете видео для IGTV, Stories или Reels.
+              Соотношение сторон видео должно быть <mark>9:16</mark>, если выкладываете
+              видео для IGTV, Stories или Reels.
             </li>
             <li>
               Видео может содержать любое количество FPS, но желательно придерживаться
@@ -5897,18 +5649,15 @@
         <summary>Как выводить из After Effects видео в .mp4?</summary>
         <p>
           Вместе с выходом обновления After Effects 2023 вернулась возможность нативно
-          выводить в
-          <mark>H.264</mark>, а значит - вы можете экспортировать видео в контейнер
-          <mark>.mp4</mark>
-          сразу из программы без использования Media Encoder.
+          выводить в <mark>H.264</mark>, а значит - вы можете экспортировать видео в
+          контейнер <mark>.mp4</mark> сразу из программы без использования Media Encoder.
         </p>
         <p>
           Для этого откройте очередь рендера из выбранной композиции, которую вы хотите
-          отрендерить с помощью
-          <mark>Ctrl + M</mark>. Затем выберите в Output Module пресет с H.264 и нужным
-          битрейтом, укажите путь для рендера и нажмите на кнопку <mark>Render</mark>.
-          После успешного просчёта композиции вы получите видео в <mark>.mp4</mark>,
-          которое уже готово к публикации куда угодно.
+          отрендерить с помощью <mark>Ctrl + M</mark>. Затем выберите в Output Module
+          пресет с H.264 и нужным битрейтом, укажите путь для рендера и нажмите на кнопку
+          <mark>Render</mark>. После успешного просчёта композиции вы получите видео в
+          <mark>.mp4</mark>, которое уже готово к публикации куда угодно.
         </p>
         <figure>
           <img
@@ -5924,9 +5673,8 @@
           <a
             href="https://www.autokroma.com/AfterCodecs/Download"
             title="Сайт AfterCodecs"
-            >AfterCodecs
-          </a>
-          или
+            >AfterCodecs </a
+          >или
           <a
             href="https://www.voukoder.org/forum/thread/783-downloads-instructions/"
             title="Сайт Voukoder для загрузки"
@@ -6017,8 +5765,7 @@
           <a
             href="https://github.com/Vouk/voukoder-connectors/tree/master/aftereffects"
             title="Voukoder Connector для After Effects на Github"
-          >
-            коннектор для After Effects</a
+            >коннектор для After Effects</a
           >. Без него в программе не появится пункт Voukoder!
         </div>
         <img
@@ -6060,9 +5807,8 @@
           <a
             href="https://aescripts.com/gifgun/"
             title="GifGun на aescripts"
-            >GifGun
-          </a>
-          с указанием желаемого веса файла. Для этого установите плагин и откройте его в
+            >GifGun </a
+          >с указанием желаемого веса файла. Для этого установите плагин и откройте его в
           After Effects с помощью Window &gt; Extensions.
         </p>
         <figure>
@@ -6120,9 +5866,8 @@
         </figure>
         <p>
           Если вы хотите изменить какие-либо настройки для вывода - нажмите на название
-          стандартного пресета для открытия
-          <mark>Export Settings</mark>. Там же вы можете настроить разрешение, FPS или
-          путь для вывода файла.
+          стандартного пресета для открытия <mark>Export Settings</mark>. Там же вы можете
+          настроить разрешение, FPS или путь для вывода файла.
         </p>
         <figure>
           <img
@@ -6147,9 +5892,8 @@
           <a
             href="https://ezgif.com/video-to-gif"
             title="Ezgif"
-            >Ezgif
-          </a>
-          и загрузите туда своё видео.
+            >Ezgif </a
+          >и загрузите туда своё видео.
         </p>
         <figure>
           <img
@@ -6207,7 +5951,7 @@
           title="Видеоплеер YouTube"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
       </details>
       <details>
@@ -6242,11 +5986,9 @@
         <p>
           Если вам нужно поставить на очередь просчёта несколько композиций из After
           Effects, то вы можете создать пустой проект-болванку, импортировать все нужные
-          проекты через
-          <mark>Ctrl + I</mark>
-          и кинуть их в очередь рендера внутри самой программы через
-          <mark>Ctrl + M</mark>. Таким образом вы получите более стабильный рендер и
-          нормальную поддержку Multi-Frame Render.
+          проекты через <mark>Ctrl + I</mark> и кинуть их в очередь рендера внутри самой
+          программы через <mark>Ctrl + M</mark>. Таким образом вы получите более
+          стабильный рендер и нормальную поддержку Multi-Frame Render.
         </p>
       </details>
       <details>
@@ -6266,15 +6008,13 @@
             <a
               href="https://www.autokroma.com/AfterCodecs/"
               title="Сайт AfterCodecs"
-              >AfterCodecs
-            </a>
-            или
+              >AfterCodecs </a
+            >или
             <a
               href="https://www.voukoder.org/"
               title="Сайт Voukoder"
-              >Voukoder
-            </a>
-            вместо стандартного способа рендера
+              >Voukoder </a
+            >вместо стандартного способа рендера
           </li>
           <li>
             Обновите After Effects до 23.6 или выше, данный баг уже был исправлен в
@@ -6357,9 +6097,9 @@
         </p>
         <p>
           Прежде чем выводить видео с альфа-каналом, убедитесь в том, что он у вас имеется
-          в проекте. Для этого существует кнопка
-          <mark>Toggle Transparency Grid</mark>, которая подставляет сетку в виде шашечной
-          доски для отображения прозрачных частей в вашем проекте.
+          в проекте. Для этого существует кнопка <mark>Toggle Transparency Grid</mark>,
+          которая подставляет сетку в виде шашечной доски для отображения прозрачных
+          частей в вашем проекте.
         </p>
         <figure>
           <img
@@ -6371,21 +6111,17 @@
         </figure>
         <p>
           Если всё в порядке, то время переходить в Render Queue с помощью комбинации
-          клавиш
-          <mark>Ctrl + M</mark>. Откройте Output Module и установите в Format пункт
+          клавиш <mark>Ctrl + M</mark>. Откройте Output Module и установите в Format пункт
           QuickTime. Затем перейдите в раздел Format Options и выберите там
-          <mark>Apple ProRes 4444</mark>
-          или
-          <mark>GoPro Cineform</mark>
-          в разделе Video Codec. Затем установите параметр RGB + Alpha в пункте Channels.
-          После выполнения всех шагов, вы можете приступить к экспорту видео с
-          альфа-каналом.
+          <mark>Apple ProRes 4444</mark> или <mark>GoPro Cineform</mark> в разделе Video
+          Codec. Затем установите параметр RGB + Alpha в пункте Channels. После выполнения
+          всех шагов, вы можете приступить к экспорту видео с альфа-каналом.
         </p>
         <figure>
           <img
             src="source/render_with_alpha_channel.png"
-            title=""
-            alt=""
+            title
+            alt
           />
           <figcaption>Корректные настройки для вывода видео с альфа-каналом</figcaption>
         </figure>
@@ -6398,9 +6134,8 @@
           <a
             href="https://www.videolan.org/vlc/"
             title="VLC"
-            >VLC
-          </a>
-          или
+            >VLC </a
+          >или
           <a
             href="https://github.com/clsid2/mpc-hc/releases"
             title="MPC-HC"
@@ -6442,8 +6177,7 @@
           После успешного создания прокси-файла вы можете продолжить работу. Внесённые
           изменения в композиции нужно будет опять перерендерить, если это необходимо.
           Если вам не нравится эта функция, то вы можете отключить прокси у композиции,
-          нажав
-          <mark>Set Proxy &gt; None</mark>
+          нажав <mark>Set Proxy &gt; None</mark>
         </p>
         <img
           src="source/disable_comp_proxy.png"
@@ -6508,8 +6242,8 @@
       </details>
     </div>
     <footer>
-      При копировании контента, пожалуйста, укажите в качестве источника этот сайт. <br />
-      © m1sh3r (2023-2024)
+      При копировании контента, пожалуйста, укажите в качестве источника этот сайт.<br />©
+      m1sh3r (2023-2024)
     </footer>
     <noscript>
       <div>

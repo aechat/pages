@@ -4,38 +4,47 @@
     <meta charset="UTF-8" />
     <link
       rel="stylesheet"
-      href="css/styles.css" />
+      href="css/styles.css"
+    />
     <link
       rel="shortcut icon"
       href="icons/faq_page_icon.ico"
-      type="image/x-icon" />
+      type="image/x-icon"
+    />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1" />
+      content="width=device-width,initial-scale=1"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-      as="style" />
+      as="style"
+    />
     <title>about</title>
   </head>
+
   <body
     class="light"
     ondragstart="return false;"
-    ondrop="return false;">
+    ondrop="return false;"
+  >
     <header>
       <button
         class="menu"
-        onclick="toggleSidemenu('.left_sidemenu')">
+        onclick="toggleSidemenu('.left_sidemenu')"
+      >
         <span class="material-symbols-outlined">menu</span>
       </button>
       <button
         class="logo"
-        onclick="copyURL()">
+        onclick="copyURL()"
+      >
         about
       </button>
       <button
         class="toggletheme"
-        onclick="toggleSidemenu('.right_sidemenu')">
+        onclick="toggleSidemenu('.right_sidemenu')"
+      >
         <span class="material-symbols-outlined">colors</span>
       </button>
     </header>
@@ -47,14 +56,15 @@
               href="index.html"
               title="На главную"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined"> home </span>
+              ><span class="material-symbols-outlined">home</span>
               <p>На главную</p>
-           </a>
+            </a>
           </li>
         </ul>
         <h2
           id="commit_date"
-          style="cursor: default">
+          style="cursor: default"
+        >
           Тут должна быть дата изменения страницы
         </h2>
       </div>
@@ -64,25 +74,27 @@
             <button
               onclick="setSystemTheme()"
               onmousedown="createRipple(event)"
-              data-theme="system">
-              <span class="material-symbols-outlined"> hide_source </span
-              >Системная
+              data-theme="system"
+            >
+              <span class="material-symbols-outlined">hide_source </span>Системная
             </button>
           </li>
           <li>
             <button
               onclick="toggleTheme('light')"
               onmousedown="createRipple(event)"
-              data-theme="light">
-              <span class="material-symbols-outlined"> light_mode </span>Светлая
+              data-theme="light"
+            >
+              <span class="material-symbols-outlined">light_mode </span>Светлая
             </button>
           </li>
           <li>
             <button
               onclick="toggleTheme('dark')"
               onmousedown="createRipple(event)"
-              data-theme="dark">
-              <span class="material-symbols-outlined"> dark_mode </span>Тёмная
+              data-theme="dark"
+            >
+              <span class="material-symbols-outlined">dark_mode </span>Тёмная
             </button>
           </li>
         </ul>
@@ -93,9 +105,9 @@
     <div class="content">
       <h2>Для чего этот сайт?</h2>
       <p>
-        Данный "портал" был создан для того, чтобы ответить на надоедливые
-        вопросы от новичков про программы от Adobe, а также на вопросы о
-        нахождении контента или чатов. Надеюсь, я с этой задачей справился.
+        Данный "портал" был создан для того, чтобы ответить на надоедливые вопросы от
+        новичков про программы от Adobe, а также на вопросы о нахождении контента или
+        чатов. Надеюсь, я с этой задачей справился.
       </p>
       <h2>Кто авторы?</h2>
       <p>
@@ -139,7 +151,8 @@
           src="https://mc.yandex.ru/watch/96346999"
           title=""
           alt=""
-          style="position: absolute; left: -9999px" />
+          style="position: absolute; left: -9999px"
+        />
       </div>
     </noscript>
     <script src="bundle.js"></script>

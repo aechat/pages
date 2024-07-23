@@ -14,31 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   const videos = document.querySelectorAll('video');
-
-//   videos.forEach(video => {
-//       video.setAttribute('autoplay', '');
-//       video.setAttribute('preload', 'auto');
-//   });
-
-//   const observer = new IntersectionObserver(entries => {
-//       entries.forEach(entry => {
-//           const video = entry.target;
-//           if (entry.isIntersecting) {
-//               video.play();
-//           } else {
-//               video.pause();
-//           }
-//       });
-//   }, {
-//       threshold: 0.25
-//   });
-
-//   videos.forEach(video => {
-//       observer.observe(video);
-//   });
-// });
 async function getLastCommitDate() {
   const owner = "aechat";
   const repo = "links";
@@ -100,6 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+const detailsElements = document.querySelectorAll("details");
+
+function expandAllDetails() {
+    detailsElements.forEach((details) => {
+        details.open = true;
+    });
+}
 function extractTextFromHTML(htmlString) {
   let tempElement = document.createElement("div");
   tempElement.innerHTML = htmlString;

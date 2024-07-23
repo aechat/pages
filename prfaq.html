@@ -13,7 +13,7 @@
     />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1"
+      content="width=device-width,initial-scale=1"
     />
     <link
       rel="stylesheet"
@@ -78,7 +78,7 @@
               href="index.html"
               title="На главную"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined"> home </span>
+              ><span class="material-symbols-outlined">home</span>
               <p>На главную</p>
             </a>
           </li>
@@ -87,9 +87,18 @@
               href="about.html"
               title="О сайте"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined"> info </span>
+              ><span class="material-symbols-outlined">info</span>
               <p>О сайте</p>
             </a>
+          </li>
+          <li>
+            <button
+              onmousedown="createRipple(event)"
+              onclick="expandAllDetails()"
+            >
+              <span class="material-symbols-outlined">unfold_more</span>Раскрыть все
+              спойлеры
+            </button>
           </li>
         </ul>
         <h2>Разделы:</h2>
@@ -99,8 +108,7 @@
               href="#where_find"
               title="Полезные материалы"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined"> bookmark_heart </span>
+              ><span class="material-symbols-outlined">bookmark_heart</span>
               <p>Полезные материалы</p>
             </a>
           </li>
@@ -109,8 +117,7 @@
               href="#from_newbies"
               title="Вопросы от новичков"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined">school</span>
+              ><span class="material-symbols-outlined">school</span>
               <p>Вопросы от новичков</p>
             </a>
           </li>
@@ -119,8 +126,7 @@
               href="#errors"
               title="Частые ошибки"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined">warning</span>
+              ><span class="material-symbols-outlined">warning</span>
               <p>Частые ошибки</p>
             </a>
           </li>
@@ -129,8 +135,7 @@
               href="#install_errors"
               title="Проблемы с установкой"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined">deployed_code_alert</span>
+              ><span class="material-symbols-outlined">deployed_code_alert</span>
               <p>Проблемы с установкой</p>
             </a>
           </li>
@@ -139,8 +144,7 @@
               href="#render"
               title="Про рендер"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined">movie_edit</span>
+              ><span class="material-symbols-outlined">movie_edit</span>
               <p>Про рендер</p>
             </a>
           </li>
@@ -160,7 +164,7 @@
               onmousedown="createRipple(event)"
               data-theme="system"
             >
-              <span class="material-symbols-outlined"> hide_source </span>Системная
+              <span class="material-symbols-outlined">hide_source </span>Системная
             </button>
           </li>
           <li>
@@ -169,7 +173,7 @@
               onmousedown="createRipple(event)"
               data-theme="light"
             >
-              <span class="material-symbols-outlined"> light_mode </span>Светлая
+              <span class="material-symbols-outlined">light_mode </span>Светлая
             </button>
           </li>
           <li>
@@ -178,7 +182,7 @@
               onmousedown="createRipple(event)"
               data-theme="dark"
             >
-              <span class="material-symbols-outlined"> dark_mode </span>Тёмная
+              <span class="material-symbols-outlined">dark_mode </span>Тёмная
             </button>
           </li>
         </ul>
@@ -215,21 +219,15 @@
             title="Канал PremTemp в Telegram"
             >PremTemp</a
           >
-          можно найти звуки, переходы и шаблоны с помощью хештегов:
-          <mark>#эффекты</mark>
-          <mark>#переходы</mark>
-          <mark>#плашки</mark>
-          <mark>#плагин</mark>. А в
+          можно найти звуки, переходы и шаблоны с помощью хештегов: <mark>#эффекты</mark>
+          <mark>#переходы</mark> <mark>#плашки</mark> <mark>#плагин</mark>. А в
           <a
             href="https://t.me/+Qd9xu7A4TeIwNzY6"
             title="канал склад стройматериалов в Telegram"
             >складе стройматериалов</a
           >
           вы можете найти конкретные программы или плагины для Windows, например:
-          <mark>#premierepro</mark>
-          <mark>#magicbullet</mark>
-          <mark>#borisfx</mark>
-          или
+          <mark>#premierepro</mark> <mark>#magicbullet</mark> <mark>#borisfx</mark> или
           <mark>#twixtor</mark>
         </p>
       </details>
@@ -277,11 +275,11 @@
         <summary>Где взять бесплатные стоковые видео для видеороликов?</summary>
         <p>
           Существует множество бесплатных видео-стоков онлайн, среди которых многие
-          предоставляют материалы с лицензией
-          <mark>Creative Commons Zero (CC0)</mark>, что означает возможность использования
-          их в своих коммерческих проектах, не указывая авторство. Перед использованием
-          материалов, необходимо внимательно ознакомиться с условиями использования на
-          каждом конкретном ресурсе. Ниже перечислены популярные источники видео:
+          предоставляют материалы с лицензией <mark>Creative Commons Zero (CC0)</mark>,
+          что означает возможность использования их в своих коммерческих проектах, не
+          указывая авторство. Перед использованием материалов, необходимо внимательно
+          ознакомиться с условиями использования на каждом конкретном ресурсе. Ниже
+          перечислены популярные источники видео:
         </p>
         <ul>
           <li>
@@ -451,10 +449,9 @@
         <p>
           Для этого нужно обработать изображения. Необязательно лезть в Photoshop и что-то
           там делать, ведь на сайте уже есть инструменты для обработки изображения,
-          например
-          <mark>Threshold</mark>. Мы его повышаем до максимально возможного значения,
-          чтобы текст стал более читабельным. Также есть инструменты для поворота,
-          отзеркаливания и наклона изображения.
+          например <mark>Threshold</mark>. Мы его повышаем до максимально возможного
+          значения, чтобы текст стал более читабельным. Также есть инструменты для
+          поворота, отзеркаливания и наклона изображения.
         </p>
         <figure>
           <img
@@ -514,8 +511,7 @@
           <a
             href="https://www.youtube.com/channel/UCmLY17yagzLy6GRiI1nVBow"
             title="Канал Ильи Зернова на YouTube"
-          >
-            Ильи Зернова</a
+            >Ильи Зернова</a
           >. Хоть и курс записан в Premiere Pro 2019 года, глобальных отличий от новых
           версий нет, кроме интерфейсов создания и рендера проекта.
         </p>
@@ -524,7 +520,7 @@
           title="Видеоплеер YouTube"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
         <p>
           Если вы уже достаточно уверенно монтируете в Premiere Pro, но хочется узнать
@@ -649,8 +645,7 @@
           </li>
           <li>
             Если у вас видеокарта от Nvidia, то установите галочку на Hardware
-            Acceleration и укажите там
-            <mark>Nvidia NVENC</mark>
+            Acceleration и укажите там <mark>Nvidia NVENC</mark>
           </li>
           <li>Нажать кнопку <mark>Start Function</mark></li>
         </ul>
@@ -667,8 +662,8 @@
         </summary>
         <p>
           Для решения этой проблемы установите Premiere Pro 23.2 и выше, затем в
-          настройках Sequence активируйте опцию
-          <mark>Auto Tone Map Media</mark> и работайте дальше.
+          настройках Sequence активируйте опцию <mark>Auto Tone Map Media</mark> и
+          работайте дальше.
         </p>
         <figure>
           <img
@@ -712,10 +707,9 @@
           Если вы видите на вашем таймлайне жёлтые или красные полосы, то при проигрывании
           предпросмотра вы заметите лаги. Это связано с тем, что на клипе по-любому
           используется ресурсоёмкий эффект или переход и его надо закэшировать. Для этого
-          перейдите в
-          <mark>Sequence &gt; Render In to Out</mark> и дождитесь конца пре-рендера. После
-          этого ваш предпросмотр будет закэширован в памяти и вы можете просмотреть его
-          без лагов.
+          перейдите в <mark>Sequence &gt; Render In to Out</mark> и дождитесь конца
+          пре-рендера. После этого ваш предпросмотр будет закэширован в памяти и вы можете
+          просмотреть его без лагов.
         </p>
       </details>
       <details>
@@ -802,9 +796,8 @@
         <summary>This effect requires GPU acceleration</summary>
         <p>
           Попробуйте включить в настройках проекта ускорение с помощью GPU. Для этого
-          перейдите в
-          <mark>File &gt; Project Settings &gt; General</mark> и переключите в Renderer
-          пункт на
+          перейдите в <mark>File &gt; Project Settings &gt; General</mark> и переключите в
+          Renderer пункт на
           <mark>Mercury Playback Engine GPU Acceleration (CUDA/OpenCL)</mark>
         </p>
         <figure>
@@ -858,8 +851,8 @@
       <details>
         <summary>Пропала визуализация аудио на таймлайне</summary>
         <p>
-          Попробуйте очистить .peak-файлы в настройках Premiere Pro. Для этого перейдите в
-          <mark>Edit &gt; Preferences &gt; Media Cache</mark> и нажмите
+          Попробуйте очистить <mark>.peak-файлы</mark> в настройках Premiere Pro. Для
+          этого перейдите в <mark>Edit &gt; Preferences &gt; Media Cache</mark> и нажмите
           <mark>Delete</mark> у Remove Media Cache Files.
         </p>
         <figure>
@@ -917,28 +910,28 @@
       </details>
     </div>
     <section id="install_errors">Проблемы с установкой</section>
-    <div class="content">
-      <!-- fixme:  -->
-    </div>
+    <div class="content"><!-- fixme:  --></div>
     <section id="render">Про рендер</section>
     <div class="content">
       <details>
         <summary>Как правильно выводить видео из Premiere Pro</summary>
-        <!-- fixme: -->
         <p>
           В рендере нюансов и технических тонкостей много. Предположим, что ваш заказчик
           хочет качественное видео с минимальным весом, в цветовом пространстве
-          <mark>Rec.709</mark> и кодеке <mark>H.264</mark> или <mark>H.265</mark>
+          <mark>Rec.709</mark> и кодеке <mark>H.264</mark> или
+          <mark>H.265</mark>
         </p>
         <p>Вы можете вывести видео из Premiere Pro с помощью нативного кодека H.264.</p>
         <p>
-          Начнём с самого простого: при нажатии на <mark>Ctrl + M</mark> программа по
-          умолчанию предложит вам вывести в
+          Начнём с самого простого: при нажатии на <mark>Ctrl + M</mark>
+          программа по умолчанию предложит вам вывести в
+          <mark>H.264</mark>, с чем мы и соглашаемся, нажав на кнопку экспорта.
         </p>
         <p>
           Если результат от стандартного H.264 не понравился, то на помощь приходят
           AfterCodecs или Voukoder.
         </p>
+        <p><!-- fixme: aftercodecs --></p>
         <div class="important">
           Если вы выбрали путь рендера с помощью Voukoder, убедитесь, что на компьютере
           установлен
@@ -949,9 +942,13 @@
           >. Без него в программе не появится пункт Voukoder!
         </div>
         <p>
-          Существует интересный способ для вывода с помощью Pre-render для последующего
-          сокращения времени рендера при незначительных правках от заказчика. Для начала
-          откройте настройки секвенции, перейдя в<mark
+          Если вы хотите вывести видео с помощью Voukoder, то выберите соответствующий
+          пункт при выборе формата. Затем нажмите на<!-- fixme: voucoder -->
+        </p>
+        <p>
+          Ещё существует интересный способ для вывода с помощью Pre-render для
+          последующего сокращения времени рендера при незначительных правках от заказчика.
+          Для начала откройте настройки секвенции, перейдя в<mark
             >Sequence &gt; Sequence Settings</mark
           >, затем переместитесь в раздел <mark>Video Previews</mark> и укажите кодек для
           пре-рендера. В нашем случае мы выберем <mark>Apple Prores 422</mark>, но вы
@@ -969,13 +966,13 @@
           Выбор кодека в Video Previews должен совпадать с кодеком для финального рендера,
           чтобы фишка с быстрым рендером сработала. То есть если вы выбрали в Video
           Previews кодек <mark>Apple Prores 4444</mark>, то и в <mark>Ctrl + M</mark> тоже
-          должен стоять кодек
-          <mark>Apple Prores 4444</mark>
+          должен стоять кодек <mark>Apple Prores 4444</mark>
         </div>
         <p>
           После того как мы выбрали кодек для пре-рендера, нужно указать точку In в начале
-          вашего таймлайна и точку Out в конце с помощью кнопок
-          <mark>I</mark> и <mark>O</mark> соответственно или очистите выделение с помощью
+          вашего таймлайна и точку Out в конце с помощью кнопок <mark>I</mark> и
+          <mark>O</mark>
+          соответственно или очистите выделение с помощью
           <mark>Ctrl + Shift + X</mark>. Затем перейдите в Seuqence и нажмите на
           <mark>Render In to Out</mark>.
         </p>
@@ -1043,7 +1040,8 @@
         <p>
           Результат всех наших действий мы должны закинуть в Shutter Encoder, но на этот
           раз там не нужно менять цветовое пространство. Он нам нужен, чтобы подогнать
-          ваше видео под требования заказчика или площадки.
+          ваше видео под требования заказчика или площадки, но об этом - уже другая
+          история.
         </p>
       </details>
       <details>
@@ -1066,7 +1064,7 @@
           title="Видеоплеер YouTube"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
         <p>
           Самое главное правило, которое применяется для всех видео: сохраняйте частоту
@@ -1077,11 +1075,9 @@
         </p>
         <p>
           Прежде чем загрузить куда-нибудь контент с чересстрочной разверткой, сделайте ее
-          прогрессивной. Например, контент в формате
-          <mark>1080i60</mark>
-          следует перевести в
-          <mark>1080p30</mark>, то есть 60 чересстрочных полукадров в секунду следует
-          заменить 30 прогрессивными кадрами в секунду.
+          прогрессивной. Например, контент в формате <mark>1080i60</mark> следует
+          перевести в <mark>1080p30</mark>, то есть 60 чересстрочных полукадров в секунду
+          следует заменить 30 прогрессивными кадрами в секунду.
         </p>
         <p>
           Для того чтобы опубликовать видео на
@@ -1097,15 +1093,10 @@
               Видео должно иметь переменный или постоянный битрейт, ограничения на него
               нет, но лучше соблюдать таблицу битрейтов
             </li>
+            <li>Контейнер должен быть <mark>.mp4</mark></li>
             <li>
-              Контейнер должен быть
-              <mark>.mp4</mark>
-            </li>
-            <li>
-              Видеокодек -
-              <mark>H.264</mark>, аудиокодек -
-              <mark>AAC</mark>
-              с частотой дискретизации 48 кГц или 96 кГц.
+              Видеокодек - <mark>H.264</mark>, аудиокодек - <mark>AAC</mark> с частотой
+              дискретизации 48 кГц или 96 кГц.
             </li>
             <li>Видео должно содержать стерео или 5.1 каналы для аудио</li>
           </ul>
@@ -1219,16 +1210,8 @@
               Площадка даёт возможность загрузить видео до 250 Мб, если вы выкладываете с
               устройства на iOS и до 75 Мб, если вы выкладываете с устройства на Android.
             </li>
-            <li>
-              Контейнер должен быть
-              <mark>.mp4</mark>
-              или
-              <mark>.mov</mark>
-            </li>
-            <li>
-              В качестве видеокодека должно использоваться
-              <mark>H.264</mark>
-            </li>
+            <li>Контейнер должен быть <mark>.mp4</mark> или <mark>.mov</mark></li>
+            <li>В качестве видеокодека должно использоваться <mark>H.264</mark></li>
           </ul>
         </div>
         <figure>
@@ -1256,15 +1239,12 @@
         <div class="important">
           <ul>
             <li>
-              Соотношение сторон видео должно быть
-              <mark>4:5</mark>,
-              <mark>16:9</mark>
-              или
+              Соотношение сторон видео должно быть <mark>4:5</mark>, <mark>16:9</mark> или
               <mark>4:3</mark>, если вы собираетесь выкладывать в обычный пост.
             </li>
             <li>
-              Соотношение сторон видео должно быть
-              <mark>9:16</mark>, если выкладываете видео для IGTV, Stories или Reels.
+              Соотношение сторон видео должно быть <mark>9:16</mark>, если выкладываете
+              видео для IGTV, Stories или Reels.
             </li>
             <li>
               Видео может содержать любое количество FPS, но желательно придерживаться
@@ -1301,9 +1281,7 @@
       </details>
       <details>
         <summary>Что делать, если рендер зависает на определённом моменте?</summary>
-        <p>
-          <!-- fixme: -->
-        </p>
+        <p><!-- fixme: --></p>
       </details>
       <details>
         <summary>Почему после рендера всё смещается влево или вправо?</summary>
@@ -1333,15 +1311,15 @@
       </details>
     </div>
     <footer>
-      При копировании контента, пожалуйста, укажите в качестве источника этот сайт. <br />
-      © m1sh3r (2023-2024)
+      При копировании контента, пожалуйста, укажите в качестве источника этот сайт.<br />©
+      m1sh3r (2023-2024)
     </footer>
     <noscript>
       <div>
         <img
           src="https://mc.yandex.ru/watch/96346999"
-          alt=""
-          title=""
+          alt
+          title
           style="position: absolute; left: -9999px"
         />
       </div>

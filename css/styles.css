@@ -491,6 +491,14 @@ header span:active {
   vertical-align: middle;
   word-break: keep-all;
 }
+.content mark::before {
+  color: var(--accent);
+  content: "content_copy";
+  font-family: "Material Symbols Outlined";
+  font-size: 14px;
+  padding: 0 3px 0 1px;
+  vertical-align: middle;
+}
 .content mark:hover {
   opacity: 80%;
 }

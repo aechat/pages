@@ -13,7 +13,7 @@
     />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1"
+      content="width=device-width,initial-scale=1"
     />
     <link
       rel="stylesheet"
@@ -78,18 +78,27 @@
               href="index.html"
               title="На главную"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined"> home </span>
-              <p>На главную</p></a
-            >
+              ><span class="material-symbols-outlined">home</span>
+              <p>На главную</p>
+            </a>
           </li>
           <li>
             <a
               href="about.html"
               title="О сайте"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined"> info </span>
-              <p>О сайте</p></a
+              ><span class="material-symbols-outlined">info</span>
+              <p>О сайте</p>
+            </a>
+          </li>
+          <li>
+            <button
+              onmousedown="createRipple(event)"
+              onclick="expandAllDetails()"
             >
+              <span class="material-symbols-outlined">unfold_more</span>Раскрыть все
+              спойлеры
+            </button>
           </li>
         </ul>
         <h2>Разделы:</h2>
@@ -99,8 +108,7 @@
               href="#where_find"
               title="Полезные материалы"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined"> bookmark_heart </span>
+              ><span class="material-symbols-outlined">bookmark_heart</span>
               <p>Полезные материалы</p>
             </a>
           </li>
@@ -109,8 +117,7 @@
               href="#from_newbies"
               title="Вопросы от новичков"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined">school</span>
+              ><span class="material-symbols-outlined">school</span>
               <p>Вопросы от новичков</p>
             </a>
           </li>
@@ -119,8 +126,7 @@
               href="#errors"
               title="Частые ошибки"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined">warning</span>
+              ><span class="material-symbols-outlined">warning</span>
               <p>Частые ошибки</p>
             </a>
           </li>
@@ -129,8 +135,7 @@
               href="#install_errors"
               title="Проблемы с установкой"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined">deployed_code_alert</span>
+              ><span class="material-symbols-outlined">deployed_code_alert</span>
               <p>Проблемы с установкой</p>
             </a>
           </li>
@@ -139,8 +144,7 @@
               href="#render"
               title="Про рендер"
               onmousedown="createRipple(event)"
-            >
-              <span class="material-symbols-outlined">movie_edit</span>
+              ><span class="material-symbols-outlined">movie_edit</span>
               <p>Про рендер</p>
             </a>
           </li>
@@ -160,7 +164,7 @@
               onmousedown="createRipple(event)"
               data-theme="system"
             >
-              <span class="material-symbols-outlined"> hide_source </span>Системная
+              <span class="material-symbols-outlined">hide_source </span>Системная
             </button>
           </li>
           <li>
@@ -169,7 +173,7 @@
               onmousedown="createRipple(event)"
               data-theme="light"
             >
-              <span class="material-symbols-outlined"> light_mode </span>Светлая
+              <span class="material-symbols-outlined">light_mode </span>Светлая
             </button>
           </li>
           <li>
@@ -178,7 +182,7 @@
               onmousedown="createRipple(event)"
               data-theme="dark"
             >
-              <span class="material-symbols-outlined"> dark_mode </span>Тёмная
+              <span class="material-symbols-outlined">dark_mode </span>Тёмная
             </button>
           </li>
         </ul>
@@ -193,7 +197,9 @@
     <section id="where_find">Полезные материалы</section>
     <div class="content">
       <details>
-        <summary>Где скачать шаблоны, программы для творчества, а также плагины к ним?</summary>
+        <summary>
+          Где скачать шаблоны, программы для творчества, а также плагины к ним?
+        </summary>
         <p>
           На
           <a
@@ -222,8 +228,7 @@
             >складе стройматериалов</a
           >
           вы можете найти конкретные программы, например: <mark>#photoshop</mark>
-          <mark>#illustrator</mark> или
-          <mark>#borisfx</mark>
+          <mark>#illustrator</mark> или <mark>#borisfx</mark>
         </p>
       </details>
       <details>
@@ -262,8 +267,8 @@
           по выгодным ценам.
         </p>
         <div class="important">
-          Файлы из Videohive, Shutter Stock ботом не принимаются по причине того, что файлы,
-          находящиеся на этих сервисах, не распространяются подписочным методом.
+          Файлы из Videohive, Shutter Stock ботом не принимаются по причине того, что
+          файлы, находящиеся на этих сервисах, не распространяются подписочным методом.
         </div>
       </details>
       <details>
@@ -278,8 +283,8 @@
             href="https://www.alpacaml.com/dashboard/photoshop-plugin"
             title="Alpaca ML"
             >Alpaca ML</a
-          >, скачать его вы можете после регистрации на сайте. В бесплатном тарифе вы можете
-          сделать 100 генераций в день, но сервис может взять ваши изображения для
+          >, скачать его вы можете после регистрации на сайте. В бесплатном тарифе вы
+          можете сделать 100 генераций в день, но сервис может взять ваши изображения для
           тренировки своих моделей. Платная версия лишена этих недостатков.
         </p>
         <p>
@@ -296,11 +301,10 @@
           <figcaption>Скачивание Alpaca ML</figcaption>
         </figure>
         <p>
-          После скачивания откройте архив и распакуйте папку
-          <mark>alpaca-x_y_z</mark> в
-          <mark>C:\Program Files\Adobe\Adobe Photoshop 20XX\Plug-ins</mark>. Затем откройте
-          Photoshop, перейдите в <mark>Подключаемые модули</mark> и выберите нужный нам
-          плагин.
+          После скачивания откройте архив и распакуйте папку <mark>alpaca-x_y_z</mark> в
+          <mark>C:\Program Files\Adobe\Adobe Photoshop 20XX\Plug-ins</mark>. Затем
+          откройте Photoshop, перейдите в <mark>Подключаемые модули</mark> и выберите
+          нужный нам плагин.
         </p>
         <figure>
           <img
@@ -313,8 +317,9 @@
         <p>
           В открытой панели плагина вам предлагают авторизоваться. Нажмите на
           <mark>Log In</mark> и продолжите авторизацию в браузере. После авторизации вам
-          будут доступны все функции сервиса Alpaca ML, в том числе и местная "генеративная
-          заливка". Работает далеко не идеальным образом, но в качестве аналога - самое оно.
+          будут доступны все функции сервиса Alpaca ML, в том числе и местная
+          "генеративная заливка". Работает далеко не идеальным образом, но в качестве
+          аналога - самое оно.
         </p>
         <figure>
           <video
@@ -335,9 +340,9 @@
             title="Сервис по нахождению шрифтов LikeFont"
             >LikeFont</a
           >
-          для определения шрифта по фотографии. Этот сервис способен распознавать шрифты как
-          на латинице, так и на кириллице. Как начать им пользоваться? Просто зайдите на
-          сайт и загрузите своё изображение с помощью проводника или
+          для определения шрифта по фотографии. Этот сервис способен распознавать шрифты
+          как на латинице, так и на кириллице. Как начать им пользоваться? Просто зайдите
+          на сайт и загрузите своё изображение с помощью проводника или
           <mark>Ctrl + V</mark>
         </p>
         <figure>
@@ -368,10 +373,10 @@
         </figure>
         <p>
           Для этого нужно обработать изображения. Необязательно лезть в Photoshop и что-то
-          там делать, ведь на сайте уже есть инструменты для обработки изображения, например
-          <mark>Threshold</mark>. Мы его повышаем до максимально возможного значения, чтобы
-          текст стал более читабельным. Также есть инструменты для поворота, отзеркаливания
-          и наклона изображения.
+          там делать, ведь на сайте уже есть инструменты для обработки изображения,
+          например <mark>Threshold</mark>. Мы его повышаем до максимально возможного
+          значения, чтобы текст стал более читабельным. Также есть инструменты для
+          поворота, отзеркаливания и наклона изображения.
         </p>
         <figure>
           <img
@@ -383,9 +388,9 @@
         </figure>
         <p>
           Как мы видим, Threshold помог, но не сильно, так как фрактальный шум по яркости
-          совпал с яркостью текста. Но не унываем, у нас есть как минимум три чистых буквы.
-          После обработки пролистываем страницу ниже и мы видим несколько изображений к
-          которым нужно вписать букву.
+          совпал с яркостью текста. Но не унываем, у нас есть как минимум три чистых
+          буквы. После обработки пролистываем страницу ниже и мы видим несколько
+          изображений к которым нужно вписать букву.
         </p>
         <figure>
           <img
@@ -427,8 +432,8 @@
     <section id="render">Про сохранение</section>
     <div class="content"></div>
     <footer>
-      При копировании контента, пожалуйста, укажите в качестве источника этот сайт. <br />
-      &copy; m1sh3r (2023-2024)
+      При копировании контента, пожалуйста, укажите в качестве источника этот сайт.<br />&copy;
+      m1sh3r (2023-2024)
     </footer>
     <noscript>
       <div>

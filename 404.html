@@ -13,7 +13,7 @@
     />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1"
+      content="width=device-width,initial-scale=1"
     />
     <link
       rel="stylesheet"
@@ -25,16 +25,13 @@
       .dark video {
         filter: invert(100%);
       }
-      @media (prefers-color-scheme: dark) {
-        video {
-          filter: invert(100%);
-        }
-        .dark video {
-          filter: invert(0%);
-        }
+
+      video {
+        filter: invert(0%);
       }
     </style>
   </head>
+
   <body
     class="light"
     ondragstart="return false;"
@@ -68,18 +65,18 @@
               href="index.html"
               title="На главную"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined"> home </span>
-              <p>На главную</p></a
-            >
+              ><span class="material-symbols-outlined">home</span>
+              <p>На главную</p>
+            </a>
           </li>
           <li>
             <a
               href="about.html"
               title="О сайте"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined"> info </span>
-              <p>О сайте</p></a
-            >
+              ><span class="material-symbols-outlined">info</span>
+              <p>О сайте</p>
+            </a>
           </li>
         </ul>
       </div>
@@ -91,7 +88,7 @@
               onmousedown="createRipple(event)"
               data-theme="system"
             >
-              <span class="material-symbols-outlined"> hide_source </span>Системная
+              <span class="material-symbols-outlined">hide_source </span>Системная
             </button>
           </li>
           <li>
@@ -100,7 +97,7 @@
               onmousedown="createRipple(event)"
               data-theme="light"
             >
-              <span class="material-symbols-outlined"> light_mode </span>Светлая
+              <span class="material-symbols-outlined">light_mode </span>Светлая
             </button>
           </li>
           <li>
@@ -109,7 +106,7 @@
               onmousedown="createRipple(event)"
               data-theme="dark"
             >
-              <span class="material-symbols-outlined"> dark_mode </span>Тёмная
+              <span class="material-symbols-outlined">dark_mode </span>Тёмная
             </button>
           </li>
         </ul>
@@ -126,7 +123,7 @@
             title="Сообщить об ошибке"
           >
             <h2>
-              <span class="material-symbols-outlined"> error </span>Сообщить об ошибке
+              <span class="material-symbols-outlined">error </span>Сообщить об ошибке
             </h2>
           </a>
         </li>
@@ -152,8 +149,8 @@
           type="video/webm"
           style="margin-bottom: -30px; height: 400px"
           src="source/a-hat-in-time-404.webm"
-        ></video>
-        <audio
+        ></video
+        ><audio
           autoplay=""
           controls=""
           loop=""
