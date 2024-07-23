@@ -194,7 +194,7 @@
     &::before {
       color         : var(--accent);
       content       : "content_copy";
-      font-family   : "Material Symbols Outlined";
+      font-family   : "Material Symbols Outlined",system-ui;
       font-size     : 14px;
       padding       : 0 3px 0 1px;
       vertical-align: middle;
