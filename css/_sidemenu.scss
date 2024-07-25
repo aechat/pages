@@ -13,14 +13,10 @@
   overflow-x     : visible;
 
   .material-symbols-outlined {
-    font-variation-settings:
-      'FILL'0,
-      'wght'350,
-      'GRAD'0,
-      'opsz'24;
-    font-size         : 18px;
-    padding-inline-end: 8px;
-    color             : var(--text);
+    font-variation-settings: "FILL"0, "wght"350, "GRAD"0, "opsz"24;
+    font-size              : 18px;
+    padding-inline-end     : 8px;
+    color                  : var(--text);
   }
 }
 
@@ -31,8 +27,7 @@
   filter          : drop-shadow(0px 10px 25px var(--for-shadow));
   max-width       : 800px;
   opacity         : 0;
-  transition      :
-    opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+  transition      : opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
     visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   visibility: hidden;
 
@@ -103,13 +98,12 @@
     display       : flex;
     align-items   : center;
     color         : var(--text);
-    text-align    : center;
+    text-align    : left;
     padding-inline: 15px;
     padding-block : 10px;
     width         : 100%;
     background    : none;
   }
-
 }
 
 .right_sidemenu {
@@ -118,8 +112,9 @@
   backdrop-filter : blur(25px) saturate(50%);
   filter          : drop-shadow(0px 10px 25px var(--for-shadow));
   opacity         : 0;
-  transition      : opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  visibility      : hidden;
+  transition      : opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    visibility 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  visibility: hidden;
 
   button {
     border        : none;

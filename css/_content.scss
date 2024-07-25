@@ -59,14 +59,6 @@
     word-wrap       : break-word;
     background-color: var(--for-summary);
 
-    &[open]::marker {
-      content: "- ";
-    }
-
-    &::marker {
-      content: "+ ";
-    }
-
     &::before {
       content                   : "";
       position                  : absolute;
@@ -80,8 +72,7 @@
     }
   }
 
-
-  audio,
+  summary audio,
   video,
   iframe {
     max-width    : 800px;
@@ -153,9 +144,6 @@
     }
   }
 
-
-
-
   img {
     margin-inline: auto;
     cursor       : zoom-in;
@@ -216,13 +204,10 @@
     color    : var(--text);
   }
 
-
   details {
     margin-inline: auto;
     cursor       : default;
   }
-
-
 
   ul {
     margin-inline: 25px;
@@ -237,9 +222,7 @@
     &::marker {
       color: var(--accent);
     }
-
   }
-
 
   blockquote {
     margin          : 20px;
@@ -259,7 +242,6 @@
       color: var(--text);
     }
   }
-
 
   table {
     max-width       : 800px;
@@ -356,6 +338,4 @@
     text-decoration: underline;
     color          : var(--text);
   }
-
-
 }
