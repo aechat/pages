@@ -56,7 +56,7 @@
         class="menu"
         onclick="toggleSidemenu('.left_sidemenu')"
       >
-        <span class="material-symbols-outlined">menu</span>
+        <span class="material-icons">menu</span>
       </button>
       <button
         class="logo"
@@ -68,7 +68,7 @@
         class="toggletheme"
         onclick="toggleSidemenu('.right_sidemenu')"
       >
-        <span class="material-symbols-outlined">colors</span>
+        <span class="material-icons">colors</span>
       </button>
     </header>
     <div class="container_sidemenu">
@@ -79,7 +79,7 @@
               href="index.html"
               title="На главную"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined">home</span>
+              ><span class="material-icons">home</span>
               <p>На главную</p>
             </a>
           </li>
@@ -88,7 +88,7 @@
               href="about.html"
               title="О сайте"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined">info</span>
+              ><span class="material-icons">info</span>
               <p>О сайте</p>
             </a>
           </li>
@@ -97,7 +97,7 @@
               onmousedown="createRipple(event)"
               onclick="expandAllDetails()"
             >
-              <span class="material-symbols-outlined">unfold_more</span>Раскрыть спойлеры
+              <span class="material-icons">unfold_more</span>Раскрыть спойлеры
             </button>
           </li>
         </ul>
@@ -108,7 +108,7 @@
               href="#where_find"
               title="Полезные материалы"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined">bookmark_heart</span>
+              ><span class="material-icons">bookmark_heart</span>
               <p>Полезные материалы</p>
             </a>
           </li>
@@ -117,7 +117,7 @@
               href="#from_newbies"
               title="Вопросы от новичков"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined">school</span>
+              ><span class="material-icons">school</span>
               <p>Вопросы от новичков</p>
             </a>
           </li>
@@ -126,7 +126,7 @@
               href="#errors"
               title="Частые ошибки"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined">warning</span>
+              ><span class="material-icons">warning</span>
               <p>Частые ошибки</p>
             </a>
           </li>
@@ -135,7 +135,7 @@
               href="#install_errors"
               title="Проблемы с установкой"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined">deployed_code_alert</span>
+              ><span class="material-icons">deployed_code_alert</span>
               <p>Проблемы с установкой</p>
             </a>
           </li>
@@ -144,7 +144,7 @@
               href="#render"
               title="Про рендер"
               onmousedown="createRipple(event)"
-              ><span class="material-symbols-outlined">movie_edit</span>
+              ><span class="material-icons">movie_edit</span>
               <p>Про рендер</p>
             </a>
           </li>
@@ -164,7 +164,7 @@
               onclick="setSystemTheme()"
               onmousedown="createRipple(event)"
             >
-              <span class="material-symbols-outlined">hide_source </span>Системная
+              <span class="material-icons">hide_source </span>Системная
             </button>
           </li>
           <li>
@@ -173,7 +173,7 @@
               onclick="toggleTheme('light')"
               onmousedown="createRipple(event)"
             >
-              <span class="material-symbols-outlined">light_mode </span>Светлая
+              <span class="material-icons">light_mode </span>Светлая
             </button>
           </li>
           <li>
@@ -182,7 +182,7 @@
               onclick="toggleTheme('dark')"
               onmousedown="createRipple(event)"
             >
-              <span class="material-symbols-outlined">dark_mode </span>Тёмная
+              <span class="material-icons">dark_mode </span>Тёмная
             </button>
           </li>
         </ul>
@@ -823,9 +823,9 @@
             параметров для рендера
           </li>
           <li>
-            <mark>Ромбики</mark> или <mark>ключи</mark> - ключевые кадры или же метки, на
-            основе которых создаётся анимация. Они указывают на то, как будет выглядеть
-            анимированный элемент в конкретный момент времени.
+            <mark>Ромбик</mark>, <mark>ключ</mark> или <mark>кейфрейм</mark> - ключевые
+            кадры или же метки, на основе которых создаётся анимация. Они указывают на то,
+            как будет выглядеть анимированный элемент в конкретный момент времени.
           </li>
           <li>
             <mark>Усики</mark> - контроллеры скорости в Graph Editor или пути движения в
@@ -932,30 +932,108 @@
         </div>
         <ul>
           <!-- fixme: дописать ещё комбинации -->
-          <li><mark>Ctrl + Shift + D</mark>: разделить слой на две части.</li>
           <li><mark>Ctrl + Alt + Num /</mark>: очистка кэша оперативной памяти.</li>
+          <li><mark>Ctrl + D</mark>: сделать дубликат слоя</li>
+          <li><mark>Ctrl + Shift + D</mark>: разделить слой на две части.</li>
+          <li>
+            <mark>Ctrl + Shift + C</mark>: создать прекомпозицию, работает при выделении
+            нужных слоёв.
+          </li>
           <li>
             <mark>Ctrl + Shift + H</mark>: отображение границ и выделения слоёв,
             контроллеров и путей движения в композиции или же. более эффективен с
             включенным Toggle Mask and Shape Path Visibility.
           </li>
+          <mark>Ctrl + Shift + A</mark>
+          или
+          <mark>F2</mark
+          >: убрать выделение слоев на таймлайне.
+          <mark>Ctrl + Alt + Shift + A</mark>
+          или
+          <mark>Shift + F2</mark
+          >: убрать выделение ключей и параметров у слоя.
+          <mark>Ctrl + Shift + T</mark>
+          или
+          <mark>F3</mark
+          >: открыть или скрыть панель Effects Controls.
+          <li><mark>F9</mark>: сделать интерполяцию ключей в виде Easy Ease</li>
+          <li></li>
           <li>
-            <mark>Ctrl + Shift + C</mark>: создать прекомпозицию, работает при выделении
-            нужных слоёв
-          </li>
-          <li>
-            <mark>+</mark> и <mark>-</mark>: увеличение или уменьшение масштаба таймлайна
+            <mark>+</mark> и <mark>-</mark>: увеличение или уменьшение масштаба таймлайна.
           </li>
           <li>
             <mark>,</mark> и <mark>.</mark>: увеличение или уменьшение масштаба
-            предпросмотра
+            предпросмотра.
+          </li>
+          <li><mark>Ctrl + Y</mark>: создать Solid Layer.</li>
+          <li><mark>Ctrl + Alt + Y</mark>: создать Adjustment Layer.</li>
+          <li>
+            <mark>[</mark> и <mark>]</mark>: передвинуть начало или конец слоя к плейхеду.
           </li>
           <li>
-            <mark>B</mark> и <mark>N</mark>: установка начала и конца рабочей области
+            <mark>Ctrl + [</mark> и <mark>Ctrl + ]</mark>: передвинуть выделенный слой
+            вниз или вверх по иерархии таймлайна.
+          </li>
+          <li>
+            <mark>Alt + [</mark> и <mark>Alt + ]</mark>: обрезать/продлить левую или
+            правую часть слоя от плейхеда.
+          </li>
+          <li><mark>I</mark> и <mark>O</mark>: перейти к началу или концу слоя.</li>
+          <li>
+            <mark>B</mark> и <mark>N</mark>: установка начала или конца рабочей области.
+          </li>
+          <li>
+            <mark>Page Up</mark> и <mark>Page Down</mark>: переместить плейхед к
+            предыдущему или следующему кадру.
+          </li>
+          <li>
+            <mark>J</mark> и <mark>K</mark>: переместить плейхед к предыдущему или
+            следующему кейфрейму.
+          </li>
+          <li>
+            <mark>*</mark>: поставить маркер на таймлайне в месте, где стоит плейхед.
+          </li>
+          <li>
+            <mark>Пробел</mark> или <mark>Space</mark>: начать воспроизведение
+            предпросмотра. При установленных параметрах
+            <mark>Cache Before Playback</mark> и
+            <mark>If Caching, play cached frames</mark> в окне Preview после нажатия на
+            <mark>Пробел</mark> начнётся кэширование предпросмотра композиции, чтобы его
+            прервать и начать воспроизведение, нажмите на <mark>Пробел</mark> ещё раз.
+          </li>
+          <li>
+            Зажатие <mark>Пробел</mark> или <mark>Space</mark>: быстрый инструмент "Рука",
+            позволяющий двигать элементы интерфейса, например предпросмотр или таймлайн.
+          </li>
+          <li><mark>Ctrl + Alt + Home</mark>: установка якорной точки в центр слоя.</li>
+          <li><mark>Ctrl + Home</mark>: расположить слой в центр композиции.</li>
+          <li>
+            <mark>Ctrl + Alt + F</mark>: растянуть слой и подогнать положение под
+            разрешение композиции.
+          </li>
+          <li>
+            <mark>Ctrl + Alt + Shift + H</mark>: растянуть слой и подогнать положение под
+            ширину композиции.
+          </li>
+          <li>
+            <mark>Ctrl + Alt + Shift + G</mark>: растянуть слой и подогнать положение под
+            высоту композиции.
+          </li>
+          <li>
+            <mark>Ctrl + Alt + T</mark>: включить <mark>Time-Remap</mark> у выделенного
+            слоя.
+          </li>
+          <li>
+            <mark>Ctrl + Alt + R</mark>: выполнить команду
+            <mark>Time-Reverse Layer</mark>, то есть перевернуть по времени слой.
+          </li>
+          <li>
+            <mark>Ctrl + K</mark>: открыть настройки композиции для указания разрешения,
+            FPS и прочих параметров.
           </li>
           <li>
             <mark>Ctrl + Shift + X</mark>: обрезка композиции до начала и конца рабочей
-            области
+            области.
           </li>
           <li>
             <mark>Ctrl + Shift + Y</mark>: установка параметров (размер, цвет, угол
@@ -964,42 +1042,70 @@
           </li>
           <li>
             Одиночное нажатие <mark>U</mark>: раскрыть все параметры слоя, у которых есть
-            ключи
+            ключи.
           </li>
           <li>
             Двойное нажатие <mark>U</mark>: раскрыть все применённые эффекты слоя и
-            параметры, у которых есть ключи
+            параметры, у которых есть ключи.
           </li>
-          <li>Одиночное нажатие <mark>E</mark>: раскрыть добавленные эффекты у слоя</li>
+          <li>Одиночное нажатие <mark>E</mark>: раскрыть добавленные эффекты у слоя.</li>
           <li>
-            Двойное нажатие <mark>E</mark>: показать параметры у которых есть выражения
+            Двойное нажатие <mark>E</mark>: показать параметры у которых есть выражения.
           </li>
           <li>
             <mark>V</mark>: инструмент выделения, стандартный инструмент на все случаи
-            жизни
+            жизни.
           </li>
           <li>
             <mark>H</mark> или зажатие <mark>Space</mark>: инструмент руки, позволяет
-            перемещать мышкой таймлайн и предпросмотр
+            перемещать мышкой таймлайн и предпросмотр.
           </li>
-          <li><mark>A</mark>: раскрытие положения якорной у слоя</li>
-          <li><mark>Y</mark>: инструмент для выбора положения якорной точки</li>
-          <li><mark>G</mark>: инструмент пера, позволяет рисовать фигуру или маску</li>
-          <li><mark>Ctrl + Alt + Home</mark>: установка якорной точки в центр слоя</li>
-          <li><mark>Ctrl + Home</mark>: расположить слой в центр композиции</li>
-          <li><mark>S</mark>: раскрытие масштаба слоя</li>
-          <li><mark>R</mark>: раскрытие поворота слоя</li>
-          <li><mark>T</mark>: раскрытие прозрачности слоя</li>
-          <li>Одиночное нажатие <mark>L</mark>: раскрытие громкости слоя</li>
-          <li>Двойное нажатие <mark>L</mark>: раскрытие звуковой дорожки слоя</li>
+          <li><mark>A</mark>: раскрытие положения якорной у слоя.</li>
+          <li><mark>Y</mark>: инструмент для выбора положения якорной точки.</li>
+          <li><mark>G</mark>: инструмент пера, позволяет рисовать фигуру или маску.</li>
+          <li><mark>M</mark>: раскрытие масок слоя.</li>
+          <li><mark>P</mark>: раскрытие положения слоя.</li>
+          <li><mark>S</mark>: раскрытие масштаба слоя.</li>
+          <li><mark>R</mark>: раскрытие поворота слоя.</li>
+          <li><mark>T</mark>: раскрытие прозрачности слоя.</li>
+          <li>Одиночное нажатие <mark>L</mark>: раскрытие громкости слоя.</li>
+          <li>Двойное нажатие <mark>L</mark>: раскрытие звуковой дорожки слоя.</li>
           <li>
-            <mark>Ctrl + T</mark>: инструмент "Текст", позволяющий создать текстовый слой
+            <mark>Ctrl + T</mark>: инструмент "Текст", позволяющий создать текстовый слой.
           </li>
           <li>
-            <mark>~</mark> или <mark>Ё</mark> - открыть окно в рабочей области на весь
+            <mark>~</mark> или <mark>Ё</mark>: открыть окно в рабочей области на весь
             экран.
           </li>
-          <li><mark>Ctrl + \</mark> - скрыть заголовок окна</li>
+          <li>
+            <mark>Shift и +</mark> или <mark>Shift и -</mark>: изменить режимы наложения
+            выделенного слоя.
+          </li>
+          <li>
+            <mark>'</mark> или <mark>Э</mark>: отобразить безопасные области композиции
+            под ТВ.
+          </li>
+          <li>
+            <mark>Ctrl + R</mark>: отобразить линейку. С помощью линейки можно создать
+            направляющие, зажав <mark>ЛКМ</mark> по одной из сторон линейки и потянув в
+            сторону.
+          </li>
+          <li><mark>Ctrl + ;</mark>: отобразить направляющие.</li>
+          <li>
+            <mark>Ctrl + Shift + ;</mark>: сделать привязку или snapping к направляющим.
+          </li>
+          <li>
+            <mark>Ctrl + '</mark>: отобразить сетку. Цвет и размер сетки настраиваются в
+            <mark>Edit &gt; Preferences &gt; Grid &amp; Guides</mark>
+          </li>
+          <li><mark>Ctrl + Shift + '</mark>: сделать привязку или snapping к сетке.</li>
+          <li>
+            <mark>Ctrl + Alt + Shift + N</mark>: открыть дубликат окна предпросмотра и
+            зафиксировать его "замком". Полезно, если нужно открыть вид из двух композиций
+            одновременно.
+          </li>
+          <li><mark>Ctrl + Alt + ;</mark>: открыть настройки After Effects.</li>
+          <li><mark>Ctrl + \</mark>: скрыть заголовок окна.</li>
         </ul>
       </details>
       <details>
