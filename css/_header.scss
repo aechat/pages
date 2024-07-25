@@ -20,6 +20,10 @@ header {
   box-sizing      : border-box;
   z-index         : 3;
 
+  .material-icons {
+    font-size: 24px;
+  }
+
   @media screen and (min-width: 800px) {
     max-width                 : 800px;
     left                      : 50%;

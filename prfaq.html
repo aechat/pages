@@ -15,10 +15,7 @@
       name="viewport"
       content="width=device-width,initial-scale=1"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+
     <title>prfaq</title>
     <meta
       name="description"
@@ -787,6 +784,34 @@
         <p>
           В последних версиях Premiere Pro баг с исчезновением этого пункта по идее
           исправили, но не исключено повторное появление этой проблемы в дальнейшем.
+        </p>
+      </details>
+      <details>
+        <summary>
+          Зачем люди советуют поменять язык в Premiere Pro и как это сделать?
+        </summary>
+        <p>
+          Аналогично как с After Effects вы можете наткнуться на различные баги и приколы
+          при использовании сторонних шаблонов или пресетов. Создатели подобного рода
+          контента не рассчитывают на то, что вы будете использовать другую локализацию
+          программы, отличную от английской.
+        </p>
+        <p>
+          Для смены языка откройте консоль с помощью <mark>Ctrl + F12</mark> и
+          переключитесь в <mark>Debug Database View</mark>.
+        </p>
+        <figure>
+          <img
+            src="source/console_database_view_premierepro.png"
+            alt="Окно консоли в Premiere Pro"
+            title="Окно консоли в Premiere Pro"
+          />
+          <figcaption>Окно консоли в Premiere Pro</figcaption>
+        </figure>
+        <p>
+          Затем нужно найти строчку <mark>ApplicationLanguage</mark> и указать en_US
+          вместо того, что у вас указано. После этого перезагрузите программу и
+          наслаждайтесь более стабильной работой программы.
         </p>
       </details>
       <details>

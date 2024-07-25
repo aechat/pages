@@ -241,6 +241,9 @@ header {
           box-sizing: border-box;
   z-index: 3;
 }
+header .material-icons {
+  font-size: 24px;
+}
 @media screen and (min-width: 800px) {
   header {
     max-width: 800px;
@@ -334,7 +337,7 @@ header span:active {
   content: "travel_explore";
   padding-right: 3px;
   font-size: 12px;
-  font-family: "Material Symbols Outlined", system-ui;
+  font-family: "Material Icons", system-ui;
   vertical-align: middle;
 }
 .content a:hover {
@@ -411,7 +414,7 @@ header span:active {
 }
 .content code::after {
   content: "content_copy";
-  font-family: "Material Symbols Outlined", system-ui;
+  font-family: "Material Icons", system-ui;
   font-size: 28px;
   position: absolute;
   right: 0;
@@ -480,7 +483,7 @@ header span:active {
 .content mark span {
   padding: 0 5px 0 1px;
   font-size: 14px;
-  font-family: "Material Symbols Outlined", system-ui;
+  font-family: "Material Icons", system-ui;
   color: var(--accent);
   vertical-align: middle;
   word-break: keep-all;
@@ -488,7 +491,7 @@ header span:active {
 .content mark::before {
   color: var(--accent);
   content: "content_copy";
-  font-family: "Material Symbols Outlined", system-ui;
+  font-family: "Material Icons", system-ui;
   font-size: 14px;
   padding: 0 3px 0 1px;
   vertical-align: middle;
@@ -610,7 +613,7 @@ header span:active {
 }
 .important::before {
   content: "warning";
-  font-family: "Material Symbols Outlined", system-ui;
+  font-family: "Material Icons", system-ui;
   font-size: 3em;
   position: absolute;
   right: 0;
@@ -715,7 +718,7 @@ header span:active {
   text-decoration: none;
 }
 .links .material-icons {
-  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 36;
+  font-family: "Material Icons";
   padding-right: 5px;
 }
 
@@ -774,7 +777,6 @@ header span:active {
   overflow-x: visible;
 }
 .container_sidemenu .material-icons {
-  font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 24;
   font-size: 18px;
   -webkit-padding-end: 8px;
      -moz-padding-end: 8px;
@@ -964,6 +966,12 @@ header span:active {
   src: url("../fonts/Montserrat-Black.woff2") format("woff2");
 }
 @font-face {
+  font-family: "Material Icons";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/MaterialSymbolsRounded.woff2") format("woff2");
+}
+@font-face {
   font-display: swap;
   font-family: "Inter";
   font-style: normal;
@@ -1125,8 +1133,8 @@ section {
 }
 
 .material-icons {
+  font-family: "Material Icons";
   color: var(--accent);
-  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 36;
   vertical-align: text-bottom;
 }
 

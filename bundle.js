@@ -19,9 +19,7 @@ async function getLastCommitDate() {
   const repo = "links";
 
   const currentUrl = window.location.pathname;
-  const filePath = currentUrl.startsWith("/")
-    ? currentUrl.substring(1)
-    : currentUrl;
+  const filePath = currentUrl.startsWith("/") ? currentUrl.substring(1) : currentUrl;
 
   const url = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}`;
 
@@ -78,9 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
 const detailsElements = document.querySelectorAll("details");
 
 function expandAllDetails() {
-    detailsElements.forEach((details) => {
-        details.open = true;
-    });
+  detailsElements.forEach((details) => {
+    details.open = true;
+  });
 }
 function extractTextFromHTML(htmlString) {
   let tempElement = document.createElement("div");
@@ -287,10 +285,7 @@ document.addEventListener("click", function (event) {
   const leftMenuVisible = leftSidemenu.classList.contains("visible");
   const rightMenuVisible = rightSidemenu.classList.contains("visible");
   if (leftMenuVisible || rightMenuVisible) {
-    if (
-      !leftSidemenu.contains(event.target) &&
-      !rightSidemenu.contains(event.target)
-    ) {
+    if (!leftSidemenu.contains(event.target) && !rightSidemenu.contains(event.target)) {
       if (leftMenuVisible && rightMenuVisible) {
         toggleSidemenu(".left_sidemenu");
         toggleSidemenu(".right_sidemenu");

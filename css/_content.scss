@@ -25,7 +25,7 @@
       content       : "travel_explore";
       padding-right : 3px;
       font-size     : 12px;
-      font-family   : "Material Symbols Outlined", system-ui;
+      font-family   : "Material Icons", system-ui;
       vertical-align: middle;
     }
 
@@ -106,7 +106,7 @@
 
     &::after {
       content    : "content_copy";
-      font-family: "Material Symbols Outlined", system-ui;
+      font-family: "Material Icons", system-ui;
       font-size  : 28px;
       position   : absolute;
       right      : 0;
@@ -172,7 +172,7 @@
     span {
       padding       : 0 5px 0 1px;
       font-size     : 14px;
-      font-family   : "Material Symbols Outlined", system-ui;
+      font-family   : "Material Icons", system-ui;
       color         : var(--accent);
       vertical-align: middle;
       word-break    : keep-all;
@@ -181,7 +181,7 @@
     &::before {
       color         : var(--accent);
       content       : "content_copy";
-      font-family   : "Material Symbols Outlined", system-ui;
+      font-family   : "Material Icons", system-ui;
       font-size     : 14px;
       padding       : 0 3px 0 1px;
       vertical-align: middle;
@@ -323,7 +323,7 @@
 
   &::before {
     content    : "warning";
-    font-family: "Material Symbols Outlined", system-ui;
+    font-family: "Material Icons", system-ui;
     font-size  : 3em;
     position   : absolute;
     right      : 0;
