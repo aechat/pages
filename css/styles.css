@@ -363,12 +363,6 @@ header span:active {
   word-wrap: break-word;
   background-color: var(--for-summary);
 }
-.content summary[open]::marker {
-  content: "- ";
-}
-.content summary::marker {
-  content: "+ ";
-}
 .content summary::before {
   content: "";
   position: absolute;
@@ -380,7 +374,7 @@ header span:active {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.content audio,
+.content summary audio,
 .content video,
 .content iframe {
   max-width: 800px;
@@ -876,7 +870,7 @@ header span:active {
       -ms-flex-align: center;
           align-items: center;
   color: var(--text);
-  text-align: center;
+  text-align: left;
   padding-inline: 15px;
   padding-block: 10px;
   width: 100%;
@@ -1183,4 +1177,14 @@ footer {
 .visible {
   opacity: 1;
   visibility: visible;
+}
+
+summary::marker {
+  content: "+ ";
+  font-family: "JetBrains Mono", monospace;
+}
+
+details[open] summary::marker {
+  content: "- ";
+  font-family: "JetBrains Mono", monospace;
 }

@@ -135,3 +135,13 @@ footer {
   opacity   : 1;
   visibility: visible;
 }
+
+summary::marker {
+  content: "+ ";
+  font-family: 'JetBrains Mono', monospace;
+}
+
+details[open] summary::marker {
+  content: "- ";
+  font-family: 'JetBrains Mono', monospace;
+}
