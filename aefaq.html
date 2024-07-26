@@ -5542,6 +5542,73 @@
         </p>
       </details>
       <details>
+        <summary>Как импортировать файлы .heic, .heif и .hevc?</summary>
+        <p>
+          На Windows 10 и 11 нельзя открыть файлы <mark>HEIC</mark>, <mark>HEIF</mark> и
+          <mark>HEVC</mark> без установленного кодека. Казалось бы, достаточно их
+          установить с Microsoft Store. Это можно сделать при условии что у вас есть два
+          доллара за кодек HEVC, а как мы с вами знаем - мы не хотим платить.
+        </p>
+        <figure>
+          <img
+            src="source/heic_error.png"
+            alt="Ошибка импорта HEIC в After Effects"
+          />
+          <figcaption>Ошибка импорта HEIC в After Effects</figcaption>
+        </figure>
+        <p>
+          Тогда на помощь приходят установщики этих кодеков. Кодек для HEIC и HEVC можно
+          скачать
+          <a
+            title="Кодек HEIC и HEIF"
+            href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/3f78db48-62c0-4600-b440-690463fe3fe3?P1=1721938979&P2=404&P3=2&P4=NRdclhQYS1iAdOl8PVYnQiyVzubs0Kr4%2fKSQTAfMx5Dzw19quYH55DIUFmrb1myVmFYvKJx0h%2fIhxvqTc83Low%3d%3d"
+            >тут</a
+          >, а для HEVC
+          <a
+            href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/38775b20-6e63-4c94-9e03-3a26ccb1535f?P1=1721938954&P2=404&P3=2&P4=CjDCHp2VF4uM8BbCG2BVzGg6cXfP25F6KNcQt7UV%2f7PWUqVPBpy%2fVFDqTM32n3DA%2f3ZMF6qYHoAbNg%2bN93TQgA%3d%3d"
+            title="Кодек HEVC"
+            >тут</a
+          >. Чтобы установить <mark>.appxbundle</mark> пакеты, достаточно их открыть
+          двойным кликом. Если ваш браузер жалуется на "вирусы" - проигнорируйте это и
+          продолжите скачивание.
+        </p>
+        <p>
+          Если вам предлагают открыть файл с помощью
+          <mark>Обработчика команд Windows</mark> или <mark>Установщика приложений</mark>,
+          то выбирайте что вам душе угодно. Я же предпочту <mark>Обработчика</mark>.
+        </p>
+        <figure>
+          <img
+            src="source/appxbundle_what_open.png"
+            title="Каким образом вы хотите открыть файл?"
+            alt="Каким образом вы хотите открыть файл?"
+          />
+          <figcaption>Окно "Каким образом вы хотите открыть файл?"</figcaption>
+        </figure>
+        <p>
+          Если после установки с помощью <mark>Обработчика команд</mark> вы видите это, то
+          кодеки установились корректно.
+        </p>
+        <code
+          >Path :<br />
+          Online : True<br />
+          RestartNeeded : False<br
+        /></code>
+        <p>
+          После установки кодеков вы теперь сможете открывать файлы <mark>.heif</mark>,
+          <mark>.heic</mark> и <mark>.hevc</mark> на вашем компьютере, но есть одно но.
+          After Effects не поддерживает файлы формата <mark>.hevc</mark>, а вот
+          изображения - поддерживает. Облом, но не беда - видеофайлы всегда можно
+          переконвертировать через
+          <a
+            title="Shutter Encoder"
+            href="https://www.shutterencoder.com"
+            >Shutter Encoder</a
+          >
+          в монтажный кодек.
+        </p>
+      </details>
+      <details>
         <summary>Как избавиться от ступенчатого градиента?</summary>
         <p>
           Для начала немного теории о том, почему градиент становится негладким: при
@@ -6978,6 +7045,12 @@
             >
           </footer>
         </blockquote>
+        <p>
+          Если вы испугались командной строки при установке программ от Adobe, то спешу
+          вас успокоить. В командной строке выполняются команды для прописывания адресов в
+          hosts, чтобы программы от Adobe не лезли в сеть и не показывали окна о
+          "недействительной лицензии".
+        </p>
       </details>
       <details>
         <summary>
