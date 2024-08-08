@@ -47,6 +47,7 @@
         <ul>
           <li>
             <a
+              class="weblink"
               href="index.html"
               title="На главную"
               onmousedown="createRipple(event)"
@@ -56,6 +57,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="about.html"
               title="О сайте"
               onmousedown="createRipple(event)"
@@ -75,29 +77,29 @@
         <ul>
           <li>
             <button
+              data-theme="system"
               onclick="setSystemTheme()"
               onmousedown="createRipple(event)"
-              data-theme="system"
             >
-              <span class="material-icons">hide_source </span>Системная
+              Системная<span class="material-icons">hide_source </span>
             </button>
           </li>
           <li>
             <button
+              data-theme="light"
               onclick="toggleTheme('light')"
               onmousedown="createRipple(event)"
-              data-theme="light"
             >
-              <span class="material-icons">light_mode </span>Светлая
+              Светлая<span class="material-icons">light_mode </span>
             </button>
           </li>
           <li>
             <button
+              data-theme="dark"
               onclick="toggleTheme('dark')"
               onmousedown="createRipple(event)"
-              data-theme="dark"
             >
-              <span class="material-icons">dark_mode </span>Тёмная
+              Тёмная<span class="material-icons">dark_mode </span>
             </button>
           </li>
         </ul>
@@ -109,19 +111,21 @@
       <p>
         В
         <a
+          class="weblink"
           href="https://t.me/joinchat/F1DdXtG9LephYWUy"
           title="AEChat в Telegram"
           >чате</a
         >
         вы можете спокойно обсудить любые темы, касающиеся работы в программах After
         Effects и Premiere Pro. Также вы можете спокойно предложить свою работу или
-        вакансию хештегом <mark>#работа</mark>
+        вакансию хештегом <mark class="copy">#работа</mark>
       </p>
       <p>
         Прежде чем рассказать о проблеме - нажимайте на галочку рядом с пунктом
-        <mark>"сжать изображение"</mark> при загрузке фото, не делайте фото/видео монитора
-        на телефон (используйте кнопку для скриншота или запись экрана) и опишите проблему
-        текстом, а не голосом. За игнорирование этого пункта - возможен мут.
+        <mark class="copy">"сжать изображение"</mark> при загрузке фото, не делайте
+        фото/видео монитора на телефон (используйте кнопку для скриншота или запись
+        экрана) и опишите проблему текстом, а не голосом. За игнорирование этого пункта -
+        возможен мут.
       </p>
       <p>
         Не помешало объяснить при описании проблемы характеристики вашей компьютера,
@@ -130,35 +134,39 @@
         в интернете, так и в чате и FAQ.
       </p>
       <p>
-        Dear English-speaking colleagues, the chat uses <mark>only Russian</mark> . Use a
-        translator from your language to Russian, or don't create problems for others.
-        Thank you.
+        Dear English-speaking colleagues, the chat uses
+        <mark class="copy">only Russian</mark> . Use a translator from your language to
+        Russian, or don't create problems for others. Thank you.
       </p>
     </div>
     <section>Правила AEChat</section>
     <div class="content">
-      <h2>Администраторы чата никому и ничего не обязаны.</h2>
+      <h2>Администраторы чата никому и ничего не обязаны</h2>
       <p>
         Администраторы чата ничем не обязаны и не являются техподдержкой, упоминать их
         через @ лишний раз не стоит, бот вас накажет. Также не стоит задавать им свои
         вопросы в личные сообщения, НЕ касающихся работы данного
         <a
+          class="weblink"
           href="https://t.me/joinchat/F1DdXtG9LephYWUy"
           title="AEChat в Telegram"
           >чата</a
         >, каналов
         <a
+          class="weblink"
           href="http://t.me/aetemp"
           title="AETemp в Telegram"
           >AETemp</a
         >,
         <a
+          class="weblink"
           href="http://t.me/designworld"
           title="Design World в Telegram"
           >Design World</a
         >
         и бота
         <a
+          class="weblink"
           href="https://t.me/HiStockBot?start=509060394"
           title="Бот HiStock в Telegram"
           >HiStock</a
@@ -170,7 +178,7 @@
         вопрос уже был дан ответ (вы можете воспользоваться поиском по чату, каналам или с
         помощью поисковиков).
       </p>
-      <h2>Плохое поведение.</h2>
+      <h2>Нет флуду и плохому поведению</h2>
       <p>
         Запрещён спам, чрезмерное употребление матов, флуд (отход от темы, вопросы не по
         продуктам Adobe или много бессмысленных сообщений, для этого есть флудилка),
@@ -178,17 +186,21 @@
         токсичность и "твинководство", если вы обиделись на бан или мут основного
         аккаунта.
       </p>
-      <h2>Мета-вопросы.</h2>
+      <h2>Ребята, давайте жить без мета-вопросов</h2>
       <p>
+        <!-- fixme: переделать про метавопросы -->
         Пожалуйста, не задавайте вопросы, например как:
-        <mark>"Можно пару вопросов?"</mark>,
-        <mark>"Столкнулась с проблемой, может ли кто-то помочь разобраться?" </mark>,
-        <mark>"Кто-то знаком с Program_Name?"</mark>,
-        <mark>"Есть тут специалисты по Program_Name?"</mark>,
-        <mark>"Нужна помощь, напишите в личные сообщения"</mark>,
-        <mark>"Сложно описать вопрос, помогите"</mark>,
-        <mark>"Ау, чё не отвечаете?"</mark> и так далее. Эти вопросы не несут никакой
-        ценности для остальных пользователей, так как нет конкретного вопроса.
+        <mark class="copy">"Можно пару вопросов?"</mark>,
+        <mark class="copy"
+          >"Столкнулась с проблемой, может ли кто-то помочь разобраться?" </mark
+        >, <mark class="copy">"Кто-то знаком с Program_Name?"</mark>,
+        <mark class="copy">"Есть тут специалисты по Program_Name?"</mark>,
+        <mark class="copy">"Нужна помощь, напишите в личные сообщения"</mark>,
+        <mark class="copy">"Сложно описать вопрос, помогите"</mark>,
+        <mark class="copy">"Ау, чё не отвечаете?"</mark> и так далее. Если вы задаёте
+        такие вопросы, то явно имеете у себя в голове четкий вопрос, который почему-то
+        прячете. И таким образом тянете себе время, потому что участники чата не понимают
+        о чем будет идти речь.
       </p>
       <p>
         ПИШИТЕ СВОЙ ВОПРОС СРАЗУ В ЧАТ, НЕ РАЗДЕЛЯЯ НА МНОЖЕСТВО СООБЩЕНИЙ, А ТАКЖЕ НЕ
@@ -199,6 +211,7 @@
         неэффективно используют время, а также могут негативно повлиять на общение между
         участниками чата. Подробнее, пожалуйста, прочитайте на
         <a
+          class="weblink"
           href="https://nometa.xyz"
           title="nometa.xyz"
           >nometa.xyz</a
@@ -232,16 +245,19 @@
       <p>
         Вы можете поделиться ссылкой на полезный ресурс (например:
         <a
+          class="weblink"
           href="https://ezgif.com"
           title="Ezgif"
           >ezgif.com</a
         >,
         <a
+          class="weblink"
           href="https://en.likefont.com"
           title="LikeFont"
           >en.likefont.com</a
         >,
         <a
+          class="weblink"
           href="https://convertio.co"
           title="Convertio"
           >convertio.co</a
@@ -266,6 +282,7 @@
       <p>
         На
         <a
+          class="weblink"
           href="index.html"
           title="Главная страница сайта"
           >главной странице</a

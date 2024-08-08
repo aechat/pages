@@ -5,11 +5,10 @@ header {
   flex-wrap       : nowrap;
   justify-content : space-between;
   align-items     : center;
-  background-color: var(--header-background);
-  color           : var(--accent);
+  background-color: var(--header_background);
+  color           : var(--primary);
   backdrop-filter : blur(25px) saturate(80%);
-  font-family     : "Montserrat", sans-serif;
-  filter          : drop-shadow(0 0 15px var(--for-shadow));
+  filter          : drop-shadow(0 0 15px var(--shadow));
   height          : 65px;
   padding-inline  : 20px;
   position        : fixed;
@@ -20,8 +19,9 @@ header {
   box-sizing      : border-box;
   z-index         : 3;
 
-  .material-icons {
+  span.material-icons {
     font-size: 24px;
+    color: var(--primary);
   }
 
   @media screen and (min-width: 800px) {
@@ -51,11 +51,10 @@ header {
 }
 
 .logo {
-  font-family: "Montserrat", sans-serif;
-  font-size  : 24px;
+  font-family: "Schuss Sans", sans-serif;
+  font-size  : 28px;
   font-weight: 900;
   margin     : 0;
-  padding    : 10px 0;
   text-align : center;
-  color      : var(--accent);
+  color      : var(--primary);
 }

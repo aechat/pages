@@ -36,6 +36,13 @@
 }
 
 @font-face {
+  font-family: 'Schuss Sans';
+  src        : url('../fonts/SchussSansPCG-Heavy.woff2') format('woff2');
+  font-weight: 900;
+  font-style : normal;
+}
+
+@font-face {
   font-family: "JetBrains Mono";
   font-style : normal;
   src        : url("../fonts/JetBrainsMono.woff2") format("woff2");

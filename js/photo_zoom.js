@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         this.style.cursor = "zoom-in";
       } else {
         this.style.transform = "scale(1.5)";
-        this.style.filter = "drop-shadow(0px 0px 20px var(--for-shadow))";
+        this.style.filter = "drop-shadow(0px 0px 20px var(--shadow))";
         this.style.cursor = "zoom-out";
       }
     });

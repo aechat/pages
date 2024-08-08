@@ -1,7 +1,7 @@
 @import "variables";
 
 .links {
-  background-color: var(--altbackground);
+  background-color: var(--content_background);
   border-radius   : 20px;
   margin-inline   : auto;
 
@@ -12,7 +12,7 @@
   }
 
   h2 {
-    color      : var(--accent);
+    color      : var(--primary);
     font-family: "Montserrat", sans-serif;
     font-size  : 20px;
     font-weight: 700;
@@ -35,14 +35,13 @@
     }
 
     &:not(:last-child) {
-      border-bottom: 1px solid var(--for-border);
+      border-bottom: 1px solid var(--border);
     }
   }
 
   section {
     padding-inline: 25px;
     padding-block : 10px;
-    opacity       : 0.75;
     font-size     : 14px;
     text-align    : center;
     text-transform: none;

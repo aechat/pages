@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- todo: сделать более компактный список ссылок, через grid или flex -->
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -15,19 +16,15 @@
       name="viewport"
       content="width=device-width,initial-scale=1"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-      rel="stylesheet"
-      as="style"
-    />
+
     <title>links</title>
     <meta
       name="description"
-      content="Различные ссылки на материалы и FAQ по программам от Adobe"
+      content="Сборник ссылок на материалы, альтернативные чаты и FAQ по Adobe"
     />
     <meta
       name="keywords"
-      content="aechat, links, аечат, чат афтер эффектс, чат, after effects, aetemp, шаблоны, ссылки, premiere pro, photoshop, склад стройматериалов"
+      content="aechat, links, аечат, чат афтер эффектс, чат, after effects, aetemp, шаблоны, ссылки, premiere pro, photoshop, склад стройматериалов, запчасти на форд фокус, премтемп, premtemp, аетемп, шаблоны афтер эффектс, плагины афтер эффектс, борисфх, borisfx"
     />
     <meta
       property="og:type"
@@ -43,7 +40,7 @@
     />
     <meta
       property="og:description"
-      content="Различные ссылки на материалы и FAQ по программам от Adobe"
+      content="Сборник ссылок на материалы, альтернативные чаты и FAQ по Adobe"
     />
   </head>
   <body
@@ -76,6 +73,7 @@
         <ul>
           <li>
             <a
+              class="weblink"
               href="about.html"
               title="О сайте"
               onmousedown="createRipple(event)"
@@ -99,7 +97,7 @@
               onclick="setSystemTheme()"
               onmousedown="createRipple(event)"
             >
-              <span class="material-icons">hide_source </span>Системная
+              Системная<span class="material-icons">hide_source </span>
             </button>
           </li>
           <li>
@@ -108,7 +106,7 @@
               onclick="toggleTheme('light')"
               onmousedown="createRipple(event)"
             >
-              <span class="material-icons">light_mode </span>Светлая
+              Светлая<span class="material-icons">light_mode </span>
             </button>
           </li>
           <li>
@@ -117,7 +115,7 @@
               onclick="toggleTheme('dark')"
               onmousedown="createRipple(event)"
             >
-              <span class="material-icons">dark_mode </span>Тёмная
+              Тёмная<span class="material-icons">dark_mode </span>
             </button>
           </li>
         </ul>
@@ -129,6 +127,7 @@
       <ul>
         <li>
           <a
+            class="weblink"
             href="aefaq.html"
             title="aefaq"
             onmousedown="createRipple(event)"
@@ -139,6 +138,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="prfaq.html"
             title="prfaq"
             onmousedown="createRipple(event)"
@@ -149,6 +149,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="psfaq.html"
             title="psfaq"
             onmousedown="createRipple(event)"
@@ -164,6 +165,7 @@
       <ul>
         <li>
           <a
+            class="weblink"
             href="https://t.me/s/aetemp"
             title="AETemp"
             onmousedown="createRipple(event)"
@@ -177,6 +179,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/s/premtemp"
             title="PremTemp"
             onmousedown="createRipple(event)"
@@ -187,6 +190,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/s/designworld"
             title="Design World"
             onmousedown="createRipple(event)"
@@ -200,6 +204,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/HiStockBot?start=509060394"
             title="HiStockBot"
             onmousedown="createRipple(event)"
@@ -213,6 +218,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/+Qd9xu7A4TeIwNzY6"
             title="склад стройматериалов"
             onmousedown="createRipple(event)"
@@ -223,6 +229,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/+gSmpjWyhd5w3ZGFi"
             title="запчасти на форд фокус"
             onmousedown="createRipple(event)"
@@ -233,6 +240,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/+ZqiaMfQRFgM4YmEy"
             title="яблоневый сад"
             onmousedown="createRipple(event)"
@@ -248,6 +256,7 @@
       <ul>
         <li>
           <a
+            class="weblink"
             href="https://t.me/joinchat/F1DdXtG9LephYWUy"
             title="AEChat"
             onmousedown="createRipple(event)"
@@ -258,6 +267,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="rules.html"
             title="Правила AEChat"
             onmousedown="createRipple(event)"
@@ -275,6 +285,7 @@
       <ul>
         <li>
           <a
+            class="weblink"
             href="https://t.me/Technical_Chat"
             title="Technical Chat"
             onmousedown="createRipple(event)"
@@ -287,6 +298,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/ru_montage"
             title="ru_montage"
             onmousedown="createRipple(event)"
@@ -300,6 +312,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/whatthefontt"
             title="Что за шрифт?"
             onmousedown="createRipple(event)"
@@ -310,6 +323,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/figmachat"
             title="Фигма-чат"
             onmousedown="createRipple(event)"
@@ -320,6 +334,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/Sound_Tut"
             title="Sound Chat"
             onmousedown="createRipple(event)"
@@ -333,6 +348,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/UpWorkTut"
             title="Work Chat"
             onmousedown="createRipple(event)"
@@ -346,6 +362,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/Blender3DChat"
             title="Blender 3D Chat"
             onmousedown="createRipple(event)"
@@ -356,6 +373,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/Cinema4DChat"
             title="Cinema 4D Chat"
             onmousedown="createRipple(event)"
@@ -366,6 +384,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/+Utwk54hiRyjGorFJ"
             title="Substance Painter &amp; Designer Chat"
             onmousedown="createRipple(event)"
@@ -376,6 +395,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/UE_Chat"
             title="Unreal Engine Chat"
             onmousedown="createRipple(event)"
@@ -389,6 +409,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/HoudiniTut"
             title="Houdini Chat"
             onmousedown="createRipple(event)"
@@ -401,6 +422,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/NeuralNetworksTut"
             title="Neural Networks Chat"
             onmousedown="createRipple(event)"
@@ -414,6 +436,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/friendlyFrontendChat"
             title="Friendly Frontend Chat"
             onmousedown="createRipple(event)"
@@ -424,11 +447,73 @@
         </li>
       </ul>
     </div>
+    <section>Вакансии и работа</section>
+    <div class="links">
+      <!-- fixme: добавить ссылки  : https://t.me/tgDesignCareer, https://t.me/motionhunter, https://t.me/job_2dfa, https://t.me/fordesigner, https://t.me/CGWorkHub, https://t.me/jobforjunior, https://t.me/dprofilejob, https://t.me/artdesignjob, https://t.me/freelancetaverna, https://t.me/workindesign, https://t.me/designer_ru, -->
+      <ul>
+        <li>
+          <a
+            href=""
+            class="weblink"
+            title=""
+            onmousedown="createRipple(event)"
+          >
+            <h2></h2>
+            <p></p>
+          </a>
+        </li>
+        <li>
+          <a
+            href=""
+            class="weblink"
+            title=""
+            onmousedown="createRipple(event)"
+          >
+            <h2></h2>
+            <p></p>
+          </a>
+        </li>
+        <li>
+          <a
+            href=""
+            class="weblink"
+            title=""
+            onmousedown="createRipple(event)"
+          >
+            <h2></h2>
+            <p></p>
+          </a>
+        </li>
+        <li>
+          <a
+            href=""
+            class="weblink"
+            title=""
+            onmousedown="createRipple(event)"
+          >
+            <h2></h2>
+            <p></p>
+          </a>
+        </li>
+        <li>
+          <a
+            href=""
+            class="weblink"
+            title=""
+            onmousedown="createRipple(event)"
+          >
+            <h2></h2>
+            <p></p>
+          </a>
+        </li>
+      </ul>
+    </div>
     <section>Черные списки</section>
     <div class="links">
       <ul>
         <li>
           <a
+            class="weblink"
             href="https://t.me/cgblacklist"
             title="CG Blacklist"
             onmousedown="createRipple(event)"
@@ -438,6 +523,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/kinostop"
             title="Чёрный список кино индустрии"
             onmousedown="createRipple(event)"
@@ -447,6 +533,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/AEnedozakaz"
             title="AEНедозаказчики"
             onmousedown="createRipple(event)"
@@ -456,6 +543,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/Brickspacer_blacklist"
             title="Brickspacer Blacklist"
             onmousedown="createRipple(event)"
@@ -465,6 +553,7 @@
         </li>
         <li>
           <a
+            class="weblink"
             href="https://t.me/moshenniki_frilans"
             title="Мошенники фриланс (Чёрный список, кидалы)"
             onmousedown="createRipple(event)"

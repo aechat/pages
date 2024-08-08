@@ -58,6 +58,7 @@
         <ul>
           <li>
             <a
+              class="weblink"
               href="index.html"
               title="На главную"
               onmousedown="createRipple(event)"
@@ -67,6 +68,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="about.html"
               title="О сайте"
               onmousedown="createRipple(event)"
@@ -80,29 +82,29 @@
         <ul>
           <li>
             <button
+              data-theme="system"
               onclick="setSystemTheme()"
               onmousedown="createRipple(event)"
-              data-theme="system"
             >
-              <span class="material-icons">hide_source </span>Системная
+              Системная<span class="material-icons">hide_source </span>
             </button>
           </li>
           <li>
             <button
+              data-theme="light"
               onclick="toggleTheme('light')"
               onmousedown="createRipple(event)"
-              data-theme="light"
             >
-              <span class="material-icons">light_mode </span>Светлая
+              Светлая<span class="material-icons">light_mode </span>
             </button>
           </li>
           <li>
             <button
+              data-theme="dark"
               onclick="toggleTheme('dark')"
               onmousedown="createRipple(event)"
-              data-theme="dark"
             >
-              <span class="material-icons">dark_mode </span>Тёмная
+              Тёмная<span class="material-icons">dark_mode </span>
             </button>
           </li>
         </ul>
@@ -114,6 +116,7 @@
       <ul>
         <li>
           <a
+            class="weblink"
             href="mailto:m1sh3r@ya.ru?subject=Битая ссылка в links"
             onmousedown="createRipple(event)"
             title="Сообщить об ошибке"
@@ -143,8 +146,8 @@
           type="video/webm"
           style="margin-bottom: -30px; height: 400px"
           src="source/a-hat-in-time-404.webm"
-        ></video
-        ><audio
+        ></video>
+        <audio
           autoplay=""
           controls=""
           loop=""

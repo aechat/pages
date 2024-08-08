@@ -15,7 +15,6 @@
       name="viewport"
       content="width=device-width,initial-scale=1"
     />
-
     <title>prfaq</title>
     <meta
       name="description"
@@ -72,6 +71,7 @@
         <ul>
           <li>
             <a
+              class="weblink"
               href="index.html"
               title="На главную"
               onmousedown="createRipple(event)"
@@ -81,6 +81,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="about.html"
               title="О сайте"
               onmousedown="createRipple(event)"
@@ -101,6 +102,7 @@
         <ul>
           <li>
             <a
+              class="weblink"
               href="#where_find"
               title="Полезные материалы"
               onmousedown="createRipple(event)"
@@ -110,6 +112,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="#from_newbies"
               title="Вопросы от новичков"
               onmousedown="createRipple(event)"
@@ -119,6 +122,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="#errors"
               title="Частые ошибки"
               onmousedown="createRipple(event)"
@@ -128,6 +132,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="#install_errors"
               title="Проблемы с установкой"
               onmousedown="createRipple(event)"
@@ -137,6 +142,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="#render"
               title="Про рендер"
               onmousedown="createRipple(event)"
@@ -156,29 +162,29 @@
         <ul>
           <li>
             <button
+              data-theme="system"
               onclick="setSystemTheme()"
               onmousedown="createRipple(event)"
-              data-theme="system"
             >
-              <span class="material-icons">hide_source </span>Системная
+              Системная<span class="material-icons">hide_source </span>
             </button>
           </li>
           <li>
             <button
+              data-theme="light"
               onclick="toggleTheme('light')"
               onmousedown="createRipple(event)"
-              data-theme="light"
             >
-              <span class="material-icons">light_mode </span>Светлая
+              Светлая<span class="material-icons">light_mode </span>
             </button>
           </li>
           <li>
             <button
+              data-theme="dark"
               onclick="toggleTheme('dark')"
               onmousedown="createRipple(event)"
-              data-theme="dark"
             >
-              <span class="material-icons">dark_mode </span>Тёмная
+              Тёмная<span class="material-icons">dark_mode </span>
             </button>
           </li>
         </ul>
@@ -186,7 +192,7 @@
     </div>
     <div class="copied hidden"></div>
     <section>Предупреждение</section>
-    <div class="important">
+    <div class="warning">
       Данный раздел находится в активной разработке, поэтому некоторые пункты могут быть
       пропущены или недописаны до окончательных изменений.
     </div>
@@ -199,32 +205,38 @@
         <p>
           На
           <a
+            class="weblink"
             href="index.html"
             title="Главная страница links"
             >главной странице</a
           >
           в разделе ”Ресурсы" и в закрепленном сообщении в
           <a
+            class="weblink"
             href="https://t.me/joinchat/F1DdXtG9LephYWUy"
             title="AEChat в Telegram"
             >AEChat</a
           >
           вы всегда можете найти наши каналы для шаблонов и программ. Например, в
           <a
+            class="weblink"
             href="https://t.me/s/premtemp"
             title="Канал PremTemp в Telegram"
             >PremTemp</a
           >
-          можно найти звуки, переходы и шаблоны с помощью хештегов: <mark>#эффекты</mark>
-          <mark>#переходы</mark> <mark>#плашки</mark> <mark>#плагин</mark>. А в
+          можно найти звуки, переходы и шаблоны с помощью хештегов:
+          <mark class="copy">#эффекты</mark> <mark class="copy">#переходы</mark>
+          <mark class="copy">#плашки</mark> <mark class="copy">#плагин</mark>. А в
           <a
+            class="weblink"
             href="https://t.me/+Qd9xu7A4TeIwNzY6"
             title="канал склад стройматериалов в Telegram"
             >складе стройматериалов</a
           >
           вы можете найти конкретные программы или плагины для Windows, например:
-          <mark>#premierepro</mark> <mark>#magicbullet</mark> <mark>#borisfx</mark> или
-          <mark>#twixtor</mark>
+          <mark class="copy">#premierepro</mark> <mark class="copy">#magicbullet</mark>
+          <mark class="copy">#borisfx</mark> или
+          <mark class="copy">#twixtor</mark>
         </p>
       </details>
       <details>
@@ -234,35 +246,40 @@
         <p>
           У нас имеется бот
           <a
+            class="weblink"
             href="https://t.me/HiStockBot?start=509060394"
             title="Бот HiStock для покупки шаблонов в Telegram"
             >HiStock в Telegram</a
           >
           для оперативной покупки шаблонов с платформ
           <a
+            class="weblink"
             href="https://elements.envato.com"
             title="Envato Elements"
             >Envato Elements</a
           >,
           <a
+            class="weblink"
             href="https://freepik.com/"
             title="Freepik"
             >Freepik</a
           >,
           <a
+            class="weblink"
             href="https://motionarray.com/"
             title="Motion Array"
             >Motion Array</a
           >
           и
           <a
+            class="weblink"
             href="https://artlist.io/"
             title="Artlist"
             >Artlist</a
           >
           по выгодным ценам.
         </p>
-        <div class="important">
+        <div class="warning">
           Файлы из Videohive, Shutter Stock ботом не принимаются по причине того, что
           файлы, находящиеся на этих сервисах, не распространяются подписочным методом.
         </div>
@@ -271,15 +288,17 @@
         <summary>Где взять бесплатные стоковые видео для видеороликов?</summary>
         <p>
           Существует множество бесплатных видео-стоков онлайн, среди которых многие
-          предоставляют материалы с лицензией <mark>Creative Commons Zero (CC0)</mark>,
-          что означает возможность использования их в своих коммерческих проектах, не
-          указывая авторство. Перед использованием материалов, необходимо внимательно
-          ознакомиться с условиями использования на каждом конкретном ресурсе. Ниже
-          перечислены популярные источники видео:
+          предоставляют материалы с лицензией
+          <mark class="copy">Creative Commons Zero (CC0)</mark>, что означает возможность
+          использования их в своих коммерческих проектах, не указывая авторство. Перед
+          использованием материалов, необходимо внимательно ознакомиться с условиями
+          использования на каждом конкретном ресурсе. Ниже перечислены популярные
+          источники видео:
         </p>
         <ul>
           <li>
             <a
+              class="weblink"
               href="https://www.pexels.com/videos/"
               title="Pexels"
               >Pexels</a
@@ -287,6 +306,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://pixabay.com/videos/"
               title="Pixabay"
               >Pixabay</a
@@ -294,6 +314,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://www.videvo.net/"
               title="Videvo"
               >Videvo</a
@@ -301,6 +322,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://coverr.co/"
               title="Coverr"
               >Coverr</a
@@ -308,6 +330,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://www.splitshire.com"
               title="SplitShire"
               >SplitShire</a
@@ -315,6 +338,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://mazwai.com/"
               title="Mazvai"
               >Mazvai</a
@@ -322,6 +346,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://www.videezy.com/"
               title="Videezy"
               >Videezy</a
@@ -329,6 +354,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://www.vidsplay.com/"
               title="Vidsplay"
               >Vidsplay</a
@@ -336,6 +362,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://cutestockfootage.com/"
               title="CuteStockFootage"
               >CuteStockFootage</a
@@ -343,6 +370,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://mitchmartinez.com/free-4k-red-epic-stock-footage/"
               title="Mitch Martinez"
               >Mitch Martinez</a
@@ -350,6 +378,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://mixkit.co/"
               title="Mixkit"
               >Mixkit</a
@@ -357,6 +386,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://www.xstockvideo.com/"
               title="XStockVideos"
               >XStockVideos</a
@@ -364,6 +394,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://www.clipstill.com/"
               title="Clipstill"
               >Clipstill</a
@@ -371,6 +402,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://vimeo.com/groups/freehd/"
               title="Пользователь Phil Fred на Vimeo"
               >Phil Fred на Vimeo</a
@@ -378,6 +410,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://www.ignitemotion.com/"
               title="IgniteMotion"
               >IgniteMotion</a
@@ -385,6 +418,7 @@
           </li>
           <li>
             <a
+              class="weblink"
               href="https://www.youtube.com/playlist?list=PLTDgOUcX23hZdwKWhKhWp3H2D5nmWhpvv"
               title="Плейлист на YouTube c абстрактными фонами"
               >абстрактные фоны на YouTube</a
@@ -395,6 +429,7 @@
           Некоторые ресурсы могут быть заблокированы на территории РФ или других стран,
           используйте
           <a
+            class="weblink"
             href="https://censortracker.org/"
             title="Плагин Censor Tracker для браузеров"
             >обходы</a
@@ -407,6 +442,7 @@
         <p>
           Вы можете использовать сервисом
           <a
+            class="weblink"
             href="https://en.likefont.com"
             title="Сервис по нахождению шрифтов LikeFont"
             >LikeFont</a
@@ -414,7 +450,7 @@
           для определения шрифта по фотографии. Этот сервис способен распознавать шрифты
           как на латинице, так и на кириллице. Как начать им пользоваться? Просто зайдите
           на сайт и загрузите своё изображение с помощью проводника или
-          <mark>Ctrl + V</mark>
+          <mark class="key">Ctrl + V</mark>
         </p>
         <figure>
           <img
@@ -424,11 +460,11 @@
           />
           <figcaption>Главная страница LikeFont</figcaption>
         </figure>
-        <div class="important">
+        <div class="warning">
           Учтите, что по умолчанию на странице стоит галка на
-          <mark>I agree to post it in Identification Community</mark>, которая выкладывает
-          ваш скриншот на общее обозрение.<br />Уберите галочку, если вы не хотите
-          выкладывать скриншот.
+          <mark class="copy">I agree to post it in Identification Community</mark>,
+          которая выкладывает ваш скриншот на общее обозрение.<br />Уберите галочку, если
+          вы не хотите выкладывать скриншот.
         </div>
         <p>
           Предположим, что на вход мы дали определённый скриншот. Но вот незадача: он
@@ -445,9 +481,9 @@
         <p>
           Для этого нужно обработать изображения. Необязательно лезть в Photoshop и что-то
           там делать, ведь на сайте уже есть инструменты для обработки изображения,
-          например <mark>Threshold</mark>. Мы его повышаем до максимально возможного
-          значения, чтобы текст стал более читабельным. Также есть инструменты для
-          поворота, отзеркаливания и наклона изображения.
+          например <mark class="copy">Threshold</mark>. Мы его повышаем до максимально
+          возможного значения, чтобы текст стал более читабельным. Также есть инструменты
+          для поворота, отзеркаливания и наклона изображения.
         </p>
         <figure>
           <img
@@ -473,12 +509,13 @@
             Если на изображении нет буквы или символа, то такие ячейки можно пропустить
           </figcaption>
         </figure>
-        <div class="important">
+        <div class="warning">
           Чем больше вы впишете букв, тем лучше будет результат распознавания шрифта!
         </div>
         <p>
-          После того как вы вписали буквы, нажмите на <mark>Identify Now</mark> и сервис
-          начнёт распознавать шрифт, а затем выдаст результат.
+          После того как вы вписали буквы, нажмите на
+          <mark class="copy">Identify Now</mark> и сервис начнёт распознавать шрифт, а
+          затем выдаст результат.
         </p>
         <figure>
           <img
@@ -489,8 +526,8 @@
           <figcaption>Результат распознавания шрифта</figcaption>
         </figure>
         <p>
-          В моём примере был использован шрифт <mark>Berlin Sans FB</mark> и с его
-          нахождением сервис справился прекрасно.
+          В моём примере был использован шрифт <mark class="copy">Berlin Sans FB</mark> и
+          с его нахождением сервис справился прекрасно.
         </p>
       </details>
       <details>
@@ -499,12 +536,14 @@
           Если вы только скачали программу и не знаете как в ней работать, то посмотрите
           плейлист
           <a
+            class="weblink"
             href="https://www.youtube.com/watch?v=Wi-AalXwilg&amp;list=PLcN7xY5E2wrmIlv6SNF2xacsryFtGIfXK&amp;pp=iAQB"
             title="Плейлист Азбука Premiere Pro на YouTube"
             >Азбука Premiere Pro</a
           >
           от
           <a
+            class="weblink"
             href="https://www.youtube.com/channel/UCmLY17yagzLy6GRiI1nVBow"
             title="Канал Ильи Зернова на YouTube"
             >Ильи Зернова</a
@@ -522,22 +561,26 @@
           Если вы уже достаточно уверенно монтируете в Premiere Pro, но хочется узнать
           что-то новое, то рекомендуем посетить каналы
           <a
+            class="weblink"
             href="https://www.youtube.com/@khs_yt"
             title="Канал Хохлов Сабатовский на YouTube"
             >Хохлова Сабатовского</a
           >,
           <a
+            class="weblink"
             href="https://www.youtube.com/@egorlistopadov"
             title="Канал Егор Листопадов на Youtube"
             >Егора Листопадова</a
           >,
           <a
+            class="weblink"
             href="https://www.youtube.com/@Profileschool/videos"
             title="Канал Profileschool на YouTube"
             >Profileschool</a
           >
           и
           <a
+            class="weblink"
             href="https://www.youtube.com/@pankovskii/playlists"
             title="Канал PANKOVSKII на YouTube"
             >PANKOVSKII</a
@@ -560,6 +603,7 @@
           Затем узнайте о ваших исходниках - в каком кодеке, цветовом пространстве или
           FPS. Для этого на вашем ПК должна быть установлена программа
           <a
+            class="weblink"
             href="https://mediaarea.net/en/MediaInfo"
             title="MediaInfo"
             >MediaInfo</a
@@ -578,15 +622,16 @@
         </figure>
         <p>
           Если у вас видео с постоянным FPS, цветовое пространство является
-          <mark>Rec.709</mark>, а исходники были записаны на адекватную камеру, то
-          радуемся жизни и спокойно импортируем в композицию и работаем с ними.
+          <mark class="copy">Rec.709</mark>, а исходники были записаны на адекватную
+          камеру, то радуемся жизни и спокойно импортируем в композицию и работаем с ними.
         </p>
         <p>
           Если у вас видео с переменным (Variable) FPS, цветовое пространство является
-          <mark>Rec.2020</mark>, а исходники были записаны на iPhone, то это полный
-          п%@#!ц. Почему? Потому что их нужно привести в порядок и для этого нам поможет
-          сторонняя программа
+          <mark class="copy">Rec.2020</mark>, а исходники были записаны на iPhone, то это
+          полный п%@#!ц. Почему? Потому что их нужно привести в порядок и для этого нам
+          поможет сторонняя программа
           <a
+            class="weblink"
             href="https://www.shutterencoder.com/"
             title="Shutter Encoder"
             >Shutter Encoder</a
@@ -632,18 +677,18 @@
           </li>
           <li>
             Изменить цветовое пространство. Для этого нужно перейти во вкладку
-            <mark>Colorimetry</mark> или
-            <mark>Преобразовать цветовое пространство</mark> и установить галочку на
-            <mark>Convert Colorspace</mark> или <mark>Конвертировать</mark>. Затем
-            установите первым значением ваш цветовой профиль, который указан в MediaInfo
-            (для iPhone это обычно Rec.2020). Вторым значением установите
-            <mark>Rec.709</mark>.
+            <mark class="copy">Colorimetry</mark> или
+            <mark class="copy">Преобразовать цветовое пространство</mark> и установить
+            галочку на <mark class="copy">Convert Colorspace</mark> или
+            <mark class="copy">Конвертировать</mark>. Затем установите первым значением
+            ваш цветовой профиль, который указан в MediaInfo (для iPhone это обычно
+            Rec.2020). Вторым значением установите <mark class="copy">Rec.709</mark>.
           </li>
           <li>
             Если у вас видеокарта от Nvidia, то установите галочку на Hardware
-            Acceleration и укажите там <mark>Nvidia NVENC</mark>
+            Acceleration и укажите там <mark class="copy">Nvidia NVENC</mark>
           </li>
-          <li>Нажать кнопку <mark>Start Function</mark></li>
+          <li>Нажать кнопку <mark class="copy">Start Function</mark></li>
         </ul>
         <p>
           Если вы не указывали папку для выходных файлов, то файлы сохранятся в папку, где
@@ -658,8 +703,8 @@
         </summary>
         <p>
           Для решения этой проблемы установите Premiere Pro 23.2 и выше, затем в
-          настройках Sequence активируйте опцию <mark>Auto Tone Map Media</mark> и
-          работайте дальше.
+          настройках Sequence активируйте опцию
+          <mark class="copy">Auto Tone Map Media</mark> и работайте дальше.
         </p>
         <figure>
           <img
@@ -680,8 +725,12 @@
         </summary>
         <p>
           Изначально Premiere Pro не поддерживает большое количество кодеков, такие как
-          VP9, VP8, Flac, AV1. Также не поддерживаются форматы <mark>.webm</mark>,
-          <mark>.flv</mark>,<mark>.mkv</mark> и прочие.
+          VP9, VP8, Flac, AV1. Также не поддерживаются форматы
+          <mark class="file">.webm</mark>, <mark class="file">.flv</mark>,<mark
+            class="copy"
+            >.mkv</mark
+          >
+          и прочие.
         </p>
         <p>
           Почему это происходит? Потому что любая программа для монтажа чего-угодно
@@ -689,19 +738,20 @@
           упрощения работы Adobe добавляет поддержку различных форматов. Но поскольку
           декодирование из не монтажных кодеков работает не так, как хотелось бы, то могут
           возникать различные проблемы, например появляются артефакты при использовании
-          <mark>H.264</mark> из различных частей интернета.
+          <mark class="copy">H.264</mark> из различных частей интернета.
         </p>
         <p>
           Если у вас небольшой проект и нет желания заниматься перекодированием
           исходников, то вы можете попробовать использовать плагин
           <a
+            class="weblink"
             href="https://www.autokroma.com/Influx"
             title="Сайт Autokroma Influx"
             >Autokroma Influx</a
           >. Он облегчает импорт некоторых файлов, которые не поддерживаются в After
           Effects, Media Encoder или Premiere Pro.
         </p>
-        <div class="important">
+        <div class="warning">
           Помните, что используя плагин, вы рискуете наткнуться на технические проблемы:
           искажённые цвета, долгий рендер или различные ошибки.
         </div>
@@ -709,12 +759,14 @@
           Если это не решит проблему, вы можете перекодировать исходные файлы в монтажный
           кодек с помощью
           <a
+            class="weblink"
             href="https://www.shutterencoder.com/en"
             title="Сайт Shutter Encoder"
             >Shutter Encoder</a
           >
-          в <mark>Apple Prores 422</mark> и прочитать
+          в <mark class="copy">Apple Prores 422</mark> и прочитать
           <a
+            class="weblink"
             href="#2.1"
             title="Какой правильный пайплайн для использования чужих исходников?"
             >правильный пайплайн</a
@@ -730,14 +782,17 @@
       </details>
       <details>
         <summary>Как открывать и импортировать файлы .heic, .heif и .hevc?</summary>
+        <!--fixme: переписать-->
         <p>
-          На Windows 10 и 11 нельзя открыть файлы <mark>HEIC</mark>, <mark>HEIF</mark> и
-          <mark>HEVC</mark> без установленного кодека. Казалось бы, достаточно их
-          установить с Microsoft Store. Это можно сделать при условии что у вас есть два
-          доллара за кодеки, а как мы с вами знаем - мы не хотим платить.
+          На Windows 10 и 11 нельзя открыть файлы <mark class="copy">HEIC</mark>,
+          <mark class="copy">HEIF</mark> и <mark class="copy">HEVC</mark> без
+          установленного кодека. Казалось бы, достаточно их установить с Microsoft Store.
+          Это можно сделать при условии, что у вас есть два доллара за кодеки, а как мы с
+          вами знаем - мы не хотим платить.
         </p>
         <figure>
           <img
+            title="Ошибка импорта HEIC в Premierу Pro"
             src="source/heic_error_premierepro.png"
             alt="Ошибка импорта HEIC в Premiere Pro"
           />
@@ -747,22 +802,25 @@
           Тогда на помощь приходят установщики этих кодеков. Кодек для HEIC и HEVC можно
           скачать
           <a
+            class="weblink"
             title="Кодек HEIC и HEIF"
             href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/3f78db48-62c0-4600-b440-690463fe3fe3?P1=1721938979&P2=404&P3=2&P4=NRdclhQYS1iAdOl8PVYnQiyVzubs0Kr4%2fKSQTAfMx5Dzw19quYH55DIUFmrb1myVmFYvKJx0h%2fIhxvqTc83Low%3d%3d"
             >тут</a
           >, а для HEVC
           <a
+            class="weblink"
             href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/38775b20-6e63-4c94-9e03-3a26ccb1535f?P1=1721938954&P2=404&P3=2&P4=CjDCHp2VF4uM8BbCG2BVzGg6cXfP25F6KNcQt7UV%2f7PWUqVPBpy%2fVFDqTM32n3DA%2f3ZMF6qYHoAbNg%2bN93TQgA%3d%3d"
             title="Кодек HEVC"
             >тут</a
-          >. Чтобы установить <mark>.appxbundle</mark> пакеты, достаточно их открыть
-          двойным кликом. Если ваш браузер жалуется на "вирусы" - проигнорируйте это и
-          продолжите скачивание.
+          >. Чтобы установить <mark class="file">.appxbundle</mark> пакеты, достаточно
+          их открыть двойным кликом. Если ваш браузер жалуется на "вирусы" -
+          проигнорируйте это и продолжите скачивание.
         </p>
         <p>
           Если вам предлагают открыть файл с помощью
-          <mark>Обработчика команд Windows</mark> или <mark>Установщика приложений</mark>,
-          то выбирайте что вам душе угодно. Я же предпочту <mark>Обработчика</mark>.
+          <mark class="copy">Обработчика команд Windows</mark> или
+          <mark class="copy">Установщика приложений</mark>, то выбирайте что вам душе
+          угодно. Я же предпочту <mark class="copy">Обработчика</mark>.
         </p>
         <figure>
           <img
@@ -773,8 +831,8 @@
           <figcaption>Окно "Каким образом вы хотите открыть файл?"</figcaption>
         </figure>
         <p>
-          Если после установки с помощью <mark>Обработчика команд</mark> вы видите это, то
-          кодеки установились корректно.
+          Если после установки с помощью <mark class="copy">Обработчика команд</mark> вы
+          видите это, то кодеки установились корректно.
         </p>
         <code
           >Path :<br />
@@ -782,17 +840,20 @@
           RestartNeeded : False<br
         /></code>
         <p>
-          После установки кодеков вы теперь сможете открывать файлы <mark>.heif</mark>,
-          <mark>.heic</mark> и <mark>.hevc</mark> на вашем компьютере, но есть одно но.
+          После установки кодеков вы теперь сможете открывать файлы
+          <mark class="file">.heif</mark>, <mark class="file">.heic</mark> и
+          <mark class="file">.hevc</mark> на вашем компьютере, но есть одно "Но".
           Premiere Pro не поддерживает эти форматы нативно. Облом, но не беда - видеофайлы
           всегда можно переконвертировать через
           <a
+            class="weblink"
             title="Shutter Encoder"
             href="https://www.shutterencoder.com"
             >Shutter Encoder</a
           >
           в монтажный кодек, а фото - через
           <a
+            class="weblink"
             href="https://www.faststone.org/FSIVDownload.htm"
             title="Скачать FastStone Image Viewer"
             >FastStone Image Viewer</a
@@ -815,15 +876,49 @@
           Если вы видите на вашем таймлайне жёлтые или красные полосы, то при проигрывании
           предпросмотра вы заметите лаги. Это связано с тем, что на клипе по-любому
           используется ресурсоёмкий эффект или переход и его надо закэшировать. Для этого
-          перейдите в <mark>Sequence &gt; Render In to Out</mark> и дождитесь конца
-          пре-рендера. После этого ваш предпросмотр будет закэширован в памяти и вы можете
-          просмотреть его без лагов.
+          перейдите в <mark class="ui">Sequence &gt; Render In to Out</mark> и
+          дождитесь конца пре-рендера. После этого ваш предпросмотр будет закэширован в
+          памяти и вы можете просмотреть его без лагов.
         </p>
       </details>
       <details>
         <summary>Как вернуть звуковую дорожку у видео или видеодорожку у аудио?</summary>
         <p>
-          <!-- fixme: -->
+          <!-- fixme: написать краткое описание -->
+        </p>
+        <figure>
+          <video
+            src="source/missing_audio_premierepro.mp4"
+
+            controls=""
+            muted=""
+            loop=""
+          ></video>
+          <figcaption>
+            Видео от
+            <a
+              class="weblink"
+              href="https://t.me/amimciptimdim"
+              title="Ярослав Семёнов в Telegram"
+              >Ярослава Семёнова</a
+            >
+            из канала
+            <a
+              class="weblink"
+              title="Nano Tuts в Telegram"
+              href="https://t.me/nano_tutorials/13"
+              >Nano Tuts</a
+            >
+            в Telegram
+          </figcaption>
+        </figure>
+      </details>
+      <details>
+        <summary>Как отключить выделение объекта при передвижении плейхеда?</summary>
+        <p>
+          Для этого уберите галочку в
+          <mark class="ui">Sequence &gt; Select Follow Playhead</mark> и
+          наслаждайтесь жизнью.
         </p>
       </details>
       <details>
@@ -831,6 +926,7 @@
         <p>
           Если у вас достаточно производительный ПК, то вы можете установить программу
           <a
+            class="weblink"
             href="https://www.stemroller.com/"
             title="Сайт StemRoller"
             >StemRoller</a
@@ -841,12 +937,14 @@
         <p>
           Если вы хотите воспользоваться онлайн-сервисами, то могу посоветовать
           <a
+            class="weblink"
             href="https://vocalremover.org/"
             title="Сайт Vocal Remover"
             >Vocal Remover</a
           >
           и
           <a
+            class="weblink"
             href="https://vocali.se/en"
             title="Сайт Vocali"
             >Vocali</a
@@ -858,12 +956,25 @@
         <p>
           Да, он существует. Называется
           <a
+            class="weblink"
             href="https://knightsoftheeditingtable.com/excalibur"
             title="Сайт Excalibur"
             >Excalibur</a
-          >. Он позволяет применять эффекты, пресеты и переходы с помощью всплывающего
-          меню. По умолчанию плагин работает с комбинацией клавиш <mark>Alt+Space</mark>,
-          но в настройках плагина вы всегда сможете поменять на удобное вам значение.
+          >.
+        </p>
+        <figure>
+          <img
+            title="Применение эффектов с помощью Excalibur"
+            src="https://images.squarespace-cdn.com/content/v1/5d090703bfcf6300017faaa8/1605797292871-IKNJ3QIJPGK2TFMMBIIY/web_01_fx.gif?format=750w"
+            alt="Применение эффектов с помощью Excalibur"
+          />
+          <figcaption>Применение эффектов с помощью Excalibur</figcaption>
+        </figure>
+        <p>
+          Он позволяет применять эффекты, пресеты и переходы с помощью всплывающего меню.
+          По умолчанию плагин работает с комбинацией клавиш
+          <mark class="key">Alt+Space</mark>, но в настройках плагина вы всегда сможете
+          поменять на удобное вам значение.
         </p>
       </details>
       <details>
@@ -890,8 +1001,9 @@
           программы, отличную от английской.
         </p>
         <p>
-          Для смены языка откройте консоль с помощью <mark>Ctrl + F12</mark> и
-          переключитесь в <mark>Debug Database View</mark>.
+          Для смены языка откройте консоль с помощью
+          <mark class="key">Ctrl + F12</mark> и переключитесь в
+          <mark class="copy">Debug Database View</mark>.
         </p>
         <figure>
           <img
@@ -902,16 +1014,17 @@
           <figcaption>Окно консоли в Premiere Pro</figcaption>
         </figure>
         <p>
-          Затем нужно найти строчку <mark>ApplicationLanguage</mark> и указать en_US
-          вместо того, что у вас указано. После этого перезагрузите программу и
-          наслаждайтесь более стабильной работой программы.
+          Затем нужно найти строчку <mark class="copy">ApplicationLanguage</mark> и
+          указать en_US вместо того, что у вас указано. После этого перезагрузите
+          программу и наслаждайтесь более стабильной работой программы.
         </p>
       </details>
       <details>
         <summary>Как передать проект с исходниками другому человеку?</summary>
         <p>
-          Для этого перейдите в <mark>File &gt; Project Manager</mark>, выберите путь для
-          сохранения в Destination Path и нажмите <mark>OK</mark>
+          Для этого перейдите в <mark class="ui">File &gt; Project Manager</mark>,
+          выберите путь для сохранения в Destination Path и нажмите
+          <mark class="copy">OK</mark>
         </p>
         <figure>
           <img
@@ -925,12 +1038,14 @@
           После сохранения, перейдите в папку куда вы сохранили проект и создайте архив с
           помощью
           <a
+            class="weblink"
             href="https://www.rarlab.com/download.htm"
             title="Официальный сайт WinRAR"
             >WinRAR</a
           >
           для Windows или
           <a
+            class="weblink"
             href="https://www.keka.io/ru/"
             title="Официальный сайт keka"
             >keka</a
@@ -944,14 +1059,15 @@
         <p>
           Для этого перейдите в
           <a
+            class="weblink"
             href="https://t.me/+Qd9xu7A4TeIwNzY6"
             title="канал склад стройматериалов в Telegram"
             >склад стройматериалов</a
           >
-          и найдите посты под хештегом <mark>#speechtotext</mark> для вашей версии
-          Premiere Pro
+          и найдите посты под хештегом <mark class="copy">#speechtotext</mark> для вашей
+          версии Premiere Pro
         </p>
-        <div class="important">
+        <div class="warning">
           Внимательно смотрите описание записей: версии языковых пакетов, не
           предназначенные для вашей версии Premiere Pro, не будут работать. То есть вы не
           можете установить языковой пакет предназначенный для Premiere Pro версии 24.3 на
@@ -965,9 +1081,10 @@
         <summary>This effect requires GPU acceleration</summary>
         <p>
           Попробуйте включить в настройках проекта ускорение с помощью GPU. Для этого
-          перейдите в <mark>File &gt; Project Settings &gt; General</mark> и переключите в
-          Renderer пункт на
-          <mark>Mercury Playback Engine GPU Acceleration (CUDA/OpenCL)</mark>
+          перейдите в
+          <mark class="ui">File &gt; Project Settings &gt; General</mark> и
+          переключите в Renderer пункт на
+          <mark class="copy">Mercury Playback Engine GPU Acceleration (CUDA/OpenCL)</mark>
         </p>
         <figure>
           <img
@@ -984,7 +1101,8 @@
           Данная псевдо-ошибка возникает в случаях, когда вы удалили с диска исходники или
           перенесли их. Для этого просто переподключите их в окне Project, выбрав исходник
           и нажав по нему правой кнопкой мыши. Затем выберите пункт
-          <mark>Link Media</mark> или <mark>Replace Footage</mark>
+          <mark class="copy">Link Media</mark> или
+          <mark class="copy">Replace Footage</mark>
         </p>
         <figure>
           <img
@@ -995,8 +1113,9 @@
           <figcaption>Контекстное меню у исходника в окне Project</figcaption>
         </figure>
         <p>
-          Если вы выбрали пункт <mark>Link Media</mark>, то в новом окне нажмите на кнопку
-          <mark>Locate</mark> и укажите новое местоположение ваших исходников.
+          Если вы выбрали пункт <mark class="copy">Link Media</mark>, то в новом окне
+          нажмите на кнопку <mark class="copy">Locate</mark> и укажите новое
+          местоположение ваших исходников.
         </p>
         <figure>
           <img
@@ -1007,11 +1126,15 @@
           <figcaption>Окно Link Media</figcaption>
         </figure>
         <p>
-          Если вы выбрали пункт <mark>Replace Footage</mark>, то откроется проводник для
-          выбора нового файла. Укажите его и файл подхватится, затем вы сможете продолжить
-          работу.
+          Если вы выбрали пункт <mark class="copy">Replace Footage</mark>, то откроется
+          проводник для выбора нового файла. Укажите его и файл подхватится, затем вы
+          сможете продолжить работу.
         </p>
-        <h2>Появились горизонтальный или вертикальные чёрные полосы на предпросмотре</h2>
+      </details>
+      <details>
+        <summary>
+          Появились горизонтальный или вертикальные чёрные полосы на предпросмотре
+        </summary>
         <p>
           Это баг некоторых версий драйверов Nvidia, попробуйте установить драйвера из
           линейки Studio.
@@ -1020,9 +1143,10 @@
       <details>
         <summary>Пропала визуализация аудио на таймлайне</summary>
         <p>
-          Попробуйте очистить <mark>.peak-файлы</mark> в настройках Premiere Pro. Для
-          этого перейдите в <mark>Edit &gt; Preferences &gt; Media Cache</mark> и нажмите
-          <mark>Delete</mark> у Remove Media Cache Files.
+          Попробуйте очистить <mark class="file">.peak-файлы</mark> в настройках
+          Premiere Pro. Для этого перейдите в
+          <mark class="ui">Edit &gt; Preferences &gt; Media Cache</mark> и нажмите
+          <mark class="copy">Delete</mark> у Remove Media Cache Files.
         </p>
         <figure>
           <img
@@ -1043,8 +1167,8 @@
         <p>
           Такое бывает, если вы недавно меняли аудио-выход, например подключали к
           компьютеру Bluetooth-наушники, а потом выключили. Проверьте аудио-выход в
-          <mark>Edit &gt; Preferences &gt; Audio Hardware</mark> и укажите при
-          необходимости нужный.
+          <mark class="ui">Edit &gt; Preferences &gt; Audio Hardware</mark> и
+          укажите при необходимости нужный.
         </p>
         <figure>
           <img
@@ -1090,32 +1214,37 @@
           загружаемых файлов, все части нужно скачать на компьютер. Для корректной
           распаковки многотомных архивов воспользуйтесь
           <a
+            class="weblink"
             href="https://www.rarlab.com/download.htm"
             title="Официальный сайт WinRAR"
-            >WinRAR </a
-          >для Windows или
+            >WinRAR</a
+          >
+          для Windows или
           <a
+            class="weblink"
             href="https://www.keka.io/ru/"
             title="Официальный сайт keka"
-            >keka </a
-          >для macOS.
+            >keka</a
+          >
+          для macOS.
         </p>
-        <div class="important">
-          Если в архиве присутствует исполняемый файл <mark>.exe</mark>, то достаточно его
-          запустить и WinRAR автоматически распакует все файлы.
+        <div class="warning">
+          Если в архиве присутствует исполняемый файл <mark class="file">.exe</mark>,
+          то достаточно его запустить и <mark class="app">WinRAR</mark> автоматически распакует все файлы.
         </div>
       </details>
       <details>
         <summary>Почему не подключаются исходники из шаблона или проекта?</summary>
         <p>
           Чаще всего проблема возникает из-за того, что пользователи не распаковывают файл
-          шаблона в отдельную директорию, а пытаются открыть <mark>.prproj</mark> файл
-          напрямую из архиватора. Архиватор при открытии <mark>.prproj</mark> или
-          <mark>.mogrt</mark> не распаковывает все файлы во временную директорию
-          <mark>%TEMP%</mark> и Premiere Pro не может определить где находятся исходные
-          файлы.
+          шаблона в отдельную директорию, а пытаются открыть
+          <mark class="file">.prproj</mark> файл напрямую из архиватора. Архиватор при
+          открытии <mark class="file">.prproj</mark> или
+          <mark class="file">.mogrt</mark> не распаковывает все файлы во временную
+          директорию <mark class="copy">%TEMP%</mark> и Premiere Pro не может определить
+          где находятся исходные файлы.
         </p>
-        <div class="important">
+        <div class="warning">
           Для правильной работы шаблона рекомендуется полностью распаковать его в удобное
           место, не превышающее 256 символов в пути
         </div>
@@ -1125,9 +1254,9 @@
           подключаются автоматически, то вам нужно подключить их вручную. Просто щелкните
           правой кнопкой мыши на любом потерянном файле в окне Project (вы можете найти
           потерянные файлы, введя в поиск Missing Footage), затем выберите
-          <mark>Replace Footage &gt; File</mark> и укажите путь к потерянному файлу. Если
-          все файлы проекта находятся в одной папке, остальные файлы должны подтянуться
-          автоматически.
+          <mark class="copy">Replace Footage &gt; File</mark> и укажите путь к потерянному
+          файлу. Если все файлы проекта находятся в одной папке, остальные файлы должны
+          подтянуться автоматически.
         </p>
       </details>
       <details>
@@ -1136,8 +1265,8 @@
           Эта ошибка возникает когда Windows Defender или сторонний антивирус блокирует
           файл helper.exe, который является распаковщиком дистрибутива. Простейший способ
           решения - временное или полное отключение антивируса во время установки. Если
-          возникают проблемы, добавьте <mark>%TEMP%</mark> вашей системы в белый список
-          антивируса на время.
+          возникают проблемы, добавьте <mark class="copy">%TEMP%</mark> вашей системы в
+          белый список антивируса на время.
         </p>
         <iframe
           src="https://www.youtube.com/embed/jCNtEW5LFng?si=yjTQMCZ7OaZUjdLi"
@@ -1150,15 +1279,16 @@
           Если способ из видео не помог, то рекомендую отключить Windows Defender с
           помощью
           <a
+            class="weblink"
             href="https://winaero.com/downloads/winaerotweaker.zip"
             title="Скачать Winaero Tweaker по прямой ссылке"
             >Winaero Tweaker</a
           >. После установки или распаковки портативной версии откройте программу,
           подтвердите что вы осознаёте что делаете и найдите пункт
-          <mark>Disable Windows Defender</mark>. Установите галочку и перезагрузите ПК. В
-          некоторых случаях нужно отключить в Windows Defender пункт
-          <mark>Защита от подделки</mark>, которая не даёт отключить встроенный антивирус
-          полностью.
+          <mark class="copy">Disable Windows Defender</mark>. Установите галочку и
+          перезагрузите ПК. В некоторых случаях нужно отключить в Windows Defender пункт
+          <mark class="copy">Защита от подделки</mark>, которая не даёт отключить
+          встроенный антивирус полностью.
         </p>
         <img
           src="source/winaero_tweaker_disable_defender.png"
@@ -1175,21 +1305,25 @@
           Данная ошибка появляется, если вы не докачали или прервали скачивание файла. В
           таком случае просто повторите скачивание репака.
         </p>
-        <div class="important">
+        <div class="warning">
           Если вы полностью скачали файл и уверены в том, что в
           <a
+            class="weblink"
             href="https://t.me/+Qd9xu7A4TeIwNzY6"
             title="склад стройматериалов в Telegram"
-            >складе стройматериалов </a
-          >битый файл - сообщите об этом в комментариях под нужным постом
+            >складе стройматериалов</a
+          >
+          битый файл - сообщите об этом в комментариях под нужным постом
         </div>
       </details>
       <details>
         <summary>rsload.net заблокирован в hosts при открытии репака от Kpojluk</summary>
         <p>
-          Такое бывает, если у вас нет файла <mark>hosts</mark> в системе или сайт
-          rsload.net внесён в этот список. Про исправление файла hosts расписано на сайте
+          Такое бывает, если у вас нет файла <mark class="copy">hosts</mark> в системе или
+          сайт rsload.net внесён в этот список. Про исправление файла hosts расписано на
+          сайте
           <a
+            class="weblink"
             href="https://remontka.pro/hosts/"
             title="Как исправить файл hosts"
             >remontka.pro</a
@@ -1209,20 +1343,27 @@
         <p>
           Софт, расположенный в
           <a
+            class="weblink"
             href="https://t.me/+Qd9xu7A4TeIwNzY6"
             title="склад стройматериалов в Telegram"
-            >складе стройматериалов </a
-          >и в
+            >складе стройматериалов</a
+          >
+          и в
           <a
+            class="weblink"
             href="https://t.me/+gSmpjWyhd5w3ZGFi"
             title="запчасти на форд фокус в Telegram"
-            >запчастях на форд фокус </a
-          >с пометкой <mark>репак от кролика</mark> поставляется как есть из сайта
+            >запчастях на форд фокус</a
+          >
+          с пометкой <mark class="copy">репак от кролика</mark> поставляется как есть из
+          сайта
           <a
+            class="weblink"
             href="https://repack.me/"
             title="Сайт repack.me"
-            >repack.me </a
-          >и не видоизменяется для плохих целей.
+            >repack.me</a
+          >
+          и не видоизменяется для плохих целей.
         </p>
         <blockquote cite="https://repack.me/faq.html">
           Ни в одной моей сборке никогда не было и не будет какого-либо вредоносного или
@@ -1235,10 +1376,12 @@
             - Костя aka KpoJluk,
             <cite
               ><a
+                class="weblink"
                 href="https://repack.me/faq.html"
                 title="Сайт KpoJluk'а"
-                >repack.me/faq </a
-              >(пункт 6)</cite
+                >repack.me/faq</a
+              >
+              (пункт 6)</cite
             >
           </footer>
         </blockquote>
@@ -1260,6 +1403,7 @@
           программ". В следующий раз не забывайте убирать. Также вы можете воспользоваться
           программой
           <a
+            class="weblink"
             href="https://unchecky.com/"
             title="Unchecky"
             >Unchecky</a
@@ -1277,18 +1421,19 @@
     <section id="render">Про рендер</section>
     <div class="content">
       <details>
-        <summary>Как правильно выводить видео из Premiere Pro</summary>
+        <summary>Как правильно выводить видео из Premiere Pro?</summary>
         <p>
           В рендере нюансов и технических тонкостей много. Предположим, что ваш заказчик
           хочет качественное видео с минимальным весом, в цветовом пространстве
-          <mark>Rec.709</mark> и кодеке <mark>H.264</mark> или
-          <mark>H.265</mark>
+          <mark class="copy">Rec.709</mark> и кодеке <mark class="copy">H.264</mark> или
+          <mark class="copy">H.265</mark>
         </p>
         <p>Вы можете вывести видео из Premiere Pro с помощью нативного кодека H.264.</p>
         <p>
-          Начнём с самого простого: при нажатии на <mark>Ctrl + M</mark>
+          Начнём с самого простого: при нажатии на <mark class="key">Ctrl + M</mark>
           программа по умолчанию предложит вам вывести в
-          <mark>H.264</mark>, с чем мы и соглашаемся, нажав на кнопку экспорта.
+          <mark class="copy">H.264</mark>, с чем мы и соглашаемся, нажав на кнопку
+          экспорта.
         </p>
         <p>
           Если результат от стандартного H.264 не понравился, то на помощь приходят
@@ -1297,10 +1442,11 @@
         <p>
           <!-- fixme: aftercodecs -->
         </p>
-        <div class="important">
+        <div class="warning">
           Если вы выбрали путь рендера с помощью Voukoder, убедитесь, что на компьютере
           установлен
           <a
+            class="weblink"
             href="https://github.com/Vouk/voukoder-connectors/tree/master/premiere"
             title="Voukoder Connector для Premiere Pro на Github"
             >коннектор для Premiere Pro</a
@@ -1314,11 +1460,11 @@
         <p>
           Ещё существует интересный способ для вывода с помощью Pre-render для
           последующего сокращения времени рендера при незначительных правках от заказчика.
-          Для начала откройте настройки секвенции, перейдя в<mark
+          Для начала откройте настройки секвенции, перейдя в<mark class="copy"
             >Sequence &gt; Sequence Settings</mark
-          >, затем переместитесь в раздел <mark>Video Previews</mark> и укажите кодек для
-          пре-рендера. В нашем случае мы выберем <mark>Apple Prores 422</mark>, но вы
-          можете указать любой другой.
+          >, затем переместитесь в раздел <mark class="copy">Video Previews</mark> и
+          укажите кодек для пре-рендера. В нашем случае мы выберем
+          <mark class="copy">Apple Prores 422</mark>, но вы можете указать любой другой.
         </p>
         <figure>
           <img
@@ -1328,19 +1474,21 @@
           />
           <figcaption>Настройка кодека для Video Preview</figcaption>
         </figure>
-        <div class="important">
+        <div class="warning">
           Выбор кодека в Video Previews должен совпадать с кодеком для финального рендера,
           чтобы фишка с быстрым рендером сработала. То есть если вы выбрали в Video
-          Previews кодек <mark>Apple Prores 4444</mark>, то и в <mark>Ctrl + M</mark> тоже
-          должен стоять кодек <mark>Apple Prores 4444</mark>
+          Previews кодек <mark class="copy">Apple Prores 4444</mark>, то и в
+          <mark class="key">Ctrl + M</mark> тоже должен стоять кодек
+          <mark class="copy">Apple Prores 4444</mark>
         </div>
         <p>
           После того как мы выбрали кодек для пре-рендера, нужно указать точку In в начале
-          вашего таймлайна и точку Out в конце с помощью кнопок <mark>I</mark> и
-          <mark>O</mark>
+          вашего таймлайна и точку Out в конце с помощью кнопок
+          <mark class="copy">I</mark> и
+          <mark class="copy">O</mark>
           соответственно или очистите выделение с помощью
-          <mark>Ctrl + Shift + X</mark>. Затем перейдите в Seuqence и нажмите на
-          <mark>Render In to Out</mark>.
+          <mark class="key">Ctrl + Shift + X</mark>. Затем перейдите в Seuqence и нажмите
+          на <mark class="copy">Render In to Out</mark>.
         </p>
         <figure>
           <img
@@ -1350,7 +1498,7 @@
           />
           <figcaption>Кнопка для начала пре-рендера в Premiere Pro</figcaption>
         </figure>
-        <div class="important">
+        <div class="warning">
           Учтите, что пре-рендер может занимать у вас большое количество памяти на жёстком
           диске. Если у вас большой проект - позаботьтесь о том, чтобы у вас было
           достаточно места на жёстком диске.
@@ -1441,28 +1589,30 @@
         </p>
         <p>
           Прежде чем загрузить куда-нибудь контент с чересстрочной разверткой, сделайте ее
-          прогрессивной. Например, контент в формате <mark>1080i60</mark> следует
-          перевести в <mark>1080p30</mark>, то есть 60 чересстрочных полукадров в секунду
+          прогрессивной. Например, контент в формате
+          <mark class="copy">1080i60</mark> следует перевести в
+          <mark class="copy">1080p30</mark>, то есть 60 чересстрочных полукадров в секунду
           следует заменить 30 прогрессивными кадрами в секунду.
         </p>
         <p>
           Для того чтобы опубликовать видео на
           <a
+            class="weblink"
             href="https://youtube.com"
             title="YouTube"
             >YouTube</a
           >, оно должно соответствовать требованиям площадки:
         </p>
-        <div class="important">
+        <div class="warning">
           <ul>
             <li>
               Видео должно иметь переменный или постоянный битрейт, ограничения на него
               нет, но лучше соблюдать таблицу битрейтов
             </li>
-            <li>Контейнер должен быть <mark>.mp4</mark></li>
+            <li>Контейнер должен быть <mark class="file">.mp4</mark></li>
             <li>
-              Видеокодек - <mark>H.264</mark>, аудиокодек - <mark>AAC</mark> с частотой
-              дискретизации 48 кГц или 96 кГц.
+              Видеокодек - <mark class="copy">H.264</mark>, аудиокодек -
+              <mark class="copy">AAC</mark> с частотой дискретизации 48 кГц или 96 кГц.
             </li>
             <li>Видео должно содержать стерео или 5.1 каналы для аудио</li>
           </ul>
@@ -1570,14 +1720,19 @@
           </figcaption>
         </figure>
         <p>Для TikTok требования следующие:</p>
-        <div class="important">
+        <div class="warning">
           <ul>
             <li>
               Площадка даёт возможность загрузить видео до 250 Мб, если вы выкладываете с
               устройства на iOS и до 75 Мб, если вы выкладываете с устройства на Android.
             </li>
-            <li>Контейнер должен быть <mark>.mp4</mark> или <mark>.mov</mark></li>
-            <li>В качестве видеокодека должно использоваться <mark>H.264</mark></li>
+            <li>
+              Контейнер должен быть <mark class="file">.mp4</mark> или
+              <mark class="file">.mov</mark>
+            </li>
+            <li>
+              В качестве видеокодека должно использоваться <mark class="copy">H.264</mark>
+            </li>
           </ul>
         </div>
         <figure>
@@ -1602,15 +1757,16 @@
           <figcaption>Таблица рекомендуемого битрейта для вывода в TikTok</figcaption>
         </figure>
         <p>Для Instagram* необходимо соблюдать следующие условия:</p>
-        <div class="important">
+        <div class="warning">
           <ul>
             <li>
-              Соотношение сторон видео должно быть <mark>4:5</mark>, <mark>16:9</mark> или
-              <mark>4:3</mark>, если вы собираетесь выкладывать в обычный пост.
+              Соотношение сторон видео должно быть <mark class="copy">4:5</mark>,
+              <mark class="copy">16:9</mark> или <mark class="copy">4:3</mark>, если вы
+              собираетесь выкладывать в обычный пост.
             </li>
             <li>
-              Соотношение сторон видео должно быть <mark>9:16</mark>, если выкладываете
-              видео для IGTV, Stories или Reels.
+              Соотношение сторон видео должно быть <mark class="copy">9:16</mark>, если
+              выкладываете видео для IGTV, Stories или Reels.
             </li>
             <li>
               Видео может содержать любое количество FPS, но желательно придерживаться
@@ -1640,7 +1796,7 @@
           </table>
           <figcaption>Рекомендуемый битрейт для вывода в Instagram*</figcaption>
         </figure>
-        <div class="important">
+        <div class="warning">
           *Instagram и Meta признаны экстремистскими организациями и запрещены на
           территории Российской Федерации.
         </div>
@@ -1663,8 +1819,8 @@
       <details>
         <summary>Почему, если я создал субтитры, их не видно после рендера?</summary>
         <p>
-          По умолчанию в Premiere Pro выключен пункт <mark>Captions</mark> в настройках
-          рендера.
+          По умолчанию в Premiere Pro выключен пункт <mark class="copy">Captions</mark> в
+          настройках рендера.
         </p>
         <figure>
           <img

@@ -44,7 +44,7 @@ html {
 
 body {
   padding-top     : 65px;
-  background-color: var(--background);
+  background-color: var(--main_background);
   color           : var(--text);
   font-family     : "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -55,7 +55,7 @@ body {
 }
 
 section {
-  color         : var(--for-aside);
+  color         : var(--text_transparent);
   font-size     : 12px;
   font-weight   : 300;
   margin-block  : 16px;
@@ -65,7 +65,7 @@ section {
 }
 
 .copied {
-  filter          : drop-shadow(0 20px 20px var(--for-shadow));
+  filter          : drop-shadow(0 20px 20px var(--shadow));
   color           : var(--text);
   font-weight     : bold;
   position        : fixed;
@@ -73,7 +73,7 @@ section {
   left            : 50%;
   transform       : translate(-50%, -50%);
   backdrop-filter : blur(25px) brightness(125%) saturate(50%);
-  background-color: var(--header-background);
+  background-color: var(--header_background);
   max-width       : 500px;
   border-radius   : 20px;
   padding-inline  : 20px;
@@ -83,13 +83,13 @@ section {
 }
 
 .material-icons {
+
   font-family            : "Material Icons";
-  color                  : var(--accent);
-  vertical-align         : text-bottom;
+  color                  : var(--text);
+  font-variation-settings: "FILL"0, "wght"300, "GRAD"0, "opsz"24;
 }
 
 footer {
-  opacity                : 50%;
   border-top-left-radius : 20px;
   border-top-right-radius: 20px;
   font-size              : small;
@@ -101,7 +101,7 @@ footer {
 
 .ripple {
   animation    : ripple-effect 0.5s linear forwards;
-  background   : var(--for-ripple);
+  background   : var(--ripple);
   border-radius: 50%;
   opacity      : 100%;
   position     : absolute;
