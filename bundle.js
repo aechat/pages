@@ -10,9 +10,33 @@ document.addEventListener("DOMContentLoaded", function () {
         element.id = `${containerIndex + 1}.${index + 1}`;
       }
       element.textContent = `${containerIndex + 1}.${index + 1}. ${element.textContent}`;
+      const detailsElement = element.closest("details");
+      if (detailsElement) {
+        const copyButton = document.createElement("button");
+        copyButton.classList.add("copy_button");
+        copyButton.textContent = "Поделиться";
+        copyButton.addEventListener("click", function () {
+          const summaryId = element.id;
+          const summaryLink = window.location.href.split("#")[0] + "#" + summaryId;
+          navigator.clipboard.writeText(summaryLink);
+          showCopiedSummaryUrlNotification();
+        });
+        detailsElement.insertBefore(copyButton, detailsElement.firstChild);
+      }
     });
   });
 });
+
+function showCopiedSummaryUrlNotification() {
+  var copiedElement = document.querySelector(".copied");
+  copiedElement.innerText = "Ссылка на пункт скопирована в буфер обмена";
+  copiedElement.classList.remove("hidden");
+  copiedElement.classList.add("visible");
+  setTimeout(function () {
+    copiedElement.classList.remove("visible");
+    copiedElement.classList.add("hidden");
+  }, 2500);
+}
 
 async function getLastCommitDate() {
   const owner = "aechat";
@@ -80,6 +104,7 @@ function expandAllDetails() {
     details.open = true;
   });
 }
+
 function extractTextFromHTML(htmlString) {
   let tempElement = document.createElement("div");
   tempElement.innerHTML = htmlString;
@@ -160,6 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //     element.appendChild(fragment);
 //   });
 // });
+
 (function (m, e, t, r, i, k, a) {
   m[i] =
     m[i] ||
@@ -202,6 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 function createRipple(event) {
   const ripple = document.createElement("span");
   ripple.className = "ripple";

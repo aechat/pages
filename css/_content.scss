@@ -5,8 +5,6 @@
   padding: 0;
 }
 
-// fixme: сделать разные иконки для <a> и <mark>
-
 .content {
   margin-block: auto;
   max-width: 1000px;
@@ -26,7 +24,7 @@
     &:before {
       padding-right: 3px;
       font-size: 16px;
-      font-family: "Material Icons", system-ui;
+      font-family: "Material Icons";
       vertical-align: middle;
     }
 
@@ -58,7 +56,7 @@
 
   summary {
     cursor: pointer;
-    margin-block: 10px;
+    margin-block: 15px;
     position: relative;
     z-index: 0;
     padding: 10px 25px;
@@ -110,7 +108,7 @@
     position: relative;
 
     &:hover {
-      opacity: 80%;
+      opacity: 60%;
       cursor: pointer;
     }
 
@@ -121,7 +119,7 @@
 
     &::after {
       content: "content_copy";
-      font-family: "Material Icons", system-ui;
+      font-family: "Material Icons";
       font-size: 28px;
       position: absolute;
       right: 0;
@@ -185,14 +183,14 @@
     text-decoration: none;
 
     &:before {
-      font-family: "Material Icons", system-ui;
+      font-family: "Material Icons";
       font-size: 16px;
       margin-inline: 3px;
       vertical-align: middle;
     }
 
     &:hover {
-      opacity: 80%;
+      opacity: 60%;
     }
 
     &:active {
@@ -202,6 +200,8 @@
   }
 
   mark.copy {
+    border: solid 1px var(--primary);
+
     &:before {
       color: var(--primary);
       content: "content_copy";
@@ -210,6 +210,7 @@
 
   mark.key {
     background-color: var(--grayscale_background);
+    border: solid 1px var(--border);
 
     &:before {
       color: var(--text);
@@ -220,6 +221,7 @@
 
   mark.word {
     background-color: var(--grayscale_background);
+    border: solid 1px var(--border);
 
     &:before {
       color: var(--text);
@@ -230,6 +232,7 @@
 
   mark.path {
     background-color: var(--grayscale_background);
+    border: solid 1px var(--primary);
 
     &:before {
       content: "folder_data";
@@ -238,6 +241,8 @@
   }
 
   mark.file {
+    border: solid 1px var(--primary);
+
     &:before {
       content: "file_present";
       color: var(--primary);
@@ -246,6 +251,7 @@
 
   mark.app {
     background-color: var(--grayscale_background);
+    border: solid 1px var(--primary);
 
     &:before {
       content: "deployed_code";
@@ -255,6 +261,7 @@
 
   mark.plugin {
     background-color: var(--grayscale_background);
+    border: solid 1px var(--primary);
 
     &:before {
       content: "extension";
@@ -263,6 +270,8 @@
   }
 
   mark.ui {
+    border: solid 1px var(--primary);
+
     &:before {
       content: "touch_app";
       color: var(--primary);
@@ -273,6 +282,38 @@
     &:before {
       content: "warning";
       color: var(--primary);
+    }
+  }
+
+  button.copy_button {
+    background-color: var(--primary_transparent);
+    padding: 5px;
+    font-size: 12px;
+    border: solid 1px var(--primary);
+    border-radius: 10px;
+    color: var(--text);
+    display: block;
+    margin-inline-start: auto;
+    margin-inline-end: 20px;
+    margin-block-end: -15px;
+
+    &:before {
+      font-family: "Material Icons";
+      font-size: 20px;
+      margin-inline: 3px;
+      vertical-align: middle;
+      content: "share";
+      color: var(--primary);
+    }
+
+    &:hover {
+      opacity: 60%;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: var(--primary_transparent);
+      opacity: 100%;
     }
   }
 
@@ -385,7 +426,7 @@
   font-weight: 600;
   background-color: var(--warning_background);
   border-radius: 20px;
-line-height: 1.5;
+  line-height: 1.5;
   padding-inline-start: 25px;
   padding-inline-end: 80px;
   padding-block: 15px;
@@ -398,7 +439,7 @@ line-height: 1.5;
 
   &::before {
     content: "warning";
-    font-family: "Material Icons", system-ui;
+    font-family: "Material Icons";
     font-size: 3em;
     position: absolute;
     right: 0;
