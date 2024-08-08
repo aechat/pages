@@ -45,10 +45,7 @@ document.addEventListener("click", function (event) {
   const leftMenuVisible = leftSidemenu.classList.contains("visible");
   const rightMenuVisible = rightSidemenu.classList.contains("visible");
   if (leftMenuVisible || rightMenuVisible) {
-    if (
-      !leftSidemenu.contains(event.target) &&
-      !rightSidemenu.contains(event.target)
-    ) {
+    if (!leftSidemenu.contains(event.target) && !rightSidemenu.contains(event.target)) {
       if (leftMenuVisible && rightMenuVisible) {
         toggleSidemenu(".left_sidemenu");
         toggleSidemenu(".right_sidemenu");
