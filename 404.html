@@ -113,30 +113,31 @@
     <div class="copied hidden"></div>
     <section>&nbsp;</section>
     <div class="links">
-      <ul>
-        <li>
-          <a
-            class="weblink"
-            href="mailto:m1sh3r@ya.ru?subject=Битая ссылка в links"
-            onmousedown="createRipple(event)"
-            title="Сообщить об ошибке"
-          >
-            <h2><span class="material-icons">error </span>Сообщить об ошибке</h2>
-          </a>
-        </li>
-      </ul>
+      <a
+      href="index.html"
+        class="weblink"
+        onmousedown="createRipple(event)"
+        title="Вернуться на главную страницу"
+        ><div>
+          <span class="material-icons">home </span>
+          <h2>На главную</h2>
+        </div>
+      </a>
+      <a
+        class="weblink"
+        href="mailto:m1sh3r@ya.ru?subject=Битая ссылка в links"
+        onmousedown="createRipple(event)"
+        title="Сообщить об ошибке"
+        ><div>
+          <span class="material-icons">error </span>
+          <h2>Сообщить об ошибке</h2>
+        </div>
+      </a>
     </div>
     <section>Страница не существует</section>
     <div class="content">
       <h2>Я куда-то нажал и всё исчезло!</h2>
-      <p>
-        Видимо кто-то накосячил со ссылкой и попал сюда. Пожалуйста, вернитесь на главную
-        страницу с помощью меню в "шапке" сайта.
-      </p>
       <figure>
-        <figcaption id="errormessage">
-          Ваш браузер блокирует автозапуск звука. Чтобы его включить, нажмите на анимацию.
-        </figcaption>
         <video
           playsinline=""
           autoplay=""
@@ -144,7 +145,7 @@
           loop=""
           id="videoElement"
           type="video/webm"
-          style="margin-bottom: -30px; height: 400px"
+          style="margin-bottom: -30px; max-height: 350px"
           src="source/a-hat-in-time-404.webm"
         ></video>
         <audio
@@ -155,6 +156,9 @@
           style="height: 0; opacity: 0"
           src="source/glukoza_nostra.mp3"
         ></audio>
+        <figcaption id="errormessage">
+          Ваш браузер блокирует автозапуск звука. Чтобы его включить, нажмите на анимацию.
+        </figcaption>
       </figure>
     </div>
     <footer>Глюк’oZы-девочки, все летим на стрелочки</footer>
