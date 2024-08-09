@@ -95,6 +95,10 @@
     border: none;
   }
 
+  video {
+    height: fit-content !important;
+  }
+
   code {
     display: block;
     max-width: 1000px;
@@ -181,6 +185,7 @@
     line-height: 24px;
     color: var(--text);
     text-decoration: none;
+    border: solid 1px var(--primary);
 
     &:before {
       font-family: "Material Icons";
@@ -232,11 +237,11 @@
 
   mark.path {
     background-color: var(--grayscale_background);
-    border: solid 1px var(--primary);
+    border: solid 1px var(--border);
 
     &:before {
       content: "folder_data";
-      color: var(--primary);
+      color: var(--text);
     }
   }
 
@@ -251,16 +256,16 @@
 
   mark.app {
     background-color: var(--grayscale_background);
-    border: solid 1px var(--primary);
+    border: solid 1px var(--и);
 
     &:before {
       content: "deployed_code";
-      color: var(--primary);
+      color: var(--text);
     }
   }
 
   mark.plugin {
-    background-color: var(--grayscale_background);
+    background-color: var(--primary_transparent);
     border: solid 1px var(--primary);
 
     &:before {
