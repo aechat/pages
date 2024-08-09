@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -553,7 +552,7 @@ header span:active {
 }
 .content mark.key:before {
   color: var(--text);
-  opacity: 30%;
+  opacity: 50%;
   content: "keyboard";
 }
 .content mark.word {
@@ -562,7 +561,7 @@ header span:active {
 }
 .content mark.word:before {
   color: var(--text);
-  opacity: 30%;
+  opacity: 50%;
   content: "dictionary";
 }
 .content mark.path {
@@ -570,6 +569,7 @@ header span:active {
   border: solid 1px var(--border);
 }
 .content mark.path:before {
+  opacity: 50%;
   content: "folder_data";
   color: var(--text);
 }
@@ -582,10 +582,11 @@ header span:active {
 }
 .content mark.app {
   background-color: var(--grayscale_background);
-  border: solid 1px var(--и);
+  border: solid 1px var(--border);
 }
 .content mark.app:before {
   content: "deployed_code";
+  opacity: 50%;
   color: var(--text);
 }
 .content mark.plugin {
