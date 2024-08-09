@@ -219,7 +219,7 @@
 
     &:before {
       color: var(--text);
-      opacity: 30%;
+      opacity: 50%;
       content: "keyboard";
     }
   }
@@ -230,7 +230,7 @@
 
     &:before {
       color: var(--text);
-      opacity: 30%;
+      opacity: 50%;
       content: "dictionary";
     }
   }
@@ -240,6 +240,7 @@
     border: solid 1px var(--border);
 
     &:before {
+      opacity: 50%;
       content: "folder_data";
       color: var(--text);
     }
@@ -256,10 +257,11 @@
 
   mark.app {
     background-color: var(--grayscale_background);
-    border: solid 1px var(--и);
+    border: solid 1px var(--border);
 
     &:before {
       content: "deployed_code";
+      opacity: 50%;
       color: var(--text);
     }
   }
