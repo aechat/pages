@@ -3134,6 +3134,31 @@ const AeInstallProblems: React.FC = () => {
         />
       </DetailsSummary>
       <DetailsSummary
+        anchor="fix-borisfx-installator-out-of-memory-error"
+        tag="boris fx, team v.r., out of memory"
+        title="«Виникла помилка при спробi копiювання файлу: Out of memory» при установке репака Boris FX от Team V.R."
+      >
+        <ContentFilter
+          windowsContent={
+            <>
+              <p>
+                Скорее всего, вам мешает антивирус, работающий в фоне. Во время установки
+                плагинов от <mark className="company">Boris FX</mark> в виде репака от{" "}
+                <mark className="user">Team V.R.</mark> он может удалять отдельные файлы
+                во время распаковки, из-за чего установщик не сможет завершить установку
+                корректно.
+              </p>
+              <p>
+                Для корректной установки плагинов рекомендуется{" "}
+                <a href="#disable-defender">временно отключить</a>{" "}
+                <mark className="app">антивирусное ПО</mark>. После этого повторите
+                установку — она должна пройти без проблем.
+              </p>
+            </>
+          }
+        />
+      </DetailsSummary>
+      <DetailsSummary
         anchor="unlicensed-element-3d"
         tag="element 3d, video copilot, vc, лицензия, активация, install license file, use your vc download account to generate a license for this computer"
         title="«Generate License» при применении Element 3D"
