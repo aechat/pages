@@ -721,7 +721,7 @@ const PrInstallProblems: React.FC = () => {
                     <Addition type="warning">
                       Не допускайте лишних вложенностей папок и не распаковывайте
                       содержимое архива без отдельной папки для расширения. Путь до{" "}
-                      <mark className="file">manifest.json</mark> должно распологаться
+                      <mark className="file">manifest.json</mark> должно располагаться
                       примерно так —{" "}
                       <mark className="path">
                         ~/Library/Application Support/Adobe/UXP/Plugins/ru.aechat.prfaq
@@ -1519,7 +1519,7 @@ const PrInstallProblems: React.FC = () => {
                     <Addition type="warning">
                       Не допускайте лишних вложенностей папок и не распаковывайте
                       содержимое архива без отдельной папки для расширения. Путь до{" "}
-                      <mark className="file">manifest.json</mark> должно распологаться
+                      <mark className="file">manifest.json</mark> должно располагаться
                       примерно так —{" "}
                       <mark className="path">
                         C:\Program Files\Common
